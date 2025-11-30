@@ -1,0 +1,23 @@
+section.nav-bar {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    background: rgba(137, 188, 217, 1);
+    height: 104px;
+    width: 100%;
+
+    a {
+        color: rgba(38, 46, 52, 1);
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
