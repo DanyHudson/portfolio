@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-nav',
   imports: [],
   templateUrl: './nav.html',
-  styleUrl: './nav.scss',
+  styleUrls: ['./nav.scss'],
 })
 export class Nav {
 

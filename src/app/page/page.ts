@@ -1,11 +1,20 @@
 import { Component } from '@angular/core';
+// import { CommonModule } from '@angular/common';
+import { LandingPage } from '../landing-page/landing-page';
+import { Nav } from '../nav/nav';
+import { PageContent } from "../page-content/page-content";
+
+
 
 @Component({
   selector: 'app-page',
-  imports: [],
+  imports: [LandingPage, Nav, PageContent],
+  standalone: true,
   templateUrl: './page.html',
-  styleUrl: './page.scss',
+  styleUrls: ['./page.scss'],
+  
 })
+
 export class Page {
 
 }
