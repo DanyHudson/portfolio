@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { AboutMe } from '../about-me/about-me';
 
 @Component({
   selector: 'app-page-content',
-  imports: [],
+  standalone: true,
+  imports: [AboutMe],
   templateUrl: './page-content.html',
-  styleUrl: './page-content.scss',
+  styleUrls: ['./page-content.scss'],
 })
 export class PageContent {
 
