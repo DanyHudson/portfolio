@@ -1,19 +1,18 @@
 .lp-content {
-    // display: flex;
+    display: flex;
     align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
     width: 100%;
-    gap: 80px;
+    // gap: 80px;
     padding: 0;
 }
 
 .persona {
     display: flex;
     justify-content: center;
+    gap: 80px;
     align-items: center;
-    // flex-direction: column;
     width: 1214px;
-
 }
 
 .lp-img-box {
@@ -66,27 +65,7 @@
     }
 }
 
-section.nav-bar {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    padding: 1rem;
-    width: 56%;
 
-    a {
-        color: rgba(38, 46, 52, 1);
-        text-decoration: none;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 24px;
-        cursor: pointer;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-}
 
 app-nav {
     position: sticky;
@@ -102,7 +81,8 @@ nav {
     width: 100%;
     background: rgba(137, 188, 217, 1);
     height: 104px;
-    padding: 8px 120px;
+    padding: 8px 109px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
