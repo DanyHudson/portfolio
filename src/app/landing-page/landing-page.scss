@@ -4,6 +4,7 @@
     justify-content: space-between;
     width: 100%;
     gap: 80px;
+    padding: 0;
 }
 
 .lp-img-box {
@@ -16,7 +17,8 @@
     width: 594px;
     height: 710px;
     position: absolute;
-    top: 0;
+    // top: 0;
+    bottom: 0;
     right: 0;
     transform: rotate(1);
 }
@@ -24,9 +26,9 @@
 .hero-img {
     width: 535px;
     height: 632px;
-    position: relative;
     position: absolute;
-    top: 0;
+    // top: 0;
+    bottom: 0;
     right: 0;
     z-index: 1;
 }
