@@ -1,0 +1,15 @@
+.about-me-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    width: 86%;
+    max-width: 860px;
+    
+    p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.1em;
+        line-height: 1.75em;
+        width: 50%;
+    }
+}

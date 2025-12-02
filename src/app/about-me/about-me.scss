@@ -3,4 +3,32 @@
     justify-content: center;
     align-items: center;
     gap: 32px;
+    width: 86%;
+    max-width: 860px;
+    
+    p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.1em;
+        line-height: 1.75em;
+        width: 50%;
+    }
 }
+
+.right-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+ .right-container button {
+    width: 150px;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    cursor: pointer;
+
+    & :hover {
+        background-color: #e73370;
+    }
+}
+
