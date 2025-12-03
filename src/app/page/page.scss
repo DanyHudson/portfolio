@@ -10,8 +10,7 @@
     background-color: rgba(38, 46, 52, 1);
 }
 
-app-landing-page,
-app-footer {
+app-landing-page {
     display: flex;
     width: 100%;
 }
@@ -35,3 +34,12 @@ app-footer {
 //     display: flex;
 //     justify-content: center;
 // }
+footer {
+    width: 100%;
+    background: rgba(137, 188, 217, 1);
+    height: 160px;
+    padding: 8px 109px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
