@@ -10,11 +10,19 @@ import { MatTabsModule } from '@angular/material/tabs';
   styleUrls: ['./tabs.scss'],
 })
 export class Tabs {
-  links = ['First', 'Second', 'Third'];
-  activeLink = this.links[0];
+  // tabs = ['First', 'Second', 'Third'];
+  tabs = [
+  {
+     label: 'Tab 1',
+     content: 'Content for Tab 1 lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua,Content for Tab 1 lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua' },
+  { label: 'Tab 2', content: 'Content for Tab 2' },
+  { label: 'Tab 3', content: 'Content for Tab 3' }
+];
+  activeLink = this.tabs[0];
+  
 
-  addLink() {
-    this.links.push(`Link ${this.links.length + 1}`);
-  }
+  // addLink() {
+  //   this.tabs.push(`Link ${this.tabs.length + 1}`);
+  // }
 
 }

@@ -7,14 +7,15 @@ app-tabs {
     active-focus-indicator-color: orange,
     active-focus-label-text-color: red,
   ));
+   --mat-tab-inactive-label-text-color: #f7f3f3; // or any visible color
 }
 
-:root {
-  --mat-tab-inactive-label-text-color: #f7f3f3; // or any visible color
-}
+// :root {
+//   --mat-tab-inactive-label-text-color: #f7f3f3; // or any visible color
+// }
 
 
-.example-action-button {
-  margin-top: 8px;
-  margin-right: 8px;
-}
+// .example-action-button {
+//   margin-top: 8px;
+//   margin-right: 8px;
+// }

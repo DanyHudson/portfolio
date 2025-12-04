@@ -1,4 +1,4 @@
-<nav mat-tab-nav-bar [tabPanel]="tabPanel">
+<!-- <nav mat-tab-nav-bar [tabPanel]="tabPanel">
   @for (link of links; track link) {
     <a mat-tab-link
       (click)="activeLink = link"
@@ -6,8 +6,19 @@
   }
   <a mat-tab-link disabled>Disabled Link</a>
 </nav>
-<mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+<mat-tab-nav-panel #tabPanel></mat-tab-nav-panel> -->
 
-<button matButton="elevated" class="example-action-button" (click)="addLink()">
+<mat-tab-group [animationDuration]="'0ms'">
+  @for (tab of tabs; track tab) {
+    <mat-tab [label]="tab.label">
+      <p>{{ tab.content }}</p>
+    </mat-tab>
+  }
+</mat-tab-group>
+
+<!-- <button matButton="elevated" class="example-action-button" (click)="addLink()">
   Add link
-</button>
+</button> -->
+
+
+
