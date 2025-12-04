@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { Tabs } from '../tabs/tabs';
 
 @Component({
   selector: 'app-my-projects',
-  imports: [],
+  standalone: true,
+  imports: [Tabs],
   templateUrl: './my-projects.html',
-  styleUrl: './my-projects.scss',
+  styleUrls: ['./my-projects.scss'],
 })
 export class MyProjects {
 
