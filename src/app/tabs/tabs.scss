@@ -6,8 +6,10 @@ app-tabs {
   @include mat.tabs-overrides((
     active-focus-indicator-color: orange,
     active-focus-label-text-color: red,
+    background-color: #f7f6f6,
+    inactive-label-text-color: #f7f6f6,
   ));
-   --mat-tab-inactive-label-text-color: #f7f3f3; // or any visible color
+  
 }
 
 // :root {
@@ -19,3 +21,4 @@ app-tabs {
 //   margin-top: 8px;
 //   margin-right: 8px;
 // }
+

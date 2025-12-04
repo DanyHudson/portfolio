@@ -10,7 +10,7 @@
 
 <mat-tab-group [animationDuration]="'0ms'">
   @for (tab of tabs; track tab) {
-    <mat-tab [label]="tab.label">
+    <mat-tab [label]="tab.label" >
       <p>{{ tab.content }}</p>
     </mat-tab>
   }
