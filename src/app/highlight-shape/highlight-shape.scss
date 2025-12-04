@@ -1,0 +1,39 @@
+.highlight-shape-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 380px;
+    height: 380px;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url(/assets/img/shape_2.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        opacity: 0.7; // 7% opacity
+        z-index: 1;
+    }
+}
+
+.highlight-shape-container p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    line-height: 1.24em;
+    width: 50%;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    img {
+        width: 32px;
+        height: 32px;
+        // object-fit: cover;
+        background-color: purple;
+        // margin-bottom: 10px;
+    }
+
+}
