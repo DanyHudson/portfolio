@@ -1,3 +1,19 @@
+@use '@angular/material' as mat;
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+//:root {
+app-tabs {
+  @include mat.tabs-overrides((
+    active-focus-indicator-color: orange,
+    active-focus-label-text-color: red,
+  ));
+}
+
+:root {
+  --mat-tab-inactive-label-text-color: #f7f3f3; // or any visible color
+}
+
+
 .example-action-button {
   margin-top: 8px;
   margin-right: 8px;
