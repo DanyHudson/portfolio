@@ -5,13 +5,15 @@
 //:root {
 app-tabs {
   @include mat.tabs-overrides((
-    active-focus-indicator-color: #2d383f,
+    // active-focus-indicator-color: #2d383f,
     // active-focus-label-text-color: white,
     inactive-label-text-color: #89BCD9,
-    active-indicator-shape: rounded-rectangle,
+    active-focus-indicator-color: #d499c6,
+    active-indicator-shape: 10px,
     active-indicator-height: 50px,
    
-    active-indicator-color: #2d383f,
+    // active-indicator-color: #2d383f,
+    active-indicator-color: #d499c6,
     
     
     
