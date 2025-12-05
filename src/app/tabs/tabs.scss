@@ -1,24 +1,25 @@
-@use '@angular/material' as mat;
-@import '@angular/material/prebuilt-themes/indigo-pink.css';
+// @use '@angular/material' as mat;
 
-//:root {
-app-tabs {
-  @include mat.tabs-overrides((
-    active-focus-indicator-color: orange,
-    active-focus-label-text-color: red,
-    background-color: #f7f6f6,
-    inactive-label-text-color: #f7f6f6,
-  ));
+
+// //:root {
+// app-tabs {
+//   @include mat.tabs-overrides((
+//     active-focus-indicator-color: orange,
+//     active-focus-label-text-color: red,
+//     background-color: #f7f6f6,
+//     inactive-label-text-color: #f7f6f6,
+//     active-indicator-shape: rectangle,
+//     active-indicator-color: orange,
+//   ));
   
+// }
+
+.custom-tab-label {
+  font-weight: bold;
+  background-color: #89BCD9;
+  opacity: 0.8;
 }
 
-// :root {
-//   --mat-tab-inactive-label-text-color: #f7f3f3; // or any visible color
-// }
-
-
-// .example-action-button {
-//   margin-top: 8px;
-//   margin-right: 8px;
-// }
-
+.mdc-tab-indicator--active .mdc-tab-indicator__content {
+    opacity: 0 !important;
+}

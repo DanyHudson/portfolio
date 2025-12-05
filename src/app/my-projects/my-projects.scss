@@ -1,0 +1,29 @@
+@use '@angular/material' as mat;
+
+
+
+//:root {
+app-tabs {
+  @include mat.tabs-overrides((
+    active-focus-indicator-color: #2d383f,
+    // active-focus-label-text-color: white,
+    inactive-label-text-color: #89BCD9,
+    active-indicator-shape: rounded-rectangle,
+    active-indicator-height: 50px,
+   
+    active-indicator-color: #2d383f,
+    
+    
+    
+    background-color: #89d8d8
+  ));
+
+
+  
+}
+.mdc-tab-indicator--active .mdc-tab-indicator__content {
+    opacity: 0 !important;
+}
+
+
+// background: #89BCD9; light blue
