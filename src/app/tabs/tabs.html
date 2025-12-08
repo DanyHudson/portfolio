@@ -1,24 +1,23 @@
-<!-- <nav mat-tab-nav-bar [tabPanel]="tabPanel">
-  @for (link of links; track link) {
-    <a mat-tab-link
-      (click)="activeLink = link"
-      [active]="activeLink == link"> {{link}} </a>
-  }
-  <a mat-tab-link disabled>Disabled Link</a>
-</nav>
-<mat-tab-nav-panel #tabPanel></mat-tab-nav-panel> -->
 
-<mat-tab-group disableRipple [animationDuration]="'0ms'">
-  @for (tab of tabs; track tab) {
-    <mat-tab [label]="tab.label" class="custom-tab-label">
-      <p>{{ tab.content }}</p>
-    </mat-tab>
-  }
-</mat-tab-group>
+
+<div class="tab-group">
+  <div class="tab-header">
+    @for (tab of tabs; track tab; let i = $index;) {
+      <div
+        class="tab-label"
+        [class.active]="i === activeTabIndex"
+        (click)="activeTabIndex = i"
+      >
+        {{ tab.label }}
+      </div>
+    }
+  </div>
+  <div class="tab-content">
+    {{ tabs[activeTabIndex].content }}
+  </div>
+</div>
+
 
 <!-- <button matButton="elevated" class="example-action-button" (click)="addLink()">
   Add link
 </button> -->
-
-
-

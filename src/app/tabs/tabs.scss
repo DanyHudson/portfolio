@@ -1,6 +1,5 @@
 // @use '@angular/material' as mat;
 
-
 // //:root {
 // app-tabs {
 //   @include mat.tabs-overrides((
@@ -11,15 +10,42 @@
 //     active-indicator-shape: rectangle,
 //     active-indicator-color: orange,
 //   ));
-  
+
 // }
 
-.custom-tab-label {
-  font-weight: bold;
-  background-color: #89BCD9;
-  opacity: 0.8;
+.tab-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
 }
 
-.mdc-tab-indicator--active .mdc-tab-indicator__content {
-    opacity: 0 !important;
+.tab-header {
+  width: 89%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
 }
+
+.tab-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  line-height: 1.83em;
+  cursor: pointer;
+  background-color: aquamarine;
+  padding: 10px 30px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.tab-body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

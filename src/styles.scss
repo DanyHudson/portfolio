@@ -19,7 +19,7 @@ body {
     align-items: center;
     // width: 100%;
     // height: 100%;
-    background-color: #DDDDDE;
+    // background-color: #DDDDDE;
     color: white;
     overflow-x: hidden;
 }
@@ -48,3 +48,18 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+// .custom-label-class {
+//   font-weight: bold;
+//   background-color: #89BCD9;
+//   opacity: 0.8;
+//   border-top-right-radius: 10px !important;
+//   border-top-left-radius: 10px !important;
+// }
+
+::ng-deep .custom-label-class {
+  font-weight: bold !important;
+  background-color: #89BCD9 !important;
+  opacity: 0.8 !important;
+  border-top-right-radius: 10px !important;
+  border-top-left-radius: 10px !important;
+}

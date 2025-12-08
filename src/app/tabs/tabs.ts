@@ -13,29 +13,34 @@ import { MatTabsModule } from '@angular/material/tabs';
 })
 export class Tabs {
 
+  // @Input() labelClass: string | string[];
+  // @Input() bodyClass: string | string[];
+
   // tabs = ['First', 'Second', 'Third'];
   tabs = [
     {
-      label: 'Tab 1',
+      label: 'DA Bubble',
       content: 'Content for Tab 1 lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua,Content for Tab 1 lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
     },
 
     {
-      label: 'Tab 2',
+      label: 'Sharky',
       content: 'Content for Tab 2'
     },
 
     {
-      label: 'Tab 3',
+      label: 'Join',
       content: 'Content for Tab 3'
     }
 
   ];
   activeLink = this.tabs[0];
   // @Input() bodyClass: string | string[];
-  // @Input() labelClass: string | string[];
+  activeTabIndex = 0;
+
 
   constructor() {
+    // this.labelClass = 'custom-label-class';
   }
 
 
