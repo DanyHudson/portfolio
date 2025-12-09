@@ -13,10 +13,6 @@ import { MatTabsModule } from '@angular/material/tabs';
 })
 export class Tabs {
 
-  // @Input() labelClass: string | string[];
-  // @Input() bodyClass: string | string[];
-
-  // tabs = ['First', 'Second', 'Third'];
   tabs = [
     {
       label: 'DA Bubble',
