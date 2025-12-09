@@ -20,7 +20,12 @@ app-tabs {
   justify-content: center;
 }
 
-// .mdc-tab-indicator--active .mdc-tab-indicator__content {
-//   opacity: 0 !important;
-// }
+.my-projects-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
 

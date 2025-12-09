@@ -16,7 +16,7 @@ export class Tabs {
   tabs = [
     {
       label: 'DA Bubble',
-      content: 'Content for Tab 1 lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua,Content for Tab 1 lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+      content: 'Content for Tab 1 lorem ipsum dolor elit sed  ut labore et dolore  '
     },
 
     {
