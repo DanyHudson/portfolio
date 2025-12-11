@@ -16,7 +16,10 @@ export class Tabs {
   tabs = [
     {
       label: 'DA Bubble',
-      content: 'Content for Tab 1 lorem ipsum dolor elit sed  ut labore et dolore  '
+      content: 'Content for Tab 1 lorem ipsum dolor elit sed  ut labore et dolore',
+      img: 'assets/images/projects/project-dabubble.png',
+      linkLiveTest: '',
+      linkGitHub: ''
     },
 
     {

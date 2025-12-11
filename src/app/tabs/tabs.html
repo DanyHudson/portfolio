@@ -11,9 +11,29 @@
   </div> -->
 
   <div class="tab-content active">
-    <p>
-      {{ tabs[activeTabIndex].content }}
-    </p>
+    <div class="left-container">
+      <p>{{ tabs[activeTabIndex].content }}</p>
+    </div>
+    <div class="right-container">
+      <div class="mp-icons">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+      </div>
+      <img [src]="tabs[activeTabIndex].img" alt="{{ tabs[activeTabIndex].label }}" class="mp-img">
+      <div class="mp-btn">
+        <button>
+          <img src="assets/img/contact_def.svg" alt="Contact me" class="contact-def-img">
+          <img src="assets/img/contact_hover.svg" alt="Contact me hover" class="contact-hover-img d-none">
+        </button>
+        <button>
+          <img src="assets/img/contact_def.svg" alt="Contact me" class="contact-def-img">
+          <img src="assets/img/contact_hover.svg" alt="Contact me hover" class="contact-hover-img d-none">
+        </button>
+      </div>
+
+    </div>
+
   </div>
 </div>
 

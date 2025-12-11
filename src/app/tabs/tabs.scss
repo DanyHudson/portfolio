@@ -62,22 +62,24 @@
   background-color: rgb(109, 124, 190);
   min-height: 100px;
 
-
 }
 
 .tab-content.active {
   background: #89BCD9;
   width: 100%;
-
-  
+ 
 }
 
-.tab-content p {
+.tab-content section {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 1.2em;
   line-height: 1.83em;
   padding: 20px;
   color: white;
+  width: 89%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
 }
