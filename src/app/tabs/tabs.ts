@@ -1,11 +1,13 @@
 import { Component, Input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
+import { Project } from '../projects/project';
+
 
 @Component({
   selector: 'app-tabs',
   standalone: true,
-  imports: [MatButtonModule, MatTabsModule],
+  imports: [MatButtonModule, MatTabsModule, Project],
   templateUrl: './tabs.html',
   styleUrls: ['./tabs.scss'],
 
