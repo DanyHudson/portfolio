@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
-import { Project } from '../projects/project';
+import { Project } from '../project/project';
 
 
 @Component({
