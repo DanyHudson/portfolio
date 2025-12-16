@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 import { Project } from '../project/project';
+import { myProjectTabs } from '../../models/page-data'; 
 
 
 @Component({
@@ -14,27 +15,12 @@ import { Project } from '../project/project';
 
 })
 export class Tabs {
+  project = Project;
+  tabs = myProjectTabs;
 
-  tabs = [
-    {
-      label: 'DA Bubble',
-      content: 'Content for Tab 1 lorem ipsum dolor elit sed  ut labore et dolore',
-      img: 'assets/images/projects/project-dabubble.png',
-      linkLiveTest: '',
-      linkGitHub: ''
-    },
-
-    {
-      label: 'Sharky',
-      content: 'Content for Tab 2'
-    },
-
-    {
-      label: 'Join',
-      content: 'Content for Tab 3'
-    }
-
-  ];
+  // tabs = [
+    
+  // ];
   activeLink = this.tabs[0];
   // @Input() bodyClass: string | string[];
   activeTabIndex = 0;
