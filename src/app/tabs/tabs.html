@@ -12,13 +12,8 @@
   </div> -->
 
   <div class="tab-content active">
-    <app-project>
-    </app-project>
+    <app-project [projectData]="tabs[activeTabIndex]"></app-project>
   </div>
 
 </div>
 
-
-<!-- <button matButton="elevated" class="example-action-button" (click)="addLink()">
-  Add link
-</button> -->

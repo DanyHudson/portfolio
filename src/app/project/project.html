@@ -1,29 +1,30 @@
 <div class="left-container">
-  <!-- @for (item of projectData.myProjectTabs.content; track item) { -->
-   @for (item of projectData.myProjectTabs.content; track item) {
+  <!-- @for (item of projectData.myProjectTabs.content; track item) {
   <h3>{{ item.myProjectTabs.headline }}</h3>
   <p>{{ item.myProjectTabs.text }}</p>
+  } -->
+  @for (item of projectData.content; track item) {
+  <h3>{{ item.headline }}</h3>
+  <p>{{ item.text }}</p>
   }
+
 </div>
 
 <div class="right-container">
   <div class="mp-icons">
     <h2>Technologies</h2>
-    @if (projectData.myProjectTabs.icons && projectData.myProjectTabs.icons.length) {
-    @for (icon of projectData.myProjectTabs.icons; track icon) {
-    <img [src]="icon" alt="icon" />
+    @if (projectData.icons && projectData.icons.length) {
+    @for (icon of projectData.icons; track icon) {
+    <img [src]="icon.icon1" alt="icon" />
+    <img [src]="icon.icon2" alt="icon" />
+    <img [src]="icon.icon3" alt="icon" />
     }
-    
     }
-    <!-- <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt=""> -->
-    
-  </div>
-@if (projectData.projectImages && projectData.projectImages.length) {
-  <img [src]="projectData.projectImage" alt="{{ projectData.label }}" class="mp-img">
 
-}
+  </div>
+  @if (projectData.projectImage) {
+  <img [src]="projectData.projectImage" alt="{{ projectData.label }}" class="mp-img">
+  }
 
   <div class="mp-btn">
     <button>
