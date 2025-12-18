@@ -6,15 +6,15 @@ export const myProjectTabs = [
         label: 'DA Bubble',
         content: [
             {
-                headline: 'Headline 1',
+                headline: ' DA Bubble Headline 1',
                 text: 'Content bullet 1 lorem ipsum dolor elit sed ut labore et dolore',
             },
             {
-                headline: 'Headline 2',
+                headline: ' DA Bubble Headline 2',
                 text: 'Content bullet 2 lorem ipsum dolor elit sed ut labore et dolore',
             },
             {
-                headline: 'Headline 3',
+                headline: ' DA Bubble Headline 3',
                 text: 'Content bullet 3 lorem ipsum dolor elit sed ut labore et dolore',
             }
         ],
@@ -36,15 +36,15 @@ export const myProjectTabs = [
         label: 'sharky',
         content: [
             {
-                headline: 'Headline 1',
+                headline: 'sharky Headline 1',
                 text: 'Content bullet 1 lorem ipsum dolor elit sed ut labore et dolore',
             },
             {
-                headline: 'Headline 2',
+                headline: 'sharky Headline 2',
                 text: 'Content bullet 2 lorem ipsum dolor elit sed ut labore et dolore',
             },
             {
-                headline: 'Headline 3',
+                headline: 'sharky Headline 3',
                 text: 'Content bullet 3 lorem ipsum dolor elit sed ut labore et dolore',
             }
         ],
@@ -58,15 +58,15 @@ export const myProjectTabs = [
         label: 'Join',
         content: [
             {
-                headline: 'Headline 1',
+                headline: 'Join Headline 1',
                 text: 'Content bullet 1 lorem ipsum dolor elit sed ut labore et dolore',
             },
             {
-                headline: 'Headline 2',
+                headline: 'Join Headline 2',
                 text: 'Content bullet 2 lorem ipsum dolor elit sed ut labore et dolore',
             },
             {
-                headline: 'Headline 3',
+                headline: 'Join Headline 3',
                 text: 'Content bullet 3 lorem ipsum dolor elit sed ut labore et dolore',
             }
         ],
