@@ -36,13 +36,13 @@
   font-size: 1.5em;
   line-height: 1.83em;
   cursor: pointer;
-  background-color: rgb(109, 124, 190);
+  background-color: rgb(163, 179, 155);
   padding: 10px 30px;
   border-radius: 8px 8px 0 0;
 }
 
 .tab-label.active {
-  background: #89BCD9;
+  background: rgb(163, 179, 155);
   font-weight: bold;
 }
 
@@ -59,13 +59,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(109, 124, 190);
+  background-color: rgb(163, 179, 155);
   min-height: 100px;
 
 }
 
 .tab-content.active {
-  background: #89BCD9;
+  background: rgb(163, 179, 155);
   width: 100%;
  
 }

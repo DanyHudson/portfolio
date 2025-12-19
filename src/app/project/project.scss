@@ -1,9 +1,38 @@
 .left-container {
     flex: 1 1 0;
-   
+
 }
 
 .right-container {
-   
+
     flex: 1 1 0;
 }
+
+.left-container-h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 1.2em;
+        line-height: 1.5em;
+        color: white;
+    }
+
+    img {
+        width: 24px;
+        height: 24px;
+        background-color: purple;
+    }
+
+
+}
+
+  .mp-icons img {
+        width: 50px;
+        height: 50px;
+        background-color: purple;
+
+    }
