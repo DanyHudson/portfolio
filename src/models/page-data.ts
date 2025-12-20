@@ -7,7 +7,7 @@ export const myProjectTabs = [
         content: [
             {
                 headline: ' DA Bubble Headline 1',
-                text: 'Content bullet 1 lorem ipsum dolor elit sed ut labore et dolore',
+                text: 'Content bullet 1 lorem ipsum dolor elit sed ut labore et dolore, ',
             },
             {
                 headline: ' DA Bubble Headline 2',
