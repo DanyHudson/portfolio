@@ -7,7 +7,10 @@ export const myProjectTabs = [
         content: [
             {
                 headline: ' DA Bubble Headline 1',
-                text: 'Content bullet 1 lorem ipsum dolor elit sed ut labore et dolore, ',
+                text: `Content bullet 1 lorem ipsum dolor elit sed ut labore et dolore,
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                `,
             },
             {
                 headline: ' DA Bubble Headline 2',
@@ -28,7 +31,7 @@ export const myProjectTabs = [
             
             
         ],
-        projectImage: '',
+        projectImage: 'src/assets/icons/html5.svg',
         linkLiveTest: '',
         linkGitHub: ''
     },

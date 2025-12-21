@@ -3,37 +3,59 @@
   <h3>{{ item.myProjectTabs.headline }}</h3>
   <p>{{ item.myProjectTabs.text }}</p>
   } -->
-  @for (item of projectData.content; track item) {
-  <span class="left-container-h3"><img src="../assets/img/bullet_icon.svg" alt=""><h3>{{ item.headline }}</h3></span>
+
+  <!-- @for (item of projectData.content; track item) {
+  <span class="left-container-h3"><img src="../assets/img/bullet_icon.svg" alt="">
+    <h3>{{ item.headline }}</h3>
+  </span>
   <p>{{ item.text }}</p>
   }
+   -->
+
+  <div class="left-container">
+
+    @for (item of projectData.content; track item) {
+    <div class="headline-row">
+      <img src="../assets/img/bullet_icon.svg" alt="bullet" class="bullet-img" />
+      <h3>{{ item.headline }}</h3>
+    </div>
+    <p class="project-paragraph">{{ item.text }}</p>
+    }
+  </div>
+
 
 </div>
 
 <div class="right-container">
   <div class="mp-icons">
-    <h2>Technologies</h2>
+    <h3>Technologies</h3>
     @if (projectData.icons && projectData.icons.length) {
+
+
+    <div class="icon-row">
     @for (icon of projectData.icons; track icon) {
     <img [src]="icon.icon1" alt="icon" />
-    <img [src]="icon.icon2" alt="icon" />
-    <img [src]="icon.icon3" alt="icon" />
-    }
-    }
+    <!-- <img [src]="icon.icon2" alt="icon" />
+    <img [src]="icon.icon3" alt="icon" /> -->
 
-  </div>
-  @if (projectData.projectImage) {
-  <img [src]="projectData.projectImage" alt="{{ projectData.label }}" class="mp-img">
+    }
+    </div>
+ 
   }
 
-  <div class="mp-btn">
-    <button>
-      <img src="assets/img/contact_def.svg" alt="Contact me" class="contact-def-img">
-      <img src="assets/img/contact_hover.svg" alt="Contact me hover" class="contact-hover-img d-none">
-    </button>
-    <button>
-      <img src="assets/img/contact_def.svg" alt="Contact me" class="contact-def-img">
-      <img src="assets/img/contact_hover.svg" alt="Contact me hover" class="contact-hover-img d-none">
-    </button>
-  </div>
+</div>
+@if (projectData.projectImage) {
+<img [src]="projectData.projectImage" alt="{{ projectData.label }}" class="mp-img">
+}
+
+<div class="mp-btn">
+  <button>
+    <img src="assets/img/contact_def.svg" alt="Contact me" class="contact-def-img">
+    <img src="assets/img/contact_hover.svg" alt="Contact me hover" class="contact-hover-img d-none">
+  </button>
+  <button>
+    <img src="assets/img/contact_def.svg" alt="Contact me" class="contact-def-img">
+    <img src="assets/img/contact_hover.svg" alt="Contact me hover" class="contact-hover-img d-none">
+  </button>
+</div>
 </div>
