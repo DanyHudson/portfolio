@@ -54,7 +54,7 @@ export const myProjectTabs = [
             { icon: '../assets/icons/ts_icon.svg', alt: 'TypeScript logo' },
             { icon: '../assets/icons/fb_icon.svg', alt: 'Firebase logo' }
         ],
-        projectImage: '',
+        projectImage: '../assets/img/sharky_scrsh.jpg',
         linkLiveTest: '',
         linkGitHub: ''
     },

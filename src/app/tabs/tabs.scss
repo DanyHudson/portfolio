@@ -43,15 +43,17 @@
   font-weight: 700;
   font-size: 1.5em;
   line-height: 1.83em;
+  color: rgb(137, 188, 217);
   cursor: pointer;
-  // background-color: rgb(163, 179, 155);
   padding: 10px 30px;
   border-radius: 8px 8px 0 0;
 }
 
 .tab-label.active {
-  background: rgb(163, 179, 155);
+  background: rgba(137, 188, 217, 0.07);
   font-weight: bold;
+  color: white;
+  z-index: 1;
 }
 
 // .tab-body {
@@ -73,7 +75,9 @@
 }
 
 .tab-content.active {
-  background: rgb(163, 179, 155);
+  // background: rgb (137, 188, 217);
+  background: rgba(137, 188, 217, 0.07);
+  // background: #89bcd9;
   width: 100%;
  
 }

@@ -16,7 +16,7 @@
     @if (projectData.icons && projectData.icons.length) {
     <div class="icon-row">
       @for (icon of projectData.icons; track $index) {
-      <img [src]="icon.icon" alt="icon" />
+      <img [src]="icon.icon" [alt]="icon.alt" />
       }
     </div>
     }
