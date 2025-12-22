@@ -6,32 +6,29 @@ export const myProjectTabs = [
         label: 'DA Bubble',
         content: [
             {
-                headline: ' DA Bubble Headline 1',
+                headline: 'About the project',
                 text: `Content bullet 1 lorem ipsum dolor elit sed ut labore et dolore,
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 `,
             },
             {
-                headline: ' DA Bubble Headline 2',
+                headline: 'How I have organised my work process',
                 text: 'Content bullet 2 lorem ipsum dolor elit sed ut labore et dolore',
             },
             {
-                headline: ' DA Bubble Headline 3',
+                headline: 'My group work experience',
                 text: 'Content bullet 3 lorem ipsum dolor elit sed ut labore et dolore',
             }
         ],
 
         icons: [
-            {
-                icon1: 'src/assets/icons/html5.svg',
-                icon2: 'src/assets/icons/html5.svg',
-                icon3: 'src/assets/icons/html5.svg'
-            }
-            
-            
+            { icon: '../assets/icons/angular_icon.svg', alt: 'Angular logo' },
+            { icon: '../assets/icons/ts_icon.svg', alt: 'TypeScript logo' },
+            { icon: '../assets/icons/fb_icon.svg', alt: 'Firebase logo' }
         ],
-        projectImage: 'src/assets/icons/html5.svg',
+
+        projectImage: '../assets/img/da_bubble_scrsh.jpg',
         linkLiveTest: '',
         linkGitHub: ''
     },
@@ -52,7 +49,11 @@ export const myProjectTabs = [
             }
         ],
 
-        icons: '',
+         icons: [
+            { icon: '../assets/icons/angular_icon.svg', alt: 'Angular logo' },
+            { icon: '../assets/icons/ts_icon.svg', alt: 'TypeScript logo' },
+            { icon: '../assets/icons/fb_icon.svg', alt: 'Firebase logo' }
+        ],
         projectImage: '',
         linkLiveTest: '',
         linkGitHub: ''
@@ -74,12 +75,16 @@ export const myProjectTabs = [
             }
         ],
 
-        icons: '',
+         icons: [
+            { icon: '../assets/icons/angular_icon.svg', alt: 'Angular logo' },
+            { icon: '../assets/icons/ts_icon.svg', alt: 'TypeScript logo' },
+            { icon: '../assets/icons/fb_icon.svg', alt: 'Firebase logo' }
+        ],
         projectImage: '',
         linkLiveTest: '',
         linkGitHub: ''
     },
 
-   
+
 
 ]
