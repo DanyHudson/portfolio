@@ -12,9 +12,10 @@
 //   ));
 
 // }
+@use '../../styles.scss' as*;
 
 .tab-group, .tab-content, app-my-projects {
-  max-width: 1214px; // or your intended max width
+  max-width: 1214px; // or your intended max width 
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -29,7 +30,6 @@
 }
 
 
-
 .tab-header {
   width: 89%;
   display: flex;
@@ -39,8 +39,8 @@
 }
 
 .tab-label {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
+  // font-family: 'Montserrat', sans-serif;
+  // font-weight: 700;
   font-size: 1.5em;
   line-height: 1.83em;
   color: rgb(137, 188, 217);
@@ -83,8 +83,9 @@
 }
 
 .tab-content section {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
+  @include defaultFont($c:white, $fw:500);
+  // font-family: 'Montserrat', sans-serif;
+  // font-weight: 500;
   font-size: 1.2em;
   line-height: 1.83em;
   padding: 20px;

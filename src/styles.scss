@@ -1,5 +1,27 @@
 @use '@angular/material' as mat;
 
+/* Josefin Sans - 400 */  
+@font-face {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('assets/fonts/JosefinSans-Regular.ttf') format('truetype');
+}
+/* Josefin Sans - 500 */
+@font-face {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('assets/fonts/JosefinSans-Medium.ttf') format('truetype');
+}
+
+@mixin defaultFont($c:white, $fw:400) {
+    font-family: 'Josefin Sans', sans-serif;
+    color: $c;
+    font-weight: $fw;
+}
 
 * {
     margin: 0;
@@ -22,6 +44,7 @@ body {
     // background-color: #DDDDDE;
     color: white;
     overflow-x: hidden;
+    @include defaultFont($c:white, $fw:400);
 }
 
 app-page {
@@ -32,8 +55,9 @@ app-page {
     
 }
 h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+
+    // font-family: 'Montserrat', sans-serif;
+    // font-weight: 700;
     font-size: 2em;
     line-height: 2.44em;
     margin: 64px 0 32px 0;
@@ -63,3 +87,5 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   border-top-right-radius: 10px !important;
   border-top-left-radius: 10px !important;
 }
+
+

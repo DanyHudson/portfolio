@@ -1,3 +1,5 @@
+@use '../../styles.scss' as*;
+
 .left-container,
 .right-container {
     flex: 1 1 0;
@@ -56,8 +58,9 @@
         }
 
         h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
+            @include defaultFont($c:white, $fw:400);
+            // font-family: 'Montserrat', sans-serif;
+            // font-weight: 700;
             font-size: 1.2em;
             line-height: 1.5em;
             color: white;
@@ -67,7 +70,7 @@
 
     .project-paragraph {
         margin: 0 0 18px 34px; // left margin matches bullet+gap width
-        font-family: 'Open Sans', sans-serif;
+        // font-family: 'Open Sans', sans-serif;
         font-size: 1.1em;
         line-height: 1.75em;
         color: white;
