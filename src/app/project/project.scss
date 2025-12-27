@@ -7,6 +7,40 @@
 
 }
 
+.left-container {
+    .headline-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 4px; // space between headline and paragraph
+
+        .bullet-img {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+        }
+
+        h3 {
+            @include defaultFont($c:white, $fw:400);
+            // font-family: 'Montserrat', sans-serif;
+            // font-weight: 700;
+            font-size: 1.2em;
+            line-height: 1.5em;
+            color: white;
+            margin: 0;
+        }
+    }
+
+    .project-paragraph {
+        margin: 0 0 18px 34px; // left margin matches bullet+gap width
+        // font-family: 'Open Sans', sans-serif;
+        font-size: 1.1em;
+        line-height: 1.75em;
+        color: white;
+    }
+
+}
+
 .right-container,
 .mp-icons {
     display: flex;
@@ -43,38 +77,32 @@
     margin: 10px 0 30px 0;
 }
 
+.mp-btn {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 40px;
 
-.left-container {
-    .headline-row {
+    button {
+        background-color: transparent;
+        border: 2px solid white;
+        border-radius: 8px;
+        padding: 12px 24px;
+        font-size: 1em;
+        color: white;
+        cursor: pointer;
         display: flex;
         align-items: center;
-        gap: 10px;
-        margin-bottom: 4px; // space between headline and paragraph
+        gap: 8px;
 
-        .bullet-img {
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-def-img,
+        .contact-hover-img {
             width: 24px;
             height: 24px;
-            flex-shrink: 0;
-        }
-
-        h3 {
-            @include defaultFont($c:white, $fw:400);
-            // font-family: 'Montserrat', sans-serif;
-            // font-weight: 700;
-            font-size: 1.2em;
-            line-height: 1.5em;
-            color: white;
-            margin: 0;
         }
     }
-
-    .project-paragraph {
-        margin: 0 0 18px 34px; // left margin matches bullet+gap width
-        // font-family: 'Open Sans', sans-serif;
-        font-size: 1.1em;
-        line-height: 1.75em;
-        color: white;
-    }
-
 }
 
