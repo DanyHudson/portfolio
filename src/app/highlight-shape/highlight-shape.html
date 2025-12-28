@@ -1,8 +1,24 @@
-<section class="highlight-shape-container">
+<!-- <section class="highlight-shape-container">
   <p>I am currently learning <br>
     <img src="" alt=""> <img src="" alt="">
     <br>
     Show that you are motivated to continually improve your skills,
     implement innovative solutions and stay abreast of new technologies.
   </p>
+</section> -->
+
+<section class="highlight-shape-container">
+  <span class="claim">{{ claim }}</span>
+  <div class="reference">
+    @for (icon of icons; track icon) {
+      <img [src]="icon" alt="icon" />
+    }
+    @if (name) {
+      <span>{{ name }}</span>
+    }
+  </div>
+  <p class="text">{{ text }}</p>
+  @if (link) {
+    <a class="link" [href]="link" target="_blank">{{ linkLabel }}</a>
+  }
 </section>
