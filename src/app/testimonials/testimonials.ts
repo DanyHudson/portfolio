@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { HighlightShape } from '../highlight-shape/highlight-shape';
 
 @Component({
   selector: 'app-testimonials',
-  imports: [],
+  standalone: true,
+  imports: [HighlightShape],
   templateUrl: './testimonials.html',
-  styleUrl: './testimonials.scss',
+  styleUrls: ['./testimonials.scss'],
 })
 export class Testimonials {
 

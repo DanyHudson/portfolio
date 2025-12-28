@@ -1,0 +1,18 @@
+ @use '../../styles.scss' as*;
+ 
+ h3 {
+    @include defaultFont($c:rgb(137, 188, 217), $fw:400);
+    font-size: 1.7em;
+    text-align: center;
+    margin: 32px 0 32px 0;
+ }
+
+ .section-content {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 32px;
+    // width: 86%;
+    max-width: 860px;
+    margin: 0 auto;
+ }
