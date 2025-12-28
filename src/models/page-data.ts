@@ -33,23 +33,28 @@ export const myProjectTabs = [
         linkGitHub: ''
     },
     {
-        label: 'sharky',
+        label: 'Sharky',
         content: [
             {
-                headline: 'sharky Headline 1',
-                text: 'Content bullet 1 lorem ipsum dolor elit sed ut labore et dolore',
+                headline: 'About the project',
+                text: `Content bullet 1 lorem ipsum dolor elit sed ut labore et dolore,
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                `,
             },
             {
-                headline: 'sharky Headline 2',
+                headline: 'How I have organised my work process',
                 text: 'Content bullet 2 lorem ipsum dolor elit sed ut labore et dolore',
             },
             {
-                headline: 'sharky Headline 3',
-                text: 'Content bullet 3 lorem ipsum dolor elit sed ut labore et dolore',
+                headline: 'What I have learned',
+                text: `As someone who is always trying to learn new technologies, 
+                you may have enjoyed working on this project because it allowed you to delve deep into a particular technology. 
+                Give details, such as the name of the framework or language you mean.`,
             }
         ],
 
-         icons: [
+        icons: [
             { icon: '../assets/icons/angular_icon.svg', alt: 'Angular logo' },
             { icon: '../assets/icons/ts_icon.svg', alt: 'TypeScript logo' },
             { icon: '../assets/icons/fb_icon.svg', alt: 'Firebase logo' }
@@ -59,28 +64,31 @@ export const myProjectTabs = [
         linkGitHub: ''
     },
     {
-        label: 'Join',
+           label: 'Join',
         content: [
             {
-                headline: 'Join Headline 1',
-                text: 'Content bullet 1 lorem ipsum dolor elit sed ut labore et dolore',
+                headline: 'About the project',
+                text: `Content bullet 1 lorem ipsum dolor elit sed ut labore et dolore,
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                `,
             },
             {
-                headline: 'Join Headline 2',
+                headline: 'How I have organised my work process',
                 text: 'Content bullet 2 lorem ipsum dolor elit sed ut labore et dolore',
             },
             {
-                headline: 'Join Headline 3',
+                headline: 'My group work experience',
                 text: 'Content bullet 3 lorem ipsum dolor elit sed ut labore et dolore',
             }
         ],
 
-         icons: [
+        icons: [
             { icon: '../assets/icons/angular_icon.svg', alt: 'Angular logo' },
             { icon: '../assets/icons/ts_icon.svg', alt: 'TypeScript logo' },
             { icon: '../assets/icons/fb_icon.svg', alt: 'Firebase logo' }
         ],
-        projectImage: '',
+        projectImage: '../assets/img/join_scrsh.jpg',
         linkLiveTest: '',
         linkGitHub: ''
     },
