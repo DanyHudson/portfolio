@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-highlight-shape',
@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './highlight-shape.scss',
 })
 export class HighlightShape {
-
+  @Input() claim: string = '';
+  @Input() reference: string[] | string = '';
+  @Input() text: string = '';
+  @Input() link: string = '';
+  @Input() linkLabel: string = '';
+  Array = Array;
 }

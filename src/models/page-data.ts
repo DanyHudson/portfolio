@@ -1,6 +1,45 @@
 
-export const aboutMe = {}
-export const skills = [];
+export const aboutMe = [];
+export const skills = [
+    {
+        skillIcons: [
+            {
+                icon: '../assets/icons/html_icon.svg',
+                alt: 'HTML5 logo',
+                skill: 'HTML5',
+            },
+            {
+                icon: '../assets/icons/html_icon.svg',
+                alt: 'SCSS logo',
+                skill: 'SCSS',
+            },
+            {
+                icon: '../assets/icons/html_icon.svg',
+                alt: 'TypeScript logo',
+                skill: 'TypeScript',
+            },
+            {
+                icon: '../assets/icons/html_icon.svg',
+                alt: 'Angular logo',
+                skill: 'Angular',
+            },
+        ],
+
+        learning: [
+            {
+                claim: 'I am currently learning:',
+                reference: [
+                    '../assets/icons/react_icon.svg',
+                    '../assets/icons/react_icon.svg',
+                ],
+                text: `Show that you are motivated to continually improve your skills, 
+                        implement innovative solutions and stay abreast of new technologies.`,
+                link: '',
+                linkLabel: ''
+            }
+        ]
+    }
+];
 export const myProjectTabs = [
     {
         label: 'DA Bubble',
@@ -64,7 +103,7 @@ export const myProjectTabs = [
         linkGitHub: ''
     },
     {
-           label: 'Join',
+        label: 'Join',
         content: [
             {
                 headline: 'About the project',
@@ -93,6 +132,27 @@ export const myProjectTabs = [
         linkGitHub: ''
     },
 
-
-
-]
+];
+export const testimonials = [
+    {
+        claim: 'Name Name',
+        reference: 'Icon or Reference to project',
+        text: 'Working with you was a pleasure. You always brought creative solutions to the table.',
+        link: 'https://linkedin.com/in/janedoe',
+        linkLabel: 'View LinkedIn'
+    },
+    {
+        claim: 'Name Name',
+        reference: 'Icon or Reference to project',
+        text: 'Working with you was a pleasure. You always brought creative solutions to the table.',
+        link: 'https://linkedin.com/in/janedoe',
+        linkLabel: 'View LinkedIn'
+    },
+    {
+        claim: 'Name Name',
+        reference: 'Icon or Reference to project',
+        text: 'Working with you was a pleasure. You always brought creative solutions to the table.',
+        link: 'https://linkedin.com/in/janedoe',
+        linkLabel: 'View LinkedIn'
+    },
+];

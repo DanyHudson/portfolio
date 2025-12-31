@@ -17,12 +17,7 @@ import { myProjectTabs } from '../../models/page-data';
 export class Tabs {
   project = Project;
   tabs = myProjectTabs;
-
-  // tabs = [
-    
-  // ];
   activeLink = this.tabs[0];
-  // @Input() bodyClass: string | string[];
   activeTabIndex = 0;
 
 

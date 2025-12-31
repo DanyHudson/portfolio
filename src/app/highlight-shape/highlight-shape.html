@@ -10,15 +10,17 @@
 <section class="highlight-shape-container">
   <span class="claim">{{ claim }}</span>
   <div class="reference">
-    @for (icon of icons; track icon) {
-      <img [src]="icon" alt="icon" />
+    @if (reference && reference.length && Array.isArray(reference)) {
+    @for (icon of reference; let i = $index; track i) {
+    <img [src]="icon" alt="icon" />
     }
-    @if (name) {
-      <span>{{ name }}</span>
+    }
+    @if (reference && !Array.isArray(reference)) {
+    <span>{{ reference }}</span>
     }
   </div>
   <p class="text">{{ text }}</p>
   @if (link) {
-    <a class="link" [href]="link" target="_blank">{{ linkLabel }}</a>
+  <a class="link" [href]="link" target="_blank">{{ linkLabel }}</a>
   }
 </section>

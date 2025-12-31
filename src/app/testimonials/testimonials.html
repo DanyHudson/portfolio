@@ -1,6 +1,18 @@
+<!-- 
+    <app-highlight-shape></app-highlight-shape>
+    <app-highlight-shape></app-highlight-shape>
+    <app-highlight-shape></app-highlight-shape>
+ -->
+
 <h3>Need a teamplayer? Here's what my colleagues said about me</h3>
 <section class="section-content">
-    <app-highlight-shape></app-highlight-shape>
-    <app-highlight-shape></app-highlight-shape>
-    <app-highlight-shape></app-highlight-shape>
+@for (testimonial of testimonials; track testimonial) {
+  <app-highlight-shape
+    [claim]="testimonial.claim"
+    [reference]="testimonial.reference"
+    [text]="testimonial.text"
+    [link]="testimonial.link"
+    [linkLabel]="testimonial.linkLabel">
+  </app-highlight-shape>
+}
 </section>

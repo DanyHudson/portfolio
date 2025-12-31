@@ -14,14 +14,20 @@
         <img src="" alt="">
         <img src="" alt="">
     </div>
-    
+
     <div class="right-container">
         <!-- <p>I am currently learning <br>
             <img src="" alt=""> <img src="" alt="">
             <br>
             Show that you are motivated to continually improve your skills,
             implement innovative solutions and stay abreast of new technologies. -->
-            <app-highlight-shape></app-highlight-shape>
+        <app-highlight-shape
+            [claim]="learning[0].claim"
+            [reference]="learning[0].reference"
+            [text]="learning[0].text"
+            [link]="learning[0].link"
+            [linkLabel]="learning[0].linkLabel">
+        </app-highlight-shape>
         <!-- </p> -->
     </div>
 </section>
