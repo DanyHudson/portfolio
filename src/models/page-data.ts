@@ -1,5 +1,12 @@
 
-export const aboutMe = [];
+export const aboutMe = [
+    `
+    Why are you passionate about coding?  
+    You can include some key traits like: analytical thinking, creativity, persistence and  collaboration.
+    A problem-solving mindset is always nice to have.
+    `
+];
+
 export const skills = [
     {
         skillIcons: [
@@ -40,6 +47,7 @@ export const skills = [
         ]
     }
 ];
+
 export const myProjectTabs = [
     {
         label: 'DA Bubble',
@@ -71,6 +79,7 @@ export const myProjectTabs = [
         linkLiveTest: '',
         linkGitHub: ''
     },
+
     {
         label: 'Sharky',
         content: [
@@ -102,6 +111,7 @@ export const myProjectTabs = [
         linkLiveTest: '',
         linkGitHub: ''
     },
+
     {
         label: 'Join',
         content: [
@@ -133,26 +143,36 @@ export const myProjectTabs = [
     },
 
 ];
+
 export const testimonials = [
     {
-        claim: 'Name Name',
+        claim: 'Max Mustermann',
         reference: 'Icon or Reference to project',
         text: 'Working with you was a pleasure. You always brought creative solutions to the table.',
         link: 'https://linkedin.com/in/janedoe',
         linkLabel: 'View LinkedIn'
     },
     {
-        claim: 'Name Name',
+        claim: 'Tina Tester',
         reference: 'Icon or Reference to project',
         text: 'Working with you was a pleasure. You always brought creative solutions to the table.',
         link: 'https://linkedin.com/in/janedoe',
         linkLabel: 'View LinkedIn'
     },
     {
-        claim: 'Name Name',
+        claim: 'Eugenia Example',
         reference: 'Icon or Reference to project',
         text: 'Working with you was a pleasure. You always brought creative solutions to the table.',
         link: 'https://linkedin.com/in/janedoe',
         linkLabel: 'View LinkedIn'
+    },
+];
+
+export const contactInfo = [
+    {
+    text: ` I am open to new opportunities and collaborations. 
+            Feel free to reach out to me via the contact form or connect with me on LinkedIn.`,
+    email: 'mailto:hudson.developer@gmail.com',
+    tel: '0157 123 456 68'
     },
 ];

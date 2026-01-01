@@ -2,21 +2,17 @@
 <section class="section-content">
 
     <p class="left-container">
-        Encourage people to contact you and describe what role you are interested in. Show that you will add value to
-        their projects through your work.
-        Example: Feel free to get in touch with job offers or opportunities such as: ...
+        {{ contact.text }}
     </p>
 
-    <div class="right-container">
-        <p class="">
-            E-mail: fohrer.developer@gmail.com <br>
-            <br>Tel: 0157 123 456 68
-        </p>
-    </div>
-
-    <div class="contact-form">
-        <app-contact-form></app-contact-form>
-    </div>
-
+    <p class="right-container">
+        <span class=""><img src="../../assets/icons/icon _email.svg" alt="email"> {{ contact.email }} </span>
+        <!-- <span class=""> Tel: 0157 123 456 68</span> -->
+        <span class=""><img src="../../assets/icons/icon _phone.svg" alt="phone"> {{ contact.tel }} </span>
+    </p>
 
 </section>
+
+<div class="contact-form">
+    <app-contact-form></app-contact-form>
+</div>

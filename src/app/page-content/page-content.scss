@@ -7,8 +7,8 @@
 // }
 
 
-app-about-me, app-my-skills, app-my-projects {
-    @include defaultFont($c:white, $fw:400);
+app-about-me, app-my-skills, app-my-projects, app-testimonials, app-contact {
+    @include defaultFont($c:rgb(137, 188, 217), $fw:400);
     display: flex;
     flex-direction: column;
     align-items: center;
