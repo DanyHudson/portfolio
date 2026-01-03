@@ -1,9 +1,11 @@
+@use '../../styles.scss' as *;
+
 .contact-form-container {
     margin-top: 48px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 16px;
+    // align-items: center;
+    gap: 8px;
     width: 100%;
     max-width: 860px;
 }
@@ -53,9 +55,9 @@
 
 label {
     margin-bottom: 6px;
-    margin-left: 12px; // slight shift from the left edge
+    margin-left: 24px; // slight shift from the left edge
     font-size: 1em;
-    color: #fff; // or your preferred color
+    color: rgb(137, 188, 217); // or your preferred color
 }
 
 input,
@@ -63,5 +65,49 @@ textarea {
     width: 100%;
     // border-radius: 8px;
     padding: 10px;
+    font-size: 0.7em;
+}
+
+.privacy-policy {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 0.8em;
+    color: white;
+    width: 100%;
+    max-width: 860px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    input  {
+        width: 16px;
+        height: 16px;
+        margin-right: 6px;
+        // background-image: url(/src/assets/img/checkbox.svg);
+    }
+
+    // img {
+    //     width: 16px;
+    //     height: 16px;
+    //     margin: 0 4px;
+    //     // vertical-align: middle;
+    // }
+
+    span {
+        color: rgb(137, 188, 217);
+        cursor: pointer;
+        // display: flex;
+    }
+}
+
+.submit-btn {
+    @include defaultFont($c: white, $fw: 400);
+    border: 2px solid rgb(137, 188, 217);
+    border-radius: 50vw;
+    padding: 12px 24px;
     font-size: 1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
