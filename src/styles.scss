@@ -23,6 +23,21 @@
     font-weight: $fw;
 }
 
+/* Anta-Regular - 400 */  
+@font-face {
+    font-family: 'Anta-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('assets/fonts/Anta-Regular.ttf') format('truetype');
+}
+
+@mixin headingFont($c:rgb(137, 188, 217), $fw:400) {
+    font-family: 'Anta-Regular', sans-serif;
+    color: $c;
+    font-weight: $fw;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -54,10 +69,8 @@ app-page {
     width: 100%;
 }
 
-h2 {
-
-    // font-family: 'Montserrat', sans-serif;
-    // font-weight: 700;
+h2, h1 {
+    @include headingFont($c:rgb(137, 188, 217), $fw:400);
     font-size: 2em;
     line-height: 2.44em;
     margin: 64px 0 32px 0;
@@ -66,10 +79,13 @@ h2 {
 .d-none {
     display: none;
 }
+
 html, body { height: 100%; }
+
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 html, body { height: 100%; }
+
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 // .custom-label-class {
