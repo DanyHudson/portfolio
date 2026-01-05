@@ -4,22 +4,17 @@
     justify-content: center;
     width: 86%;
     max-width: 860px;
-    //   margin: 0 auto 32px auto;
     position: relative;
 
     button {
-        background: none;
-        border: none;
         position: absolute;
         top: 80px;
         left: 896px;
-        // right: 0;
         cursor: pointer;
     }
 }
 
 .section-content {
-    // position: relative;
     display: flex;
     justify-content: center;
     align-items: stretch;
@@ -29,16 +24,11 @@
     margin: 0 auto;
 }
 
-// p.left-container {
-//     text-align: center;
-// }
-
 .left-container,
 .right-container {
     flex: 1 1 0;
     display: flex;
     flex-direction: column;
-    // justify-content: center;
     color: white;
 }
 
@@ -76,24 +66,14 @@ app-contact-form,
 
 }
 
-// .arrow-up-btn {
-//     position: absolute;
-//     top: 0;
-//     left: 860px;
-//     background: none;
-//     border: none;
-//     cursor: pointer;
-//     // margin-top: 64px;
-//     // margin-left: 24px;
-// }
+.arrow-up-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
 
-// .arrow-up-btn {
-//     background: none;
-//     border: none;
-//     cursor: pointer;
-//     // margin-top: 120px;
-// }
-
-.arrow-up-btn:hover .arrow-up-img {
-    display: none;
+    &:hover {
+        background-color: rgba(137, 188, 217, 0.3);
+        border-radius: 50vw;
+    }
 }
+
