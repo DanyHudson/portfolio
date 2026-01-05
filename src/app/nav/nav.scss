@@ -1,6 +1,9 @@
 @use '../../styles.scss' as*;
 
-section.nav-bar {
+.nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
     display: flex;
     justify-content: space-between;
     gap: 2rem;
@@ -12,7 +15,7 @@ section.nav-bar {
         text-decoration: none;
         font-size: 20px;
         line-height: 24px;
-        cursor: pointer;    
+        cursor: pointer;
         @include defaultFont($c: rgba(38, 46, 52, 1), $fw: 500);
 
         &:hover {
