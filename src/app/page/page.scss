@@ -9,6 +9,7 @@
     max-width: 1440px;
     background-color: rgba(38, 46, 52, 1);
 }
+
 main {
     width: 100%;
 }
@@ -16,6 +17,29 @@ main {
 app-landing-page {
     display: flex;
     width: 100%;
+}
+
+app-nav {
+    // position: sticky;
+    // top: 0;
+    // z-index: 1;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background: rgba(137, 188, 217, 1);
+    height: 104px;
+    padding: 8px 109px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer {
