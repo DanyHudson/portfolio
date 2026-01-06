@@ -58,8 +58,9 @@ body {
     // height: 100%;
     // background-color: #DDDDDE;
     color: white;
-    // overflow-x: hidden;
+    overflow-x: hidden;
     @include defaultFont($c:white, $fw:400);
+    // overscroll-behavior-y: contain; 
 }
 
 app-page {

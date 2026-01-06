@@ -9,9 +9,18 @@
             <h1 class="lp-title">Daniela Hudson</h1>
             <p class="lp-subtitle">FRONTEND DEVELOPER</p>
 
-            <a href="#aboutMe" class="arrow-down-btn" >
+            <!-- <a href="#startPoint" class="arrow-down-btn" >
                 <img src="assets/img/arrow_down.svg" alt="Arrow down" class="arrow-down-img">
+            </a> -->
+
+            <!-- <a href="#startPoint" (click)="scrollToStartPoint()" class="arrow-down-btn">
+                <img src="assets/img/arrow_down.svg" alt="Arrow down" class="arrow-down-img">
+            </a> -->
+
+            <a #arrowDownBtn class="arrow-down-btn" (click)="onBounceScroll('startPoint', $event)">
+                <img src="assets/img/arrow_down.svg" alt="Arrow down" />
             </a>
+
 
             <!-- <button class="arrow-down-btn" #aboutMe>
                 <img src="assets/img/arrow_down.svg" alt="Arrow down" class="arrow-down-img">
