@@ -70,7 +70,14 @@ app-page {
     width: 100%;
 }
 
-h2, h1 {
+h1 {
+    @include headingFont($c:white, $fw:400);
+    // font-size: 2em;
+    // line-height: 2.44em;
+    margin: 64px 0 32px 0;
+}
+
+h2 {
     @include headingFont($c:rgb(137, 188, 217), $fw:400);
     font-size: 2em;
     line-height: 2.44em;
