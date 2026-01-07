@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 // import { Nav } from '../nav/nav';
+import { SocMed } from '../soc-med/soc-med';
 
 @Component({
   selector: 'app-landing-page',
-  imports: [],
+  imports: [SocMed],
   templateUrl: './landing-page.html',
   styleUrl: './landing-page.scss',
 })
