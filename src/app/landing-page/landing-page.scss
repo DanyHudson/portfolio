@@ -12,7 +12,7 @@
  .persona {
      display: flex;
      justify-content: center;
-    //  gap: 80px;
+     //  gap: 80px;
      align-items: center;
      width: 1214px;
  }
@@ -76,7 +76,14 @@
      }
  }
 
-app-soc-med {
-    // position: absolute;
-    position: relative;
-}
+ app-soc-med {
+     // position: absolute;
+     position: relative;
+
+     div {
+         flex-direction: column;
+         gap: 12px;
+         top: 56px;
+         left: 480px;
+     }
+ }
