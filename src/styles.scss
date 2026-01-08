@@ -81,11 +81,15 @@ h2 {
     @include headingFont($c:rgb(137, 188, 217), $fw:400);
     font-size: 2em;
     line-height: 2.44em;
-    margin: 64px 0 32px 0;
+    // margin: 64px 0 32px 0;
 }
 
 .d-none {
     display: none;
+}
+
+.achor-point {
+    height: 168px;
 }
 
 
