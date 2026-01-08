@@ -1,0 +1,22 @@
+ @use '../../styles.scss' as*;
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 32px 0;
+    width: 100%;
+}
+
+.legal-notice {
+    @include defaultFont($c: rgba(38, 46, 52, 1), $fw: 400);
+    font-size: 14px;
+
+
+    line-height: 20px;
+}
+
+app-soc-med {
+    position: absolute;
+}
