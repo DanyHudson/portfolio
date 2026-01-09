@@ -17,6 +17,6 @@
      line-height: 20px;
  }
 
- .soc-med-container {
-     @include socMedPosition($p: static, $t: auto, $l: auto, $fd: row, $gap: 24px);
- }
+//  .soc-med-container app-soc-med ::ng-deep .soc-med {
+//      @include socMedPosition($p: absolute, $t: 56px, $l: 480px, $fd: column, $gap: 12px);
+//  }

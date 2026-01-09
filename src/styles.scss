@@ -38,13 +38,13 @@
     font-weight: $fw;
 }
 
-@mixin socMedPosition($p:absolute, $t:56px, $l:480px, $fd:column, $gap:12px) {
-    position: $p;
-    top: $t;
-    left: $l;
-    flex-direction: $fd;
-    gap: $gap;
-}
+// @mixin socMedPosition($p:absolute, $t:56px, $l:480px, $fd:column, $gap:12px) {
+//     position: $p;
+//     top: $t;
+//     left: $l;
+//     flex-direction: $fd;
+//     gap: $gap;
+// }
 
 * {
     margin: 0;

@@ -1,4 +1,4 @@
-<div class="soc-med">
+<!-- <div class="soc-med">
     <a mailto="BxPbM@example.com">
         <img src="../../assets/img/email_button.svg" alt="Email">
     </a>
@@ -7,5 +7,19 @@
     </a>
     <a href="https://www.linkedin.com/in/daniela-hudson/" target="_blank" rel="noopener noreferrer">
         <img src="../../assets/img/linkedin_button.svg" alt="LinkedIn">
+    </a>
+</div> -->
+
+<div class="soc-med">
+    <a href="mailto:BxPbM@example.com">
+        <img [src]="theme === 'dark' ? 'assets/img/email_button_dark.svg' : 'assets/img/email_button.svg'" alt="Email">
+    </a>
+    <a href="https://github.com/daniela-hudson" target="_blank" rel="noopener noreferrer">
+        <img [src]="theme === 'dark' ? 'assets/img/github_button_dark.svg' : 'assets/img/github_button.svg'"
+            alt="GitHub">
+    </a>
+    <a href="https://www.linkedin.com/in/daniela-hudson/" target="_blank" rel="noopener noreferrer">
+        <img [src]="theme === 'dark' ? 'assets/img/linkedin_button_dark.svg' : 'assets/img/linkedin_button.svg'"
+            alt="LinkedIn">
     </a>
 </div>

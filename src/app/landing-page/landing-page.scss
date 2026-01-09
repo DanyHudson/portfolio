@@ -7,6 +7,7 @@
      width: 100%;
      // gap: 80px;
      padding: 0;
+     position: relative;
  }
 
  .persona {
@@ -76,12 +77,27 @@
      }
  }
 
-//  app-soc-med {
-//      // position: absolute;
-//      position: relative;
+ .soc-med-container {
+     position: absolute;
+     top: 56px;
+     right: 96px;
 
-//  }
-
-app-soc-med.soc-med {
-     @include socMedPosition($p: absolute, $t: 56px, $l: 480px, $fd: column, $gap: 12px);
+     app-soc-med ::ng-deep .soc-med {
+         flex-direction: column;
+         gap: 12px;
+     }
  }
+
+
+
+ //  @mixin socMedPosition($p: absolute, $t: 56px, $l: 480px, $fd: column, $gap: 12px) {
+ //      position: $p;
+ //      top: $t;
+ //      left: $l;
+ //      flex-direction: $fd;
+ //      gap: $gap;
+ //  }
+
+ //  .soc-med-container app-soc-med ::ng-deep .soc-med {
+ //      @include socMedPosition($p: absolute, $t: 56px, $l: 700px, $fd: column, $gap: 12px);
+ //  }

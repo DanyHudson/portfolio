@@ -1,5 +1,5 @@
 <section class="lp-content">
-    <div class="soc-med-container"><app-soc-med></app-soc-med></div>
+    <div class="soc-med-container"><app-soc-med theme="dark"></app-soc-med></div>
     <div class="persona" id="persona">
         <div class="lp-img-box">
             <img class="hero-img-bg" src="assets/img/BG_shape.png" alt="landing page image">
@@ -10,26 +10,10 @@
             <h1 class="lp-title">Daniela Hudson</h1>
             <p class="lp-subtitle">FRONTEND DEVELOPER</p>
 
-            <!-- <a href="#startPoint" class="arrow-down-btn" >
-                <img src="assets/img/arrow_down.svg" alt="Arrow down" class="arrow-down-img">
-            </a> -->
-
-            <!-- <a href="#startPoint" (click)="scrollToStartPoint()" class="arrow-down-btn">
-                <img src="assets/img/arrow_down.svg" alt="Arrow down" class="arrow-down-img">
-            </a> -->
-
             <a #arrowDownBtn class="arrow-down-btn" (click)="onBounceScroll('startPoint', $event)">
                 <img src="assets/img/arrow_down.svg" alt="Arrow down" />
             </a>
 
-
-            <!-- <button class="arrow-down-btn" #aboutMe>
-                <img src="assets/img/arrow_down.svg" alt="Arrow down" class="arrow-down-img">
-            </button> -->
         </section>
     </div>
-    <!-- <nav>
-        <app-nav></app-nav>
-    </nav> -->
-
 </section>
