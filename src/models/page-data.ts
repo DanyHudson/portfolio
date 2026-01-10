@@ -11,7 +11,7 @@ export const skills = [
     {
         skillIcons: [
             {
-                icon: '../assets/icons/html_icon.svg',
+                icon: 'assets/img/html_icon.svg',
                 alt: 'HTML5 logo',
                 skill: 'HTML5',
             },
