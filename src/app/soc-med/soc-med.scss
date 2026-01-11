@@ -1,15 +1,46 @@
  @use '../../styles.scss' as*;
 
-.soc-med {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 99;
-    gap: 12px;
+ @mixin bgImgFit() {
+     background-repeat: no-repeat;
+    //  object-fit: cover;
+    //  background-position: center;
+ }
 
-    a {
-        cursor: pointer;
-        text-decoration: none;
-    }
+ .soc-med {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     z-index: 99;
+     gap: 12px;
 
-}
+     a {
+         cursor: pointer;
+         text-decoration: none;
+
+        
+     }
+
+     a.email-link:hover {
+         background-image: url(../../assets/img/email_button_hover.svg);
+         // background-repeat: no-repeat;
+         // object-fit: cover;
+         @include bgImgFit();
+
+        
+     }
+
+     a.github-link:hover {
+         background-image: url(../../assets/img/github_button_hover.svg);
+         // background-repeat: no-repeat;  
+         // object-fit: cover;
+         @include bgImgFit();
+     }
+
+     a.linkedin-link:hover {
+         background-image: url(../../assets/img/linkedin_button_hover.svg);
+         // background-repeat: no-repeat;
+         // object-fit: cover;
+         @include bgImgFit();
+     }
+
+ }
