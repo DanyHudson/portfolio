@@ -11,25 +11,58 @@ export const skills = [
     {
         skillIcons: [
             {
-                icon: 'assets/img/html_icon.svg',
+                icon: 'assets/icons/html_icon.svg',
                 alt: 'HTML5 logo',
                 skill: 'HTML5',
             },
             {
-                icon: '../assets/icons/html_icon.svg',
+                icon: 'assets/icons/css_icon.svg',
                 alt: 'SCSS logo',
-                skill: 'SCSS',
+                skill: 'CSS',
             },
             {
-                icon: '../assets/icons/html_icon.svg',
+                icon: 'assets/icons/js_icon.svg',
+                alt: 'JavaScript logo',
+                skill: 'JavaScript',
+            },
+            {
+                icon: 'assets/icons/ts_icon.svg',
                 alt: 'TypeScript logo',
                 skill: 'TypeScript',
             },
             {
-                icon: '../assets/icons/html_icon.svg',
+                icon: 'assets/icons/ang_icon.svg',
                 alt: 'Angular logo',
                 skill: 'Angular',
             },
+            {
+                icon: 'assets/icons/fb_icon.svg',
+                alt: 'Angular logo',
+                skill: 'Firebbnase',
+            },
+            {
+                icon: 'assets/icons/md_icon.svg',
+                alt: 'Angular logo',
+                skill: 'Material Design',
+            },
+            {
+                icon: 'assets/icons/ai_CC_icon.svg',
+                alt: 'Angular logo',
+                skill: 'Material Design',
+            },
+            {
+                icon: 'assets/icons/ps_CC_icon.svg',
+                alt: 'Angular logo',
+                skill: 'Material Design',
+            },
+            {
+                icon: 'assets/icons/ac_CC_icon.svg',
+                alt: 'Angular logo',
+                skill: 'Material Design',
+            },
+
+
+
         ],
 
         learning: [
@@ -70,9 +103,9 @@ export const myProjectTabs = [
         ],
 
         icons: [
-            { icon: '../assets/icons/angular_icon.svg', alt: 'Angular logo' },
-            { icon: '../assets/icons/ts_icon.svg', alt: 'TypeScript logo' },
-            { icon: '../assets/icons/fb_icon.svg', alt: 'Firebase logo' }
+            { icon: 'assets/icons/ang_icon.svg', alt: 'Angular logo' },
+            { icon: 'assets/icons/ts_icon.svg', alt: 'TypeScript logo' },
+            { icon: 'assets/icons/fb_icon.svg', alt: 'Firebase logo' }
         ],
 
         projectImage: '../assets/img/da_bubble_scrsh.jpg',
