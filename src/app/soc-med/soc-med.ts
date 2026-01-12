@@ -7,5 +7,9 @@ import { Component, Input } from '@angular/core';
   styleUrl: './soc-med.scss',
 })
 export class SocMed {
+  isEmailHover = false;
+  isGithubHover = false;
+  isLinkedinHover = false;
+
   @Input() theme: 'light' | 'dark' = 'light';
 }

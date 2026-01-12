@@ -2,8 +2,8 @@
 
  @mixin bgImgFit() {
      background-repeat: no-repeat;
-    //  object-fit: cover;
-    //  background-position: center;
+     //  object-fit: cover;
+     //  background-position: center;
  }
 
  .soc-med {
@@ -17,7 +17,7 @@
          cursor: pointer;
          text-decoration: none;
 
-        
+
      }
 
      a.email-link:hover {
@@ -26,7 +26,6 @@
          // object-fit: cover;
          @include bgImgFit();
 
-        
      }
 
      a.github-link:hover {
