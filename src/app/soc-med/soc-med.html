@@ -1,97 +1,33 @@
-<!-- <div class="soc-med">
-    <a mailto="BxPbM@example.com" class="email-link">
-        <img src="../../assets/img/email_button.svg" alt="Email">
-        
-    </a>
-    <a href="https://github.com/daniela-hudson" target="_blank" rel="noopener noreferrer" class="github-link">
-        <img src="../../assets/img/github_button.svg" alt="GitHub">
-    </a>
-    <a href="https://www.linkedin.com/in/daniela-hudson/" target="_blank" rel="noopener noreferrer" class="linkedin-link">
-        <img src="../../assets/img/linkedin_button.svg" alt="LinkedIn">
-    </a>
-</div> -->
-
-
-<!-- <a href="mailto:BxPbM@example.com" class="email-link"
-        (mouseenter)="isEmailHover = true"
-        (mouseleave)="isEmailHover = false">
-        <img [src]="theme === 'dark' ? '../../assets/img/email_button_dark.svg' : '../../assets/img/email_button.svg'"
-            alt="Email">
-    </a>
-    <a href="https://github.com/DanyHudson" target="_blank" rel="noopener noreferrer" class="github-link"
-        (mouseenter)="isGithubHover = true"
-        (mouseleave)="isGithubHover = false">
-        <img [src]="theme === 'dark' ? '../../assets/img/github_button_dark.svg' : '../../assets/img/github_button.svg'"
-            alt="GitHub">
-    </a>
-    <a href="https://www.linkedin.com/in/daniela-hudson/" target="_blank" rel="noopener noreferrer"
-        class="linkedin-link"
-        (mouseenter)="isLinkedinHover = true"
-        (mouseleave)="isLinkedinHover = false">
-        <img [src]="theme === 'dark' ? '../../assets/img/linkedin_button_dark.svg' : '../../assets/img/linkedin_button.svg'"
-            alt="LinkedIn">
-    </a> -->
-
-
-<!-- <div class="soc-med">
+<div class="soc-med">
     <a href="mailto:BxPbM@example.com" class="email-link" (mouseenter)="isEmailHover = true"
         (mouseleave)="isEmailHover = false">
-        <img [src]="isEmailHover ? '../../assets/img/email_button_hover.svg' : (theme === 'dark' ? '../../assets/img/email_button_dark.svg' : '../../assets/img/email_button.svg')"
-            alt="Email">
-    </a>
-    <a href="https://github.com/DanyHudson" target="_blank" rel="noopener noreferrer" class="github-link"
-        (mouseenter)="isGithubHover = true" (mouseleave)="isGithubHover = false">
-        <img [src]="isGithubHover ? '../../assets/img/github_button_hover.svg' : (theme === 'dark' ? '../../assets/img/github_button_dark.svg' : '../../assets/img/github_button.svg')"
-            alt="GitHub">
-    </a>
-    <a href="https://www.linkedin.com/in/daniela-hudson/" target="_blank" rel="noopener noreferrer"
-        class="linkedin-link" (mouseenter)="isLinkedinHover = true" (mouseleave)="isLinkedinHover = false">
-        <img [src]="isLinkedinHover ? '../../assets/img/linkedin_button_hover.svg' : (theme === 'dark' ? '../../assets/img/linkedin_button_dark.svg' : '../../assets/img/linkedin_button.svg')"
-            alt="LinkedIn">
-    </a>
-</div> -->
-
-
-
-<!-- theme light= helle darstellung der icons, theme dark = dunkle -->
-<div class="soc-med">
-<a href="mailto:BxPbM@example.com" class="email-link"
-   (mouseenter)="isEmailHover = true"
-   (mouseleave)="isEmailHover = false">
-  <img [src]="isEmailHover
+        <img [src]="isEmailHover
       ? (theme === 'dark'  
           ? '../../assets/img/email_dark_hover.svg'
           : '../../assets/img/email_button_hover.svg')
       : (theme === 'light'
           ? '../../assets/img/email_button.svg'
-          : '../../assets/img/email_button_dark.svg')"  
-      alt="Email">
-</a>
-<a href="https://github.com/DanyHudson" target="_blank" rel="noopener noreferrer" class="github-link"
-   (mouseenter)="isGithubHover = true"
-   (mouseleave)="isGithubHover = false">
-  <img [src]="isGithubHover
+          : '../../assets/img/email_button_dark.svg')" alt="Email">
+    </a>
+    <a href="https://github.com/DanyHudson" target="_blank" rel="noopener noreferrer" class="github-link"
+        (mouseenter)="isGithubHover = true" (mouseleave)="isGithubHover = false">
+        <img [src]="isGithubHover
       ? (theme === 'dark'  
           ? '../../assets/img/github_dark_hover.svg'
           : '../../assets/img/github_button_hover.svg')
       : (theme === 'light'
           ? '../../assets/img/github_button.svg'
-          : '../../assets/img/github_button_dark.svg')"
-      alt="GitHub">
-</a>
-<a href="https://www.linkedin.com/in/daniela-hudson/" target="_blank" rel="noopener noreferrer" class="linkedin-link"
-   (mouseenter)="isLinkedinHover = true"
-   (mouseleave)="isLinkedinHover = false">
-  <img [src]="isLinkedinHover
+          : '../../assets/img/github_button_dark.svg')" alt="GitHub">
+    </a>
+    <a href="https://www.linkedin.com/in/daniela-hudson/" target="_blank" rel="noopener noreferrer"
+        class="linkedin-link" (mouseenter)="isLinkedinHover = true" (mouseleave)="isLinkedinHover = false">
+        <img [src]="isLinkedinHover
       ? (theme === 'dark'  
           ? '../../assets/img/linkedin_dark_hover.svg'
           : '../../assets/img/linkedin_button_hover.svg')
       : (theme === 'light'
           ? '../../assets/img/linkedin_button.svg'
-          : '../../assets/img/linkedin_button_dark.svg')"
-      alt="LinkedIn ">
-</a>
-
-
+          : '../../assets/img/linkedin_button_dark.svg')" alt="LinkedIn ">
+    </a>
 
 </div>
