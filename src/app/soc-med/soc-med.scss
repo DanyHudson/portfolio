@@ -21,7 +21,7 @@
      }
 
      a.email-link:hover {
-         background-image: url(../../assets/img/email_button_hover.svg);
+        //  background-image: url(../../assets/img/email_button_hover.svg);
          // background-repeat: no-repeat;
          // object-fit: cover;
          @include bgImgFit();
@@ -29,14 +29,14 @@
      }
 
      a.github-link:hover {
-         background-image: url(../../assets/img/github_button_hover.svg);
+        //  background-image: url(../../assets/img/github_button_hover.svg);
          // background-repeat: no-repeat;  
          // object-fit: cover;
          @include bgImgFit();
      }
 
      a.linkedin-link:hover {
-         background-image: url(../../assets/img/linkedin_button_hover.svg);
+        //  background-image: url(../../assets/img/linkedin_button_hover.svg);
          // background-repeat: no-repeat;
          // object-fit: cover;
          @include bgImgFit();
