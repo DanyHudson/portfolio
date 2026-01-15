@@ -61,35 +61,25 @@ export const skills = [
                 skill: 'Adobe Acrobat',
             },
 
+
+
         ],
 
         learning: [
             {
                 claim: 'I am currently learning:',
-                references: [
-                    {
-                        icon: '../assets/icons/nodejs_icon.svg',
-                        alt: 'Node.js Logo',
-                        skill: 'Node.js',
-                    },
-                    {
-                        icon: '../assets/icons/react_icon.svg',
-                        alt: 'React Logo',
-                        skill: 'React',
-                    },
-
+                reference: [
+                    '../assets/icons/react_icon.svg',
+                    '../assets/icons/react_icon.svg',
                 ],
-
                 text: `Show that you are motivated to continually improve your skills, 
-                implement innovative solutions and stay abreast of new technologies.`,
+                        implement innovative solutions and stay abreast of new technologies.`,
                 link: '',
                 linkLabel: ''
-            },
-        ],
-
+            }
+        ]
     }
 ];
-
 
 export const myProjectTabs = [
     {
@@ -213,9 +203,9 @@ export const testimonials = [
 
 export const contactInfo = [
     {
-        text: ` I am open to new opportunities and collaborations. 
+    text: ` I am open to new opportunities and collaborations. 
             Feel free to reach out to me via the contact form or connect with me on LinkedIn.`,
-        email: 'mailto:hudson.developer@gmail.com',
-        tel: '0157 123 456 68'
+    email: 'mailto:hudson.developer@gmail.com',
+    tel: '0157 123 456 68'
     },
 ];
