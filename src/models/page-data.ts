@@ -12,74 +12,84 @@ export const skills = [
         skillIcons: [
             {
                 icon: 'assets/icons/html_icon.svg',
-                alt: 'HTML5 logo',
+                alt: 'HTML5 Logo',
                 skill: 'HTML5',
             },
             {
                 icon: 'assets/icons/css_icon.svg',
-                alt: 'SCSS logo',
+                alt: 'SCSS Logo',
                 skill: 'CSS',
             },
             {
                 icon: 'assets/icons/js_icon.svg',
-                alt: 'JavaScript logo',
+                alt: 'JavaScript Logo',
                 skill: 'JavaScript',
             },
             {
                 icon: 'assets/icons/ts_icon.svg',
-                alt: 'TypeScript logo',
+                alt: 'TypeScript Logo',
                 skill: 'TypeScript',
             },
             {
                 icon: 'assets/icons/ang_icon.svg',
-                alt: 'Angular logo',
+                alt: 'Angular Logo',
                 skill: 'Angular',
             },
             {
                 icon: 'assets/icons/fb_icon.svg',
-                alt: 'Angular logo',
+                alt: 'Firebase Logo',
                 skill: 'Firebbnase',
             },
             {
                 icon: 'assets/icons/md_icon.svg',
-                alt: 'Angular logo',
+                alt: 'Material Design Logo',
                 skill: 'Material Design',
             },
             {
                 icon: 'assets/icons/ai_CC_icon.svg',
-                alt: 'Angular logo',
-                skill: 'Material Design',
+                alt: 'Adobe Illustrator Logo',
+                skill: 'Adobe Illustrator',
             },
             {
                 icon: 'assets/icons/ps_CC_icon.svg',
-                alt: 'Angular logo',
-                skill: 'Material Design',
+                alt: 'Adobe Photoshop Logo',
+                skill: 'Adobe Photoshop',
             },
             {
                 icon: 'assets/icons/ac_CC_icon.svg',
-                alt: 'Angular logo',
-                skill: 'Material Design',
+                alt: 'Adobe Acrobat Logo',
+                skill: 'Adobe Acrobat',
             },
-
-
 
         ],
 
         learning: [
             {
                 claim: 'I am currently learning:',
-                reference: [
-                    '../assets/icons/react_icon.svg',
-                    '../assets/icons/react_icon.svg',
+                references: [
+                    {
+                        icon: '../assets/icons/nodejs_icon.svg',
+                        alt: 'Node.js Logo',
+                        skill: 'Node.js',
+                    },
+                    {
+                        icon: '../assets/icons/react_icon.svg',
+                        alt: 'React Logo',
+                        skill: 'React',
+                    },
+
                 ],
+
                 text: `Show that you are motivated to continually improve your skills, 
-                        implement innovative solutions and stay abreast of new technologies.`,
+                implement innovative solutions and stay abreast of new technologies.`,
                 link: '',
                 linkLabel: ''
-            }
-        ]
+            },
+        ],
+
     }
 ];
+
 
 export const myProjectTabs = [
     {
@@ -203,9 +213,9 @@ export const testimonials = [
 
 export const contactInfo = [
     {
-    text: ` I am open to new opportunities and collaborations. 
+        text: ` I am open to new opportunities and collaborations. 
             Feel free to reach out to me via the contact form or connect with me on LinkedIn.`,
-    email: 'mailto:hudson.developer@gmail.com',
-    tel: '0157 123 456 68'
+        email: 'mailto:hudson.developer@gmail.com',
+        tel: '0157 123 456 68'
     },
 ];
