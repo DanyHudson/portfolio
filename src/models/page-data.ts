@@ -68,10 +68,16 @@ export const skills = [
         learning: [
             {
                 claim: 'I am currently learning:',
+                // reference: [
+                //     '../assets/icons/react_icon.svg',
+                //     '../assets/icons/react_icon.svg',
+                // ],
+
                 reference: [
-                    '../assets/icons/react_icon.svg',
-                    '../assets/icons/react_icon.svg',
+                    { icon: 'assets/icons/react_icon.svg', label: 'React' },
+                    { icon: 'assets/icons/vue_icon.svg', label: 'Vue' }
                 ],
+
                 text: `Show that you are motivated to continually improve your skills, 
                         implement innovative solutions and stay abreast of new technologies.`,
                 link: '',
@@ -203,9 +209,9 @@ export const testimonials = [
 
 export const contactInfo = [
     {
-    text: ` I am open to new opportunities and collaborations. 
+        text: ` I am open to new opportunities and collaborations. 
             Feel free to reach out to me via the contact form or connect with me on LinkedIn.`,
-    email: 'mailto:hudson.developer@gmail.com',
-    tel: '0157 123 456 68'
+        email: 'mailto:hudson.developer@gmail.com',
+        tel: '0157 123 456 68'
     },
 ];

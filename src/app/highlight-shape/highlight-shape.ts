@@ -8,7 +8,9 @@ import { Component, Input } from '@angular/core';
 })
 export class HighlightShape {
   @Input() claim: string = '';
-  @Input() reference: string[] | string = '';
+  // @Input() reference: string[] | string = '';
+  @Input() reference: { icon: string; label: string }[] | string = '';        
+
   @Input() text: string = '';
   @Input() link: string = '';
   @Input() linkLabel: string = '';

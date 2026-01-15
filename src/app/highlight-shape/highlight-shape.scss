@@ -38,3 +38,23 @@
     }
 
 }
+
+.reference {
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    // flex-wrap: wrap;
+}
+
+.icon-with-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}

@@ -7,7 +7,7 @@
   </p>
 </section> -->
 
-<section class="highlight-shape-container">
+<!-- <section class="highlight-shape-container">
   <span class="claim">{{ claim }}</span>
   <div class="reference">
     @if (reference && reference.length && Array.isArray(reference)) {
@@ -17,6 +17,27 @@
     }
     @if (reference && !Array.isArray(reference)) {
     <span>{{ reference }}</span>
+    }
+  </div>
+  <p class="text">{{ text }}</p>
+  @if (link) {
+  <a class="link" [href]="link" target="_blank">{{ linkLabel }}</a>
+  }
+</section> -->
+
+<section class="highlight-shape-container">
+  <span class="claim">{{ claim }}</span>
+  <div class="reference">
+    @if (reference && Array.isArray(reference)) {
+    @for (item of reference; let i = $index; track i) {
+    <div class="icon-with-label">
+      <img [src]="item.icon" [alt]="item.label" />
+      <span class="icon-label">{{ item.label }}</span>
+    </div>
+    }
+    }
+    @if (reference && !Array.isArray(reference)) {
+    <span class="reference">{{ reference }}</span>
     }
   </div>
   <p class="text">{{ text }}</p>
