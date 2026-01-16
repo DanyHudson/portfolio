@@ -12,6 +12,7 @@
         <textarea id="message" placeholder=""></textarea>
         
     </div> -->
+    <form (ngSubmit)="onSubmit()" class="contact-form">
     <div class="row-1">
         <div class="form-group">
             <label for="userName">Your Name</label>
@@ -34,4 +35,12 @@
     <div class="button-container">
     <button class="submit-btn" type="submit">Send</button>
     </div>
+    </form>
+
+    <!-- <p class="privacy-policy"><input type="checkbox"/> I've read the <span> &nbsp; privacy policy &nbsp;</span>and
+        agree to the processing of my data as outlined.
+    </p> -->
+    <!-- <div class="button-container">
+    <button class="submit-btn" type="submit">Send</button>
+    </div> -->
 </div>
