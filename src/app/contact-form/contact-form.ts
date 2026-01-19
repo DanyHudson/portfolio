@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-form',
@@ -10,7 +10,20 @@ import { FormsModule } from '@angular/forms';
 })
 export class ContactForm {
 
-  onSubmit() {
-    alert('Thank you for your message. I will get back to you soon!');
-  } 
+  contactFormData = {
+    userName: '',
+    userEmail: '',
+    message: '',
+    privacyPolicyAccepted: false,
+  };
+
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.valid && ngForm.submitted && ngForm.touched) {
+      console.log('Form Data: ', ngForm.value);
+    }
+    else {
+      console.log(' fill out the form correctly ');
+    }
+
+  }
 }
