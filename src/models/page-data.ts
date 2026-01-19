@@ -74,8 +74,8 @@ export const skills = [
                 // ],
 
                 reference: [
-                    { icon: 'assets/icons/react_icon.svg', label: 'React' },
-                    { icon: 'assets/icons/vue_icon.svg', label: 'Vue' }
+                    { icon: 'assets/icons/owl_icon.svg', label: 'OWL' },
+                   
                 ],
 
                 text: `Show that you are motivated to continually improve your skills, 
@@ -186,21 +186,21 @@ export const myProjectTabs = [
 export const testimonials = [
     {
         claim: 'Max Mustermann',
-        reference: 'Icon or Reference to project',
+        reference: 'example project',
         text: 'Working with you was a pleasure. You always brought creative solutions to the table.',
         link: 'https://linkedin.com/in/janedoe',
         linkLabel: 'View LinkedIn'
     },
     {
         claim: 'Tina Tester',
-        reference: 'Icon or Reference to project',
+        reference: 'example project',
         text: 'Working with you was a pleasure. You always brought creative solutions to the table.',
         link: 'https://linkedin.com/in/janedoe',
         linkLabel: 'View LinkedIn'
     },
     {
         claim: 'Eugenia Example',
-        reference: 'Icon or Reference to project',
+        reference: 'example project',
         text: 'Working with you was a pleasure. You always brought creative solutions to the table.',
         link: 'https://linkedin.com/in/janedoe',
         linkLabel: 'View LinkedIn'
