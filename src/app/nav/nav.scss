@@ -1,5 +1,11 @@
 @use '../../styles.scss' as*;
 
+.lp-logo {
+    width: 94px;
+    height: auto;
+    z-index: 10;
+}
+
 .nav-bar {
     position: sticky;
     top: 0;
