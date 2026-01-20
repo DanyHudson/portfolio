@@ -52,6 +52,7 @@
     align-items: flex-start;
     width: 100%;
     margin-bottom: 16px;
+    position: relative;
 }
 
 label {
@@ -134,4 +135,15 @@ textarea {
 
 .error-input {
     border: 1px solid red !important;
-} 
+}
+
+.done-icon {
+    width: 16px;
+    height: 16px;
+    background-image: url('../../assets/icons/icon_done.svg');
+    background-color: transparent;
+    position: absolute;
+    top: 30px;
+    right: 16px;
+
+}

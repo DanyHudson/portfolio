@@ -24,6 +24,7 @@
           }
         </label>
         <!-- <input #userName="ngModel" [(ngModel)]="contactFormData.userName" id="userName" name="userName" type="text" required /> -->
+         <i class="done-icon d-none " ></i>
         <input [(ngModel)]="contactFormData.userName" id="userName" name="userName" type="text" required
           #userName="ngModel" [class.error-input]="userName.invalid && userName.touched" />
       </div>
@@ -36,6 +37,7 @@
           Your Email
           }
         </label>
+        <i class="done-icon  " ></i>
         <input #userEmail="ngModel" [(ngModel)]="contactFormData.userEmail" id="userEmail" name="userEmail" type="text"
           required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
           [class.error-input]="userEmail.invalid && userEmail.touched" />
