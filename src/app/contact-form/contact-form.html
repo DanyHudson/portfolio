@@ -51,8 +51,8 @@
           Your Message
           }
         </label>
-        <textarea #message="ngModel" [(ngModel)]="contactFormData.message" id="message" name="message"
-          required  [class.error-input]="message.invalid && message.touched"></textarea>
+        <textarea #message="ngModel" [(ngModel)]="contactFormData.message" id="message" name="message" required
+          [class.error-input]="message.invalid && message.touched"></textarea>
 
       </div>
     </div>
@@ -65,52 +65,4 @@
       <button class="submit-btn" type="submit">Send</button>
     </div>
   </form>
-
-  <!-- <p class="privacy-policy"><input type="checkbox"/> I've read the <span> &nbsp; privacy policy &nbsp;</span>and
-        agree to the processing of my data as outlined.
-    </p> -->
-  <!-- <div class="button-container">
-    <button class="submit-btn" type="submit">Send</button>
-    </div> -->
 </div>
-
-
-<!-- 
-The block
-@if (userName.invalid && userName.touched) {
-  <div class="error">Name is required.</div>
-} 
-  
-
-means the <div class="error"> only appears when the condition is true—so only when the field is invalid and has been touched.
-
-You can use this to:
-
-Show error messages only when needed.
-Change the label text or input border color by adding a class or using a conditional.
--->
-
-<!-- <label [class.error-label]="userName.invalid && userName.touched">
-  @if (userName.invalid && userName.touched) {
-    Your name is required
-  } @else {
-    Your Name
-  }
-</label>
-<input
-  [(ngModel)]="contactFormData.userName"
-  id="userName"
-  name="userName"
-  type="text"
-  required
-  #userName="ngModel"
-  [class.error-input]="userName.invalid && userName.touched"
-/> -->
-
-
-<!-- .error-label {
-  color: red;
-}
-.error-input {
-  border: 1px solid red;
-} -->
