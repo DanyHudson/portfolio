@@ -51,6 +51,7 @@ input:-webkit-autofill:active {
 .row-1 {
     display: flex;
     gap: 16px;
+    height: 94px;
 
     input {
         flex: 1 1 0;
@@ -59,6 +60,14 @@ input:-webkit-autofill:active {
         border: 1px solid rgb(137, 188, 217);
         border-radius: 50vw;
     }
+
+    label {
+    margin-bottom: 6px;
+    margin-left: 24px; // slight shift from the left edge
+    font-size: 1em;
+    color: rgb(137, 188, 217); // or your preferred color
+}
+
 }
 
 .row-2 {
@@ -72,7 +81,7 @@ input:-webkit-autofill:active {
         resize: vertical;
         background: none;
         border: 1px solid rgb(137, 188, 217);
-        border-radius: 30px;
+        border-radius: 24px;
     }
 
 }
@@ -86,12 +95,12 @@ input:-webkit-autofill:active {
     position: relative;
 }
 
-label {
-    margin-bottom: 6px;
-    margin-left: 24px; // slight shift from the left edge
-    font-size: 1em;
-    color: rgb(137, 188, 217); // or your preferred color
-}
+// label {
+//     margin-bottom: 6px;
+//     margin-left: 24px; // slight shift from the left edge
+//     font-size: 1em;
+//     color: rgb(137, 188, 217); // or your preferred color
+// }
 
 input,
 textarea {
@@ -119,6 +128,11 @@ textarea {
         height: 16px;
         margin-right: 6px;
         // background-image: url(/src/assets/img/checkbox.svg);
+    }
+
+    label {
+        display: flex;
+        align-items: center;
     }
 
     // img {
