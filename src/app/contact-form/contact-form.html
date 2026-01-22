@@ -25,7 +25,7 @@
         </label>
         <!-- <input #userName="ngModel" [(ngModel)]="contactFormData.userName" id="userName" name="userName" type="text" required /> -->
          <!-- <i class="done-icon d-none " ></i> -->
-          <i class="done-icon" [class.d-none]="!userName.valid || !userName.touched"></i>
+          <i class="done-icon" [class.d-none]="!userName.valid || !userName.touched" ></i>
         <input [(ngModel)]="contactFormData.userName" id="userName" name="userName" type="text" required
           #userName="ngModel" [class.error-input]="userName.invalid && userName.touched" />
       </div>
@@ -38,7 +38,7 @@
           Your Email
           }
         </label>
-        <i class="done-icon d-none" ></i>
+        <i class="done-icon" [class.d-none]="!userEmail.valid || !userEmail.touched" ></i>
         <input #userEmail="ngModel" [(ngModel)]="contactFormData.userEmail" id="userEmail" name="userEmail" type="text"
           required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
           [class.error-input]="userEmail.invalid && userEmail.touched" />
@@ -56,7 +56,7 @@
         </label>
         <textarea #message="ngModel" [(ngModel)]="contactFormData.message" id="message" name="message" required
           [class.error-input]="message.invalid && message.touched"></textarea>
-
+          <i class="done-icon" [class.d-none]="!message.valid || !message.touched" ></i>
       </div>
     </div>
     <p class="privacy-policy"><input [(ngModel)]="contactFormData.privacyPolicyAccepted" id="privacyPolicyAccepted"

@@ -1,5 +1,36 @@
 @use '../../styles.scss' as *;
 
+
+// AI version
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  box-shadow: 0 0 0 1000px transparent inset !important;
+  background-color: transparent !important;
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+// stack overflow version
+// input:-webkit-autofill,
+// input:-webkit-autofill:hover,
+// input:-webkit-autofill:focus,
+// input:-webkit-autofill:active {
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: #ffffff;
+//     transition: background-color 5000s ease-in-out 0s;
+//     box-shadow: inset 0 0 20px 20px #23232329;
+//     color: white !important;
+// }
+
+
+
+
+
 .contact-form-container {
     margin-top: 48px;
     display: flex;
@@ -24,7 +55,7 @@
     input {
         flex: 1 1 0;
         height: 60px;
-        background: none;
+        background: transparent;
         border: 1px solid rgb(137, 188, 217);
         border-radius: 50vw;
     }
@@ -68,7 +99,8 @@ textarea {
     // border-radius: 8px;
     padding: 10px;
     font-size: 0.7em;
-    color: white;
+    color: white !important;
+    z-index: 5;
 }
 
 .privacy-policy {
@@ -141,9 +173,9 @@ textarea {
     width: 16px;
     height: 16px;
     background-image: url('../../assets/icons/icon_done.svg');
-    background-color: transparent;
+    // background: transparent;
     position: absolute;
     top: 30px;
     right: 16px;
-
+    z-index: 10;
 }
