@@ -24,6 +24,13 @@
         padding: 18px 16px;
         @include defaultFont($c: rgba(38, 46, 52, 1), $fw: 500);
 
+        // transition-property: background-image;
+        // transition-duration: 0.9s;
+        // transition-timing-function: ease-in-out;
+
+
+
+
         &:hover {
             text-decoration: none;
             color: white;
@@ -36,4 +43,9 @@ a.active {
     background-repeat: no-repeat;
     background-position: center;
     object-fit: cover;
+
+    transition-property: background-image;
+    transition-duration: 0.9s;
+    transition-timing-function: ease-in-out;
+    
 }

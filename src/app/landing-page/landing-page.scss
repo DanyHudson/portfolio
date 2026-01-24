@@ -23,7 +23,8 @@
      width: 580px;
      height: 683px;
  }
-  .lp-logo {
+
+ .lp-logo {
      width: 94px;
      height: auto;
      z-index: 10;
@@ -76,6 +77,11 @@
      cursor: pointer;
      margin-top: 120px;
 
+     transition-property: background-color;
+     transition-duration: 0.3s;
+     transition-timing-function: ease-in-out;
+     border-radius: 50vw;
+
      &:hover {
          background-color: rgba(137, 188, 217, 0.3);
          border-radius: 50vw;
@@ -89,20 +95,6 @@
 
      app-soc-med ::ng-deep .soc-med {
          flex-direction: column;
-         
+
      }
  }
-
-
-
- //  @mixin socMedPosition($p: absolute, $t: 56px, $l: 480px, $fd: column, $gap: 12px) {
- //      position: $p;
- //      top: $t;
- //      left: $l;
- //      flex-direction: $fd;
- //      gap: $gap;
- //  }
-
- //  .soc-med-container app-soc-med ::ng-deep .soc-med {
- //      @include socMedPosition($p: absolute, $t: 56px, $l: 700px, $fd: column, $gap: 12px);
- //  }

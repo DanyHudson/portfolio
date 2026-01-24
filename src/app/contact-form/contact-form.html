@@ -16,7 +16,7 @@
     <div class="row-1">
       <div class="form-group">
         <!-- <label for="userName">Your Name</label> -->
-        <label [class.error-label]="userName.invalid && userName.touched">
+        <label for="userName" [class.error-label]="userName.invalid && userName.touched">
           @if (userName.invalid && userName.touched) {
           Your name is required
           } @else {
@@ -31,7 +31,7 @@
       </div>
       <div class="form-group">
         <!-- <label for="userEmail">Your Email</label> -->
-        <label [class.error-label]="userEmail.invalid && userEmail.touched">
+        <label for="userEmail" [class.error-label]="userEmail.invalid && userEmail.touched">
           @if (userEmail.invalid && userEmail.touched) {
           Your email is required
           } @else {
@@ -47,7 +47,7 @@
     <div class="row-2">
       <div class="form-group">
         <!-- <label for="message">Your Message</label> -->
-        <label [class.error-label]="message.invalid && message.touched">
+        <label for="message" [class.error-label]="message.invalid && message.touched">
           @if (message.invalid && message.touched) {
           Message is required.
           } @else {
@@ -67,9 +67,10 @@
         I've read the <span> &nbsp; privacy policy
           &nbsp;</span>and
         agree to the processing of my data as outlined.
+        <span class="d-none">Please accept the privacy policy</span>
       </label>
-
     </div>
+    
     <div class="button-container">
       <button class="submit-btn" type="submit">Send</button>
     </div>
