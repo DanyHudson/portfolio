@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class Nav {
   constructor() { }
   navLinks = [
-    { label: 'About me', anchor: 'aboutme' },
+    { label: 'About me', anchor: 'aboutme' },             
     { label: 'Skills', anchor: 'skills' },
     { label: 'Projects', anchor: 'projects' },
     { label: 'Contact', anchor: 'contact' }
