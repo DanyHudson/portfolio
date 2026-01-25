@@ -17,8 +17,13 @@ export class Nav {
   ];
 
   selectedLink: string = '';
+  currentLang: string = 'en';
 
   onNavClick(link: { label: string; anchor: string }) {
     this.selectedLink = link.label;
   }
+
+  toggleLanguage() {
+  this.currentLang = this.currentLang === 'en' ? 'de' : 'en';
+}
 } 

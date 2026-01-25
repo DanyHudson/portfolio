@@ -1,11 +1,14 @@
 
-export const aboutMe = [
-    `
-    Why are you passionate about coding?  
-    You can include some key traits like: analytical thinking, creativity, persistence and  collaboration.
-    A problem-solving mindset is always nice to have.
-    `
-];
+export const aboutMe = {
+    en: `Why are you passionate about coding?
+       You can include some key traits like: analytical thinking, creativity, persistence and collaboration.
+       A problem-solving mindset is always nice to have.`,
+    de: `Was fasziniert dich am Programmieren?
+       Du kannst Eigenschaften wie analytisches Denken, Kreativität, Ausdauer und Zusammenarbeit erwähnen.
+       Eine problemlösende Denkweise ist immer von Vorteil.`
+
+};
+
 
 export const skills = [
     {
@@ -68,14 +71,10 @@ export const skills = [
         learning: [
             {
                 claim: 'I am currently learning:',
-                // reference: [
-                //     '../assets/icons/react_icon.svg',
-                //     '../assets/icons/react_icon.svg',
-                // ],
 
                 reference: [
                     { icon: 'assets/icons/owl_icon.svg', label: 'OWL' },
-                   
+
                 ],
 
                 text: `Show that you are motivated to continually improve your skills, 

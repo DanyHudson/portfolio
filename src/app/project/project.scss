@@ -32,8 +32,7 @@
     }
 
     .project-paragraph {
-        margin: 0 0 18px 34px; // left margin matches bullet+gap width
-        // font-family: 'Open Sans', sans-serif;
+        margin: 0 0 18px 34px;
         font-size: 1.1em;
         line-height: 1.75em;
         color: white;
@@ -49,7 +48,6 @@
 }
 
 .technologies {
-    // gap: 32px;
     margin-top: 12px;
     display: flex;
     flex-direction: column;
@@ -92,19 +90,17 @@
         display: flex;
         align-items: center;
         gap: 8px;
-
-
-        // .contact-def-img,
-        // .contact-hover-img {
-        //     width: 24px;
-        //     height: 24px;
-        // }
     }
 }
 
 .mp-btn .live-test {
     background-color: rgb(137, 188, 217);
     color: rgba(38, 46, 52, 1);
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    border-radius: 50vw;
+
 
     &:hover {
         background-color: rgba(255, 255, 255, 1);
@@ -115,6 +111,10 @@
 .mp-btn .github {
     background-color: transparent;
     color: rgb(137, 188, 217);
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    border-radius: 50vw;
 
     &:hover {
         background-color: rgba(137, 188, 217, 0.3);

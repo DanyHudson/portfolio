@@ -1,16 +1,15 @@
 <div class="logo-dark-mob">
-    <img class="lp-logo" src="assets/img/logo_dark.svg" alt="logo">
+  <img class="lp-logo" src="assets/img/logo_dark.svg" alt="logo">
 </div>
 <section class="nav-bar" id="startPoint">
-   @for (link of navLinks; track link.label) {
-  <a
-    [class.active]="selectedLink === link.label"
-    (click)="onNavClick(link)"
-    href="#{{ link.anchor }}"
-  >
+  @for (link of navLinks; track link.label) {
+  <a [class.active]="selectedLink === link.label" (click)="onNavClick(link)" href="#{{ link.anchor }}">
     {{ link.label }}
   </a>
-}
+  }
 </section>
 
-<div class="toggle-language">DE/EN</div>    
+<!-- <div class="toggle-language">DE/EN</div> -->
+<button class="toggle-language" (click)="toggleLanguage()">
+  {{ currentLang === 'en' ? 'DE' : 'EN' }}
+</button>
