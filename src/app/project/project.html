@@ -3,9 +3,9 @@
     @for (item of projectData.content; track $index) {
     <div class="headline-row">
       <img src="../assets/img/bullet_icon.svg" alt="bullet" class="bullet-img" />
-      <h3>{{ item.headline }}</h3>
+      <h3>{{ item.headline.en }}</h3>
     </div>
-    <p class="project-paragraph">{{ item.text }}</p>
+    <p class="project-paragraph">{{ item.text.en }}</p>
     }
   </div>
 </div>

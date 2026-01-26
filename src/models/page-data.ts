@@ -98,19 +98,40 @@ export const myProjectTabs = [
         label: 'DA Bubble',
         content: [
             {
-                headline: 'About the project',
-                text: `Content bullet 1 lorem ipsum dolor elit sed ut labore et dolore,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                `,
+                headline: {
+                    en: 'About the project',
+                    de: 'Ueber das Projekt'
+                },
+                text: {
+                    en: `Content bullet 1 lorem ipsum dolor elit sed ut labore et dolore,
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    `,
+                    de: `Content bullet 1 lorem ipsum dolor elit sed ut labore et dolore,
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    `,
+                },
             },
             {
-                headline: 'How I have organised my work process',
-                text: 'Content bullet 2 lorem ipsum dolor elit sed ut labore et dolore',
+                headline: {
+                    en: 'How I have organised my work process',
+                    de: 'Wie ich meinen Arbeitsprozess organisiert habe'
+                },
+                text: {
+                    en: 'Content bullet 2 lorem ipsum dolor elit sed ut labore et dolore',
+                    de: 'Content bullet 2 lorem ipsum dolor elit sed ut labore et dolore',
+                }
             },
             {
-                headline: 'My group work experience',
-                text: 'Content bullet 3 lorem ipsum dolor elit sed ut labore et dolore',
+                headline: {
+                    en: 'My group work experience',
+                    de: 'Meine Erfahrungen in der Gruppenarbeit'
+                },
+                text: {
+                    en: 'Content bullet 3 lorem ipsum dolor elit sed ut labore et dolore',
+                    de: 'Content bullet 3 lorem ipsum dolor elit sed ut labore et dolore',
+                }
             }
         ],
 
@@ -129,21 +150,43 @@ export const myProjectTabs = [
         label: 'Sharky',
         content: [
             {
-                headline: 'About the project',
-                text: `Content bullet 1 lorem ipsum dolor elit sed ut labore et dolore,
+                headline: {
+                    en: 'About the project',
+                    de: 'Ueber das Projekt'
+                },
+                text: {
+                    en: `Content bullet 1 lorem ipsum dolor elit sed ut labore et dolore,
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 `,
+                    de: `Content bullet 1 lorem ipsum dolor elit sed ut labore et dolore,
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                `,
+                }
             },
             {
-                headline: 'How I have organised my work process',
-                text: 'Content bullet 2 lorem ipsum dolor elit sed ut labore et dolore',
+                headline: {
+                    en: 'How I have organised my work process',
+                    de: 'Wie ich meinen Arbeitsprozess organisiert habe'
+                },
+                text: {
+                    en: 'Content bullet 2 lorem ipsum dolor elit sed ut labore et dolore',
+                    de: 'Content bullet 2 lorem ipsum dolor elit sed ut labore et dolore',
+                }
             },
             {
-                headline: 'What I have learned',
-                text: `As someone who is always trying to learn new technologies, 
-                you may have enjoyed working on this project because it allowed you to delve deep into a particular technology. 
-                Give details, such as the name of the framework or language you mean.`,
+                headline: {
+                    en: 'What I have learned',
+                    de: 'Was ich gelernt habe'
+                },
+
+                text: {
+                    en: `As someone who is always trying to learn new technologies, 
+                        you may have enjoyed working on this project because it allowed you to delve deep into a particular technology. 
+                        Give details, such as the name of the framework or language you mean.`,
+                    de: `Als jemand, der immer versucht, neue Technologien zu lernen`
+                }
             }
         ],
 
@@ -161,19 +204,43 @@ export const myProjectTabs = [
         label: 'Join',
         content: [
             {
-                headline: 'About the project',
-                text: `Content bullet 1 lorem ipsum dolor elit sed ut labore et dolore,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                headline: {
+                    en: 'About the project',
+                    de: 'Ueber das Projekt'
+                },
+
+                text: {
+                    en: `Content bullet 1 lorem ipsum dolor elit sed ut labore et dolore,
+                         consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 `,
+                    de: `Content bullet 1 lorem ipsum dolor elit sed ut labore et dolore,`
+                }
+
             },
             {
-                headline: 'How I have organised my work process',
-                text: 'Content bullet 2 lorem ipsum dolor elit sed ut labore et dolore',
+                headline: {
+                    en: 'How I have organised my work process',
+                    de: 'Wie ich meinen Arbeitsprozess organisiert habe',
+                },
+
+                text: {
+                    en: 'Content bullet 2 lorem ipsum dolor elit sed ut labore et dolore',
+                    de: 'Content bullet 2 lorem ipsum dolor elit sed ut labore et dolore',
+                }
+
             },
             {
-                headline: 'My group work experience',
-                text: 'Content bullet 3 lorem ipsum dolor elit sed ut labore et dolore',
+                headline: {
+                    en: 'My group work experience',
+                    de: 'Meine Erfahrungen in der Gruppenarbeit'
+                },
+
+                text: {
+                    en: 'Content bullet 3 lorem ipsum dolor elit sed ut labore et dolore',
+                    de: 'Content bullet 3 lorem ipsum dolor elit sed ut labore et dolore',
+                }
+
             }
         ],
 
@@ -193,21 +260,30 @@ export const testimonials = [
     {
         claim: 'Max Mustermann',
         reference: 'example project',
-        text: 'Working with you was a pleasure. You always brought creative solutions to the table.',
+        text: {
+            en: 'Working with you was a pleasure. You always brought creative solutions to the table.',
+            de: 'Die Zusammenarbeit mit Ihnen war eine Freude. Sie haben immer kreative Lösungen auf den Tisch gebracht.'
+        },
         link: 'https://linkedin.com/in/janedoe',
         linkLabel: 'View LinkedIn'
     },
     {
         claim: 'Tina Tester',
         reference: 'example project',
-        text: 'Working with you was a pleasure. You always brought creative solutions to the table.',
+        text: {
+            en: 'Working with you was a pleasure. You always brought creative solutions to the table.',
+            de: 'Die Zusammenarbeit mit Ihnen war eine Freude. Sie haben immer kreative Lösungen auf den Tisch gebracht.'
+        },
         link: 'https://linkedin.com/in/janedoe',
         linkLabel: 'View LinkedIn'
     },
     {
         claim: 'Eugenia Example',
         reference: 'example project',
-        text: 'Working with you was a pleasure. You always brought creative solutions to the table.',
+        text: {
+            en: 'Working with you was a pleasure. You always brought creative solutions to the table.',
+            de: 'Die Zusammenarbeit mit Ihnen war eine Freude. Sie haben immer kreative Lösungen auf den Tisch gebracht.'
+        },
         link: 'https://linkedin.com/in/janedoe',
         linkLabel: 'View LinkedIn'
     },
@@ -215,9 +291,14 @@ export const testimonials = [
 
 export const contactInfo = [
     {
-        text: ` I am open to new opportunities and collaborations. 
-            Feel free to reach out to me via the contact form or connect with me on LinkedIn.`,
-        email: 'mailto:hudson.developer@gmail.com',
+        text: {
+            en: `I am open to new opportunities and collaborations. 
+                 Feel free to reach out to me via the contact form or connect with me on LinkedIn.`,
+            de: `Ich bin offen für neue Möglichkeiten und Kooperationen.
+                 Zögern Sie nicht, mich über das Kontaktformular zu erreichen oder sich mit mir auf LinkedIn zu vernetzen.`,
+        },
+
+        email: 'hudson.developer@gmail.com',
         tel: '0157 123 456 68'
     },
 ];
