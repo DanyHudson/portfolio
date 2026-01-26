@@ -70,15 +70,22 @@ export const skills = [
 
         learning: [
             {
-                claim: 'I am currently learning:',
+                claim: {
+                    en: 'I am currently learning:',
+                    de: 'Aktuell lerne ich:'
+                },
 
                 reference: [
                     { icon: 'assets/icons/owl_icon.svg', label: 'OWL' },
 
                 ],
 
-                text: `Show that you are motivated to continually improve your skills, 
+                text: {
+                    en: `Show that you are motivated to continually improve your skills, 
                         implement innovative solutions and stay abreast of new technologies.`,
+                    de: `Zeige, dass du motiviert bist, deine Fähigkeiten ständig zu verbessern, 
+                        innovative Lösungen umzusetzen und über neue Technologien auf dem Laufenden zu bleiben.`
+                },
                 link: '',
                 linkLabel: ''
             }
