@@ -14,7 +14,9 @@ export class MySkills {
   skillIcons = skills[0].skillIcons;
   learning = skills[0].learning;
 
-  currentLang: string = 'en';
+  // currentLang: string = 'en';
+
+  currentLang: 'en' | 'de' = 'en';
 
   constructor(private langService: LangService) {
     this.langService.lang$.subscribe(lang => this.currentLang = lang);

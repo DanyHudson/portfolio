@@ -25,16 +25,11 @@ export class Nav {
   }
 
   setLanguage(lang: string) {
-    this.langService.setLang(lang);
+    this.langService.setLang(lang as 'en' | 'de');
   }
 
   onNavClick(link: { label: string; anchor: string }) {
     this.selectedLink = link.label;
   }
-
-  //   toggleLanguage() {
-  //   this.currentLang = this.currentLang === 'en' ? 'de' : 'en';
-  // }
-
 
 }

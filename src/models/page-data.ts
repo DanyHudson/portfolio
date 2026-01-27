@@ -257,6 +257,14 @@ export const myProjectTabs = [
 ];
 
 export const testimonials = [
+
+     
+    // { mainClaim : {
+    //     en: 'Need a teamplayer? Here\'s what my colleagues said about me',
+    //     de: 'Was Kunden über mich sagen'
+    // }
+
+    // },
     {
         claim: 'Max Mustermann',
         reference: 'example project',

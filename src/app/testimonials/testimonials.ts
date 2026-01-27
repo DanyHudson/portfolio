@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HighlightShape } from '../highlight-shape/highlight-shape';
 import { testimonials } from '../../models/page-data';
+import { LangService } from '../services/lang.service';
 
 @Component({
   selector: 'app-testimonials',
@@ -10,6 +11,11 @@ import { testimonials } from '../../models/page-data';
   styleUrls: ['./testimonials.scss'],
 })
 export class Testimonials {
-testimonials = testimonials
-;
+testimonials = testimonials;
+
+currentLang: 'en' | 'de' = 'en';
+
+constructor(private langService: LangService) {
+  this.langService.lang$.subscribe(lang => this.currentLang = lang);
+}
 }

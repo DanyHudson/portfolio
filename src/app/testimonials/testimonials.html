@@ -1,10 +1,11 @@
-<h3>Need a teamplayer? Here's what my colleagues said about me</h3>
+<!-- <h3>Need a teamplayer? Here's what my colleagues said about me</h3> -->
+<!-- <h3>{{mainClaim[currentLang]}}</h3> -->
 <section class="section-content">
 @for (testimonial of testimonials; track testimonial) {
   <app-highlight-shape
     [claim]="testimonial.claim"
     [reference]="testimonial.reference"
-    [text]="testimonial.text.en"
+    [text]="testimonial.text[currentLang]"
     [link]="testimonial.link"
     [linkLabel]="testimonial.linkLabel">
   </app-highlight-shape>
