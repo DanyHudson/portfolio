@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HighlightShape } from '../highlight-shape/highlight-shape';
 import { skills } from '../../models/page-data';
+import { LangService } from '../services/lang.service';
 
 @Component({
   selector: 'app-my-skills',
@@ -12,4 +13,10 @@ import { skills } from '../../models/page-data';
 export class MySkills {
   skillIcons = skills[0].skillIcons;
   learning = skills[0].learning;
+
+  currentLang: string = 'en';
+
+  constructor(private langService: LangService) {
+    this.langService.lang$.subscribe(lang => this.currentLang = lang);
+  }
 }

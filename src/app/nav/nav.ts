@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LangService } from '../services/lang.service';
 
 @Component({
   selector: 'app-nav',
@@ -8,9 +9,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav.scss'],
 })
 export class Nav {
-  constructor() { }
+
   navLinks = [
-    { label: 'About me', anchor: 'aboutme' },             
+    { label: 'About me', anchor: 'aboutme' },
     { label: 'Skills', anchor: 'skills' },
     { label: 'Projects', anchor: 'projects' },
     { label: 'Contact', anchor: 'contact' }
@@ -19,11 +20,21 @@ export class Nav {
   selectedLink: string = '';
   currentLang: string = 'en';
 
+  constructor(private langService: LangService) {
+    this.langService.lang$.subscribe(lang => this.currentLang = lang);
+  }
+
+  setLanguage(lang: string) {
+    this.langService.setLang(lang);
+  }
+
   onNavClick(link: { label: string; anchor: string }) {
     this.selectedLink = link.label;
   }
 
-  toggleLanguage() {
-  this.currentLang = this.currentLang === 'en' ? 'de' : 'en';
+  //   toggleLanguage() {
+  //   this.currentLang = this.currentLang === 'en' ? 'de' : 'en';
+  // }
+
+
 }
-} 
