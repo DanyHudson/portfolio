@@ -49,7 +49,7 @@ export class ContactForm {
         .subscribe({
           next: (response) => {
             // insert here what else should happen on success, e.g. a success message
-
+            console.log('Response from server: ', response);
             ngForm.resetForm();
           },
           error: (error: any) => {

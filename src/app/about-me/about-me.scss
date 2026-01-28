@@ -38,3 +38,29 @@ p.left-container {
         cursor: pointer;
     }
 }
+
+.contact-me-btn {
+    background-color: transparent;
+    color: rgb(137, 188, 217);
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    border-radius: 50vw;
+
+    font-family: "Josefin Sans", sans-serif;
+    color: white;
+    font-weight: 400;
+    border: 2px solid rgb(137, 188, 217);
+    border-radius: 50vw;
+    padding: 12px 24px;
+    font-size: 1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+
+    &:hover {
+        background-color: rgba(137, 188, 217, 0.3);
+    }
+
+}
