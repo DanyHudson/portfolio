@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+// import { FormsModule, NgForm } from '@angular/forms';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
@@ -7,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
   standalone: true,
   imports: [FormsModule],
   templateUrl: './contact-form.html',
-  styleUrl: './contact-form.scss',
+  styleUrls: ['./contact-form.scss'],
 })
 export class ContactForm {
 
