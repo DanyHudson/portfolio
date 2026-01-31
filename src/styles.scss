@@ -1,6 +1,6 @@
 @use '@angular/material' as mat;
 
-/* Josefin Sans - 400 */  
+/* Josefin Sans - 400 */
 @font-face {
     font-family: 'Josefin Sans';
     font-style: normal;
@@ -8,6 +8,7 @@
     font-display: swap;
     src: url('assets/fonts/JosefinSans-Regular.ttf') format('truetype');
 }
+
 /* Josefin Sans - 500 */
 @font-face {
     font-family: 'Josefin Sans';
@@ -17,13 +18,13 @@
     src: url('assets/fonts/JosefinSans-Medium.ttf') format('truetype');
 }
 
-@mixin defaultFont($c:white, $fw:400) {
+@mixin defaultFont($c: white, $fw: 400) {
     font-family: 'Josefin Sans', sans-serif;
     color: $c;
     font-weight: $fw;
 }
 
-/* Anta-Regular - 400 */  
+/* Anta-Regular - 400 */
 @font-face {
     font-family: 'Anta-Regular';
     font-style: normal;
@@ -32,7 +33,7 @@
     src: url('assets/fonts/Anta-Regular.ttf') format('truetype');
 }
 
-@mixin headingFont($c:rgb(137, 188, 217), $fw:400) {
+@mixin headingFont($c: rgb(137, 188, 217), $fw: 400) {
     font-family: 'Anta-Regular', sans-serif;
     color: $c;
     font-weight: $fw;
@@ -56,7 +57,7 @@ body {
     align-items: center;
     color: white;
     overflow-x: hidden;
-    @include defaultFont($c:white, $fw:400);
+    @include defaultFont($c: white, $fw: 400);
 }
 
 app-page {
@@ -67,12 +68,12 @@ app-page {
 }
 
 h1 {
-    @include headingFont($c:white, $fw:400);
+    @include headingFont($c: white, $fw: 400);
     margin: 64px 0 32px 0;
 }
 
 h2 {
-    @include headingFont($c:rgb(137, 188, 217), $fw:400);
+    @include headingFont($c: rgb(137, 188, 217), $fw: 400);
     font-size: 2em;
     line-height: 2.44em;
     margin-bottom: 32px;
@@ -86,28 +87,10 @@ h2 {
     height: 90px;
 }
 
-
-
-// .custom-label-class {
-//   font-weight: bold;
-//   background-color: #89BCD9;
-//   opacity: 0.8;
-//   border-top-right-radius: 10px !important;
-//   border-top-left-radius: 10px !important;
-// }
-
 ::ng-deep .custom-label-class {
-  font-weight: bold !important;
-  background-color: #89BCD9 !important;
-  opacity: 0.8 !important;
-  border-top-right-radius: 10px !important;
-  border-top-left-radius: 10px !important;
+    font-weight: bold !important;
+    background-color: #89BCD9 !important;
+    opacity: 0.8 !important;
+    border-top-right-radius: 10px !important;
+    border-top-left-radius: 10px !important;
 }
-
-// input:-webkit-autofill {
-//   background-color: transparent !important;
-//   -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
-//   color: white !important; // or your desired color
-// }
-
-
