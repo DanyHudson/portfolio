@@ -18,15 +18,52 @@
      width: 1214px;
  }
 
+
+
+ //  .lp-img-box {
+ //      position: relative;
+ //      width: 580px;
+ //      height: 683px;
+
+ //      &:hover .hero-img-bg {
+ //          transform: rotate(-15deg);
+ //          opacity: 0.5;
+ //      }
+ //  }
+
  .lp-img-box {
      position: relative;
      width: 580px;
      height: 683px;
 
-     &:hover .hero-img-bg {
-         transform: rotate(-15deg), opacity 0.5s ease-in ;
+     // ...existing styles...
+     .hero-img-bg {
+         position: absolute;
+         width: 580px;
+         height: 610px;
+         bottom: 0;
+         right: 0;
+         transition: opacity 0.5s ease-in, transform 0.3s ease-in;
+         z-index: 0;
+         opacity: 1;
+         pointer-events: none;
+     }
+
+     .hero-img-bg.animated {
+         opacity: 0;
+         transform: none;
+     }
+
+     &:hover .hero-img-bg.base {
+         opacity: 0;
+     }
+
+     &:hover .hero-img-bg.animated {
+         opacity: 0.7;
+         transform: rotate(-17.4deg);
      }
  }
+
 
  .lp-logo {
      width: 94px;
@@ -34,20 +71,20 @@
      z-index: 10;
  }
 
- .hero-img-bg {
-     width: 594px;
-     height: 710px;
-     position: absolute;
-     // top: 0;
-     bottom: 0;
-     right: 0;
-     transition: transform 0.4s ease-in; // , opacity 0.5s ease-in
+ //  .hero-img-bg {
+ //      width: 594px;
+ //      height: 710px;
+ //      position: absolute;
+ //      // top: 0;
+ //      bottom: 0;
+ //      right: 0;
+ //      transition: transform 0.4s ease-in, opacity 0.5s ease-in;
 
-     //  &:hover {
-     //      transform: rotate(-15deg);
-     //  }
-     z-index: 0;
- }
+ //      //  &:hover {
+ //      //      transform: rotate(-15deg);
+ //      //  }
+ //      z-index: 0;
+ //  }
 
  .hero-img {
      width: 535px;
@@ -58,6 +95,9 @@
      right: 0;
      z-index: 1;
  }
+
+
+
 
  .lp-text-box {
      max-width: 540px;
