@@ -1,3 +1,17 @@
+export const aboutMeTypewriter = [
+  {
+    icon: 'assets/icons/location_icon.svg',
+    preText: 'I am',
+    typeText: 'located in Hamburg',
+  },
+  {
+    icon: 'assets/icons/coffee_icon.svg',
+    preText: 'I love',
+    typeText: 'drinking coffee',
+  },
+  
+];
+
 
 export const aboutMe = {
     en: `Why are you passionate about coding?
@@ -8,7 +22,6 @@ export const aboutMe = {
        Eine problemlösende Denkweise ist immer von Vorteil.`
 
 };
-
 
 export const skills = [
     {
