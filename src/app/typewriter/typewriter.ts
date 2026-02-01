@@ -18,37 +18,42 @@ import { AsyncPipe } from '@angular/common';
   selector: 'app-typewriter',
   standalone: true,
   imports: [AsyncPipe],
-  template: `<h1>{{ typedText$ | async }}<span class="cursor">|</span></h1>`,
+  templateUrl: `./typewriter.html`,
   styles: [`.cursor { animation: blink 1s infinite; } @keyframes blink { 50% { opacity: 0; } }`]
 })
 export class Typewriter {
   words = aboutMeTypewriter;
+  item: any;
 
-  typeEffect(word: string) {
+  typeEffect(item: { icon: string; preText: string; typeText: string }) {
+    const word = item.typeText;
     return concat(
-      // Type
+      // Typewriter effect: type letters one by one
       interval(100).pipe(
-        take(word.length),
-        map(i => word.substring(0, i + 1))
+        take(word.length + 1),
+        map(i => ({
+          ...item,
+          typed: word.substring(0, i)
+        }))
       ),
-      // Pause
-      of('').pipe(delay(1500), ignoreElements()),
-      // Delete
+      // Pause after typing
+      of(null).pipe(delay(1500), ignoreElements()),
+      // Backward delete effect
       interval(50).pipe(
-        take(word.length),
-        map(i => word.substring(0, word.length - i - 1))
-      )
-      
-      
-      ,
-      // Pause
-      of('').pipe(delay(300), ignoreElements())
+        take(word.length + 1),
+        map(i => ({
+          ...item,
+          typed: word.substring(0, word.length - i)
+        }))
+      ),
+      // Pause after deleting
+      of(null).pipe(delay(300), ignoreElements())
     );
   }
 
   typedText$ = interval(1).pipe(
     concatMap(() => this.words),
-    concatMap(word => this.typeEffect(word)),
+    concatMap(item => this.typeEffect(item)),
     repeat()
   );
 }
