@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { aboutMe } from '../../models/page-data';
+import { aboutMeTypewriter } from '../../models/page-data';
+
 import { LangService } from '../services/lang.service';
-import { Typewriter } from '../typewriter/typewriter';
+// import { Typewriter } from '../typewriter/typewriter';
 import { Typewriter02 } from '../typewriter-02/typewriter-02';
 
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [Typewriter, Typewriter02],
+  imports: [Typewriter02], //Typewriter,
   templateUrl: './about-me.html',
   styleUrl: './about-me.scss',
 })
@@ -15,6 +17,14 @@ export class AboutMe {
   aboutMe = aboutMe;
 
   currentLang: 'en' | 'de' = 'en';
+
+  // @Input({ required: true, alias: "words" })
+  // words!: { icon: string; preText: string; typeText: string }[];
+
+  typewriterWords = aboutMeTypewriter;
+
+  // typewriterWords = aboutMeTypewriter.map(item => item.typeText);
+
 
   constructor(private langService: LangService) {
     this.langService.lang$.subscribe(lang => this.currentLang = lang);

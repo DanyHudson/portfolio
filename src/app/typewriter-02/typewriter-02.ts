@@ -1,6 +1,6 @@
-import {ChangeDetectionStrategy, Component, Input, OnInit, signal} from "@angular/core";
-import {CommonModule} from "@angular/common";
-import {concat, concatMap, delay, from, ignoreElements, interval, map, Observable, of, repeat, skip, take} from "rxjs";
+import { ChangeDetectionStrategy, Component, Input, OnInit, signal } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { concat, concatMap, delay, from, ignoreElements, interval, map, Observable, of, repeat, skip, take } from "rxjs";
 
 @Component({
   selector: "app-typewriter-02",
@@ -11,8 +11,11 @@ import {concat, concatMap, delay, from, ignoreElements, interval, map, Observabl
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Typewriter02 implements OnInit {
-  @Input({required: true, alias: "words"})
-  words!: string[];
+  // @Input({required: true, alias: "words"})
+  // words!: string[];
+
+  @Input({ required: true, alias: "words" })
+  words!: { icon: string; preText: string; typeText: string }[];
 
   @Input("disableLoop")
   disableLoop: boolean = false;
@@ -34,10 +37,13 @@ export class Typewriter02 implements OnInit {
 
   @Input("textCursorColor")
   set textCursorColor(textCursorColor: string) {
-    this.style.update(prev => ({...prev, '--text-cursor-color': textCursorColor}));
+    this.style.update(prev => ({ ...prev, '--text-cursor-color': textCursorColor }));
   }
 
-  typeWriterText$?: Observable<string>;
+
+
+
+  typeWriterText$?: Observable<{ icon: string; preText: string; typed: string }>;
 
   private wordsCount = 0;
 
@@ -49,16 +55,22 @@ export class Typewriter02 implements OnInit {
     }
 
     this.typeWriterText$ = this.typeWriteEffect()
-      .pipe(map((text) => text));
+      // .pipe(map((text) => text));
   }
 
-  typeWriteEffect(): Observable<string> {
-    this.wordsCount = this.words.length;
+  // typeWriteEffect(): Observable<string> {
+  //   this.wordsCount = this.words.length;
 
-    return this.startTypewriter(this.words);
-  }
+  //   return this.startTypewriter(this.words);
+  // }
 
-  private startTypewriter(words: string[]): Observable<string> {
+  typeWriteEffect(): Observable<any> {
+  this.wordsCount = this.words.length;
+  return this.startTypewriter(this.words);
+}
+
+  // private startTypewriter(words: string[]): Observable<string> {
+  private startTypewriter(words: { icon: string; preText: string; typeText: string }[]): Observable<any> {
     if (this.disableLoop) {
       return concat(
         of(null).pipe(delay(this.startDelay)),
@@ -79,31 +91,61 @@ export class Typewriter02 implements OnInit {
     );
   }
 
-  private typeEffect(word: string): Observable<string> {
-    if (this.disableLoop) {
-      this.wordsCount -= 1;
-    }
 
-    return concat(
-      this.typeWord(word),
-      of("").pipe(delay(this.deleteDelay), ignoreElements()),
-      this.typeWord(word, true),
-      of("").pipe(delay(this.writeDelay), ignoreElements())
-    );
-  }
+  // original version
+  // private typeEffect(word: string): Observable<string> {
+  //   if (this.disableLoop) {
+  //     this.wordsCount -= 1;
+  //   }
+  //   return concat(
+  //     this.typeWord(word),
+  //     of("").pipe(delay(this.deleteDelay), ignoreElements()),
+  //     this.typeWord(word, true),
+  //     of("").pipe(delay(this.writeDelay), ignoreElements())
+  //   );
+  // }
 
-  private typeWord(word: string, backwards?: boolean): Observable<string> {
-    if (this.disableLoop && this.wordsCount <= 0 && backwards) {
-      return of(word);
-    }
+  private typeEffect(item: { icon: string; preText: string; typeText: string }) {
+  const word = item.typeText;
+  return concat(
+    this.typeWord(item, false),
+    of(null).pipe(delay(this.deleteDelay), ignoreElements()),
+    this.typeWord(item, true),
+    of(null).pipe(delay(this.writeDelay), ignoreElements())
+  );
+}
 
-    return interval(this.writeSpeed).pipe(
-      map((x) => {
-        return backwards
-          ? word.substring(0, word.length - x)
-          : word.substring(0, x + 1);
-      }),
-      take(word.length + 1)
-    );
-  }
+
+// original version
+  // private typeWord(word: string, backwards?: boolean): Observable<string> {
+  //   if (this.disableLoop && this.wordsCount <= 0 && backwards) {
+  //     return of(word);
+  //   }
+
+  //   return interval(this.writeSpeed).pipe(
+  //     map((x) => {
+  //       return backwards
+  //         ? word.substring(0, word.length - x)
+  //         : word.substring(0, x + 1);
+  //     }),
+  //     take(word.length + 1)
+  //   );
+  // }
+
+  private typeWord(item: { icon: string; preText: string; typeText: string }, backwards?: boolean): Observable<any> {
+  const word = item.typeText;
+  return interval(this.writeSpeed).pipe(
+    map((x) => ({
+      icon: item.icon,
+      preText: item.preText,
+      typed: backwards
+        ? word.substring(0, word.length - x)
+        : word.substring(0, x + 1)
+    })),
+    take(word.length + 1)
+  );
+}
+
+
+
 }

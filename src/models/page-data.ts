@@ -1,15 +1,25 @@
 export const aboutMeTypewriter = [
-  {
-    icon: 'assets/icons/location_icon.svg',
-    preText: 'I am',
-    typeText: 'located in Hamburg',
-  },
-  {
-    icon: 'assets/icons/coffee_icon.svg',
-    preText: 'I love',
-    typeText: 'drinking coffee',
-  },
-  
+    {
+        icon: 'assets/icons/location_icon.svg',
+        preText: 'I am',
+        typeText: 'located in Hamburg',
+    },
+    {
+        icon: 'assets/icons/location_icon.svg',
+        preText: 'I am',
+        typeText: 'open to remote work',
+    },
+    {
+        icon: 'assets/icons/coffee_icon.svg',
+        preText: 'I love',
+        typeText: 'drinking coffee',
+    },
+    {
+        icon: 'assets/icons/coding_icon.svg',
+        preText: 'I am',
+        typeText: 'passionate about coding',
+    },
+
 ];
 
 

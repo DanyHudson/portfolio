@@ -1,4 +1,12 @@
 <!-- <p>typewriter-02 works!</p> -->
-<p class="om-typewriter-text" [ngClass]="styleClass" [ngStyle]="style()">
+<!-- <p class="om-typewriter-text" [ngClass]="styleClass" [ngStyle]="style()">
   &#8203;{{ typeWriterText$ | async }}
-</p>
+</p> -->
+
+@if (typeWriterText$ | async; as item) {
+  <div class="typewriter-row">
+    <img [src]="item.icon" alt="" class="typewriter-icon" />
+    <span class="pre-text">{{ item.preText }}</span>
+    <span class="type-text">{{ item.typed }}<span class="cursor">|</span></span>
+  </div>
+}
