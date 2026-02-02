@@ -14,6 +14,14 @@ import { AsyncPipe } from '@angular/common';
 // export class Typewriter {
 
 // }
+
+  interface TypewriterItem {
+  icon: string;
+  preText: string;
+  typeText: string;
+  typed?: string;
+}
+
 @Component({
   selector: 'app-typewriter',
   standalone: true,
@@ -23,9 +31,20 @@ import { AsyncPipe } from '@angular/common';
 })
 export class Typewriter {
   words = aboutMeTypewriter;
-  item: any;
+  item: TypewriterItem = {
+    icon: '',
+    preText: '',
+    typeText: '',
+    typed: ''
+  };
 
-  typeEffect(item: { icon: string; preText: string; typeText: string }) {
+// words: TypewriterItem[] = aboutMeTypewriter;
+
+  // typeEffect(item: { icon: string; preText: string; typeText: string }) {
+
+
+  
+  typeEffect(item: TypewriterItem) {
     const word = item.typeText;
     return concat(
       // Typewriter effect: type letters one by one
