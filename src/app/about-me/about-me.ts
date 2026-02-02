@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { aboutMe } from '../../models/page-data';
 import { LangService } from '../services/lang.service';
 import { Typewriter } from '../typewriter/typewriter';
+import { Typewriter02 } from '../typewriter-02/typewriter-02';
 
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [Typewriter],
+  imports: [Typewriter, Typewriter02],
   templateUrl: './about-me.html',
   styleUrl: './about-me.scss',
 })
