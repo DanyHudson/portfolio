@@ -5,8 +5,8 @@
 
 @if (typeWriterText$ | async; as item) {
   <div class="typewriter-row">
-    <img [src]="item.icon" alt="" class="typewriter-icon" />
-    <span class="pre-text">{{ item.preText }}</span>
+    <img [src]="item.icon" alt="" class="typewriter-icon" [class.fade-in]="iconVisible"/>
+    &nbsp;<span class="pre-text">{{ item.preText }}</span>&nbsp;
     <span class="type-text">{{ item.typed }}<span class="cursor">|</span></span>
   </div>
 }

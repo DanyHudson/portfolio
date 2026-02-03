@@ -5,17 +5,17 @@ export const aboutMeTypewriter = [
         typeText: 'located in Hamburg',
     },
     {
-        icon: 'assets/icons/location_icon.svg',
+        icon: 'assets/icons/remote_icon.svg',
         preText: 'I am',
         typeText: 'open to remote work',
     },
     {
-        icon: 'assets/icons/coffee_icon.svg',
+        icon: 'assets/icons/location_icon.svg',
         preText: 'I love',
         typeText: 'drinking coffee',
     },
     {
-        icon: 'assets/icons/coding_icon.svg',
+        icon: 'assets/icons/location_icon.svg',
         preText: 'I am',
         typeText: 'passionate about coding',
     },

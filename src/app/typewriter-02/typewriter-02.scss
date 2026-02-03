@@ -1,3 +1,5 @@
+@use '../../styles.scss' as*;
+
 .om-typewriter-text {
   --text-cursor-color: #8a8a8a;
 
@@ -26,4 +28,30 @@
   to {
     opacity: 1;
   }
+}
+
+.typewriter-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  // font-weight: 400;
+  color: white;
+  @include defaultFont($c: #FFFFFF, $fw: 400);
+}
+
+.typewriter-icon {
+  opacity: 0;
+  transition: opacity 0.5s ease-in, transform 0.4s ease-in;
+  width: 40px;
+  height: 40px;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.pre-text {
+  font-weight: 400;
+  color: rgb(137, 188, 217);
 }

@@ -40,7 +40,7 @@ export class Typewriter02 implements OnInit {
     this.style.update(prev => ({ ...prev, '--text-cursor-color': textCursorColor }));
   }
 
-
+  iconVisible = false;
 
 
   typeWriterText$?: Observable<{ icon: string; preText: string; typed: string }>;
@@ -55,7 +55,7 @@ export class Typewriter02 implements OnInit {
     }
 
     this.typeWriterText$ = this.typeWriteEffect()
-      // .pipe(map((text) => text));
+    // .pipe(map((text) => text));
   }
 
   // typeWriteEffect(): Observable<string> {
@@ -65,9 +65,9 @@ export class Typewriter02 implements OnInit {
   // }
 
   typeWriteEffect(): Observable<any> {
-  this.wordsCount = this.words.length;
-  return this.startTypewriter(this.words);
-}
+    this.wordsCount = this.words.length;
+    return this.startTypewriter(this.words);
+  }
 
   // private startTypewriter(words: string[]): Observable<string> {
   private startTypewriter(words: { icon: string; preText: string; typeText: string }[]): Observable<any> {
@@ -106,17 +106,17 @@ export class Typewriter02 implements OnInit {
   // }
 
   private typeEffect(item: { icon: string; preText: string; typeText: string }) {
-  const word = item.typeText;
-  return concat(
-    this.typeWord(item, false),
-    of(null).pipe(delay(this.deleteDelay), ignoreElements()),
-    this.typeWord(item, true),
-    of(null).pipe(delay(this.writeDelay), ignoreElements())
-  );
-}
+    const word = item.typeText;
+    return concat(
+      this.typeWord(item, false),
+      of(null).pipe(delay(this.deleteDelay), ignoreElements()),
+      this.typeWord(item, true),
+      of(null).pipe(delay(this.writeDelay), ignoreElements())
+    );
+  }
 
 
-// original version
+  // original version
   // private typeWord(word: string, backwards?: boolean): Observable<string> {
   //   if (this.disableLoop && this.wordsCount <= 0 && backwards) {
   //     return of(word);
@@ -132,20 +132,57 @@ export class Typewriter02 implements OnInit {
   //   );
   // }
 
-  private typeWord(item: { icon: string; preText: string; typeText: string }, backwards?: boolean): Observable<any> {
-  const word = item.typeText;
-  return interval(this.writeSpeed).pipe(
-    map((x) => ({
-      icon: item.icon,
-      preText: item.preText,
-      typed: backwards
-        ? word.substring(0, word.length - x)
-        : word.substring(0, x + 1)
-    })),
-    take(word.length + 1)
-  );
-}
 
+  // first version with icon and preText
+  // private typeWord(item: { icon: string; preText: string; typeText: string }, backwards?: boolean): Observable<any> {
+  //   const word = item.typeText;
+  //   return interval(this.writeSpeed).pipe(
+  //     map((x) => ({
+  //       icon: item.icon,
+  //       preText: item.preText,
+  //       typed: backwards
+  //         ? word.substring(0, word.length - x)
+  //         : word.substring(0, x + 1)
+  //     })),
+  //     take(word.length + 1)
+  //   );
+  // }
+
+
+  // second version with icon and preText fused for true typewriter effect
+  // private typeWord(item: { icon: string; preText: string; typeText: string }, backwards?: boolean): Observable<any> {
+  //   const fullText = item.preText + item.typeText;
+  //   return interval(this.writeSpeed).pipe(
+  //     map((x) => ({
+  //       icon: item.icon,
+  //       preText: '', // Remove this, see below
+  //       typed: backwards
+  //         ? fullText.substring(0, fullText.length - x)
+  //         : fullText.substring(0, x + 1)
+  //     })),
+  //     take(fullText.length + 1)
+  //   );
+  // }
+
+
+
+  private typeWord(item: { icon: string; preText: string; typeText: string }, backwards?: boolean): Observable<any> {
+    const word = item.typeText;
+    const preWord = item.preText;
+    return interval(this.writeSpeed).pipe(
+      map((x) => ({
+        icon: item.icon,
+        preText: item.preText,
+        typed: backwards
+          ? word.substring(0, word.length - x)
+          : word.substring(0, x + 1),
+        preWord: backwards
+          ? preWord.substring(0, preWord.length - x)
+          : preWord.substring(0, x + 1)
+      })),
+      take(word.length + 1)
+    );
+  }
 
 
 }
