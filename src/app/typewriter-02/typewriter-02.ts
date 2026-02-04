@@ -35,6 +35,9 @@ export class Typewriter02 implements OnInit {
   @Input("styleClass")
   styleClass?: string;
 
+  @Input("preTextPause")
+  preTextPause: number = 400;
+
   @Input("textCursorColor")
   set textCursorColor(textCursorColor: string) {
     this.style.update(prev => ({ ...prev, '--text-cursor-color': textCursorColor }));
@@ -149,40 +152,67 @@ export class Typewriter02 implements OnInit {
   // }
 
 
-  // second version with icon and preText fused for true typewriter effect
-  // private typeWord(item: { icon: string; preText: string; typeText: string }, backwards?: boolean): Observable<any> {
-  //   const fullText = item.preText + item.typeText;
-  //   return interval(this.writeSpeed).pipe(
-  //     map((x) => ({
-  //       icon: item.icon,
-  //       preText: '', // Remove this, see below
-  //       typed: backwards
-  //         ? fullText.substring(0, fullText.length - x)
-  //         : fullText.substring(0, x + 1)
-  //     })),
-  //     take(fullText.length + 1)
-  //   );
-  // }
-
-
 
   private typeWord(item: { icon: string; preText: string; typeText: string }, backwards?: boolean): Observable<any> {
-    const word = item.typeText;
-    const preWord = item.preText;
-    return interval(this.writeSpeed).pipe(
-      map((x) => ({
-        icon: item.icon,
-        preText: item.preText,
-        typed: backwards
-          ? word.substring(0, word.length - x)
-          : word.substring(0, x + 1),
-        preWord: backwards
-          ? preWord.substring(0, preWord.length - x)
-          : preWord.substring(0, x + 1)
+    const { icon, preText, typeText } = item;
+
+    if (backwards) {
+      // const full = preText + typeText;
+      // return interval(this.writeSpeed).pipe(
+      //   map(x => {
+      //     const current = full.substring(0, full.length - x);
+      //     const pre = current.substring(0, Math.min(preText.length, current.length));
+      //     const typed = current.substring(pre.length);
+      //     return { icon, preText: pre, typed };
+      //   }),
+      //   take(full.length + 1)
+      // );
+
+
+    }
+
+    // Typing forward: preText first, then pause, then typeText
+    const preText$ = interval(this.writeSpeed).pipe(
+      map(x => ({
+        icon,
+        preText: preText.substring(0, x + 1),
+        typed: ''
       })),
-      take(word.length + 1)
+      take(preText.length + 1)
     );
+
+    const pause$ = of({
+      icon,
+      preText,
+      typed: ''
+    }).pipe(delay(this.writeDelay));
+
+    const typeText$ = interval(this.writeSpeed).pipe(
+      map(x => ({
+        icon,
+        preText,
+        typed: typeText.substring(0, x + 1)
+      })),
+      take(typeText.length + 1)
+    );
+
+    return concat(preText$, pause$, typeText$);
   }
 
 
+typeBackwards(preText: string, typeText: string, icon: string): Observable<any> {
+ const full = preText + typeText;
+      return interval(this.writeSpeed).pipe(
+        map(x => {
+          const current = full.substring(0, full.length - x);
+          const pre = current.substring(0, Math.min(preText.length, current.length));
+          const typed = current.substring(pre.length);
+          return { icon, preText: pre, typed };
+        }),
+        take(full.length + 1)
+      );
 }
+
+ ///// 
+}
+
