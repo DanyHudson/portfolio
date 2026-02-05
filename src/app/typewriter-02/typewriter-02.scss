@@ -33,7 +33,7 @@
 .typewriter-row {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: 1.5em;
   // font-weight: 400;
   color: white;
@@ -41,10 +41,16 @@
 }
 
 .typewriter-icon {
-  opacity: 0;
-  transition: opacity 0.5s ease-in, transform 0.4s ease-in;
   width: 40px;
   height: 40px;
+  margin-right: 12px;
+  // opacity: 0;
+  // transition: opacity 0.5s ease-in, transform 0.4s ease-in;
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -webkit-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
 }
 
 .fade-in {

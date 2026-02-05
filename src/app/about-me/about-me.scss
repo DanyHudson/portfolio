@@ -11,10 +11,9 @@
 }
 
 .left-container {
-    display: flex;
     // text-align: center;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     color: white;
 
 }
@@ -23,7 +22,7 @@ app-typewriter-02 {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .left-container span {
@@ -35,11 +34,12 @@ app-typewriter-02 {
 .right-container {
     flex: 1 1 0;
     display: flex;
-    justify-content: center;
+
 }
 
 .right-container {
     flex-direction: column;
+    justify-content: center;
 }
 
 .button-container {

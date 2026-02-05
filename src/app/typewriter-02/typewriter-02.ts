@@ -157,16 +157,16 @@ export class Typewriter02 implements OnInit {
     const { icon, preText, typeText } = item;
 
     if (backwards) {
-      // const full = preText + typeText;
-      // return interval(this.writeSpeed).pipe(
-      //   map(x => {
-      //     const current = full.substring(0, full.length - x);
-      //     const pre = current.substring(0, Math.min(preText.length, current.length));
-      //     const typed = current.substring(pre.length);
-      //     return { icon, preText: pre, typed };
-      //   }),
-      //   take(full.length + 1)
-      // );
+      const full = preText + typeText;
+      return interval(this.writeSpeed).pipe(
+        map(x => {
+          const current = full.substring(0, full.length - x);
+          const pre = current.substring(0, Math.min(preText.length, current.length));
+          const typed = current.substring(pre.length);
+          return { icon, preText: pre, typed };
+        }),
+        take(full.length + 1)
+      );
 
 
     }
@@ -200,19 +200,5 @@ export class Typewriter02 implements OnInit {
   }
 
 
-typeBackwards(preText: string, typeText: string, icon: string): Observable<any> {
- const full = preText + typeText;
-      return interval(this.writeSpeed).pipe(
-        map(x => {
-          const current = full.substring(0, full.length - x);
-          const pre = current.substring(0, Math.min(preText.length, current.length));
-          const typed = current.substring(pre.length);
-          return { icon, preText: pre, typed };
-        }),
-        take(full.length + 1)
-      );
-}
-
- ///// 
 }
 
