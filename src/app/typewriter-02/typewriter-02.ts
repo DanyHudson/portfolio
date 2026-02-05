@@ -74,6 +74,7 @@ export class Typewriter02 implements OnInit {
 
   // private startTypewriter(words: string[]): Observable<string> {
   private startTypewriter(words: { icon: string; preText: string; typeText: string }[]): Observable<any> {
+    this.iconVisible = true;
     if (this.disableLoop) {
       return concat(
         of(null).pipe(delay(this.startDelay)),
@@ -82,6 +83,7 @@ export class Typewriter02 implements OnInit {
         skip(1),
         concatMap((word) => this.typeEffect(word!))
       );
+      
     }
 
     return concat(
@@ -92,6 +94,7 @@ export class Typewriter02 implements OnInit {
       concatMap((word) => this.typeEffect(word!)),
       repeat()
     );
+    
   }
 
 
@@ -160,9 +163,13 @@ export class Typewriter02 implements OnInit {
       const full = preText + typeText;
       return interval(this.writeSpeed).pipe(
         map(x => {
+          this.iconVisible = false;
           const current = full.substring(0, full.length - x);
           const pre = current.substring(0, Math.min(preText.length, current.length));
           const typed = current.substring(pre.length);
+
+          
+
           return { icon, preText: pre, typed };
         }),
         take(full.length + 1)
