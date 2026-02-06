@@ -149,57 +149,6 @@ export class Typewriter02 implements OnInit {
   //   return concat(preText$, pause$, typeText$);
   // }
 
-  private typeWord(item: { icon: string; preText: string; typeText: string }, backwards?: boolean): Observable<any> {
-    const { icon, preText, typeText } = item;
-
-    if (backwards) {
-      const full = preText + typeText;
-      return interval(this.writeSpeed).pipe(
-        map(x => {
-          const current = full.substring(0, full.length - x);
-          const pre = current.substring(0, Math.min(preText.length, current.length));
-          const typed = current.substring(pre.length);
-          return { icon, preText: pre, typed };
-        }),
-
-        take(full.length + 1),
-        tap({
-          complete: () => { this.iconVisible = false; } // Fade out after all deleted
-        })
-      );
-    }
-
-
-    // Typing forward: preText first, then pause, then typeText
-    const preText$ = interval(this.writeSpeed).pipe(
-      tap({ subscribe: () => { this.iconVisible = true; } }), // Fade in at start
-      map(x => ({
-        icon,
-        preText: preText.substring(0, x + 1),
-        typed: ''
-      })),
-      take(preText.length + 1)
-    );
-
-    const pause$ = of({
-      icon,
-      preText,
-      typed: ''
-    }).pipe(delay(this.writeDelay));
-
-    const typeText$ = interval(this.writeSpeed).pipe(
-      map(x => ({
-        icon,
-        preText,
-        typed: typeText.substring(0, x + 1)
-      })),
-      take(typeText.length + 1)
-    );
-
-    return concat(preText$, pause$, typeText$);
-  }
-
-
 
   private typeWord(item: { icon: string; preText: string; typeText: string }, backwards?: boolean): Observable<{ icon: string; preText: string; typed: string }> {
     const { icon, preText, typeText } = item;
@@ -212,42 +161,55 @@ export class Typewriter02 implements OnInit {
   }
 
 
-  typeBackwards(preText, typeText, icon) { }
-  typePreText(preText, icon) { }
-  typePause(preText, icon) { }
-  typeTypeText(typeText, preText, icon) { }
+  typeBackwards(preText: string, typeText: string, icon: string) {
+    const full = preText + typeText;
+    return interval(this.writeSpeed).pipe(
+      map(x => {
+        const current = full.substring(0, full.length - x);
+        const pre = current.substring(0, Math.min(preText.length, current.length));
+        const typed = current.substring(pre.length);
+        return { icon, preText: pre, typed };
+      }),
+      take(full.length + 1),
+      tap({
+        complete: () => { this.iconVisible = false; } // Fade out after all deleted
+      })
+    );
+  }
 
 
-
-
+ typePreText(preText: string, icon: string): Observable<{ icon: string; preText: string; typed: string }> {
+  return interval(this.writeSpeed).pipe(
+    tap({ subscribe: () => { this.iconVisible = true; } }),
+    map(x => ({
+      icon,
+      preText: preText.substring(0, x + 1),
+      typed: ''
+    })),
+    take(preText.length + 1)
+  );
 }
 
 
-
-// 4. How to refactor for line limits
-// Split each logical step into a helper function:
-
-// typeBackwards(preText, typeText, icon)
-// typePreText(preText, icon)
-// typePause(preText, icon)
-// typeTypeText(typeText, preText, icon)
-// Then call them in typeWord() using concat().
-
-// Example Refactored typeWord() (under 14 lines):
-// private typeWord(item: { icon: string; preText: string; typeText: string }, backwards?: boolean): Observable<{ icon: string; preText: string; typed: string }> {
-//   const { icon, preText, typeText } = item;
-//   if (backwards) return this.typeBackwards(preText, typeText, icon);
-//   return concat(
-//     this.typePreText(preText, icon),
-//     this.typePause(preText, icon),
-//     this.typeTypeText(typeText, preText, icon)
-//   );
-// }
+ typePause(preText: string, icon: string): Observable<{ icon: string; preText: string; typed: string }> {
+  return of({
+    icon,
+    preText,
+    typed: ''
+  }).pipe(delay(this.writeDelay));
+}
 
 
+ typeTypeText(typeText: string, preText: string, icon: string): Observable<{ icon: string; preText: string; typed: string }> {
+  return interval(this.writeSpeed).pipe(
+    map(x => ({
+      icon,
+      preText,
+      typed: typeText.substring(0, x + 1)
+    })),
+    take(typeText.length + 1)
+  );
+}
+  
 
-// Rule of thumb:
-
-// If your function is supposed to produce a value (like an Observable), always use return to output it.
-// If you call a helper function that produces the value you need, use return helperFunction(...) to immediately return its result.
-
+}

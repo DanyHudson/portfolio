@@ -35,7 +35,6 @@
   align-items: center;
   justify-content: flex-start;
   font-size: 1.5em;
-  // font-weight: 400;
   color: white;
   @include defaultFont($c: #FFFFFF, $fw: 400);
 }
@@ -44,8 +43,6 @@
   width: 40px;
   height: 40px;
   margin-right: 12px;
-  // opacity: 0;
-  // transition: opacity 0.5s ease-in, transform 0.4s ease-in;
   opacity: 0;
   transition: opacity .7s ease-in-out, transform .6s ease-in-out;
   -moz-transition: opacity .7s ease-in-out, transform .6s ease-in-out;
