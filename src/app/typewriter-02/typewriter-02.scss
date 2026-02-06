@@ -47,13 +47,14 @@
   // opacity: 0;
   // transition: opacity 0.5s ease-in, transform 0.4s ease-in;
   opacity: 0;
-  transition: opacity .5s ease-in-out;
-  -moz-transition: opacity .5s ease-in-out;
-  -webkit-transition: opacity .5s ease-in-out;
-  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .7s ease-in-out, transform .6s ease-in-out;
+  -moz-transition: opacity .7s ease-in-out, transform .6s ease-in-out;
+  -webkit-transition: opacity .7s ease-in-out, transform .6s ease-in-out;
+  -o-transition: opacity .7s ease-in-out, transform .6s ease-in-out;
+  -ms-transition: opacity .7s ease-in-out, transform .6s ease-in-out;
 }
 
-.fade-in {
+.typewriter-icon.fade-in {
   opacity: 1;
 }
 

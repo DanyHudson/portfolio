@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit, signal } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { concat, concatMap, delay, from, ignoreElements, interval, map, Observable, of, repeat, skip, take } from "rxjs";
+import { concat, concatMap, delay, from, ignoreElements, interval, map, Observable, of, repeat, skip, take, tap } from "rxjs";
+
 
 @Component({
   selector: "app-typewriter-02",
@@ -10,10 +11,9 @@ import { concat, concatMap, delay, from, ignoreElements, interval, map, Observab
   styleUrls: ["./typewriter-02.scss"],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Typewriter02 implements OnInit {
-  // @Input({required: true, alias: "words"})
-  // words!: string[];
 
+
+export class Typewriter02 implements OnInit {
   @Input({ required: true, alias: "words" })
   words!: { icon: string; preText: string; typeText: string }[];
 
@@ -45,7 +45,6 @@ export class Typewriter02 implements OnInit {
 
   iconVisible = false;
 
-
   typeWriterText$?: Observable<{ icon: string; preText: string; typed: string }>;
 
   private wordsCount = 0;
@@ -56,25 +55,18 @@ export class Typewriter02 implements OnInit {
     if (!this.words) {
       throw Error("[words] is required!");
     }
-
     this.typeWriterText$ = this.typeWriteEffect()
-    // .pipe(map((text) => text));
   }
 
-  // typeWriteEffect(): Observable<string> {
-  //   this.wordsCount = this.words.length;
-
-  //   return this.startTypewriter(this.words);
-  // }
 
   typeWriteEffect(): Observable<any> {
     this.wordsCount = this.words.length;
     return this.startTypewriter(this.words);
   }
 
-  // private startTypewriter(words: string[]): Observable<string> {
+
   private startTypewriter(words: { icon: string; preText: string; typeText: string }[]): Observable<any> {
-    this.iconVisible = true;
+    // this.iconVisible = true;
     if (this.disableLoop) {
       return concat(
         of(null).pipe(delay(this.startDelay)),
@@ -83,7 +75,6 @@ export class Typewriter02 implements OnInit {
         skip(1),
         concatMap((word) => this.typeEffect(word!))
       );
-      
     }
 
     return concat(
@@ -94,22 +85,8 @@ export class Typewriter02 implements OnInit {
       concatMap((word) => this.typeEffect(word!)),
       repeat()
     );
-    
   }
 
-
-  // original version
-  // private typeEffect(word: string): Observable<string> {
-  //   if (this.disableLoop) {
-  //     this.wordsCount -= 1;
-  //   }
-  //   return concat(
-  //     this.typeWord(word),
-  //     of("").pipe(delay(this.deleteDelay), ignoreElements()),
-  //     this.typeWord(word, true),
-  //     of("").pipe(delay(this.writeDelay), ignoreElements())
-  //   );
-  // }
 
   private typeEffect(item: { icon: string; preText: string; typeText: string }) {
     const word = item.typeText;
@@ -122,39 +99,55 @@ export class Typewriter02 implements OnInit {
   }
 
 
-  // original version
-  // private typeWord(word: string, backwards?: boolean): Observable<string> {
-  //   if (this.disableLoop && this.wordsCount <= 0 && backwards) {
-  //     return of(word);
+  // private typeWord(item: { icon: string; preText: string; typeText: string }, backwards?: boolean): Observable<any> {
+  //   const { icon, preText, typeText } = item;
+
+  //   if (backwards) {
+  //     const full = preText + typeText;
+  //     return interval(this.writeSpeed).pipe(
+  //       map(x => {
+  //         const current = full.substring(0, full.length - x);
+  //         const pre = current.substring(0, Math.min(preText.length, current.length));
+  //         const typed = current.substring(pre.length);
+  //         return { icon, preText: pre, typed };
+  //       }),
+
+  //       take(full.length + 1),
+  //       tap({
+  //         complete: () => { this.iconVisible = false; } // Fade out after all deleted
+  //       })
+  //     );
   //   }
 
-  //   return interval(this.writeSpeed).pipe(
-  //     map((x) => {
-  //       return backwards
-  //         ? word.substring(0, word.length - x)
-  //         : word.substring(0, x + 1);
-  //     }),
-  //     take(word.length + 1)
-  //   );
-  // }
 
-
-  // first version with icon and preText
-  // private typeWord(item: { icon: string; preText: string; typeText: string }, backwards?: boolean): Observable<any> {
-  //   const word = item.typeText;
-  //   return interval(this.writeSpeed).pipe(
-  //     map((x) => ({
-  //       icon: item.icon,
-  //       preText: item.preText,
-  //       typed: backwards
-  //         ? word.substring(0, word.length - x)
-  //         : word.substring(0, x + 1)
+  //   // Typing forward: preText first, then pause, then typeText
+  //   const preText$ = interval(this.writeSpeed).pipe(
+  //     tap({ subscribe: () => { this.iconVisible = true; } }), // Fade in at start
+  //     map(x => ({
+  //       icon,
+  //       preText: preText.substring(0, x + 1),
+  //       typed: ''
   //     })),
-  //     take(word.length + 1)
+  //     take(preText.length + 1)
   //   );
+
+  //   const pause$ = of({
+  //     icon,
+  //     preText,
+  //     typed: ''
+  //   }).pipe(delay(this.writeDelay));
+
+  //   const typeText$ = interval(this.writeSpeed).pipe(
+  //     map(x => ({
+  //       icon,
+  //       preText,
+  //       typed: typeText.substring(0, x + 1)
+  //     })),
+  //     take(typeText.length + 1)
+  //   );
+
+  //   return concat(preText$, pause$, typeText$);
   // }
-
-
 
   private typeWord(item: { icon: string; preText: string; typeText: string }, backwards?: boolean): Observable<any> {
     const { icon, preText, typeText } = item;
@@ -163,23 +156,23 @@ export class Typewriter02 implements OnInit {
       const full = preText + typeText;
       return interval(this.writeSpeed).pipe(
         map(x => {
-          this.iconVisible = false;
           const current = full.substring(0, full.length - x);
           const pre = current.substring(0, Math.min(preText.length, current.length));
           const typed = current.substring(pre.length);
-
-          
-
           return { icon, preText: pre, typed };
         }),
-        take(full.length + 1)
+
+        take(full.length + 1),
+        tap({
+          complete: () => { this.iconVisible = false; } // Fade out after all deleted
+        })
       );
-
-
     }
+
 
     // Typing forward: preText first, then pause, then typeText
     const preText$ = interval(this.writeSpeed).pipe(
+      tap({ subscribe: () => { this.iconVisible = true; } }), // Fade in at start
       map(x => ({
         icon,
         preText: preText.substring(0, x + 1),
@@ -207,5 +200,54 @@ export class Typewriter02 implements OnInit {
   }
 
 
+
+  private typeWord(item: { icon: string; preText: string; typeText: string }, backwards?: boolean): Observable<{ icon: string; preText: string; typed: string }> {
+    const { icon, preText, typeText } = item;
+    if (backwards) return this.typeBackwards(preText, typeText, icon);
+    return concat(
+      this.typePreText(preText, icon),
+      this.typePause(preText, icon),
+      this.typeTypeText(typeText, preText, icon)
+    );
+  }
+
+
+  typeBackwards(preText, typeText, icon) { }
+  typePreText(preText, icon) { }
+  typePause(preText, icon) { }
+  typeTypeText(typeText, preText, icon) { }
+
+
+
+
 }
+
+
+
+// 4. How to refactor for line limits
+// Split each logical step into a helper function:
+
+// typeBackwards(preText, typeText, icon)
+// typePreText(preText, icon)
+// typePause(preText, icon)
+// typeTypeText(typeText, preText, icon)
+// Then call them in typeWord() using concat().
+
+// Example Refactored typeWord() (under 14 lines):
+// private typeWord(item: { icon: string; preText: string; typeText: string }, backwards?: boolean): Observable<{ icon: string; preText: string; typed: string }> {
+//   const { icon, preText, typeText } = item;
+//   if (backwards) return this.typeBackwards(preText, typeText, icon);
+//   return concat(
+//     this.typePreText(preText, icon),
+//     this.typePause(preText, icon),
+//     this.typeTypeText(typeText, preText, icon)
+//   );
+// }
+
+
+
+// Rule of thumb:
+
+// If your function is supposed to produce a value (like an Observable), always use return to output it.
+// If you call a helper function that produces the value you need, use return helperFunction(...) to immediately return its result.
 
