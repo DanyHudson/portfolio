@@ -72,9 +72,8 @@ export class Typewriter02 implements OnInit {
         setTimeout(() => {
           this.currentIcon = item.icon;
           this.iconVisible = true;
-        }, 200); // 200ms fade-out duration, match your CSS transition
+        }, 200); 
       }
-      // You can handle text animation as usual here
     });
   }
 
