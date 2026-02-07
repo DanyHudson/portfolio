@@ -1,13 +1,7 @@
-<!-- <p>typewriter-02 works!</p> -->
-<!-- <p class="om-typewriter-text" [ngClass]="styleClass" [ngStyle]="style()">
-  &#8203;{{ typeWriterText$ | async }}
-</p> -->
-
 @if (typeWriterText$ | async; as item) {
-  <div class="typewriter-row">
-    <img [src]="item.icon" alt="" class="typewriter-icon" [class.fade-in]="iconVisible"/>
-    <!-- &nbsp;<span class="pre-text">{{ item.preText }}</span>&nbsp; -->
-    &nbsp;<span class="pre-text">{{ item.preText }}</span>&nbsp;
-    <span class="type-text">{{ item.typed }}<span class="cursor">|</span></span>
-  </div>
+<div class="typewriter-row">
+  <img [src]="currentIcon" class="typewriter-icon" [class.fade-in]="iconVisible" />
+  &nbsp;<span class="pre-text">{{ item.preText }}</span>&nbsp;
+  <span class="type-text">{{ item.typed }}<span class="cursor">|</span></span>
+</div>
 }

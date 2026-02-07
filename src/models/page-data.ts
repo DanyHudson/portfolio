@@ -15,7 +15,7 @@ export const aboutMeTypewriter = [
         typeText: 'drinking coffee',
     },
     {
-        icon: 'assets/icons/location_icon.svg',
+        icon: 'assets/icons/remote_icon.svg',
         preText: 'I am',
         typeText: 'passionate about coding',
     },

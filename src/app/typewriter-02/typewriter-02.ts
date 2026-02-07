@@ -30,19 +30,20 @@ export class Typewriter02 implements OnInit {
   writeDelay: number = 50;
 
   @Input("startDelay")
-  startDelay: number = 0;
+  startDelay: number = 400;
 
   @Input("styleClass")
   styleClass?: string;
 
   @Input("preTextPause")
-  preTextPause: number = 400;
+  preTextPause: number = 1000;
 
   @Input("textCursorColor")
   set textCursorColor(textCursorColor: string) {
     this.style.update(prev => ({ ...prev, '--text-cursor-color': textCursorColor }));
   }
 
+  currentIcon: string | null = null;
   iconVisible = false;
 
   typeWriterText$?: Observable<{ icon: string; preText: string; typed: string }>;
@@ -51,11 +52,30 @@ export class Typewriter02 implements OnInit {
 
   style = signal({});
 
+  // ngOnInit(): void {
+  //   if (!this.words) {
+  //     throw Error("[words] is required!");
+  //   }
+  //   this.typeWriterText$ = this.typeWriteEffect()
+  // }
+
   ngOnInit(): void {
     if (!this.words) {
       throw Error("[words] is required!");
     }
-    this.typeWriterText$ = this.typeWriteEffect()
+    this.typeWriterText$ = this.typeWriteEffect();
+
+    this.typeWriterText$?.subscribe(item => {
+      if (!item) return;
+      if (item.icon !== this.currentIcon) {
+        this.iconVisible = false;
+        setTimeout(() => {
+          this.currentIcon = item.icon;
+          this.iconVisible = true;
+        }, 200); // 200ms fade-out duration, match your CSS transition
+      }
+      // You can handle text animation as usual here
+    });
   }
 
 
@@ -94,7 +114,8 @@ export class Typewriter02 implements OnInit {
       this.typeWord(item, false),
       of(null).pipe(delay(this.deleteDelay), ignoreElements()),
       this.typeWord(item, true),
-      of(null).pipe(delay(this.writeDelay), ignoreElements())
+      of(null).pipe(delay(this.writeDelay), ignoreElements()),
+      of(null).pipe(delay(this.startDelay), ignoreElements())
     );
   }
 
@@ -178,38 +199,38 @@ export class Typewriter02 implements OnInit {
   }
 
 
- typePreText(preText: string, icon: string): Observable<{ icon: string; preText: string; typed: string }> {
-  return interval(this.writeSpeed).pipe(
-    tap({ subscribe: () => { this.iconVisible = true; } }),
-    map(x => ({
-      icon,
-      preText: preText.substring(0, x + 1),
-      typed: ''
-    })),
-    take(preText.length + 1)
-  );
-}
+  typePreText(preText: string, icon: string): Observable<{ icon: string; preText: string; typed: string }> {
+    return interval(this.writeSpeed).pipe(
+      tap({ subscribe: () => { this.iconVisible = true; } }),
+      map(x => ({
+        icon,
+        preText: preText.substring(0, x + 1),
+        typed: ''
+      })),
+      take(preText.length + 1)
+    );
+  }
 
 
- typePause(preText: string, icon: string): Observable<{ icon: string; preText: string; typed: string }> {
-  return of({
-    icon,
-    preText,
-    typed: ''
-  }).pipe(delay(this.writeDelay));
-}
-
-
- typeTypeText(typeText: string, preText: string, icon: string): Observable<{ icon: string; preText: string; typed: string }> {
-  return interval(this.writeSpeed).pipe(
-    map(x => ({
+  typePause(preText: string, icon: string): Observable<{ icon: string; preText: string; typed: string }> {
+    return of({
       icon,
       preText,
-      typed: typeText.substring(0, x + 1)
-    })),
-    take(typeText.length + 1)
-  );
-}
-  
+      typed: ''
+    }).pipe(delay(this.writeDelay));
+  }
+
+
+  typeTypeText(typeText: string, preText: string, icon: string): Observable<{ icon: string; preText: string; typed: string }> {
+    return interval(this.writeSpeed).pipe(
+      map(x => ({
+        icon,
+        preText,
+        typed: typeText.substring(0, x + 1)
+      })),
+      take(typeText.length + 1)
+    );
+  }
+
 
 }

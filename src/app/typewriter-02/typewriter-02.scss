@@ -35,7 +35,7 @@
   align-items: center;
   justify-content: flex-start;
   font-size: 1.5em;
-  color: white;
+  color: white; 
   @include defaultFont($c: #FFFFFF, $fw: 400);
 }
 
@@ -44,11 +44,12 @@
   height: 40px;
   margin-right: 12px;
   opacity: 0;
-  transition: opacity .7s ease-in-out, transform .6s ease-in-out;
-  -moz-transition: opacity .7s ease-in-out, transform .6s ease-in-out;
-  -webkit-transition: opacity .7s ease-in-out, transform .6s ease-in-out;
-  -o-transition: opacity .7s ease-in-out, transform .6s ease-in-out;
-  -ms-transition: opacity .7s ease-in-out, transform .6s ease-in-out;
+  // transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  // -moz-transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  // -webkit-transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  // -o-transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  // -ms-transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  transition: opacity 0.2s cubic-bezier(0.2, 0, 0.2, 0.2), transform 0.2s ease-in-out;
 }
 
 .typewriter-icon.fade-in {
