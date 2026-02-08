@@ -113,8 +113,9 @@ textarea {
 
 .privacy-policy {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
     font-size: 0.8em;
     color: white;
     width: 100%;
@@ -147,16 +148,15 @@ textarea {
         background-image: url('../../assets/img/checkbox.svg');
         background-repeat: no-repeat;
         object-fit: contain;
-
         transition-property: background-image;
         transition-duration: 0.3s;
         transition-timing-function: ease-in-out;
-        
+
 
     }
 
     label:hover::before,
-    input[type="checkbox"]:hover + label::before {
+    input[type="checkbox"]:hover+label::before {
         cursor: pointer;
         background-image: url('../../assets/img/checkbox_hover.svg');
         width: 1.7em;
@@ -168,6 +168,24 @@ textarea {
         cursor: pointer;
         // display: flex;
     }
+}
+
+.privacy-policy input[type="checkbox"].error-input+label::before {
+    background-image: url('../../assets/img/checkbox_red.svg');
+    width: 1.7em;
+    height: 1.7em;
+}
+
+.privacy-policy input[type="checkbox"]:checked+label::before {
+    background-image: url('../../assets/img/checkbox_checked.svg');
+    width: 1.7em;
+    height: 1.7em;
+}
+
+.error-message {
+    color: red !important;
+    font-size: 0.9em;
+    margin: 4px 0 0 28px;
 }
 
 .button-container {
@@ -189,6 +207,11 @@ textarea {
     align-items: center;
     gap: 8px;
     background: none;
+
+    &:hover {
+        background-color: rgba(137, 188, 217, 0.3);
+    }
+
 }
 
 .error-label {

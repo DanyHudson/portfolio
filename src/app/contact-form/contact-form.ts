@@ -32,9 +32,11 @@ export class ContactForm {
   // }
 
   mailTest = true; // set to false for real mail sending
+  submitAttempted = false;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    // endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://dany-hudson.com/sendMail.php',  // my email just  for testing
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -45,6 +47,9 @@ export class ContactForm {
   };
 
   onSubmit(ngForm: NgForm) {
+
+    this.submitAttempted = true;
+
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) { // remove ' !this.mailTest' for real mail sending
       this.http.post(this.post.endPoint, this.post.body(this.contactFormData))
         .subscribe({
@@ -58,7 +63,7 @@ export class ContactForm {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) { // delete this for real mail sending
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) { // delete '&& this.mailTest' for real mail sending
       // asa above insert here what else should happen on success, e.g. a success message
       ngForm.resetForm();
     }
