@@ -26,7 +26,7 @@
         <!-- <input #userName="ngModel" [(ngModel)]="contactFormData.userName" id="userName" name="userName" type="text" required /> -->
         <!-- <i class="done-icon d-none " ></i> -->
         <i class="done-icon" [class.d-none]="!userName.valid || !userName.touched"></i>
-        <input [(ngModel)]="contactFormData.userName" id="userName" name="userName" type="text" required
+        <input maxlength="57" [(ngModel)]="contactFormData.userName" id="userName" name="userName" type="text" required
           #userName="ngModel" [class.error-input]="userName.invalid && userName.touched && submitAttempted" />
       </div>
       <div class="form-group">
