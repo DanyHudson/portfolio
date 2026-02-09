@@ -26,7 +26,7 @@
         <!-- <input #userName="ngModel" [(ngModel)]="contactFormData.userName" id="userName" name="userName" type="text" required /> -->
         <!-- <i class="done-icon d-none " ></i> -->
         <i class="done-icon" [class.d-none]="!userName.valid || !userName.touched"></i>
-        <input maxlength="57" [(ngModel)]="contactFormData.userName" id="userName" name="userName" type="text" required
+        <input maxlength="64" [(ngModel)]="contactFormData.userName" id="userName" name="userName" type="text" required
           #userName="ngModel" [class.error-input]="userName.invalid && userName.touched && submitAttempted" />
       </div>
       <div class="form-group">
@@ -39,9 +39,9 @@
           }
         </label>
         <i class="done-icon" [class.d-none]="!userEmail.valid || !userEmail.touched"></i>
-        <input #userEmail="ngModel" [(ngModel)]="contactFormData.userEmail" id="userEmail" name="userEmail" type="text"
+        <input maxlength="64" #userEmail="ngModel" [(ngModel)]="contactFormData.userEmail" id="userEmail" name="userEmail" type="text"
           required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-          [class.error-input]="userEmail.invalid && userEmail.touched && submitAttempted && !contactFormData.privacyPolicyAccepted" />
+          [class.error-input]="userEmail.invalid && userEmail.touched && submitAttempted" />
       </div>
     </div>
     <div class="row-2">
@@ -55,7 +55,7 @@
           }
         </label>
         <textarea #message="ngModel" [(ngModel)]="contactFormData.message" id="message" name="message" required
-          [class.error-input]="message.invalid && message.touched && submitAttempted && !contactFormData.privacyPolicyAccepted"></textarea>
+          [class.error-input]="message.invalid && message.touched && submitAttempted "></textarea>
         <i class="done-icon" [class.d-none]="!message.valid || !message.touched"></i>
       </div>
     </div>
@@ -74,7 +74,8 @@
     </div>
 
     <div class="button-container">
-      <button class="submit-btn" type="submit">Send</button>
+      <!-- <button class="submit-btn" type="submit">Send</button> -->
+       <button class="submit-btn" type="submit" [disabled]="!contactForm.form.valid || !contactFormData.privacyPolicyAccepted">Send</button>
     </div>
   </form>
 </div>

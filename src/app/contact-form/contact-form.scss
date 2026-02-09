@@ -63,9 +63,8 @@ input:-webkit-autofill:active {
         background: transparent;
         border: 1px solid rgb(137, 188, 217);
         border-radius: 50vw;
+        
     }
-
-
 
 }
 
@@ -94,19 +93,13 @@ input:-webkit-autofill:active {
     position: relative;
 }
 
-// label {
-//     margin-bottom: 6px;
-//     margin-left: 24px; // slight shift from the left edge
-//     font-size: 1em;
-//     color: rgb(137, 188, 217); // or your preferred color
-// }
 
 input,
 textarea {
     width: 100%;
     // border-radius: 8px;
-    padding: 10px;
-    font-size: 0.7em;
+    padding: 10px 36px 10px 20px;
+    font-size: 1em;
     color: white !important;
     z-index: 5;
 }
@@ -210,6 +203,12 @@ textarea {
 
     &:hover {
         background-color: rgba(137, 188, 217, 0.3);
+    }
+
+    &:disabled {
+        border-color: rgb(137, 188, 217, 0.5);
+        color: rgb(137, 188, 217, 0.5);
+        cursor: not-allowed;
     }
 
 }
