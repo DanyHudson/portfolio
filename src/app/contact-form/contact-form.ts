@@ -57,15 +57,17 @@ export class ContactForm {
             // insert here what else should happen on success, e.g. a success message
             console.log('Response from server: ', response);
             ngForm.resetForm();
+            this.submitAttempted = false;
           },
           error: (error: any) => {
             console.error(error);
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) { // delete '&& this.mailTest' for real mail sending
+    } else if (ngForm.submitted && ngForm.form.valid && this.submitAttempted && this.mailTest) { // delete the whole else if block for real mail sending
       // asa above insert here what else should happen on success, e.g. a success message
       ngForm.resetForm();
+      this.submitAttempted = false;
     }
   }
 }
