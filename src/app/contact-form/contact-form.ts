@@ -50,7 +50,7 @@ export class ContactForm {
 
     this.submitAttempted = true;
 
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) { // remove ' !this.mailTest' for real mail sending
+    if (ngForm.submitted && ngForm.form.valid && this.contactFormData.privacyPolicyAccepted && !this.mailTest) { // remove ' !this.mailTest' for real mail sending
       this.http.post(this.post.endPoint, this.post.body(this.contactFormData))
         .subscribe({
           next: (response) => {
@@ -65,7 +65,7 @@ export class ContactForm {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.submitAttempted && this.mailTest) { // delete the whole else if block for real mail sending
-      // asa above insert here what else should happen on success, e.g. a success message
+      // as above insert here what else should happen on success, e.g. a success message
       ngForm.resetForm();
       this.submitAttempted = false;
     }

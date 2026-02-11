@@ -12,6 +12,12 @@ input:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
 }
 
+input:focus,
+textarea:focus {
+    outline: none !important; // Remove default browser outline
+    box-shadow: 0 0 0 2px #89bcd9 !important; // Your custom focus style
+    border-color: #89bcd9 !important; // Your custom border color
+}
 
 .contact-form-container {
     margin-top: 48px;
@@ -148,8 +154,6 @@ textarea {
         transition-property: background-image;
         transition-duration: 0.3s;
         transition-timing-function: ease-in-out;
-
-
     }
 
     label:hover::before,
@@ -209,7 +213,7 @@ textarea {
         background-color: rgba(137, 188, 217, 0.3);
     }
 
-    &:disabled {
+    &.inactive {
         border-color: rgb(137, 188, 217, 0.5);
         color: rgb(137, 188, 217, 0.5);
         cursor: not-allowed;
