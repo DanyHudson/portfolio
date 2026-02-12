@@ -213,10 +213,16 @@ textarea {
         background-color: rgba(137, 188, 217, 0.3);
     }
 
-    &.inactive {
+    // &.inactive {
+    //     border-color: rgb(137, 188, 217, 0.5);
+    //     color: rgb(137, 188, 217, 0.5);
+    //     cursor: not-allowed;
+    // }
+    
+    &.disabled {
         border-color: rgb(137, 188, 217, 0.5);
         color: rgb(137, 188, 217, 0.5);
-        cursor: not-allowed;
+
     }
 
 }
