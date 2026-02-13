@@ -33,8 +33,7 @@
 
       <div class="form-group">
         <!-- <label for="userEmail">Your Email</label> -->
-        <label for="userEmail"
-          [class.error-label]="userEmail.invalid && (userEmail.touched || submitAttempted)">
+        <label for="userEmail" [class.error-label]="userEmail.invalid && (userEmail.touched || submitAttempted)">
           @if (userEmail.invalid && (userEmail.touched || submitAttempted)) {
           @if (userEmail.errors?.['required']) {
           Your email is requiredq
@@ -84,8 +83,11 @@
 
     <div class="button-container">
       <!-- <button class="submit-btn" type="submit">Send</button> -->
-      <button class="submit-btn" type="submit"
-        [disabled]="!contactForm.form.valid || !contactFormData.privacyPolicyAccepted">Send</button>
+      <button class="submit-btn" type="submit" [disabled]="!contactForm.form.valid">Send</button>
     </div>
   </form>
-</div> 
+
+  <div class="success-message-container">
+    <div class="success-message " [class.d-none]="!showSuccessMessage()">{{ contactFormData.successMessage }} <i class="done-icon"></i></div>
+  </div>
+</div>

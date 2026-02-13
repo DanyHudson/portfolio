@@ -220,7 +220,7 @@ textarea {
         border-color: rgb(137, 188, 217, 0.5);
         color: rgb(137, 188, 217, 0.5);
         cursor: not-allowed;
-        opacity: 0.7; 
+        opacity: 0.7;
     }
 
 }
@@ -242,4 +242,40 @@ textarea {
     top: 37px;
     right: 16px;
     z-index: 10;
+}
+
+
+.success-message-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    max-width: 860px;
+    height: 120px;
+    background-color: rgb(137, 188, 217, 0.3);
+    border-radius: 24px;
+
+}
+
+.success-message {
+    @include defaultFont($c: white, $fw: 400);
+    color: rgb(204, 220, 230, 0.5);
+    font-size: 1em;
+    gap: 8px;
+    z-index: 1;
+
+    .done-icon {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background-image: url('../../assets/icons/icon_done.svg');
+        // background: transparent;
+        background-repeat: no-repeat;
+        position: static;
+        z-index: 1;
+    }
 }
