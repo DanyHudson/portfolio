@@ -59,7 +59,6 @@ export class ContactForm {
       this.http.post(this.post.endPoint, this.post.body(this.contactFormData))
         .subscribe({
           next: (response) => {
-            // insert here what else should happen on success, e.g. a success message
             this.showSuccessMessage();
             console.log('Response from server: ', response);
             ngForm.resetForm();
@@ -71,7 +70,6 @@ export class ContactForm {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.submitAttempted && this.contactFormData.privacyPolicyAccepted && this.mailTest) { // delete the whole else if block for real mail sending
-      // as above insert here what else should happen on success, e.g. a success message
       this.showSuccessMessage();
       ngForm.resetForm();
       this.submitAttempted = false;
@@ -81,10 +79,9 @@ export class ContactForm {
   showSuccessMessage() {
     this.successMessageVisible = true;
     setTimeout(() => {
-      // this.successMessage[this.currentLang] || this.successMessage['en'];
       this.successMessageVisible = false;
     }, 1600);
   }
 
-  
+
 }
