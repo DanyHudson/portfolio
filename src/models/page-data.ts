@@ -331,3 +331,8 @@ export const contactInfo = [
         tel: '0157 123 456 68'
     },
 ];
+
+export const successMessages = {
+    en: 'Your message has been sent successfully!',
+    de: 'Deine Nachricht wurde erfolgreich gesendet!'
+}

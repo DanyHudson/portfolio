@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 // import { FormsModule, NgForm } from '@angular/forms';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { successMessages } from '../../models/page-data';
 
 @Component({
   selector: 'app-contact-form',
@@ -18,8 +19,7 @@ export class ContactForm {
     userName: '',
     userEmail: '',
     message: '',
-    privacyPolicyAccepted: false,
-    successMessage: 'Your message has been sent successfully!',
+    privacyPolicyAccepted: false
   };
 
   // onSubmit(ngForm: NgForm) {
@@ -34,6 +34,10 @@ export class ContactForm {
 
   mailTest = true; // set to false for real mail sending
   submitAttempted = false;
+
+  currentLang: 'en' | 'de' = 'en';
+  successMessage = successMessages;
+  successMessageVisible = false;
 
   post = {
     // endPoint: 'https://deineDomain.de/sendMail.php',
@@ -74,9 +78,13 @@ export class ContactForm {
     }
   }
 
-showSuccessMessage() {
-  return this.contactFormData.successMessage && !this.submitAttempted;
+  showSuccessMessage() {
+    this.successMessageVisible = true;
+    setTimeout(() => {
+      // this.successMessage[this.currentLang] || this.successMessage['en'];
+      this.successMessageVisible = false;
+    }, 1600);
+  }
 
-}
-
+  
 }
