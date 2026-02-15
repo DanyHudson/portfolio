@@ -35,3 +35,35 @@ switch ($_SERVER['REQUEST_METHOD']) {
             header("Allow: POST", true, 405);
             exit;
     } 
+
+
+
+//     for own emai adress:
+//         <?php
+// use PHPMailer\PHPMailer\PHPMailer;
+// use PHPMailer\PHPMailer\Exception;
+
+// require 'path/to/PHPMailer/src/Exception.php';
+// require 'path/to/PHPMailer/src/PHPMailer.php';
+// require 'path/to/PHPMailer/src/SMTP.php';
+
+// $mail = new PHPMailer(true);
+// try {
+//     $mail->isSMTP();
+//     $mail->Host = 'send.one.com';
+//     $mail->SMTPAuth = true;
+//     $mail->Username = 'your@email.com';
+//     $mail->Password = 'yourpassword';
+//     $mail->SMTPSecure = 'ssl'; // or 'tls'
+//     $mail->Port = 465; // or 587 for TLS
+
+//     $mail->setFrom('your@email.com', 'Your Name');
+//     $mail->addAddress('recipient@email.com');
+//     $mail->Subject = 'Subject here';
+//     $mail->Body    = 'Message body here';
+
+//     $mail->send();
+//     echo 'Message has been sent';
+// } catch (Exception $e) {
+//     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+// }

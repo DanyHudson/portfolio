@@ -247,14 +247,14 @@ textarea {
     width: 370px;
     max-width: 860px;
     height: 94px;
-    // background-color: rgb(137, 188, 217, 0.3);
-    box-shadow: 0 0 2em #f4aab9;
+    background-color: rgb(137, 188, 217, 0.3);
+    // box-shadow: 0 0 0.5em rgb(204, 220, 230, 1);
     border-radius: 24px;
 }
 
 .success-message {
     @include defaultFont($c: white, $fw: 400);
-    color: rgb(204, 220, 230, 0.5);
+    color: white;
     font-size: 1em;
     gap: 16px;
     z-index: 1;
