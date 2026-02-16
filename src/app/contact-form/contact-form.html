@@ -87,20 +87,13 @@
     </div>
   </form>
 
-  <!-- <div class="success-message-container">
-    <div class="success-message" >{{ successMessage }} <i
-        class="done-icon"></i></div>
-  </div> -->
-
   @if (successMessageVisible) {
   <div class="success-message-container">
-
     <div class="success-message">
       <!-- {{ successMessage }} -->
       {{ successMessage[currentLang] || successMessage['en'] }}
       <i class="done-icon"></i>
     </div>
-
   </div>
   }
 

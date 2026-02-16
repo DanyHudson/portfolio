@@ -116,7 +116,7 @@ textarea {
 .privacy-policy {
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    // justify-content: center;
     flex-direction: column;
     font-size: 0.8em;
     color: white;
@@ -124,6 +124,7 @@ textarea {
     max-width: 860px;
     margin-top: 8px;
     margin-bottom: 8px;
+    height: 56px;
 
     input[type="checkbox"] {
         width: 16px;
