@@ -5,14 +5,21 @@
 </button>
 
 
+@if (navOpen) {
+<div class="nav-links fade-in">
+  @for (link of navLinks; track link.label) {
+  <section class="nav-link" id="startPoint">
+    <a [class.active]="selectedLink === link.label" (click)="onNavClick(link)" href="#{{ link.anchor }}">
+      {{ link.label }}
+    </a>
+  </section>
 
-@for (link of navLinks; track link.label) {
-<section [class.open]="navOpen" id="startPoint">
-  <a [class.active]="selectedLink === link.label" (click)="onNavClick(link)" href="#{{ link.anchor }}">
-    {{ link.label }}
-  </a>
-</section>
+  }
+</div>
+}
 
+@if (navOpen) {
+<div class="backdrop" (click)="toggleNav()"></div>
 }
 
 
@@ -45,7 +52,3 @@
   <a href="#">About</a>
   <a href="#">Contact</a>
 </nav> -->
-
-@if (navOpen) {
-<div class="backdrop" (click)="toggleNav()"></div>
-}
