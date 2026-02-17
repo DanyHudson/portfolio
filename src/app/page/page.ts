@@ -5,13 +5,14 @@ import { Nav } from '../nav/nav';
 import { NavResp } from '../nav-resp/nav-resp';
 import { PageContent } from "../page-content/page-content";
 import { Footer } from '../footer/footer';
+import { LandingPageResp } from "../landing-page-resp/landing-page-resp";
 
 
 
 
 @Component({
   selector: 'app-page',
-  imports: [LandingPage, Nav, NavResp, PageContent, Footer],
+  imports: [LandingPage, Nav, NavResp, PageContent, Footer, LandingPageResp],
   standalone: true,
   templateUrl: './page.html',
   styleUrls: ['./page.scss'],

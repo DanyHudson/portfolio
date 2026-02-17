@@ -1,7 +1,8 @@
-<button class="burger" (click)="toggleNav()" [attr.aria-expanded]="navOpen" aria-label="Toggle navigation">
-  <span [class.open]="navOpen"></span>
-  <span [class.open]="navOpen"></span>
-  <span [class.open]="navOpen"></span>
+
+<button class="burger" (click)="toggleNav()" [class.open]="navOpen" [attr.aria-expanded]="navOpen" aria-label="Toggle navigation">
+  <span></span>
+  <span></span>
+  <span></span>
 </button>
 
 
@@ -22,33 +23,9 @@
 <div class="backdrop" (click)="toggleNav()"></div>
 }
 
-
-<!-- <nav [class.open]="navOpen">
-  -- Your nav links here 
-  <a href="#">Home</a>
-  <a href="#">About</a>
-  <a href="#">Contact</a>
-</nav> -->
-
-
-<!-- <div class="toggle-language">
-  <button class="de-btn active" (click)="setLanguage('de')">DE</button>
-  <button class="en-btn active" (click)="setLanguage('en')">EN</button>
-</div> -->
 <div class="toggle-language">
   <button class="de-btn" [class.active]="currentLang === 'de'" (click)="setLanguage('de')">DE</button>
   <button class="en-btn" [class.active]="currentLang === 'en'" (click)="setLanguage('en')">EN</button>
 </div>
 
 <!-- need to have explained how the [] brackets work. is is a condition, is it an assignment? -->
-
-
-
-
-
-<!-- <nav [class.open]="navOpen">
-  -- Your nav links here --
-  <a href="#">Home</a>
-  <a href="#">About</a>
-  <a href="#">Contact</a>
-</nav> -->

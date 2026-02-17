@@ -6,36 +6,6 @@
   z-index: 10;
 }
 
-// .nav-bar {
-//     position: sticky;
-//     top: 0;
-//     z-index: 10;
-//     display: flex;
-//     justify-content: space-between;
-//     gap: 2rem;
-//     padding: 1rem;
-//     width: 56%;
-
-//     a {
-//         position: relative;
-//         text-decoration: none;
-//         font-size: 20px;
-//         line-height: 24px;
-//         cursor: pointer;
-//         padding: 18px 16px;
-//         @include defaultFont($c: rgba(38, 46, 52, 1), $fw: 500);
-//         transition: color 0.3s ease-in, opacity 0.5s ease-in;
-
-//         &:hover {
-//             text-decoration: none;
-//             color: white;
-
-//         }
-//      
-//     }
-// }
-
-
 .de-btn,
 .en-btn {
   position: relative;
@@ -85,32 +55,86 @@
 }
 
 
+
+// Burger menu animation (clean pattern)
 .burger {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 40px;
   height: 40px;
+  margin: 10px 10px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
   background: none;
   border: none;
-  cursor: pointer;
   z-index: 1001;
-  // transform-origin: center;
-
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
 
   span {
-    display: block;
-    height: 4px;
-    width: 100%;
-    background: #89bcd9;
-    margin: 5px 0;
+    background-color: #FFF;
+    position: absolute;
     border-radius: 2px;
-    // transition: 0.3s;
-    transition:
-      // width 0.3s cubic-bezier(.68, -0.55, .27, 1.55),
-      transform 0.3s cubic-bezier(.68, -0.55, .27, 1.55);
-    transform-origin: center;
+    transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+    width: 100%;
+    height: 4px;
+    left: 0;
   }
+
+  span:nth-child(1) {
+    top: 0px;
+  }
+
+  span:nth-child(2) {
+    top: 13px;
+  }
+
+  span:nth-child(3) {
+    bottom: 0px;
+  }
+
+  &:not(.open):hover span:nth-child(1) {
+    transform: scaleX(.8);
+  }
+
+  &:not(.open):hover span:nth-child(2) {
+    transform: scaleX(.5);
+  }
+
+  &:not(.open):hover span:nth-child(3) {
+    transform: scaleX(.8);
+  }
+
+  &.open span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 13px;
+  }
+
+  &.open span:nth-child(2) {
+    transform: scale(0);
+    transition-duration: 50ms;
+  }
+
+  &.open span:nth-child(3) {
+    top: 13px;
+    transform: rotate(-45deg);
+  }
+}
+
+
+span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #89bcd9;
+  margin: 5px 0;
+  border-radius: 2px;
+  // transition: 0.3s;
+  transition:
+    // width 0.3s cubic-bezier(.68, -0.55, .27, 1.55),
+    transform 0.3s cubic-bezier(.68, -0.55, .27, 1.55);
+  transform-origin: center;
+
 
   &:hover span:nth-child(1),
   &:focus span:nth-child(1) {
@@ -131,25 +155,25 @@
     transform: scaleX(0.8);
   }
 
-  // :hover after an element (e.g. a:hover) means “when this element is hovered.”
-  // &:hover span:nth-child(1) means “when the parent (.burger) is hovered,
-  //style the first span inside it.”
+}
 
-  span.open:nth-child(1) {
-    transform: translateY(13px) rotate(45deg);
-  }
+// :hover after an element (e.g. a:hover) means “when this element is hovered.”
+// &:hover span:nth-child(1) means “when the parent (.burger) is hovered,
+//style the first span inside it.”
 
+span.open:nth-child(1) {
+  transform: translateY(13px) rotate(45deg);
+}
 
-  span.open:nth-child(2) {
-    width: 0;
-    opacity: 0;
-    transition: opacity 0.2s ease-in;
-    transform: scaleX(0);
-  }
+span.open:nth-child(2) {
+  width: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+  transform: scaleX(0);
+}
 
-  span.open:nth-child(3) {
-    transform: translateY(-13px) rotate(-45deg);
-  }
+span.open:nth-child(3) {
+  transform: translateY(-13px) rotate(-45deg);
 }
 
 .nav-links {
@@ -158,9 +182,6 @@
   left: 0;
   width: 250px;
   height: 100vh;
-  // background: #222;
-  // transform: translateX(-100%);
-  // transition: transform 0.3s;
   z-index: 1000;
   display: flex;
   flex-direction: column;
@@ -209,53 +230,3 @@
   display: flex;
   gap: 8px;
 }
-
-
-
-
-
-
-
-// .burger span {
-//   // ...base styles...
-//   transition: transform 0.3s cubic-bezier(.68, -0.55, .27, 1.55);
-//   transform-origin: center;
-// }
-
-// // Hover/focus effect (only when not open)
-// .burger:not(.open):hover span:nth-child(1),
-// .burger:not(.open):focus span:nth-child(1) {
-//   transform: scaleX(0.8);
-// }
-// .burger:not(.open):hover span:nth-child(2),
-// .burger:not(.open):focus span:nth-child(2) {
-//   transform: scaleX(0.5);
-// }
-// .burger:not(.open):hover span:nth-child(3),
-// .burger:not(.open):focus span:nth-child(3) {
-//   transform: scaleX(0.8);
-// }
-
-// // Open (clicked) state
-// .burger.open span:nth-child(1) {
-//   transform: translateY(13px) rotate(45deg);
-// }
-// .burger.open span:nth-child(2) {
-//   opacity: 0;
-//   transform: scaleX(0); // or just opacity: 0;
-// }
-// .burger.open span:nth-child(3) {
-//   transform: translateY(-13px) rotate(-45deg);
-// }
-
-
-// How to use:
-
-// When the menu is open, add the .open class to the .burger button.
-// The hover/focus effect only applies when .open is NOT present.
-
-// Summary:
-
-// Use .burger:not(.open):hover span for the hover effect.
-// Use .burger.open span for the open (clicked) state.
-// This ensures the hover effect is only active when the menu is closed.
