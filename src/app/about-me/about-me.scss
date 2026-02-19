@@ -9,7 +9,7 @@
     max-width: 860px;
     margin: 0 auto;
 
-     @media (max-width: 1020px) {
+    @media (max-width: 1020px) {
         flex-direction: column;
         align-items: center;
     }
@@ -45,6 +45,24 @@ app-typewriter-02 {
 .right-container {
     flex-direction: column;
     justify-content: center;
+    overflow-wrap: break-word;
+
+    @media (max-width: 1020px) {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.ab-me-text {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    width: 100%;
+    max-width: 640px;
+    text-align: left;
+
+    @media (max-width: 1020px) {
+        text-align: center;
+    }
 }
 
 .button-container {
