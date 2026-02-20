@@ -21,6 +21,10 @@
     align-items: flex-start;
     color: white;
 
+    @media (max-width: 580px) {
+        font-size: min(1.2em, 4vw);
+    }
+
 }
 
 app-typewriter-02 {
@@ -62,7 +66,14 @@ app-typewriter-02 {
 
     @media (max-width: 1020px) {
         text-align: center;
+
     }
+
+    @media (max-width: 650px) {
+        width: min(35em, 70vw);
+    }
+
+
 }
 
 .button-container {
