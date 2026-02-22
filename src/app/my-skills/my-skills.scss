@@ -37,21 +37,22 @@
     @media (max-width: 1020px) {
         grid-template-columns: repeat(4, 60px);
         grid-template-rows: repeat(3, 80px);
-        // gap: 26px;
         justify-content: center;
-        
     }
-
 
     @media (max-width: 650px) {
         width: min(35em, 70vw);
-
     }
 
     @media (max-width: 580px) {
         grid-template-columns: repeat(4, 50px);
         grid-template-rows: repeat(3, 70px);
-        gap: 16px;
+        
+    }
+    @media (max-width: 340px) {
+        grid-template-columns: repeat(3, 50px);
+        grid-template-rows: repeat(2, 70px);
+        
     }
 
 }
@@ -73,7 +74,7 @@
     }
 
       @media (max-width: 1020px) {
-        font-size: 1em;
+        font-size: 0.9em;
         
     }
 }
