@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { HighlightShape } from '../highlight-shape/highlight-shape';
+import { HighlightShapeResp } from '../highlight-shape-resp/highlight-shape-resp';
+
 import { skills } from '../../models/page-data';
 import { LangService } from '../services/lang.service';
 
 @Component({
   selector: 'app-my-skills',
   standalone: true,
-  imports: [HighlightShape,],
+  imports: [HighlightShape, HighlightShapeResp],
   templateUrl: './my-skills.html',
   styleUrls: ['./my-skills.scss'],
 })
