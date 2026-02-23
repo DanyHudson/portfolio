@@ -1,0 +1,45 @@
+<!-- <section class="highlight-shape-container">
+  <img class="shape-bg base" src="assets/img/shape_2.svg" alt="background shape">
+  <img class="shape-bg animated" src="assets/img/shape_2.svg" alt="background shape">
+  <span class="claim">{{ claim }}</span>
+  <div class="reference">
+    @if (reference && Array.isArray(reference)) {
+    @for (item of reference; let i = $index; track i) {
+    <div class="icon-with-label">
+      <img [src]="item.icon" [alt]="item.label" />
+      <span class="icon-label">{{ item.label }}</span>
+    </div>
+    }
+    }
+    @if (reference && !Array.isArray(reference)) {
+    <span>Project <span class="project-reference"> {{ reference }}</span></span>
+    }
+  </div>
+  <p class="text">{{ text }}</p>
+  @if (link) {
+  <a class="link" [href]="link" target="_blank">{{ linkLabel }}</a>
+  }
+</section> -->
+
+<section class="highlight-shape-container">
+  <img class="shape-bg base" src="assets/img/shape_2.svg" alt="background shape">
+  <img class="shape-bg animated" src="assets/img/shape_2.svg" alt="background shape">
+  <span class="claim">{{ claim }}</span>
+  <div class="reference">
+    @if (reference && Array.isArray(reference)) {
+    @for (item of reference; let i = $index; track i) {
+    <div class="icon-with-label">
+      <img [src]="item.icon" [alt]="item.label" />
+      <span class="icon-label">{{ item.label }}</span>
+    </div>
+    }
+    }
+    @if (reference && !Array.isArray(reference)) {
+    <span>Project <span class="project-reference"> {{ reference }}</span></span>
+    }
+  </div>
+  <p class="text">{{ text }}</p>
+  @if (link) {
+  <a class="link" [href]="link" target="_blank">{{ linkLabel }}</a>
+  }
+</section>
