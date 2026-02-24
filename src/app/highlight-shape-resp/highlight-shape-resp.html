@@ -21,10 +21,16 @@
   }
 </section> -->
 
-<section class="highlight-shape-container">
-  <img class="shape-bg base" src="assets/img/shape_2.svg" alt="background shape">
-  <img class="shape-bg animated" src="assets/img/shape_2.svg" alt="background shape">
+<section class="highlight-shape-container-resp">
   <span class="claim">{{ claim }}</span>
+
+  <p class="text">{{ text }}</p>
+  @if (link) {
+  <a class="link" [href]="link" target="_blank">{{ linkLabel }}</a>
+
+  <img class="shape-bg base" src="assets/img/shape_2.svg" alt="background shape">
+  <!-- <img class="shape-bg animated" src="assets/img/shape_2.svg" alt="background shape"> -->
+
   <div class="reference">
     @if (reference && Array.isArray(reference)) {
     @for (item of reference; let i = $index; track i) {
@@ -38,8 +44,6 @@
     <span>Project <span class="project-reference"> {{ reference }}</span></span>
     }
   </div>
-  <p class="text">{{ text }}</p>
-  @if (link) {
-  <a class="link" [href]="link" target="_blank">{{ linkLabel }}</a>
+
   }
 </section>
