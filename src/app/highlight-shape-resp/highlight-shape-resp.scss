@@ -1,45 +1,73 @@
 .highlight-shape-container-resp {
+    border: 1px solid rgb(243, 26, 160);
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 320px;
-    height: 332px;
+    width: 380px;
+    height: 156px;
     overflow: hidden;
 
-     .shape-bg {
-        position: absolute;
-        width: 320px;
-        height: 332px;
-        top: 0;
-        left: 0;
-        transition: opacity 0.5s ease-in, transform 0.4s ease-in;
-        z-index: 0;
-        opacity: 0.5;
-        pointer-events: none;
+    // .shape-bg {
+    // position: absolute;
+    // width: 320px;
+    // height: 332px;
+    // top: 0;
+    // left: 0;
+    // transition: opacity 0.5s ease-in, transform 0.4s ease-in;
+    // z-index: 0;
+    // opacity: 0.5;
+    // pointer-events: none;
+    //}
+
+    @media (max-width: 650px) {
+        width: min(35em, 70vw);
+        height: auto;
     }
-    .shape-bg.animated {
-        opacity: 0;
-        transform: none;
+
+    @media (max-width: 580px) {
+        width: min(35em, 90vw);
+        height: auto;
     }
-    &:hover .shape-bg.base {
-        opacity: 0;
+
+    @media (max-width: 320px) {
+        width: min(35em, 95vw);
+
     }
-    &:hover .shape-bg.animated {
-        opacity: 0.8;
-        transform: rotate(16deg);
+
+    @media (max-width: 650px) {
+        width: min(35em, 90vw);
     }
+
 }
 
-.highlight-shape-container p {
+.claim {
+    font-size: 1.4em;
+    margin-bottom: 1em;
+    text-align: center;
+
+}
+
+.highlight-shape-resp-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.highlight-shape-resp-content p {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
     line-height: 1.24em;
     width: 50%;
     z-index: 2;
     color: white;
-    text-align: center;
+    // 
+    flex: 1 1 0;
 }
 
 .reference {
@@ -51,6 +79,7 @@
     align-items: center;
     gap: 12px;
     // flex-wrap: wrap;
+    flex: 1 1 0;
 }
 
 .project-reference {

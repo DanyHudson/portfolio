@@ -100,6 +100,7 @@ export const skills = [
 
                 reference: [
                     { icon: 'assets/icons/owl_icon.svg', label: 'OWL' },
+                    { icon: 'assets/icons/owl_icon.svg', label: 'OWL' }
 
                 ],
 
