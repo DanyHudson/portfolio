@@ -25,6 +25,11 @@
     width: 380px;
     height: 380px;
     margin-top: 40px;
+
+    @media (max-width: 1020px) {
+        display: none;
+    }
+
 }
 
 

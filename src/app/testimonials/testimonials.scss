@@ -1,7 +1,7 @@
  @use '../../styles.scss' as*;
- 
+
  h3 {
-    @include defaultFont($c:rgb(137, 188, 217), $fw:400);
+    @include defaultFont($c: rgb(137, 188, 217), $fw: 400);
     font-size: 1.7em;
     text-align: center;
     margin: 32px 0 32px 0;
@@ -14,5 +14,12 @@
     gap: 32px;
     // width: 86%;
     max-width: 860px;
+    height: 320px;
     margin: 0 auto;
+
+    @media (max-width: 320px) {
+       overflow-x: scroll ;
+
+    }
+
  }
