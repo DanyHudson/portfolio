@@ -26,12 +26,15 @@
     height: 380px;
     margin-top: 40px;
 
+
+}
+
+.hide-highlight-shape {
     @media (max-width: 1020px) {
         display: none;
     }
 
 }
-
 
 .left-container {
     flex: 1 1 0;
