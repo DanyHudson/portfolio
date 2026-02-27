@@ -17,8 +17,16 @@
     height: 320px;
     margin: 0 auto;
 
-    @media (max-width: 320px) {
-       overflow-x: scroll ;
+    @media (max-width: 1020px) {
+       overflow-x: scroll;
+       overflow-y: hidden;
+       scroll-snap-type: x mandatory;
+
+       &::-webkit-scrollbar {
+          height: 0px;
+       }
+
+       scrollbar-width: none;
 
     }
 
