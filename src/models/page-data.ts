@@ -283,22 +283,17 @@ export const myProjectTabs = [
 export const mainClaim = {
     en: 'Need a teamplayer? Here\'s what my colleagues said about me',
     de: 'Was Kollegen über mich sagen'
-
 };
 
 export const mainClaimResp = {
     en: 'Need a teamplayer?',
     de: 'Teamplayer gesucht?'
-
 };
 
 export const mainSubClaimResp = {
     en: 'Here\'s what my colleagues said about me',
     de: 'Was Kollegen über mich sagen'
-
 };
-
-
 
 export const testimonials = [
     {
