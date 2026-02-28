@@ -286,6 +286,20 @@ export const mainClaim = {
 
 };
 
+export const mainClaimResp = {
+    en: 'Need a teamplayer?',
+    de: 'Teamplayer gesucht?'
+
+};
+
+export const mainSubClaimResp = {
+    en: 'Here\'s what my colleagues said about me',
+    de: 'Was Kollegen über mich sagen'
+
+};
+
+
+
 export const testimonials = [
     {
         claim: 'Max Mustermann',

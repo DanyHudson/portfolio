@@ -1,5 +1,11 @@
 
-<h3>{{mainClaim[currentLang]}}</h3>
+<h3 class="hide-for-resp">{{mainClaim[currentLang]}}</h3>
+
+<div class="display-resp">
+<h3>{{mainClaimResp[currentLang]}}</h3>
+<h4>{{mainSubClaimResp[currentLang]}}</h4>
+</div>
+
 <section class="section-content">
 @for (testimonial of testimonials; track testimonial) {
   <app-highlight-shape

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HighlightShape } from '../highlight-shape/highlight-shape';
-import { testimonials } from '../../models/page-data';
+import { mainClaimResp, mainSubClaimResp, testimonials } from '../../models/page-data';
 import { mainClaim } from '../../models/page-data';
 import { LangService } from '../services/lang.service';
 
@@ -14,6 +14,8 @@ import { LangService } from '../services/lang.service';
 export class Testimonials {
 testimonials = testimonials;
 mainClaim = mainClaim;
+mainClaimResp = mainClaimResp;
+mainSubClaimResp = mainSubClaimResp;
 currentLang: 'en' | 'de' = 'en';
 
 constructor(private langService: LangService) {
