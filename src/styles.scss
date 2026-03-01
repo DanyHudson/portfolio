@@ -94,3 +94,17 @@ h2 {
     border-top-right-radius: 10px !important;
     border-top-left-radius: 10px !important;
 }
+
+@mixin hide-for-resp($breakpoint: 1020px) {
+    @media (max-width: $breakpoint) {
+        display: none;
+    }
+}
+
+@mixin display-resp($breakpoint: 1020px) {
+    display: none;
+
+    @media (max-width: $breakpoint) {
+        display: block;
+    }
+}

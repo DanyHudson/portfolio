@@ -18,6 +18,11 @@ app-about-me, app-my-skills, app-my-projects, app-testimonials, app-contact {
 app-my-projects, app-about-me {
     width: 100%;
 }
+app-my-projects {
+    @media (max-width: 1020px) {
+        width: min(42em, 90vw);
+  }
+}
 
 app-contact {
     position: relative;

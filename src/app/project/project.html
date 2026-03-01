@@ -1,14 +1,13 @@
 <div class="left-container">
-  <div class="left-container">
-    @for (item of projectData.content; track $index) {
-    <div class="headline-row">
-      <img src="../assets/img/bullet_icon.svg" alt="bullet" class="bullet-img" />
-      <h3>{{ item.headline[currentLang] }}</h3>
-    </div>
-    <p class="project-paragraph">{{ item.text[currentLang] }}</p>
-    }
+  @for (item of projectData.content; track $index) {
+  <div class="headline-row">
+    <img src="../assets/img/bullet_icon.svg" alt="bullet" class="bullet-img" />
+    <h3>{{ item.headline[currentLang] }}</h3>
   </div>
+  <p class="project-paragraph">{{ item.text[currentLang] }}</p>
+  }
 </div>
+
 
 <div class="right-container">
   <div class="technologies">

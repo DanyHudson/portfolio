@@ -1,106 +1,102 @@
-// @use '@angular/material' as mat;
-
-// //:root {
-// app-tabs {
-//   @include mat.tabs-overrides((
-//     active-focus-indicator-color: orange,
-//     active-focus-label-text-color: red,
-//     background-color: #f7f6f6,
-//     inactive-label-text-color: #f7f6f6,
-//     active-indicator-shape: rectangle,
-//     active-indicator-color: orange,
-//   ));
-
-// }
 @use '../../styles.scss' as*;
 
-.tab-group, .tab-content, app-my-projects {
+.tab-group,
+.tab-content,
+app-my-projects {
   max-width: 1214px; // or your intended max width 
   margin: 0 auto;
   box-sizing: border-box;
 }
 
-.tab-group {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  // justify-content: space-evenly;
+  .tab-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .tab-header {
+    width: 89%;
+    display: flex;
+    gap: 20px;
+  }
+
+  .tab-label,
+  .tab-label-resp {
+    font-size: 1.3em;
+    line-height: 1.83em;
+    color: rgb(137, 188, 217);
+    cursor: pointer;
+    padding: 10px 30px;
+    border-radius: 8px 8px 0 0;
+  }
+
+
+  .tab-label {
+    @include hide-for-resp($breakpoint: 1020px);
+  }
+
+
+  .tab-label.active,
+  .tab-label-resp.active {
+    background: rgba(137, 188, 217, 0.07);
+    font-weight: bold;
+    color: white;
+    z-index: 1;
+  }
+
+  .tab-label-resp {
+    @include display-resp($breakpoint: 1020px);
+
+    // font-size: 1.5em;
+    // line-height: 1.83em;
+    // color: rgb(137, 188, 217);
+    // cursor: pointer;
+    // padding: 10px 30px;
+    // border-radius: 8px 8px 0 0;
+  }
+
+
+  .tab-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    
+     @media (max-width: 1020px) {
+       flex-direction: column;
+       gap: 20px;
+  }
 }
 
+  .tab-content.active {
+    background: rgba(137, 188, 217, 0.07);
+    width: 100%;
 
-.tab-header {
-  width: 89%;
-  display: flex;
-  // align-items: center;
-  // justify-content: flex-start;
-  gap: 20px;
-}
+  }
 
-.tab-label {
-  // font-family: 'Montserrat', sans-serif;
-  // font-weight: 700;
-  font-size: 1.5em;
-  line-height: 1.83em;
-  color: rgb(137, 188, 217);
-  cursor: pointer;
-  padding: 10px 30px;
-  border-radius: 8px 8px 0 0;
-}
+  .tab-content section {
+    @include defaultFont($c: white, $fw: 500);
+    font-size: 1.2em;
+    line-height: 1.83em;
+    padding: 20px;
+    color: white;
+    width: 89%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.tab-label.active {
-  background: rgba(137, 188, 217, 0.07);
-  font-weight: bold;
-  color: white;
-  z-index: 1;
-}
+  app-project {
+    width: 88%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 
-// .tab-body {
-//   width: 100%;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   background-color: rgb(109, 124, 190);
-// }
-
-.tab-content {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  // background-color: rgb(163, 179, 155);
-  min-height: 100px;
-
-}
-
-.tab-content.active {
-  // background: rgb (137, 188, 217);
-  background: rgba(137, 188, 217, 0.07);
-  // background: #89bcd9;
-  width: 100%;
- 
-}
-
-.tab-content section {
-  @include defaultFont($c:white, $fw:500);
-  // font-family: 'Montserrat', sans-serif;
-  // font-weight: 500;
-  font-size: 1.2em;
-  line-height: 1.83em;
-  padding: 20px;
-  color: white;
-  width: 89%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-}
-
-app-project {
-  width: 88%;
-  display: flex;
-  // align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
+    @media (max-width: 1020px) {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }
+  }
