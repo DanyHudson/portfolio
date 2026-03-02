@@ -1,0 +1,36 @@
+<div class="right-container">
+  <div class="technologies">
+    <h3>Technologies</h3>
+    @if (projectData.techNames && projectData.techNames.length) {
+    <div class="icon-row">
+      @for (techName of projectData.techNames; track $index) {
+      {{ techName }} @if (!$last) {, }
+      }
+    </div>
+    }
+  </div>
+  @if (projectData.projectImage) {
+  <img [src]="projectData.projectImage" alt="{{ projectData.label }}" class="mp-img">
+  }
+
+
+</div>
+
+<div class="left-container">
+  @for (item of projectData.content; track $index) {
+  <div class="headline-row">
+    <img src="../assets/img/bullet_icon.svg" alt="bullet" class="bullet-img" />
+    <h3>{{ item.headline[currentLang] }}</h3>
+  </div>
+  <p class="project-paragraph">{{ item.text[currentLang] }}</p>
+  }
+</div>
+
+<div class="mp-btn">
+  <button class="live-test">
+    Live Test
+  </button>
+  <button class="github">
+    GitHub
+  </button>
+</div>
