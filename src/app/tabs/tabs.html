@@ -25,9 +25,7 @@
     <div class="tab-label-resp" [class.active]="i === activeTabIndex" (click)="activeTabIndex = i">
       {{ tab.subLabel ? tab.subLabel : '' }}
 
-
       <!-- Project {{ i + 1 }}{{ tab.subLabel ? ' - ' + tab.subLabel : '' }} -->
-
 
     </div>
 
@@ -37,6 +35,8 @@
   <div class="tab-content active">
     <h3 class="tab-label-resp">{{ tabs[activeTabIndex].label }}</h3>
     <app-project [projectData]="tabs[activeTabIndex]"></app-project>
+    <app-project-resp [projectData]="tabs[activeTabIndex]"></app-project-resp>
+
   </div>
 
 </div>

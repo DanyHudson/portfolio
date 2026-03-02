@@ -2,13 +2,14 @@ import { Component, Input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 import { Project } from '../project/project';
+import  {ProjectResp} from '../project-resp/project-resp';
 import { myProjectTabs } from '../../models/page-data'; 
 
 
 @Component({
   selector: 'app-tabs',
   standalone: true,
-  imports: [MatButtonModule, MatTabsModule, Project],
+  imports: [MatButtonModule, MatTabsModule, Project, ProjectResp],
   templateUrl: './tabs.html',
   styleUrls: ['./tabs.scss'],
 
@@ -16,6 +17,7 @@ import { myProjectTabs } from '../../models/page-data';
 })
 export class Tabs {
   project = Project;
+  projectResp = ProjectResp;
   tabs = myProjectTabs;
   activeLink = this.tabs[0];
   activeTabIndex = 0;

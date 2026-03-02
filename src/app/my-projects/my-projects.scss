@@ -28,4 +28,8 @@ app-tabs {
   align-items: center;
   justify-content: center;
   gap: 20px;
+
+  @media (max-width: 1020px) {
+    width: min(42em, 90vw);
+  }
 }

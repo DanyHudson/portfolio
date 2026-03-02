@@ -87,8 +87,6 @@ export const skills = [
                 skill: 'Adobe Acrobat',
             },
 
-
-
         ],
 
         learning: [
@@ -101,7 +99,6 @@ export const skills = [
                 reference: [
                     { icon: 'assets/icons/owl_icon.svg', label: 'OWL' },
                     { icon: 'assets/icons/owl_icon.svg', label: 'OWL' }
-
                 ],
 
                 text: {
@@ -165,6 +162,8 @@ export const myProjectTabs = [
             { icon: 'assets/icons/ts_icon.svg', alt: 'TypeScript logo' },
             { icon: 'assets/icons/fb_icon.svg', alt: 'Firebase logo' }
         ],
+
+        techNames: ['Angular', 'TypeScript', 'Firebase'],
 
         projectImage: '../assets/img/da_bubble_scrsh.jpg',
         linkLiveTest: '',
