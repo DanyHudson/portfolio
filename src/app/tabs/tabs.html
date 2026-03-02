@@ -23,8 +23,14 @@
     </div>
 
     <div class="tab-label-resp" [class.active]="i === activeTabIndex" (click)="activeTabIndex = i">
-      Project {{ i + 1 }}
+      {{ tab.subLabel ? tab.subLabel : '' }}
+
+
+      <!-- Project {{ i + 1 }}{{ tab.subLabel ? ' - ' + tab.subLabel : '' }} -->
+
+
     </div>
+
     }
   </div>
 

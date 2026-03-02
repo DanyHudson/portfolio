@@ -120,6 +120,7 @@ export const skills = [
 export const myProjectTabs = [
     {
         label: 'DA Bubble',
+        subLabel: 'Community App',
         content: [
             {
                 headline: {
@@ -172,6 +173,7 @@ export const myProjectTabs = [
 
     {
         label: 'Sharky',
+        subLabel: 'Game App',
         content: [
             {
                 headline: {
@@ -226,6 +228,7 @@ export const myProjectTabs = [
 
     {
         label: 'Join',
+        subLabel: 'Kanban App',
         content: [
             {
                 headline: {
