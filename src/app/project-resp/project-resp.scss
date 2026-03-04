@@ -15,8 +15,8 @@
         margin-bottom: 4px; // space between headline and paragraph
 
         .bullet-img {
-            width: 24px;
-            height: 24px;
+            width: 26px;
+            height: 26px;  
             flex-shrink: 0;
         }
 
@@ -27,12 +27,12 @@
             font-size: 1.2em;
             line-height: 1.5em;
             color: white;
-            margin: 0;
+            margin-bottom:  16px 0 8px 0;
         }
     }
 
     .project-paragraph {
-        margin: 0 0 18px 34px;
+        // margin: 0 0 18px 34px;
         font-size: 1.1em;
         line-height: 1.75em;
         color: white;
