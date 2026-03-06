@@ -12,30 +12,36 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        margin-bottom: 12px; 
+        margin-bottom: 12px;
 
-        .bullet-img {
-            width: 32px;
-            height: 32px;  
-            flex-shrink: 0;
-        }
-
-        h3 {
-            @include defaultFont($c: rgb(137, 188, 217), $fw: 400);
-            font-size: 1.4em;
-            line-height: 1.5em;
-            margin-bottom:  16px 0 8px 0;
+        @media (max-width: 1020px) {
+            width: min(42em, 90vw);
+            align-items: flex-start;
         }
     }
 
-    .project-paragraph {
-        font-size: 1.1em;
-        line-height: 1.75em;
-        color: white;
-        margin-bottom: 18px;
+    .bullet-img {
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
     }
 
+    h3 {
+        @include defaultFont($c: rgb(137, 188, 217), $fw: 400);
+        font-size: 1.4em;
+        line-height: 1.5em;
+        margin-bottom: 16px 0 8px 0;
+    }
 }
+
+.project-paragraph {
+    font-size: 1.1em;
+    line-height: 1.75em;
+    color: white;
+    margin-bottom: 18px;
+}
+
+
 
 .right-container,
 .mp-icons {
@@ -54,7 +60,6 @@
         width: 32px;
         height: auto;
     }
-
 }
 
 .icon-row {
@@ -70,12 +75,18 @@
     border-radius: 30px;
     object-fit: cover;
     margin: 10px 0 30px 0;
+
+    @media (max-width: 1020px) {
+        width: min(42em, 80vw);
+    }
 }
+
 
 .mp-btn {
     display: flex;
     gap: 24px;
     margin-bottom: 40px;
+    justify-content: center;
 
     button {
         @include defaultFont($fw: 400);

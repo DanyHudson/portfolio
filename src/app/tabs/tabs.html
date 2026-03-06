@@ -34,8 +34,8 @@
 
   <div class="tab-content active">
     <h3 class="tab-label-resp">{{ tabs[activeTabIndex].label }}</h3>
-    <app-project [projectData]="tabs[activeTabIndex]"></app-project>
-    <app-project-resp [projectData]="tabs[activeTabIndex]"></app-project-resp>
+    <app-project [projectData]="tabs[activeTabIndex]" class="project-desktop"></app-project>
+    <app-project-resp [projectData]="tabs[activeTabIndex]" class="project-mobile"></app-project-resp>
 
   </div>
 

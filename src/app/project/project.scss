@@ -4,7 +4,6 @@
 .right-container {
     flex: 1 1 0;
     margin-top: 16px;
-
 }
 
 .left-container {
@@ -12,7 +11,7 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        margin-bottom: 4px; // space between headline and paragraph
+        margin-bottom: 4px; 
 
         .bullet-img {
             width: 24px;
@@ -37,7 +36,6 @@
         line-height: 1.75em;
         color: white;
     }
-
 }
 
 .right-container,
@@ -101,11 +99,9 @@
     transition-timing-function: ease-in-out;
     border-radius: 50vw;
 
-
     &:hover {
         background-color: rgba(255, 255, 255, 1);
     }
-
 }
 
 .mp-btn .github {
