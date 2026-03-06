@@ -1,16 +1,6 @@
-<!-- <h2>Contact Me</h2>
-<button class="arrow-up-btn">
-    <img src="assets/img/arrow_up.svg" alt="Arrow up" class="arrow-up-img">
-    <img src="assets/img/arrow_up_hover.svg" alt="Arrow up hover" class="arrow-up-hover-img  d-none">
-</button> -->
-
 <div class="contact-header">
     <div id="contact" class="achor-point"></div>
     <h2>Contact Me</h2>
-    <!-- <button class="arrow-up-btn">
-        <img src="assets/img/arrow_up.svg" alt="Arrow up" class="arrow-up-img">
-        <img src="assets/img/arrow_up_hover.svg" alt="Arrow up hover" class="arrow-up-hover-img d-none">
-    </button> -->
 
     <a #arrowUpBtn class="arrow-up-btn" (click)="onBounceScroll('persona', $event)">
         <img src="assets/img/arrow_up.svg" alt="Arrow up" />
@@ -19,17 +9,31 @@
 
 <section class="section-content">
 
-
     <p class="left-container">
         {{ contact.text.en }}
     </p>
 
     <p class="right-container">
         <span class=""><img src="../../assets/icons/icon _email.svg" alt="email"> {{ contact.email }} </span>
-        <!-- <span class=""> Tel: 0157 123 456 68</span> -->
         <span class=""><img src="../../assets/icons/icon _phone.svg" alt="phone"> {{ contact.tel }} </span>
     </p>
 
+</section>
+
+
+<!-- for responsive design -->
+<section class="section-content-resp">
+
+    <!-- used to be right-container -->
+    <p class="top-container"> 
+        <span class=""><img src="../../assets/icons/icon _phone.svg" alt="phone"> {{ contact.tel }} </span>
+        <span class=""><img src="../../assets/icons/icon _email.svg" alt="email"> {{ contact.email }} </span>
+    </p>
+
+    <!-- used to be left-container -->
+    <p class="bottom-container">
+        {{ contact.text.en }}
+    </p>
 
 </section>
 

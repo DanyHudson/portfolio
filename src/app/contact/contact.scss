@@ -57,6 +57,10 @@ app-contact-form,
     align-items: center;
     justify-content: center;
     gap: 16px;
+
+    @media (max-width: 1020px) {
+        width: min(42em, 80vw);
+    }
 }
 
 // .contact-form {
