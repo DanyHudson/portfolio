@@ -7,12 +7,48 @@
      gap: 16px;
      padding: 32px 0;
      width: 100%;
+
+
+     @include hide-for-resp($breakpoint: 1020px);
+
+ }
+
+ .footer-container-resp {
+     @include display-resp($breakpoint: 1020px);
+
+
+     //  display: flex !important;
+     //  flex-direction: column;
+     //  align-items: center;
+     //  justify-content: center;
+     //  gap: 32px;
+     @media (max-width: 1020px) {
+         display: flex; // override block with flex only on mobile
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         gap: 32px;
+         //  width: 100%;
+         margin: 32px 0px;
+     }
+
+
  }
 
  .legal-notice {
      @include defaultFont($c: rgba(38, 46, 52, 1), $fw: 400);
      font-size: 14px;
      line-height: 20px;
+
+     @media (max-width: 1020px) {
+         font-size: 12px;
+         line-height: 16px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 32px;
+     }
+
      a {
          text-decoration: none;
          color: white;
@@ -30,7 +66,3 @@
      height: auto;
      z-index: 10;
  }
-
- //  .soc-med-container app-soc-med ::ng-deep .soc-med {
- //      @include socMedPosition($p: absolute, $t: 56px, $l: 480px, $fd: column, $gap: 12px);
- //  }

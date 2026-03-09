@@ -55,13 +55,20 @@ app-footer {
 }
 
 footer {
-    width: 100%;
+    // width: 100%;
+    width: min(42em, 90vw);
     background: rgba(137, 188, 217, 1);
-    height: 160px;
+    // height: 160px;
+    height: auto;
     // padding: 8px 109px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    // @media (max-width: 1020px) {
+    //     height: auto;
+    //     min-height: 100px
+    // }
 }
 
 nav,
