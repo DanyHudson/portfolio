@@ -6,8 +6,7 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
     box-shadow: 0 0 0 1000px transparent inset !important;
-    // background-color: transparent !important;
-    background-color: rgba(137, 188, 217, 0.3) !important;
+    background-color: transparent !important;
     color: white !important;
     -webkit-text-fill-color: white !important;
     transition: background-color 5000s ease-in-out 0s;
@@ -19,7 +18,7 @@ textarea:focus {
     box-shadow: 0 0 0 2px #89bcd9 !important; // Your custom focus style
     border-color: #89bcd9 !important; // Your custom border color
 
-    background-color: rgba(137, 188, 217, 0.3);
+    // background-color: rgba(137, 188, 217, 0.5) !important;
 
 }
 
@@ -131,7 +130,7 @@ textarea {
     z-index: 5;
 
     &:hover{
-        background-color: rgba(137, 188, 217, 0.3);
+        background-color: rgba(137, 188, 217, 0.2) !important;
     }
 }
 
