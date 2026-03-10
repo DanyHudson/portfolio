@@ -59,14 +59,32 @@
       <input type="checkbox" id="privacyPolicyAccepted" [(ngModel)]="contactFormData.privacyPolicyAccepted"
         name="privacyPolicyAccepted" [class.error-input]=" !contactFormData.privacyPolicyAccepted && submitAttempted" />
       <label for="privacyPolicyAccepted">
-        I've read the <span> &nbsp; privacy policy
-          &nbsp;</span>and
+        I've read the <span>privacy policy</span> and
         agree to the processing of my data as outlined.
       </label>
       @if (!contactFormData.privacyPolicyAccepted && submitAttempted) {
       <span class="error-message">Please accept the privacy policy.</span>
       }
     </div>
+
+    <div class="privacy-policy-resp">
+      <div>
+        <input type="checkbox" id="privacyPolicyAccepted" [(ngModel)]="contactFormData.privacyPolicyAccepted"
+          name="privacyPolicyAccepted"
+          [class.error-input]=" !contactFormData.privacyPolicyAccepted && submitAttempted" />
+      </div>
+      <div style="display: flex; align-items: flex-start; justify-content: flex-start; margin-left: 32px;">
+        <label for="privacyPolicyAccepted">
+          I've read the <span>privacy policy</span> and
+          agree to the processing of my data as outlined.
+        </label>
+      </div>
+      @if (!contactFormData.privacyPolicyAccepted && submitAttempted) {
+      <span class="error-message">Please accept the privacy policy.</span>
+      }
+    </div>
+
+
 
     <div class="button-container">
       <!-- <button class="submit-btn" type="submit">Send</button> -->
