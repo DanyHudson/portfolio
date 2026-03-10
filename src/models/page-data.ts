@@ -220,6 +220,9 @@ export const myProjectTabs = [
             { icon: '../assets/icons/ts_icon.svg', alt: 'TypeScript logo' },
             { icon: '../assets/icons/fb_icon.svg', alt: 'Firebase logo' }
         ],
+
+        techNames: ['Angular', 'TypeScript', 'Firebase'],
+
         projectImage: '../assets/img/sharky_scrsh.jpg',
         linkLiveTest: '',
         linkGitHub: ''
@@ -271,10 +274,13 @@ export const myProjectTabs = [
         ],
 
         icons: [
-            { icon: '../assets/icons/angular_icon.svg', alt: 'Angular logo' },
-            { icon: '../assets/icons/ts_icon.svg', alt: 'TypeScript logo' },
+            { icon: '../assets/icons/js_icon.svg', alt: 'JavaScript logo' },
+            { icon: '../assets/icons/css_icon.svg', alt: 'CSS logo' },
             { icon: '../assets/icons/fb_icon.svg', alt: 'Firebase logo' }
         ],
+
+        techNames: ['JavaScript', 'CSS', 'Firebase'],
+
         projectImage: '../assets/img/join_scrsh.jpg',
         linkLiveTest: '',
         linkGitHub: ''
