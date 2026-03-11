@@ -147,7 +147,7 @@ textarea {
     margin-bottom: 8px;
     height: 56px;
 
-    input[type="checkbox"] {
+   // input[type="checkbox"] {
     //     width: 16px;
     //     height: 16px;
     //     margin-right: 6px;
@@ -155,12 +155,13 @@ textarea {
     //     // opacity: 0;
     //     opacity: 0.02;
     //     position: absolute;
-    // }
+   // }
 
     label {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
+    
         // display: flex;
         // flex-wrap: wrap;
         // align-items: flex-start;
