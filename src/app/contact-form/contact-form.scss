@@ -43,6 +43,10 @@ textarea:focus {
         margin-left: 24px; // slight shift from the left edge
         font-size: 1em;
         color: rgb(137, 188, 217); // or your preferred color
+
+        @media (max-width: 1020px) {
+           
+        }
     }
 }
 
@@ -147,7 +151,7 @@ textarea {
     margin-bottom: 8px;
     height: 56px;
 
-   // input[type="checkbox"] {
+    // input[type="checkbox"] {
     //     width: 16px;
     //     height: 16px;
     //     margin-right: 6px;
@@ -155,21 +159,21 @@ textarea {
     //     // opacity: 0;
     //     opacity: 0.02;
     //     position: absolute;
-   // }
+    // }
 
-   // label {
-        // display: flex;
-        // align-items: center;
-        // flex-wrap: wrap;
-    
-        // display: flex;
-        // flex-wrap: wrap;
-        // align-items: flex-start;
-        // white-space: normal;
-        // gap: 0.5em;
+    // label {
+    // display: flex;
+    // align-items: center;
+    // flex-wrap: wrap;
+
+    // display: flex;
+    // flex-wrap: wrap;
+    // align-items: flex-start;
+    // white-space: normal;
+    // gap: 0.5em;
 
 
-   // }
+    // }
 
     // label::before {
     //     content: '';
@@ -192,11 +196,11 @@ textarea {
     //     height: 1.7em;
     // }
 
-    // span {
-    //     color: rgb(137, 188, 217);
-    //     cursor: pointer;
-    //     margin: 0 0.3em;
-    // }
+    span {
+        color: rgb(137, 188, 217);
+        cursor: pointer;
+        margin: 0 0.3em;
+    }
 }
 
 // .privacy-policy input[type="checkbox"].error-input+label::before {
@@ -213,10 +217,10 @@ textarea {
 
 
 
-.error-message {
+span.error-message {
     color: red !important;
     font-size: 0.9em;
-    margin: 4px 0 0 28px;
+    margin: 4px 0 0 38px !important;
 }
 
 .button-container {
@@ -304,30 +308,41 @@ textarea {
     }
 }
 
-label.container {
-  display: flex;
-  align-items: center;
-  gap: 0.5em; // or whatever spacing you want
+
+.privacy-policy,
+.privacy-policy-resp {
+    label {
+        flex-wrap: wrap;
+    }
 }
 
 /* Customize the label (the container) */
-.container {
+label.container {
+    display: flex;
+    align-items: center;
     // display: flex;
     // align-items: center;
     position: relative;
-    padding-left: 42px;
+    padding-left: 38px;
     margin-bottom: 12px;
     // cursor: pointer;
-    font-size: 1.4em;
+
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+
+    p {
+        margin-top: 5px;
+        font-size: 1.3em;
+        line-height: 1.3em;
+    }
 }
+
 
 /* Hide the browser's default checkbox */
 .container input {
-    position: absolute;
+    position: static;
     opacity: 0;
     cursor: pointer;
     height: 0;
@@ -347,7 +362,7 @@ label.container {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
-   
+
 }
 
 /* On mouse-over, add a grey background color */
