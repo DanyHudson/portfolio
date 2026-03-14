@@ -15,7 +15,6 @@
 }
 
 .right-container {
-    border: 1px solid red;
     position: relative;
     flex: 1 1 0;
     display: flex;
@@ -36,14 +35,12 @@
         height: min(35em, 90vw);
         //  width: 86%;
     }
-
 }
 
 .hide-highlight-shape {
     @media (max-width: 1020px) {
         display: none;
     }
-
 }
 
 .left-container {

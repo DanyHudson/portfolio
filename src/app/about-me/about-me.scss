@@ -24,7 +24,6 @@
     @media (max-width: 580px) {
         font-size: min(1.2em, 4vw);
     }
-
 }
 
 app-typewriter-02 {
@@ -72,8 +71,6 @@ app-typewriter-02 {
     @media (max-width: 650px) {
         width: min(35em, 70vw);
     }
-
-
 }
 
 .button-container {
@@ -94,7 +91,6 @@ app-typewriter-02 {
     display: flex;
     align-items: center;
     justify-content: center;
-
     background-color: transparent;
     color: rgb(137, 188, 217);
     transition-property: background-color;

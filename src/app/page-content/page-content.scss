@@ -1,18 +1,10 @@
 @use '../../styles.scss' as*;
 
-// @mixin defaultFont($c:$white, $fw:400) {
-//     font-family: 'JosefinSans-Regular', sans-serif;
-//     color: $c;
-//     font-weight: $fw;
-// }
-
-
 app-about-me, app-my-skills, app-my-projects, app-testimonials, app-contact {
     @include defaultFont($c:rgb(137, 188, 217), $fw:400);
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid pink;
 }
 
 app-my-projects, app-about-me {
