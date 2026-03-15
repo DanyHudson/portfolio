@@ -1,19 +1,3 @@
-<!-- <div class="tab-group">
-
-  <div class="tab-header">
-    @for (tab of tabs; track tab; let i = $index;) {
-    <div class="tab-label" [class.active]="i === activeTabIndex" (click)="activeTabIndex = i">
-      {{ tab.label }}
-    </div>
-    }
-  </div>
-
-  <div class="tab-content active">
-    <app-project [projectData]="tabs[activeTabIndex]"></app-project>
-  </div>
-
-</div> -->
-
 <div class="tab-group">
 
   <div class="tab-header">
@@ -24,11 +8,7 @@
 
     <div class="tab-label-resp" [class.active]="i === activeTabIndex" (click)="activeTabIndex = i">
       {{ tab.subLabel ? tab.subLabel : '' }}
-
-      <!-- Project {{ i + 1 }}{{ tab.subLabel ? ' - ' + tab.subLabel : '' }} -->
-
     </div>
-
     }
   </div>
 
@@ -36,7 +16,6 @@
     <h3 class="tab-label-resp">{{ tabs[activeTabIndex].label }}</h3>
     <app-project [projectData]="tabs[activeTabIndex]" class="project-desktop"></app-project>
     <app-project-resp [projectData]="tabs[activeTabIndex]" class="project-mobile"></app-project-resp>
-
   </div>
 
 </div>
