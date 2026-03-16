@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-// import { Nav } from '../nav/nav';
-import { SocMed } from '../soc-med/soc-med';
+import { NavResp } from '../nav-resp/nav-resp';
+// import { SocMed } from '../soc-med/soc-med';
 
 @Component({
   selector: 'app-landing-page-resp',
-  imports: [SocMed],
+  imports: [NavResp],
   templateUrl: './landing-page-resp.html',
   styleUrls: ['./landing-page-resp.scss'],
 })

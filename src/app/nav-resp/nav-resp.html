@@ -1,4 +1,6 @@
+ <img class="lp-logo" src="assets/img/LOGO.png" alt="logo"> 
 
+<div class="nav-resp-container">
 <button class="burger" (click)="toggleNav()" [class.open]="navOpen" [attr.aria-expanded]="navOpen" aria-label="Toggle navigation">
   <span></span>
   <span></span>
@@ -26,6 +28,7 @@
 <div class="toggle-language">
   <button class="de-btn" [class.active]="currentLang === 'de'" (click)="setLanguage('de')">DE</button>
   <button class="en-btn" [class.active]="currentLang === 'en'" (click)="setLanguage('en')">EN</button>
+</div>
 </div>
 
 <!-- need to have explained how the [] brackets work. is is a condition, is it an assignment? -->
