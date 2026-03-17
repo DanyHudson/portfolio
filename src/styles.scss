@@ -57,6 +57,7 @@ body {
     align-items: center;
     color: white;
     overflow-x: hidden;
+    background-color: rgb(38, 46, 52);
     @include defaultFont($c: white, $fw: 400);
 }
 

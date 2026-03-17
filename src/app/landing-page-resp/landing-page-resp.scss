@@ -1,149 +1,159 @@
  @use '../../styles.scss' as*;
 
  .nav-box {
-     width: 100%;
-     height: 56px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 120px;
+     //  width: 100%;
+     margin-top: 24px;
+     width: min(64em, 100vw);
+
  }
 
-     app-nav-resp {
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         width: 100%;
+ app-nav-resp {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 88%;
 
-         // position: absolute;
-         // top: 0;
-         // left: 0;
-         // z-index: 10;
-         background-color: transparent;
-     }
+     // position: absolute;
+     // top: 0;
+     // left: 0;
+     // z-index: 10;
+     background-color: transparent;
+ }
 
-     .lp-content-resp {
-         display: flex;
-         align-items: center;
-         flex-direction: column;
-         width: 100%;
-         // gap: 80px;
-         padding: 0;
-         position: relative;
-     }
+ .lp-content-resp {
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     width: 100%;
+     // gap: 80px;
+     padding: 0;
+     position: relative;
+ }
 
-     .persona-resp {
-         display: flex;
-         justify-content: center;
-         flex-direction: column;
-         //  gap: 80px;
-         align-items: center;
-         width: 1214px;
-     }
-
-
-
-     //  .lp-img-box {
-     //      position: relative;
-     //      width: 580px;
-     //      height: 683px;
-
-     //      &:hover .hero-img-bg {
-     //          transform: rotate(-15deg);
-     //          opacity: 0.5;
-     //      }
-     //  }
-
-     .lp-img-box {
-         position: relative;
-         width: 580px;
-         height: 683px;
-
-         .hero-img-bg {
-             position: absolute;
-             width: 580px;
-             height: 610px;
-             bottom: 0;
-             right: 0;
-             transition: opacity 0.5s ease-in, transform 0.3s ease-in;
-             z-index: 0;
-             opacity: 1;
-             pointer-events: none;
-         }
-
-         .hero-img-bg.animated {
-             opacity: 0;
-             transform: none;
-         }
-
-         &:hover .hero-img-bg.base {
-             opacity: 0;
-         }
-
-         &:hover .hero-img-bg.animated {
-             opacity: 0.7;
-             transform: rotate(-17.4deg);
-         }
-     }
+ .persona-resp {
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     //  gap: 80px;
+     align-items: center;
+     width: 1214px;
+ }
 
 
-     .lp-logo {
-         width: 94px;
-         height: auto;
-         z-index: 10;
-     }
 
-     .hero-img {
-         width: 535px;
-         height: 632px;
+ //  .lp-img-box {
+ //      position: relative;
+ //      width: 580px;
+ //      height: 683px;
+
+ //      &:hover .hero-img-bg {
+ //          transform: rotate(-15deg);
+ //          opacity: 0.5;
+ //      }
+ //  }
+
+ .lp-img-box {
+     position: relative;
+     width: 580px;
+     height: 640px;
+
+     .hero-img-bg {
          position: absolute;
-         // top: 0;
+         width: 580px;
+         height: 610px;
          bottom: 0;
          right: 0;
-         z-index: 1;
+         transition: opacity 0.5s ease-in, transform 0.3s ease-in;
+         z-index: 0;
+         opacity: 1;
+         pointer-events: none;
      }
 
-     .lp-text-box {
-         max-width: 540px;
-         display: flex;
-         justify-content: center;
-         align-items: center;
+     .hero-img-bg.animated {
+         opacity: 0;
+         transform: none;
+     }
+
+     &:hover .hero-img-bg.base {
+         opacity: 0;
+     }
+
+     &:hover .hero-img-bg.animated {
+         opacity: 0.7;
+         transform: rotate(-17.4deg);
+     }
+ }
+
+
+ .lp-logo {
+     width: 94px;
+     height: auto;
+     z-index: 10;
+ }
+
+ .hero-img {
+     width: 535px;
+     height: 632px;
+     position: absolute;
+     // top: 0;
+     bottom: 0;
+     right: 0;
+     z-index: 1;
+ }
+
+ .lp-text-box {
+     max-width: 540px;
+     width: min(64em, 100vw);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+
+     h1 {
+         // @include headingFont($c:rgb(137, 188, 217), $fw:400);
+         font-size: 3.6em;
+         line-height: 48px;
+         margin: 64px 0 24px 0;
+         text-align: center;
+     }
+
+     p {
+         @include defaultFont($c: #FFFFFF, $fw: 400);
+         font-size: 1.7em;
+         line-height: 32px;
+         color: #FFFFFF;
+         text-align: center;
+     }
+ }
+
+ .arrow-down-btn {
+     background: none;
+     border: none;
+     cursor: pointer;
+     margin-top: 24px;
+
+     transition-property: background-color;
+     transition-duration: 0.3s;
+     transition-timing-function: ease-in-out;
+     border-radius: 50vw;
+
+     &:hover {
+         background-color: rgba(137, 188, 217, 0.3);
+         border-radius: 50vw;
+     }
+ }
+
+ .soc-med-container {
+     position: absolute;
+     top: 56px;
+     right: 96px;
+
+     app-soc-med ::ng-deep .soc-med {
          flex-direction: column;
 
-         h1 {
-             // @include headingFont($c:rgb(137, 188, 217), $fw:400);
-             font-size: 3.6em;
-             line-height: 48px;
-         }
-
-         p {
-             @include defaultFont($c: #FFFFFF, $fw: 400);
-             font-size: 1.7em;
-             line-height: 32px;
-             color: #FFFFFF;
-         }
      }
-
-     .arrow-down-btn {
-         background: none;
-         border: none;
-         cursor: pointer;
-         margin-top: 120px;
-
-         transition-property: background-color;
-         transition-duration: 0.3s;
-         transition-timing-function: ease-in-out;
-         border-radius: 50vw;
-
-         &:hover {
-             background-color: rgba(137, 188, 217, 0.3);
-             border-radius: 50vw;
-         }
-     }
-
-     .soc-med-container {
-         position: absolute;
-         top: 56px;
-         right: 96px;
-
-         app-soc-med ::ng-deep .soc-med {
-             flex-direction: column;
-
-         }
-     }
+ }
