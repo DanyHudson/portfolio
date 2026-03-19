@@ -24,6 +24,7 @@ export class LandingPageResp {
     }, 400);
   }
 
+  
   // scrollToStartPoint() {
   //   const el = document.getElementById('startPoint');
   //   if (el) {
