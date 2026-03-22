@@ -177,8 +177,8 @@ span.open:nth-child(3) {
 }
 
 .nav-links {
-  position: fixed;
-  top: 38%;
+  position: absolute;
+  top: 42%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 600px;
@@ -189,7 +189,8 @@ span.open:nth-child(3) {
   text-align: center;
   justify-content: center;
   // margin: 60px 20px 20px 20px;
-  background-image: url('/assets/img/bg_shape_def.svg');
+  background-image: url('/assets/img/nav-resp_bg.svg');
+  // opacity: 0.7;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -232,8 +233,11 @@ span.open:nth-child(3) {
 
 .toggle-language {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  // top: 16px;
+  // right: 16px;
+  top: 64%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   gap: 8px;
 }
