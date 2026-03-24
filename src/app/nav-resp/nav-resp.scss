@@ -121,7 +121,6 @@
   }
 }
 
-
 span {
   display: block;
   height: 4px;
@@ -129,10 +128,7 @@ span {
   background: #89bcd9;
   margin: 5px 0;
   border-radius: 2px;
-  // transition: 0.3s;
-  transition:
-    // width 0.3s cubic-bezier(.68, -0.55, .27, 1.55),
-    transform 0.3s cubic-bezier(.68, -0.55, .27, 1.55);
+  transition: transform 0.3s cubic-bezier(.68, -0.55, .27, 1.55);
   transform-origin: center;
 
 
@@ -196,7 +192,7 @@ span.open:nth-child(3) {
   background-size: contain;
 
   // &.open {
-    
+
   // }
 
   a {
@@ -204,18 +200,14 @@ span.open:nth-child(3) {
     text-decoration: none;
     font-size: 1.6em;
     line-height: 54px;
+
+    &:hover {
+      text-decoration: none;
+      color: white;
+
+    }
   }
 }
-
-// .backdrop {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   background: rgba(0, 0, 0, 0.3);
-//   z-index: 999;
-// }
 
 .nav-links.fade-in {
   animation: fadeInNav 0.4s;
