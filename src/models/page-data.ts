@@ -24,12 +24,15 @@ export const aboutMeTypewriter = [
 
 
 export const aboutMe = {
-    en: `Why are you passionate about coding?
-       You can include some key traits like: analytical thinking, creativity, persistence and collaboration.
-       A problem-solving mindset is always nice to have.`,
-    de: `Was fasziniert dich am Programmieren?
-       Du kannst Eigenschaften wie analytisches Denken, Kreativität, Ausdauer und Zusammenarbeit erwähnen.
-       Eine problemlösende Denkweise ist immer von Vorteil.`
+
+    en: `I’m a frontend developer based in Hamburg with a background in media design. My journey into web development began with a curiosity to understand how websites work and a determination to bring creative ideas to life.
+         While I wouldn’t call myself a natural-born coder, I am persistent and resilient and I thrive on the challenge of finding solutions. My attention to detail means I care deeply about making designs look just right.
+         I enjoy working in teams, exchanging ideas, and learning from others. I find satisfaction in translating a designer’s vision into functional, pixel-perfect web experiences.
+         I’m always eager to improve my skills and contribute to meaningful projects. If you’re looking for a frontend developer who is dedicated, detail-oriented, and motivated by problem-solving, let’s connect!`,
+    de: `Ich bin ein Frontend-Entwickler mit Sitz in Hamburg, mit einem Hintergrund in Mediendesign und einem starken Antrieb, Probleme durch Code zu lösen. Mein Weg in die Webentwicklung begann mit der Neugier, zu verstehen, wie Websites funktionieren, und dem Willen, kreative Ideen zum Leben zu erwecken – selbst wenn die Lernkurve steil ist.
+         Obwohl ich mich nicht als geborenen Programmierer bezeichnen würde, bin ich hartnäckig und widerstandsfähig. Ich gedeihe bei der Herausforderung, Lösungen zu finden, und gebe selten auf, bis ich eine Lösung gefunden habe. Meine Liebe zum Detail bedeutet, dass mir die Gestaltung von Designs sehr wichtig ist, selbst wenn es zusätzliche Zeit und Mühe erfordert.
+         Ich arbeite gerne im Team, tausche Ideen aus und lerne von anderen. Meine Erfahrung als Mediendesigner hat mir den Wert von Zusammenarbeit und klarer Kommunikation vermittelt. Heutzutage finde ich Zufriedenheit darin, die Vision eines Designers in funktionale, pixelgenaue Web-Erlebnisse umzusetzen.
+         Ich bin immer bestrebt, meine Fähigkeiten zu verbessern und zu bedeutungsvollen Projekten beizutragen. Wenn Sie nach einem Frontend-Entwickler suchen, der engagiert, detailorientiert und problemlösungsorientiert ist, lassen Sie uns verbinden!`
 
 };
 
