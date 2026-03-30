@@ -10,11 +10,6 @@ export const aboutMeTypewriter = [
         typeText: 'open to remote work',
     },
     {
-        icon: 'assets/icons/location_icon.svg',
-        preText: 'I love',
-        typeText: 'drinking coffee',
-    },
-    {
         icon: 'assets/icons/remote_icon.svg',
         preText: 'I am',
         typeText: 'passionate about coding',
@@ -115,57 +110,68 @@ export const skills = [
 ];
 
 export const myProjectTabs = [
-    {
-        label: 'DA Bubble',
-        subLabel: 'Community App',
+   {
+        label: 'Join',
+        subLabel: 'Kanban App',
         content: [
             {
                 headline: {
                     en: 'About the project',
                     de: 'Ueber das Projekt'
                 },
+
                 text: {
-                    en: `Content bullet 1 lorem ipsum dolor elit sed ut labore et dolore,
-                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    `,
-                    de: `Content bullet 1 lorem ipsum dolor elit sed ut labore et dolore,
-                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    `,
-                },
+                    en: `Join is a Kanban App for task management and planning.
+                    This was a group project where we had to work together to create a functional and user-friendly application.
+                    The design was provided by the course customer, and we had to implement it while ensuring a smooth user experience.
+                `,
+                    de: `Join ist eine Kanban-App für Aufgabenverwaltung und Planung.
+                    Dies war ein Gruppenprojekt, bei dem wir zusammenarbeiten mussten, um eine funktionale und benutzerfreundliche Anwendung zu erstellen.
+                    Das Design wurde vom Kunden bereitgestellt, und wir mussten es implementieren, während wir eine reibungslose Benutzererfahrung sicherstellten.`
+                }
+
             },
             {
                 headline: {
-                    en: 'How I have organised my work process',
-                    de: 'Wie ich meinen Arbeitsprozess organisiert habe'
+                    en: 'How we have organised our work process',
+                    de: 'Wie wir unseren Arbeitsprozess organisiert haben',
                 },
+
                 text: {
-                    en: 'Content bullet 2 lorem ipsum dolor elit sed ut labore et dolore',
-                    de: 'Content bullet 2 lorem ipsum dolor elit sed ut labore et dolore',
+                    en: `We have organised our work process by dividing the project into smaller tasks and assigning them to each team member based on their strengths and interests. 
+                    We used the Trello Kanban board to track our progress and ensure that we were meeting our deadlines. 
+                    Regular communication and collaboration were key to our success, as we had to coordinate our efforts and resolve any issues that arose during the development process.`,
+                    de: `Wir haben unseren Arbeitsprozess organisiert, indem wir das Projekt in kleinere Aufgaben unterteilt und sie jedem Teammitglied basierend auf seinen Stärken und Interessen zugewiesen haben. 
+                    Wir haben das Trello-Kanban-Board verwendet, um unseren Fortschritt zu verfolgen und sicherzustellen, dass wir unsere Fristen einhalten. 
+                    Regelmäßige Kommunikation und Zusammenarbeit waren der Schlüssel zu unserem Erfolg, da wir unsere Bemühungen koordinieren und alle während des Entwicklungsprozesses auftretenden Probleme lösen mussten.`,
                 }
+
             },
             {
                 headline: {
-                    en: 'My group work experience',
-                    de: 'Meine Erfahrungen in der Gruppenarbeit'
+                    en: 'Our group work experience',
+                    de: 'Unsere  Erfahrungen in der Gruppenarbeit'
                 },
+
                 text: {
-                    en: 'Content bullet 3 lorem ipsum dolor elit sed ut labore et dolore',
-                    de: 'Content bullet 3 lorem ipsum dolor elit sed ut labore et dolore',
+                    en: `Our group work experience was highly collaborative and educational. 
+                    We learned the importance of communication, teamwork, and problem-solving in a real-world project setting.`,
+                    de: `Unsere Erfahrungen in der Gruppenarbeit waren sehr kollaborativ und lehrreich. 
+                    Wir haben die Bedeutung von Kommunikation, Teamarbeit und Problemlösung in einem realen Projektumfeld gelernt.`,
                 }
+
             }
         ],
 
         icons: [
-            { icon: 'assets/icons/ang_icon.svg', alt: 'Angular logo' },
-            { icon: 'assets/icons/ts_icon.svg', alt: 'TypeScript logo' },
-            { icon: 'assets/icons/fb_icon.svg', alt: 'Firebase logo' }
+            { icon: '../assets/icons/js_icon.svg', alt: 'JavaScript logo' },
+            { icon: '../assets/icons/css_icon.svg', alt: 'CSS logo' },
+            { icon: '../assets/icons/fb_icon.svg', alt: 'Firebase logo' }
         ],
 
-        techNames: ['Angular', 'TypeScript', 'Firebase'],
+        techNames: ['JavaScript', 'CSS', 'Firebase'],
 
-        projectImage: '../assets/img/da_bubble_scrsh.jpg',
+        projectImage: '../assets/img/join_scrsh.jpg',
         linkLiveTest: '',
         linkGitHub: ''
     },
