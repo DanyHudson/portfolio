@@ -20,14 +20,19 @@ export const aboutMeTypewriter = [
 
 export const aboutMe = {
 
-    en: `I’m a frontend developer based in Hamburg with a background in media design. My journey into web development began with a curiosity to understand how websites work and a determination to bring creative ideas to life.
-         While I wouldn’t call myself a natural-born coder, I am persistent and resilient and I thrive on the challenge of finding solutions. My attention to detail means I care deeply about making designs look just right.
-         I enjoy working in teams, exchanging ideas, and learning from others. I find satisfaction in translating a designer’s vision into functional, pixel-perfect web experiences.
-         I’m always eager to improve my skills and contribute to meaningful projects. If you’re looking for a frontend developer who is dedicated, detail-oriented, and motivated by problem-solving, let’s connect!`,
-    de: `Ich bin ein Frontend-Entwickler mit Sitz in Hamburg, mit einem Hintergrund in Mediendesign und einem starken Antrieb, Probleme durch Code zu lösen. Mein Weg in die Webentwicklung begann mit der Neugier, zu verstehen, wie Websites funktionieren, und dem Willen, kreative Ideen zum Leben zu erwecken – selbst wenn die Lernkurve steil ist.
-         Obwohl ich mich nicht als geborenen Programmierer bezeichnen würde, bin ich hartnäckig und widerstandsfähig. Ich gedeihe bei der Herausforderung, Lösungen zu finden, und gebe selten auf, bis ich eine Lösung gefunden habe. Meine Liebe zum Detail bedeutet, dass mir die Gestaltung von Designs sehr wichtig ist, selbst wenn es zusätzliche Zeit und Mühe erfordert.
-         Ich arbeite gerne im Team, tausche Ideen aus und lerne von anderen. Meine Erfahrung als Mediendesigner hat mir den Wert von Zusammenarbeit und klarer Kommunikation vermittelt. Heutzutage finde ich Zufriedenheit darin, die Vision eines Designers in funktionale, pixelgenaue Web-Erlebnisse umzusetzen.
-         Ich bin immer bestrebt, meine Fähigkeiten zu verbessern und zu bedeutungsvollen Projekten beizutragen. Wenn Sie nach einem Frontend-Entwickler suchen, der engagiert, detailorientiert und problemlösungsorientiert ist, lassen Sie uns verbinden!`
+    en: `I’m a frontend developer based in Hamburg with a background in media design.\nMy journey into web development began with a curiosity to understand how websites work and a determination to bring creative ideas to life.
+         While I wouldn’t call myself a natural-born coder, I am persistent and resilient and I thrive on the challenge of finding solutions, finding satisfaction in translating a designer’s vision into functional web experiences.
+         I enjoy working in teams, exchanging ideas and knowledge as well as learning from others and in this way to contribute to the success of projects. 
+         I’m always eager to improve my skills and stay up-to-date with the latest technologies.
+          \nInterested? Let’s connect!`,
+
+    de: `Ich bin eine Frontend-Entwicklerin aus Hamburg.\nAls ursprüngliche Mediengestalterin begann mein Weg in die Webentwicklung nicht nur mit der Lust, kreative Ideen zum Leben zu erwecken sondern auch mit der Neugier, zu verstehen, wie Websites funktionieren.
+         Obwohl ich mich nicht als geborene Programmiererin bezeichnen würde, bin ich hartnäckig und ausdauernd wenn es darum geht Lösungen zu finden und es macht mir Spaß
+         Designs so präzise wie möglich in funktionale Web-Erlebnisse umzusetzen.
+         Ich arbeite gerne im Team, um Ideen und  Wissen mit anderen zu teilen und von anderen zu lernen um so zum Gelingen von Projekten beizutragen. 
+         Dabei versuche ich meine Kenntnisse und Fähigkeiten ständig aktuell zu halten, das versteht sich von selbst.\n 
+        Interessiert? Let‘s connect!
+        `
 
 };
 
@@ -95,15 +100,13 @@ export const skills = [
                 },
 
                 reference: [
-                    { icon: 'assets/icons/owl_icon.svg', label: 'OWL' },
+                    { icon: 'assets/icons/react_icon.svg', label: 'React' },
                     { icon: 'assets/icons/owl_icon.svg', label: 'OWL' }
                 ],
 
                 text: {
-                    en: `Show that you are motivated to continually improve your skills, 
-                        implement innovative solutions and stay abreast of new technologies.`,
-                    de: `Zeige, dass du motiviert bist, deine Fähigkeiten ständig zu verbessern, 
-                        innovative Lösungen umzusetzen und über neue Technologien auf dem Laufenden zu bleiben.`
+                    en: `I am always eager to improve my skills and stay up-to-date with the latest technologies.`,
+                    de: `Ständig mit meinen Fähigkeiten up-to-date zu bleiben und neue Technologien zu lernen ist für mich selbstverständlich.`
                 },
                 link: '',
                 linkLabel: ''
@@ -113,54 +116,59 @@ export const skills = [
 ];
 
 export const myProjectTabs = [
-   {
+    {
         label: 'Join',
         subLabel: 'Kanban App',
         content: [
             {
                 headline: {
-                    en: 'About the project',
-                    de: 'Ueber das Projekt'
+                    en: `About the project`,
+                    de: `Über das Projekt`
                 },
 
                 text: {
                     en: `Join is a Kanban App for task management and planning.
-                    This was a group project where we had to work together to create a functional and user-friendly application.
-                    The design was provided by the course customer, and we had to implement it while ensuring a smooth user experience.
+                    This was a group project where our Team worked together to create a functional and user-friendly application.
+                    The design was provided by the course customer, which we had to implement while ensuring a smooth user experience.
                 `,
-                    de: `Join ist eine Kanban-App für Aufgabenverwaltung und Planung.
-                    Dies war ein Gruppenprojekt, bei dem wir zusammenarbeiten mussten, um eine funktionale und benutzerfreundliche Anwendung zu erstellen.
-                    Das Design wurde vom Kunden bereitgestellt, und wir mussten es implementieren, während wir eine reibungslose Benutzererfahrung sicherstellten.`
+                    de: `Join ist eine Kanban-App für Projekt-Planung und um Aufgaben zu verwalten.
+                    Dies Projekt war eine Gruppenarbeit, in der wir die Zusammenarbeit trainieren konnten. 
+                    Ziel war es aus einem vorgegebenen Design eine funktionale und benutzerfreundliche Anwendung zu erstellen.
+                    Design und Funktionalität wurden sinnvoll implementiert, um eine reibungslose Benutzererfahrung sicherzustellen.`
                 }
 
             },
             {
                 headline: {
-                    en: 'How we have organised our work process',
-                    de: 'Wie wir unseren Arbeitsprozess organisiert haben',
+                    en: `Organising our work process`,
+                    de: `Organisation unserer Arbeitsprozesse`,
                 },
 
                 text: {
-                    en: `We have organised our work process by dividing the project into smaller tasks and assigning them to each team member based on their strengths and interests. 
-                    We used the Trello Kanban board to track our progress and ensure that we were meeting our deadlines. 
+                    en: `We organised our work process by dividing the project into smaller tasks and assigning them to each team member based on their strengths and interests. 
+                    We used the Trello Kanban board to track our progress and ensure that we were meeting our self-set deadlines. 
                     Regular communication and collaboration were key to our success, as we had to coordinate our efforts and resolve any issues that arose during the development process.`,
-                    de: `Wir haben unseren Arbeitsprozess organisiert, indem wir das Projekt in kleinere Aufgaben unterteilt und sie jedem Teammitglied basierend auf seinen Stärken und Interessen zugewiesen haben. 
-                    Wir haben das Trello-Kanban-Board verwendet, um unseren Fortschritt zu verfolgen und sicherzustellen, dass wir unsere Fristen einhalten. 
-                    Regelmäßige Kommunikation und Zusammenarbeit waren der Schlüssel zu unserem Erfolg, da wir unsere Bemühungen koordinieren und alle während des Entwicklungsprozesses auftretenden Probleme lösen mussten.`,
+                    de: `Unser Team hat das Projekt in kleinere Aufgaben unterteilt und diese jedem Teammitglied basierend auf seinen Stärken und Interessen zugewiesen. 
+                    Mit dem Trello-Kanban-Board haben wir unseren Fortschritt verfolgt und sichergestellt, dass wir unsere selbsgesetzten Fristen einhalten. 
+                    Durch regelmäßige Kommunikation und gemeinsame Coding-Sessions konnten wir alle während des Entwicklungsprozesses auftretenden Probleme lösen.`,
                 }
 
             },
             {
                 headline: {
                     en: 'Our group work experience',
-                    de: 'Unsere  Erfahrungen in der Gruppenarbeit'
+                    de: 'Unsere Erfahrungen in der Gruppenarbeit'
                 },
 
                 text: {
                     en: `Our group work experience was highly collaborative and educational. 
-                    We learned the importance of communication, teamwork, and problem-solving in a real-world project setting.`,
-                    de: `Unsere Erfahrungen in der Gruppenarbeit waren sehr kollaborativ und lehrreich. 
-                    Wir haben die Bedeutung von Kommunikation, Teamarbeit und Problemlösung in einem realen Projektumfeld gelernt.`,
+                    We learned the importance of communication, teamwork, and problem-solving in a real-world project setting.
+                    I enjoyed the colab-sessions emensely, as they allowed us to work together in real-time, share our screens, and provide immediate feedback to each other.
+                    This not only helped us to quickly resolve any issues but also fostered a sense of mutual support within the team.`,
+                    de: `In unserer Gruppenarbeit haben wir die Bedeutung von Kommunikation, Teamarbeit und gemeinsamen Problemlösungen in einem realen Projektumfeld gelernt.
+                    Die gemeinsamen Coding-Sessions haben uns ermöglicht, in Echtzeit zusammenzuarbeiten, unsere Bildschirme zu teilen und sofortiges Feedback zu geben.
+                    Dies half uns nicht nur, schnell alle auftretenden Probleme zu lösen, sondern förderte auch ein Gefühl der Zusammenarbeit und gegenseitigen Unterstützung innerhalb des Teams.
+                    `,
                 }
 
             }
@@ -185,28 +193,37 @@ export const myProjectTabs = [
         content: [
             {
                 headline: {
-                    en: 'About the project',
-                    de: 'Ueber das Projekt'
+                    en:`About the project`,
+                    de: `Über das Projekt`
                 },
                 text: {
-                    en: `Content bullet 1 lorem ipsum dolor elit sed ut labore et dolore,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                `,
-                    de: `Content bullet 1 lorem ipsum dolor elit sed ut labore et dolore,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                `,
+                    en: `Sharky is a simple D2 browser game app.
+                         This was the first project where we usesd classes and OOP in general.
+                         It inculded collision detection, animation as well as a simple game loop and the use of the HTML5 canvas element.
+                         The design was mainly provided by the Developer Academy.
+                         `,
+                    de: `Sharky ist ein einfaches D2 Browsergame.
+                         Es war das erste Projekt, bei dem wir Klassen und OOP im Allgemeinen verwendet haben.
+                         Außerdem beinhaltete es Kollisions-Logik, Animationen sowie einen einfachen Game-Loop und die Verwendung des HTML5-Canvas-Elements.
+                         Das Design wurde hauptsächlich von der Developer Academy bereitgestellt.
+                          `,
                 }
             },
             {
                 headline: {
-                    en: 'How I have organised my work process',
-                    de: 'Wie ich meinen Arbeitsprozess organisiert habe'
+                    en: `Organising my work process`,
+                    de: `Organisation meiner Arbeitsprozesse`
                 },
                 text: {
-                    en: 'Content bullet 2 lorem ipsum dolor elit sed ut labore et dolore',
-                    de: 'Content bullet 2 lorem ipsum dolor elit sed ut labore et dolore',
+                    en: `To organize myself during the development process, I tried to break down the project into smaller and logical steps.
+                         For the main part I followed the tutorial provided by the Developer Academy, however the tutorial was created for a slightly different game.
+                         So I had to adapt the code and logic to fit the requirements of my game, which was a great learning experience for me.
+                         I also made use of version control with Git to keep track of my changes and ensure that I could easily revert back to previous versions if needed.`,
+                    
+                    de: `Um mich während des Entwicklungsprozesses zu organisieren, habe ich versucht, das Projekt in kleinere und logische Schritte zu unterteilen.
+                         Den Hauptteil habe ich nach dem Tutorial der Developer Academy abgearbeitet. Das Tutorial wurde für ein etwas anderes Spiel erstellt.
+                         Daher habe ich den Code und die Logik an die Anforderungen meines Spiels angepasst, was eine großartige Lernerfahrung für mich war.
+                         Ich habe Git genutzt, um meine Änderungen zu verfolgen und sicherzustellen, dass ich bei Bedarf problemlos zu früheren Versionen zurückkehren kann.`,
                 }
             },
             {
@@ -216,12 +233,16 @@ export const myProjectTabs = [
                 },
 
                 text: {
-                    en: `As someone who is always trying to learn new technologies, 
-                        you may have enjoyed working on this project because it allowed you to delve deep into a particular technology. 
-                        Give details, such as the name of the framework or language you mean.`,
-                    de: `Als jemand, der immer versucht, neue Technologien zu lernen`
+                    en: `I  have learned to think in terms of objects and classes, which was a new concept for me at the time.
+                         I also gained a deeper understanding of how to structure code in a way that is organized and maintainable.
+                         Additionally, I learned how to implement game mechanics such as collision detection and animation, which was a fun and rewarding experience.`,
+                    
+                         de: `Ich habe gelernt, in Begriffen von Objekten und Klassen zu denken, was für mich zu diesem Zeitpunkt ein neues Konzept war.
+                         Außerdem habe ich ein tieferes Verständnis dafür gewonnen, wie man Code sinnvoll und wiederverwendbar strukturieren kann.
+                         Zudem habe ich gelernt, wie man Spielmechaniken wie Kollisionserkennung und Animation implementieren kann, ein Fun-Projekt.`
                 }
             }
+            
         ],
 
         icons: [
@@ -238,13 +259,13 @@ export const myProjectTabs = [
     },
 
     {
-        label: 'Join',
-        subLabel: 'Kanban App',
+        label: 'Pokedex',
+        subLabel: 'Catalog App',
         content: [
             {
                 headline: {
                     en: 'About the project',
-                    de: 'Ueber das Projekt'
+                    de: 'Über das Projekt'
                 },
 
                 text: {
