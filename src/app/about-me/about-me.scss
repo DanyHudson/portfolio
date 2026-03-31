@@ -58,10 +58,11 @@ app-typewriter-02 {
 
 .ab-me-text {
     font-size: 1.2em;
-    line-height: 1.5em;
+    line-height: 1.3em;
     width: 100%;
     max-width: 640px;
     text-align: left;
+    color: white;
 
     @media (max-width: 1020px) {
         text-align: center;

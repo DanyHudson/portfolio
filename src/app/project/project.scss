@@ -23,7 +23,7 @@
             @include defaultFont($c: white, $fw: 400);
             // font-family: 'Montserrat', sans-serif;
             // font-weight: 700;
-            font-size: 1.2em;
+            font-size: 1.6em;
             line-height: 1.5em;
             color: white;
             margin: 0;
@@ -31,9 +31,9 @@
     }
 
     .project-paragraph {
-        margin: 0 0 18px 34px;
+        margin: 0 0 22px 34px;
         font-size: 1.1em;
-        line-height: 1.75em;
+        line-height: 1.3em;
         color: white;
     }
 }
