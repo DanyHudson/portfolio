@@ -27,9 +27,8 @@ export const aboutMe = {
           \nInterested? Let’s connect!`,
 
     de: `Ich bin eine Frontend-Entwicklerin aus Hamburg.\nAls ursprüngliche Mediengestalterin begann mein Weg in die Webentwicklung nicht nur mit der Lust, kreative Ideen zum Leben zu erwecken sondern auch mit der Neugier, zu verstehen, wie Websites funktionieren.
-         Obwohl ich mich nicht als geborene Programmiererin bezeichnen würde, bin ich hartnäckig und ausdauernd wenn es darum geht Lösungen zu finden und es macht mir Spaß
-         Designs so präzise wie möglich in funktionale Web-Erlebnisse umzusetzen.
-         Ich arbeite gerne im Team, um Ideen und  Wissen mit anderen zu teilen und von anderen zu lernen um so zum Gelingen von Projekten beizutragen. 
+         Obwohl ich mich nicht als geborene Programmiererin bezeichnen würde, bin ich hartnäckig und ausdauernd wenn es darum geht Lösungen zu finden und es macht mir Spaß Designs so präzise wie möglich in funktionale Web-Erlebnisse umzusetzen.
+         Ich arbeite gerne im Team, um Ideen und  Wissen mit anderen zu teilen und von anderen zu lernen. 
          Dabei versuche ich meine Kenntnisse und Fähigkeiten ständig aktuell zu halten, das versteht sich von selbst.\n 
         Interessiert? Let‘s connect!
         `
@@ -67,12 +66,22 @@ export const skills = [
             {
                 icon: 'assets/icons/fb_icon.svg',
                 alt: 'Firebase Logo',
-                skill: 'Firebbnase',
+                skill: 'Firebase',
             },
             {
                 icon: 'assets/icons/md_icon.svg',
                 alt: 'Material Design Logo',
                 skill: 'Material Design',
+            },
+            {
+                icon: 'assets/icons/scrum_icon.svg',
+                alt: 'Scrum Logo',
+                skill: 'Scrum',
+            },
+            {
+                icon: 'assets/icons/git_icon.svg',
+                alt: 'Git Logo',
+                skill: 'Git',
             },
             {
                 icon: 'assets/icons/ai_CC_icon.svg',
@@ -193,7 +202,7 @@ export const myProjectTabs = [
         content: [
             {
                 headline: {
-                    en:`About the project`,
+                    en: `About the project`,
                     de: `Über das Projekt`
                 },
                 text: {
@@ -219,7 +228,7 @@ export const myProjectTabs = [
                          For the main part I followed the tutorial provided by the Developer Academy, however the tutorial was created for a slightly different game.
                          So I had to adapt the code and logic to fit the requirements of my game, which was a great learning experience for me.
                          I also made use of version control with Git to keep track of my changes and ensure that I could easily revert back to previous versions if needed.`,
-                    
+
                     de: `Um mich während des Entwicklungsprozesses zu organisieren, habe ich versucht, das Projekt in kleinere und logische Schritte zu unterteilen.
                          Den Hauptteil habe ich nach dem Tutorial der Developer Academy abgearbeitet. Das Tutorial wurde für ein etwas anderes Spiel erstellt.
                          Daher habe ich den Code und die Logik an die Anforderungen meines Spiels angepasst, was eine großartige Lernerfahrung für mich war.
@@ -236,19 +245,19 @@ export const myProjectTabs = [
                     en: `I  have learned to think in terms of objects and classes, which was a new concept for me at the time.
                          I also gained a deeper understanding of how to structure code in a way that is organized and maintainable.
                          Additionally, I learned how to implement game mechanics such as collision detection and animation, which was a fun and rewarding experience.`,
-                    
-                         de: `Ich habe gelernt, in Begriffen von Objekten und Klassen zu denken, was für mich zu diesem Zeitpunkt ein neues Konzept war.
+
+                    de: `Ich habe gelernt, in Begriffen von Objekten und Klassen zu denken, was für mich zu diesem Zeitpunkt ein neues Konzept war.
                          Außerdem habe ich ein tieferes Verständnis dafür gewonnen, wie man Code sinnvoll und wiederverwendbar strukturieren kann.
                          Zudem habe ich gelernt, wie man Spielmechaniken wie Kollisionserkennung und Animation implementieren kann, ein Fun-Projekt.`
                 }
             }
-            
+
         ],
 
         icons: [
-            { icon: '../assets/icons/angular_icon.svg', alt: 'Angular logo' },
-            { icon: '../assets/icons/ts_icon.svg', alt: 'TypeScript logo' },
-            { icon: '../assets/icons/fb_icon.svg', alt: 'Firebase logo' }
+            { icon: '../assets/icons/js_icon.svg', alt: 'JavaScript logo' },
+            { icon: '../assets/icons/css_icon.svg', alt: 'CSS logo' },
+            { icon: '../assets/icons/html_icon.svg', alt: 'HTML logo' }
         ],
 
         techNames: ['Angular', 'TypeScript', 'Firebase'],
@@ -259,8 +268,8 @@ export const myProjectTabs = [
     },
 
     {
-        label: 'Pokedex',
-        subLabel: 'Catalog App',
+        label: 'Pokédex',
+        subLabel: 'Pokemon Library App',
         content: [
             {
                 headline: {
@@ -269,35 +278,42 @@ export const myProjectTabs = [
                 },
 
                 text: {
-                    en: `Content bullet 1 lorem ipsum dolor elit sed ut labore et dolore,
-                         consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    en: `This is a simple Pokédex app that allows users to search for and view information about different Pokémon.
+                         The app was built using JavaScript, fetching live data from the Pokémon API.
+                         The design was created by me.
                 `,
-                    de: `Content bullet 1 lorem ipsum dolor elit sed ut labore et dolore,`
+                    de: `Eine einfache Pokédex-App, es kann nach Pokémon gesucht und Informationen über sie können angezeigt werden.
+                         Die App wurde mit JavaScript erstellt und ruft Live-Daten von der Pokémon-API ab.
+                         Das Design wurde von mir erstellt.`
                 }
 
             },
             {
                 headline: {
-                    en: 'How I have organised my work process',
-                    de: 'Wie ich meinen Arbeitsprozess organisiert habe',
+                    en: `Organising my work process`,
+                    de: `Organisation meiner Arbeitsprozesse`
                 },
 
                 text: {
-                    en: 'Content bullet 2 lorem ipsum dolor elit sed ut labore et dolore',
-                    de: 'Content bullet 2 lorem ipsum dolor elit sed ut labore et dolore',
+                    en: `I started by first setting up the basic structure of the app, deciding for the design and layout and made sure that worked well.
+                         I then moved on to implementing the search functionality and fetching data from the API.
+                         I also made use of version control with Git to keep track of my changes and ensure that I could easily revert back to previous versions if needed.`,
+                    de: `Zuerst habe ich die grundlegende Struktur der App eingerichtet, mich für das Design und Layout entschieden und sichergestellt, dass dies gut funktioniert.
+                         Dann habe ich die Suchfunktionalität implementiert und Daten von der API abgerufen.
+                         Ich habe Git genutzt, um einen Überblick über meine Änderungen zu behalten und sicherzustellen, dass ich bei Bedarf problemlos auf frühere Versionen zurückgreifen kann.`
                 }
 
             },
             {
                 headline: {
-                    en: 'My group work experience',
-                    de: 'Meine Erfahrungen in der Gruppenarbeit'
+                    en: `What I have learned`,
+                    de: `Was ich gelernt habe`
                 },
 
                 text: {
-                    en: 'Content bullet 3 lorem ipsum dolor elit sed ut labore et dolore',
-                    de: 'Content bullet 3 lorem ipsum dolor elit sed ut labore et dolore',
+                    en: `I have learned how to work with APIs and fetch data in JavaScript. I also gained a better understanding of how to structure code in a way that is organized and maintainable. Additionally, I learned how to implement search functionality.`,
+                    de: `Ich habe gelernt, wie man mit APIs arbeitet und Daten in JavaScript abruft. Ich habe auch ein besseres Verständnis dafür gewonnen, Code zu so strukturieren, dass er auch für Außenstehende verständlich ist. Außerdem habe ich gelernt, wie man Suchfunktionen implementiert.
+                    `
                 }
 
             }
@@ -306,12 +322,12 @@ export const myProjectTabs = [
         icons: [
             { icon: '../assets/icons/js_icon.svg', alt: 'JavaScript logo' },
             { icon: '../assets/icons/css_icon.svg', alt: 'CSS logo' },
-            { icon: '../assets/icons/fb_icon.svg', alt: 'Firebase logo' }
+            { icon: '../assets/icons/html_icon.svg', alt: 'HTML logo' }
         ],
 
-        techNames: ['JavaScript', 'CSS', 'Firebase'],
+        techNames: ['JavaScript', 'CSS', 'HTML'],
 
-        projectImage: '../assets/img/join_scrsh.jpg',
+        projectImage: '../assets/img/pokedex_scrsh.jpg',
         linkLiveTest: '',
         linkGitHub: ''
     },
