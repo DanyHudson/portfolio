@@ -23,16 +23,6 @@ export class ContactForm {
     privacyPolicyAccepted: false
   };
 
-  // onSubmit(ngForm: NgForm) {
-  //   if (ngForm.valid && ngForm.submitted && ngForm.touched) {
-  //     console.log('Form Data: ', ngForm.value);
-  //   }
-  //   else {
-  //     console.log(' fill out the form correctly ');
-  //   }
-
-  // }
-
   mailTest = true; // set to false for real mail sending
   submitAttempted = false;
 
@@ -82,6 +72,12 @@ export class ContactForm {
     setTimeout(() => {
       this.successMessageVisible = false;
     }, 1600);
+  }
+
+
+  onPrivPolClick() {
+    
+    console.log('Privacy policy link clicked');
   }
 
 
