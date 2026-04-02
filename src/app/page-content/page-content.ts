@@ -5,12 +5,13 @@ import { MyProjects } from '../my-projects/my-projects';
 import { Testimonials } from '../testimonials/testimonials';
 // import { ContactForm } from '../contact-form/contact-form';
 import { Contact } from '../contact/contact';
+import { PrivacyPolicy } from '../legal/privacy-policy/privacy-policy'; 
 
 
 @Component({
   selector: 'app-page-content',
   standalone: true,
-  imports: [AboutMe, MySkills, MyProjects, Testimonials, Contact],
+  imports: [AboutMe, MySkills, MyProjects, Testimonials, Contact, PrivacyPolicy],
   templateUrl: './page-content.html',
   styleUrls: ['./page-content.scss'],
 })
