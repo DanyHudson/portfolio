@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { SocMed } from '../soc-med/soc-med';
+import { LegalNotice } from '../legal/legal-notice/legal-notice';
 
 @Component({
   selector: 'app-footer',
-  imports: [SocMed],
+  standalone: true,
+  imports: [SocMed, LegalNotice],
   templateUrl: './footer.html',
-  styleUrl: './footer.scss',
+  styleUrls: ['./footer.scss'],
 })
 export class Footer {
 

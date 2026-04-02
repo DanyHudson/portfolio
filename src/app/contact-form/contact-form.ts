@@ -3,11 +3,12 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { successMessages } from '../../models/page-data';
+import { PrivacyPolicy } from '../legal/privacy-policy/privacy-policy'; 
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, PrivacyPolicy],
   templateUrl: './contact-form.html',
   styleUrls: ['./contact-form.scss'],
 })
