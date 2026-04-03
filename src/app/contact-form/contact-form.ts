@@ -1,9 +1,7 @@
-import { Component, inject } from '@angular/core';
-// import { FormsModule, NgForm } from '@angular/forms';
+import { Component, inject, EventEmitter,Input, Output } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { successMessages } from '../../models/page-data';
-// import { PrivacyPolicy } from '../legal/privacy-policy/privacy-policy'; 
 
 @Component({
   selector: 'app-contact-form',
@@ -15,6 +13,8 @@ import { successMessages } from '../../models/page-data';
 export class ContactForm {
 
   http = inject(HttpClient);
+
+  // @Input() openPrivacyPolicy: () => void;
 
   contactFormData = {
     userName: '',
@@ -29,6 +29,8 @@ export class ContactForm {
   currentLang: 'en' | 'de' = 'en';
   successMessage = successMessages;
   successMessageVisible = false;
+
+  @Output() privacyPolicyRequested = new EventEmitter<void>();
 
   post = {
     // endPoint: 'https://deineDomain.de/sendMail.php',
@@ -75,10 +77,13 @@ export class ContactForm {
   }
 
 
-  onPrivPolClick() {
-    
-    console.log('Privacy policy link clicked');
-  }
+  // onPrivPolClick() {
+  //   console.log('Privacy policy link clicked');
+  // }
+
+  requestPrivacyPolicy() {
+    this.privacyPolicyRequested.emit();
+  } 
 
 
 }

@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { ContactForm } from '../contact-form/contact-form';
 import { contactInfo } from '../../models/page-data';
 
 @Component({
   selector: 'app-contact',
+  standalone: true,
   imports: [ContactForm],
   templateUrl: './contact.html',
-  styleUrl: './contact.scss',
+  styleUrls: ['./contact.scss'],
 })
 export class Contact {
   contact = contactInfo[0];
+  @Output() privacyPolicyRequested = new EventEmitter<void>();
 
   onBounceScroll(targetId: string, event: Event): void {
     event.preventDefault();
@@ -26,4 +28,8 @@ export class Contact {
     }, 400);
   }
 
+
+  onPrivacyPolicyRequested() {
+    this.privacyPolicyRequested.emit();
+  }
 }

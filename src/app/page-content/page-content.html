@@ -1,8 +1,8 @@
+<app-privacy-policy [class.d-none]="!showPrivacyPolicy"></app-privacy-policy>
 <app-about-me></app-about-me>
 <app-my-skills></app-my-skills>
 
 <app-my-projects></app-my-projects>
 <app-testimonials></app-testimonials>
-<!-- <app-contact-form></app-contact-form> -->
-<app-contact></app-contact>
-<app-privacy-policy> </app-privacy-policy>
+<!-- <app-contact></app-contact> -->
+<app-contact (privacyPolicyRequested)="openPrivacyPolicy()"></app-contact>

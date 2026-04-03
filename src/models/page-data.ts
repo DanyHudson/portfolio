@@ -400,3 +400,53 @@ export const successMessages = {
     en: 'Your message has been sent successfully!',
     de: 'Deine Nachricht wurde erfolgreich gesendet!'
 }
+
+export const privacyPolicyText = [
+
+    {
+        headline: {
+            en: `1. Responsible Party`,
+            de: `1. Verantwortliche`
+        },
+
+        text: {
+            en: `The responsible party for data processing on this website is:
+                 Daniela Hudson
+                 Friedrich-Ebert-Hof 19
+                 22763 Hamburg
+                 Germany
+                 `,
+            de: `Verantwortlich für die Datenverarbeitung auf dieser Website ist:
+                 Daniela Hudson
+                 Friedrich-Ebert-Hof 19
+                 22763 Hamburg
+                 Germany
+                 `
+        }
+
+    },
+    {
+        headline: {
+            en: `2. General Information about Data Processing`,
+            de: `2. Allgemeine Informationen zur Datenverarbeitung`
+        },
+
+        text: {
+            en: `The protection of your personal data is a priority. <br>
+                 On this website personal data is only processed to the extent that this is technically necessary and to handle
+                 inquiries.
+                 Personal data includes any information that can personally identify you (e.g., name, email address, IP address).
+                 `,
+            de: `Der Schutz Ihrer persönlichen Daten ist mir ein wichtiges Anliegen. 
+            `
+        }
+
+    },
+
+
+
+
+]
+
+
+

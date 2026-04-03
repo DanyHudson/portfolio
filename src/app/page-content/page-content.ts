@@ -5,7 +5,7 @@ import { MyProjects } from '../my-projects/my-projects';
 import { Testimonials } from '../testimonials/testimonials';
 // import { ContactForm } from '../contact-form/contact-form';
 import { Contact } from '../contact/contact';
-import { PrivacyPolicy } from '../legal/privacy-policy/privacy-policy'; 
+import { PrivacyPolicy } from '../legal/privacy-policy/privacy-policy';
 
 
 @Component({
@@ -16,5 +16,15 @@ import { PrivacyPolicy } from '../legal/privacy-policy/privacy-policy';
   styleUrls: ['./page-content.scss'],
 })
 export class PageContent {
+  showPrivacyPolicy = false;
+
+
+  openPrivacyPolicy() {
+    this.showPrivacyPolicy = true;
+  }
+
+  closePrivacyPolicy() {
+    this.showPrivacyPolicy = false;
+  }
 
 }
