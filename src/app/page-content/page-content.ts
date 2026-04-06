@@ -18,7 +18,6 @@ import { PrivacyPolicy } from '../legal/privacy-policy/privacy-policy';
 export class PageContent {
   showPrivacyPolicy = false;
 
-
   openPrivacyPolicy() {
     this.showPrivacyPolicy = true;
   }
