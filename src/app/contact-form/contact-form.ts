@@ -1,4 +1,4 @@
-import { Component, inject, EventEmitter,Input, Output } from '@angular/core';
+import { Component, inject, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { successMessages } from '../../models/page-data';
@@ -13,8 +13,6 @@ import { successMessages } from '../../models/page-data';
 export class ContactForm {
 
   http = inject(HttpClient);
-
-  // @Input() openPrivacyPolicy: () => void;
 
   contactFormData = {
     userName: '',
@@ -76,14 +74,8 @@ export class ContactForm {
     }, 1600);
   }
 
-
-  // onPrivPolClick() {
-  //   console.log('Privacy policy link clicked');
-  // }
-
   requestPrivacyPolicy() {
     this.privacyPolicyRequested.emit();
-  } 
-
+  }
 
 }

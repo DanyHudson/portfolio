@@ -28,7 +28,6 @@ export class Contact {
     }, 400);
   }
 
-
   onPrivacyPolicyRequested() {
     this.privacyPolicyRequested.emit();
   }
