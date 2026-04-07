@@ -3,7 +3,7 @@
  .privacy-policy-overlay {
      left: 0;
      right: 0;
-     margin: 0 auto;
+     margin: 24px auto;
      max-width: 980px;
      width: 90vw;
      z-index: 1000;
@@ -14,16 +14,19 @@
 
  .headline-row {
      display: flex;
-     align-items: center;
-     gap: 10px;
+     flex-direction: column;
+    //  align-items: center;
+     gap: 16px;
      margin-bottom: 12px;
+
+     h2 {
+         font-size: 1.8em;
+         color: rgb(137, 188, 217);
+         margin-bottom: 4px;
+     }
  }
 
- h2 {
-     font-size: 1.4em;
-     margin-bottom: 12px;
-     color: rgb(137, 188, 217);
- }
+
 
  .priv-pol-text {
      font-size: 1.2em;
@@ -31,21 +34,27 @@
      width: 100%;
      margin-bottom: 24px;
      color: white;
+
+     h3 {
+         font-size: 1.4em;
+         margin-bottom: 12px;
+         color: rgb(137, 188, 217);
+     }
  }
 
  .arrow-left-btn {
-    width: 80px;
-    background: none;
-    border: none;
-    cursor: pointer;
+     width: 80px;
+     background: none;
+     border: none;
+     cursor: pointer;
 
-    transition-property: background-color;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in-out;
-    border-radius: 50vw;
+     transition-property: background-color;
+     transition-duration: 0.3s;
+     transition-timing-function: ease-in-out;
+     border-radius: 50vw;
 
-    &:hover {
-        background-color: rgba(137, 188, 217, 0.3);
-        border-radius: 50vw;
-    }
-}
+     &:hover {
+         background-color: rgba(137, 188, 217, 0.3);
+         border-radius: 50vw;
+     }
+ }
