@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { HighlightShape } from '../highlight-shape/highlight-shape';
 import { HighlightShapeResp } from '../highlight-shape-resp/highlight-shape-resp';
-
 import { skills } from '../../models/page-data';
 import { LangService } from '../services/lang.service';
 
@@ -12,11 +11,10 @@ import { LangService } from '../services/lang.service';
   templateUrl: './my-skills.html',
   styleUrls: ['./my-skills.scss'],
 })
+
 export class MySkills {
   skillIcons = skills[0].skillIcons;
   learning = skills[0].learning;
-
-  // currentLang: string = 'en';
 
   currentLang: 'en' | 'de' = 'en';
 

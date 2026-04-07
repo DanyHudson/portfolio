@@ -8,6 +8,7 @@ import { Tabs } from '../tabs/tabs';
   templateUrl: './my-projects.html',
   styleUrls: ['./my-projects.scss'],
 })
+
 export class MyProjects {
 
 }
