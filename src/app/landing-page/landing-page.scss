@@ -5,7 +5,6 @@
      align-items: center;
      flex-direction: column;
      width: 100%;
-     // gap: 80px;
      padding: 0;
      position: relative;
  }
@@ -23,7 +22,6 @@
      width: 580px;
      height: 683px;
 
-     // ...existing styles...
      .hero-img-bg {
          position: absolute;
          width: 580px;
@@ -51,27 +49,11 @@
      }
  }
 
-
  .lp-logo {
      width: 94px;
      height: auto;
      z-index: 10;
  }
-
- //  .hero-img-bg {
- //      width: 594px;
- //      height: 710px;
- //      position: absolute;
- //      // top: 0;
- //      bottom: 0;
- //      right: 0;
- //      transition: transform 0.4s ease-in, opacity 0.5s ease-in;
-
- //      //  &:hover {
- //      //      transform: rotate(-15deg);
- //      //  }
- //      z-index: 0;
- //  }
 
  .hero-img {
      width: 535px;
@@ -83,9 +65,6 @@
      z-index: 1;
  }
 
-
-
-
  .lp-text-box {
      max-width: 540px;
      display: flex;
@@ -94,7 +73,6 @@
      flex-direction: column;
 
      h1 {
-         // @include headingFont($c:rgb(137, 188, 217), $fw:400);
          font-size: 3.6em;
          line-height: 48px;
      }
@@ -112,7 +90,6 @@
      border: none;
      cursor: pointer;
      margin-top: 120px;
-
      transition-property: background-color;
      transition-duration: 0.3s;
      transition-timing-function: ease-in-out;
@@ -131,6 +108,5 @@
 
      app-soc-med ::ng-deep .soc-med {
          flex-direction: column;
-
      }
  }

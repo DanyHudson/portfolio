@@ -8,7 +8,9 @@ import { SocMed } from '../soc-med/soc-med';
   templateUrl: './landing-page.html',
   styleUrl: './landing-page.scss',
 })
+
 export class LandingPage {
+  
   onBounceScroll(targetId: string, event: Event): void {
     event.preventDefault();
     const target = document.getElementById(targetId);
@@ -23,13 +25,5 @@ export class LandingPage {
       window.scrollTo({ top: targetY, behavior: 'smooth' });
     }, 400);
   }
-
-  // scrollToStartPoint() {
-  //   const el = document.getElementById('startPoint');
-  //   if (el) {
-  //     el.scrollIntoView({ behavior: 'smooth' });
-  //     // Add bounce logic here if needed
-  //   }
-  // }
 
 }

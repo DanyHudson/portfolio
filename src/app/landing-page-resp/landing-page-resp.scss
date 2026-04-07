@@ -5,10 +5,8 @@
      justify-content: center;
      align-items: center;
      height: 120px;
-     //  width: 100%;
      margin-top: 24px;
      width: min(64em, 100vw);
-
  }
 
  app-nav-resp {
@@ -16,11 +14,6 @@
      justify-content: space-between;
      align-items: center;
      width: 88%;
-
-     // position: absolute;
-     // top: 0;
-     // left: 0;
-     // z-index: 10;
      background-color: transparent;
  }
 
@@ -29,7 +22,6 @@
      align-items: center;
      flex-direction: column;
      width: 100%;
-     // gap: 80px;
      padding: 0;
      position: relative;
  }
@@ -38,57 +30,15 @@
      display: flex;
      justify-content: center;
      flex-direction: column;
-     //  gap: 80px;
      align-items: center;
      width: 100%;
  }
 
-
-
- //  .lp-img-box {
- //      position: relative;
- //      width: 580px;
- //      height: 683px;
-
- //      &:hover .hero-img-bg {
- //          transform: rotate(-15deg);
- //          opacity: 0.5;
- //      }
- //  }
-
  .lp-img-box {
-     //  position: relative;
      display: flex;
      justify-content: center;
      align-items: center;
-     //  width: 580px;
      height: 640px;
-
-     //  .hero-img-bg {
-     //      position: absolute;
-     //      width: 580px;
-     //      height: 610px;
-     //      bottom: 0;
-     //      right: 0;
-     //      transition: opacity 0.5s ease-in, transform 0.3s ease-in;
-     //      z-index: 0;
-     //      opacity: 1;
-     //      pointer-events: none;
-     //  }
-
-     //  .hero-img-bg.animated {
-     //      opacity: 0;
-     //      transform: none;
-     //  }
-
-     //  &:hover .hero-img-bg.base {
-     //      opacity: 0;
-     //  }
-
-     //  &:hover .hero-img-bg.animated {
-     //      opacity: 0.7;
-     //      transform: rotate(-17.4deg);
-     //  }
  }
 
 
@@ -100,10 +50,6 @@
 
  .hero-img {
      width: 80%;
-    //  height: 632px;
-     //  position: absolute;
-     // top: 0;
-    //  bottom: 0;
      right: 0;
      z-index: 1;
  }
@@ -117,7 +63,6 @@
      flex-direction: column;
 
      h1 {
-         // @include headingFont($c:rgb(137, 188, 217), $fw:400);
          font-size: 3.6em;
          line-height: 48px;
          margin: 64px 0 24px 0;
@@ -157,6 +102,5 @@
 
      app-soc-med ::ng-deep .soc-med {
          flex-direction: column;
-
      }
  }
