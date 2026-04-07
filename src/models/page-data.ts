@@ -351,14 +351,14 @@ export const mainSubClaimResp = {
 
 export const testimonials = [
     {
-        claim: 'Max Mustermann',
-        reference: 'example project',
+        claim: 'Victor Vaal',
+        reference: 'Join',
         text: {
-            en: 'Working with you was a pleasure. You always brought creative solutions to the table.',
-            de: 'Die Zusammenarbeit mit Ihnen war eine Freude. Sie haben immer kreative Lösungen auf den Tisch gebracht.'
+            en: `You have a way to approach tasks with great attention to detail. If there is anything you don't understand you will keep going until you fully understand it. This makes you a very valuable and reliable team member.`,
+            de: `Du hast so eine Art, Aufgaben mit großer Sorgfalt anzugehen, wenn du estwas nicht verstehst bohrst du so lange bis du es verstanden hast. Das macht dich zu einem sehr wertvollen und zuverlässigen Teammitglied.`
         },
-        link: 'https://linkedin.com/in/janedoe',
-        linkLabel: 'View LinkedIn'
+        link: '',
+        linkLabel: ''
     },
     {
         claim: 'Tina Tester',
@@ -402,7 +402,6 @@ export const successMessages = {
 }
 
 export const privacyPolicyText = [
-
     {
         headline: {
             en: `Responsible Party`,
@@ -532,7 +531,7 @@ export const privacyPolicyText = [
         }
 
     },
-      {
+    {
         headline: {
             en: `Last Updated`,
             de: `Zuletzt aktualisiert`
@@ -549,6 +548,130 @@ export const privacyPolicyText = [
 
 
 ]
+
+export const legalNoticeText = [
+    {
+        headline: {
+            en: `Imprint`,
+            de: `Impressum`
+        },
+
+        text: {
+            en: `Daniela Hudson
+                 Friedrich-Ebert-Hof 19
+                 22763 Hamburg
+                 Germany
+                 `,
+            de: `Daniela Hudson
+                 Friedrich-Ebert-Hof 19
+                 22763 Hamburg
+                 Germany
+                 `
+        }
+    },
+    {
+        headline: {
+            en: `Acceptance of Terms and Conditions`,
+            de: `Akzeptanz der allgemeinen Bedingungen`
+        },
+
+        text: {
+            en: `By accessing and using this portfolio website, you acknowledge and agree to the terms outlined in this Legal Notice. These terms may be updated or modified at any time without prior notice.
+                 `,
+            de: `Durch den Zugriff auf und die Nutzung dieser Portfolio-Website erkennen Sie die in diesem Impressum dargelegten Bedingungen an und stimmen ihnen zu. Diese Bedingungen können jederzeit ohne vorherige Ankündigung aktualisiert oder geändert werden.
+                 `
+        }
+
+    },
+    {
+        headline: {
+            en: `Scope and Purpose of the Website`,
+            de: `Umfang und Zweck der Website`
+        },
+
+        text: {
+            en: `This website is a private, non-commercial portfolio that showcases personal projects, skills, and development work.
+                 No commercial services or paid offerings are provided.
+                 `,
+            de: `Diese Website ist ein privates, nicht-kommerzielles Portfolio, das persönliche Projekte, Fähigkeiten und Entwicklungsarbeiten präsentiert.
+                 Es werden keine kommerziellen Dienstleistungen oder kostenpflichtigen Angebote bereitgestellt.
+                 `
+        }
+    },
+    {
+        headline: {
+            en: `Ownership and Intellectual Property Rights`,
+            de: `Eigentum und geistige Eigentumsrechte`
+        },
+
+        text: {
+            en: `All content on this website, including text, code, design, and graphics, is the intellectual property of the website owner unless otherwise stated. Unauthorized use, reproduction, or distribution is prohibited.
+                 `,
+            de: `Alle Inhalte auf dieser Website, einschließlich Text, Code, Design und Grafiken, sind geistiges Eigentum des Website-Betreibers, sofern nicht anders angegeben. Unbefugte Nutzung, Vervielfältigung oder Verbreitung ist untersagt.  
+                `
+        }
+
+    },
+    {
+        headline: {
+            en: `Use of the Website`,
+            de: `Zulässige Nutzung der Website`
+        },
+
+        text: {
+            en: `This website may only be used for lawful purposes. Any misuse, including attempts to disrupt functionality, gain unauthorized access, or abuse contact services, is strictly prohibited.
+                 `,
+            de: `Die Nutzung der Website ist nur zu rechtmäßigen Zwecken gestattet. Manipulationen, Angriffe auf die Infrastruktur oder missbräuchliche Nutzung des Kontaktformulars sind untersagt.
+                 `
+        }
+
+    },
+    {
+        headline: {
+            en: `External Services`,
+            de: `Externe Dienste`
+        },
+
+        text: {
+            en: `This website uses a FastAPI-based backend service to process contact form submissions. No tracking or analytics services are used for marketing or profiling.
+                 `,
+            de: `Diese Website verwendet einen FastAPI-basierten Backend-Dienst, um Kontaktformularübermittlungen zu verarbeiten. Es werden keine Tracking- oder Analyse-Dienste für Marketing- oder Profiling-Zwecke verwendet.
+                 `
+        }
+
+    },
+      {
+        headline: {
+            en: `Disclaimer and Limitation of Liability`,
+            de: `Haftungsausschluss und Haftungsbeschränkung`
+        },
+
+        text: {
+            en: `All content is provided "as is" without warranties of any kind. The website owner assumes no liability for the accuracy, completeness, or reliability of the information, nor for damages resulting from the use or inability to use this website.
+                 `,
+            de: `Alle Inhalte werden "wie besehen" ohne jegliche Gewähr bereitgestellt. Der Website-Betreiber übernimmt keine Haftung für die Genauigkeit, Vollständigkeit oder Zuverlässigkeit der Informationen sowie für Schäden, die aus der Nutzung oder der Unmöglichkeit der Nutzung dieser Website entstehen.
+                 `
+        }
+
+    },
+     {
+        headline: {
+            en: `Last Updated`,
+            de: `Zuletzt aktualisiert`
+        },
+
+        text: {
+            en: `This privacy policy was last updated on [date].
+                 `,
+            de: `Diese Datenschutzerklärung wurde zuletzt am [Datum] aktualisiert.
+                 `
+        }
+
+    },
+
+
+]
+
 
 
 

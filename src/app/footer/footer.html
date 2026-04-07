@@ -15,7 +15,8 @@
     </div>
     <div class="soc-med-container"><app-soc-med theme="dark"></app-soc-med></div>
     <div class="legal-notice">
-        <a href="#"> Legal notice </a>
+        <!-- <a href="#"> Legal notice </a> -->
+        <a href="#" (click)="requestPrivacyPolicy(); $event.preventDefault()">privacy policy</a>
         <p>&copy; Daniela Hudson 2026</p>
     </div>
 
