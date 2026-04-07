@@ -1,8 +1,12 @@
-<app-privacy-policy [class.d-none]="!showPrivacyPolicy" (closeRequested)="closePrivacyPolicy()" ></app-privacy-policy>
-<app-about-me></app-about-me>
-<app-my-skills></app-my-skills>
+@if (showPrivacyPolicy) {
+  <app-privacy-policy (closeRequested)="closePrivacyPolicy()"></app-privacy-policy>
+} @else {
+  <app-about-me></app-about-me>
+  <app-my-skills></app-my-skills>
+  <app-my-projects></app-my-projects>
+  <app-testimonials></app-testimonials>
+  <app-contact (privacyPolicyRequested)="openPrivacyPolicy()"></app-contact>
+}
 
-<app-my-projects></app-my-projects>
-<app-testimonials></app-testimonials>
-<!-- <app-contact></app-contact> -->
-<app-contact (privacyPolicyRequested)="openPrivacyPolicy()"></app-contact>
+<!-- 'note to myself:copy the explanation about @Output(), @Input() and flags by copilot into your coding notes' -->
+
