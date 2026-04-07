@@ -23,7 +23,6 @@ export class ContactForm {
 
   mailTest = true; // set to false for real mail sending
   submitAttempted = false;
-
   currentLang: 'en' | 'de' = 'en';
   successMessage = successMessages;
   successMessageVisible = false;

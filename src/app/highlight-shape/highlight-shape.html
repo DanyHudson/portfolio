@@ -1,34 +1,10 @@
-<!-- <section class="highlight-shape-container">
-  <p>I am currently learning <br>
-    <img src="" alt=""> <img src="" alt="">
-    <br>
-    Show that you are motivated to continually improve your skills,
-    implement innovative solutions and stay abreast of new technologies.
-  </p>
-</section> -->
-
-<!-- <section class="highlight-shape-container">
-  <span class="claim">{{ claim }}</span>
-  <div class="reference">
-    @if (reference && reference.length && Array.isArray(reference)) {
-    @for (icon of reference; let i = $index; track i) {
-    <img [src]="icon" alt="icon" />
-    }
-    }
-    @if (reference && !Array.isArray(reference)) {
-    <span>{{ reference }}</span>
-    }
-  </div>
-  <p class="text">{{ text }}</p>
-  @if (link) {
-  <a class="link" [href]="link" target="_blank">{{ linkLabel }}</a>
-  }
-</section> -->
-
 <section class="highlight-shape-container">
+
   <img class="shape-bg base" src="assets/img/shape_2.svg" alt="background shape">
   <img class="shape-bg animated" src="assets/img/shape_2.svg" alt="background shape">
+
   <span class="claim">{{ claim }}</span>
+
   <div class="reference">
     @if (reference && Array.isArray(reference)) {
     @for (item of reference; let i = $index; track i) {
@@ -42,8 +18,10 @@
     <span>Project <span class="project-reference"> {{ reference }}</span></span>
     }
   </div>
+  
   <p class="text">{{ text }}</p>
   @if (link) {
   <a class="link" [href]="link" target="_blank">{{ linkLabel }}</a>
   }
+
 </section>

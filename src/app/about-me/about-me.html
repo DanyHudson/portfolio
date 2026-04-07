@@ -1,15 +1,11 @@
 <div id="aboutme" class="achor-point"></div>
+
 <h2>About Me</h2>
 
-<!-- <section class="about-me-content"> -->
 <section class="section-content">
-    <div class="left-container">
-        <!-- <app-typewriter></app-typewriter> -->
-        <!-- <app-typewriter-02 [words]="['word1', 'word2', 'word3']"></app-typewriter-02> -->
-        <app-typewriter-02 [words]="typewriterWords"></app-typewriter-02>
 
-        <!-- <img src="assets/icons/location_icon.svg" alt="">
-        <p><span> I am </span> &nbsp; located in Hamburg</p> -->
+    <div class="left-container">
+        <app-typewriter-02 [words]="typewriterWords"></app-typewriter-02>
     </div>
     <div class="right-container">
         <p class="ab-me-text" style="white-space: pre-line;" >{{ aboutMe[currentLang] }}
@@ -20,7 +16,6 @@
                 Let's talk
             </button>
         </div>
-
     </div>
 
 </section>

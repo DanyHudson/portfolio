@@ -58,10 +58,10 @@
 
     <div class="privacy-policy-resp">
       <label for="privacyPolicyAccepted" class="container">
+
         <p>I've read the <a href="#" (click)="requestPrivacyPolicy(); $event.preventDefault()">privacy policy</a> and
           agree to the processing of my data as outlined.
         </p>
-
         <input type="checkbox" id="privacyPolicyAccepted" [(ngModel)]="contactFormData.privacyPolicyAccepted"
           name="privacyPolicyAccepted"
           [class.error-input]=" !contactFormData.privacyPolicyAccepted && submitAttempted" />
@@ -89,6 +89,5 @@
     </div>
   </div>
   }
-
 
 </div>
