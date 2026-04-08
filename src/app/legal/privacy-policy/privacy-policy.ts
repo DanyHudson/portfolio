@@ -9,6 +9,7 @@ import { privacyPolicyText } from '../../../models/page-data';
   templateUrl: './privacy-policy.html',
   styleUrls: ['./privacy-policy.scss'],
 })
+
 export class PrivacyPolicy {
   @Output() closeRequested = new EventEmitter<void>();
   privPolText = privacyPolicyText;
