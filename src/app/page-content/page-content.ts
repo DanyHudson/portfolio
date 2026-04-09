@@ -5,25 +5,32 @@ import { MyProjects } from '../my-projects/my-projects';
 import { Testimonials } from '../testimonials/testimonials';
 // import { ContactForm } from '../contact-form/contact-form';
 import { Contact } from '../contact/contact';
-import { PrivacyPolicy } from '../legal/privacy-policy/privacy-policy';
+import { privacyPolicyText }from '../../models/page-data';
+import { legalNoticeText }from '../../models/page-data';
+import { LegalPage } from '../legal-page/legal-page';
+
 
 
 @Component({
   selector: 'app-page-content',
   standalone: true,
-  imports: [AboutMe, MySkills, MyProjects, Testimonials, Contact, PrivacyPolicy],
+  imports: [AboutMe, MySkills, MyProjects, Testimonials, Contact, LegalPage],
   templateUrl: './page-content.html',
   styleUrls: ['./page-content.scss'],
 })
 export class PageContent {
-  showPrivacyPolicy = false;
+  legalPage: 'privacyPolicyText' | 'legalNotice' | null = null;
 
   openPrivacyPolicy() {
-    this.showPrivacyPolicy = true;
+    this.legalPage = 'privacyPolicy';
   }
 
-  closePrivacyPolicy() {
-    this.showPrivacyPolicy = false;
+  openLegalNotice() {
+    this.legalPage = 'legalNotice';
+  }
+
+  closeLegalPage() {
+    this.legalPage = null;
   }
 
 }
