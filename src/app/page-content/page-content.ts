@@ -5,8 +5,8 @@ import { MyProjects } from '../my-projects/my-projects';
 import { Testimonials } from '../testimonials/testimonials';
 // import { ContactForm } from '../contact-form/contact-form';
 import { Contact } from '../contact/contact';
-import { privacyPolicyText }from '../../models/page-data';
-import { legalNoticeText }from '../../models/page-data';
+// import { privacyPolicyText }from '../../models/page-data';
+// import { legalNoticeText }from '../../models/page-data';
 import { LegalPage } from '../legal-page/legal-page';
 
 
@@ -19,7 +19,7 @@ import { LegalPage } from '../legal-page/legal-page';
   styleUrls: ['./page-content.scss'],
 })
 export class PageContent {
-  legalPage: 'privacyPolicyText' | 'legalNotice' | null = null;
+  legalPage: 'privacyPolicy' | 'legalNotice' | null = null;
 
   openPrivacyPolicy() {
     this.legalPage = 'privacyPolicy';
