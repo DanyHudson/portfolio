@@ -7,7 +7,7 @@
         <h2>Privacy Policy</h2>
     </div>
 
-    @for (paragraph of legalPageText; track paragraph; let i = $index) {
+    @for (paragraph of legalPageType; track paragraph; let i = $index) {
     <section class="priv-pol-text">
         <h3>{{ i + 1 }}. {{ paragraph.headline[currentLang] }}</h3>
         <p>{{ paragraph.text[currentLang] }}</p>

@@ -515,7 +515,6 @@ export const privacyPolicyText = [
                  Rechtsgrundlage: Art. 6 Abs. 1 lit. b GDPR (Verarbeitung einer Anfrage/Vertragsinitiation) und Art. 6 Abs. 1 lit. f GDPR (legitimierter Interesse an effizienter Kommunikation).  
                 `
         }
-
     },
     {
         headline: {
@@ -527,9 +526,8 @@ export const privacyPolicyText = [
             en: `This website does not use cookies.
                  `,
             de: `Diese Website verwendet keine Cookies.
-                 `
+                `
         }
-
     },
     {
         headline: {
@@ -543,10 +541,7 @@ export const privacyPolicyText = [
             de: `Diese Datenschutzerklärung wurde zuletzt am [Datum] aktualisiert.
                  `
         }
-
     },
-
-
 ]
 
 export const legalNoticeText = [
