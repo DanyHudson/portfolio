@@ -20,7 +20,7 @@
 } @else if (legalPage === 'legalNotice') {
   <app-legal-page
     [title]="'Legal Notice'"
-    [content]="legalNoticeText"
+    [content]="legalNoticeText.headline[currentLang]"
     (closeRequested)="closeLegalPage()"
   ></app-legal-page>
 } @else {
