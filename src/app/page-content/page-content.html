@@ -1,26 +1,13 @@
-<!-- @if (showPrivacyPolicy) {
-  <app-privacy-policy (closeRequested)="closePrivacyPolicy()"></app-privacy-policy>
-} @else {
-  <app-about-me></app-about-me>
-  <app-my-skills></app-my-skills>
-  <app-my-projects></app-my-projects>
-  <app-testimonials></app-testimonials>
-  <app-contact (privacyPolicyRequested)="openPrivacyPolicy()"></app-contact>
-} -->
-
-<!-- 'note to myself:copy the explanation about @Output(), @Input() and flags by copilot into your coding notes' -->
-
-
 @if (legalPage === 'privacyPolicy') {
   <app-legal-page
-    [title]="'Privacy Policy'"
-    [content]="privacyPolicyText"
+    [title]="privacyPolicyData.legalPageTitle"
+    [content]="privacyPolicyData.content"
     (closeRequested)="closeLegalPage()"
   ></app-legal-page>
 } @else if (legalPage === 'legalNotice') {
   <app-legal-page
-    [title]="'Legal Notice'"
-    [content]="legalNoticeText.headline[currentLang]"
+    [title]="legalNoticeData.legalPageTitle"
+    [content]="legalNoticeData.content"
     (closeRequested)="closeLegalPage()"
   ></app-legal-page>
 } @else {

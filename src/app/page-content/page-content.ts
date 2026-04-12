@@ -3,48 +3,49 @@ import { AboutMe } from '../about-me/about-me';
 import { MySkills } from '../my-skills/my-skills';
 import { MyProjects } from '../my-projects/my-projects';
 import { Testimonials } from '../testimonials/testimonials';
-// import { ContactForm } from '../contact-form/contact-form';
 import { Contact } from '../contact/contact';
-import { privacyPolicyText } from '../../models/page-data';
-import { legalNoticeText } from '../../models/page-data';
+import { legalPageContent } from '../../models/legal-page-data';
 import { LegalPage } from '../legal-page/legal-page';
 import { LangService } from '../services/lang.service';
 
+type LegalParagraph = {
+  headline: {
+    en: string;
+    de: string;
+  };
+  text: {
+    en: string;
+    de: string;
+  };
+};
 
+type LegalPageData = {
+  legalPageTitle: string;
+  content: LegalParagraph[];
+};
 
 @Component({
   selector: 'app-page-content',
   standalone: true,
-  imports: [AboutMe, MySkills, MyProjects, Testimonials, Contact, LegalPage],
+  imports: [AboutMe, MySkills, MyProjects, Testimonials, Contact],
   templateUrl: './page-content.html',
   styleUrls: ['./page-content.scss'],
 })
+
 export class PageContent {
-  privacyPolicyText = privacyPolicyText;
-  legalNoticeText = legalNoticeText;
-  privPolHeadline = privacyPolicyText[0].headline;
-  privPolText = privacyPolicyText[0].text;
-  legNotHeadline = legalNoticeText[0].headline;
-  legNotText = legalNoticeText[0].text;
+  @Input() legalPage: 'privacyPolicy' | 'legalNotice' | null = null;
 
-  legalPage: 'privacyPolicy' | 'legalNotice' | null = null;
+  @Output() privacyPolicyRequested = new EventEmitter<void>();
+  @Output() closeRequested = new EventEmitter<void>();
 
-  currentLang: 'en' | 'de' = 'en';
-
-   constructor(private langService: LangService) {
-    this.langService.lang$.subscribe(lang => this.currentLang = lang);
-  }
+  privacyPolicyData: LegalPageData = legalPageContent[0];
+  legalNoticeData: LegalPageData = legalPageContent[1];
 
   openPrivacyPolicy() {
-    this.legalPage = 'privacyPolicy';
-  }
-
-  openLegalNotice() {
-    this.legalPage = 'legalNotice';
+    this.privacyPolicyRequested.emit();
   }
 
   closeLegalPage() {
-    this.legalPage = null;
+    this.closeRequested.emit();
   }
-
 }

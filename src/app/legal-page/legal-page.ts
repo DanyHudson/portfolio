@@ -1,8 +1,16 @@
 import { Component, Output, EventEmitter, Input } from '@angular/core';
 import { LangService } from '../services/lang.service';
-// import { privacyPolicyText} from '../../models/page-data';
-// import { legalNoticeText} from '../../models/page-data';
 
+type LegalParagraph = {
+  headline: {
+    en: string;
+    de: string; 
+  };
+  text: {
+    en: string;
+    de: string;
+  };
+};
 
 @Component({
   selector: 'app-legal-page',
@@ -11,20 +19,22 @@ import { LangService } from '../services/lang.service';
   templateUrl: './legal-page.html',
   styleUrls: ['./legal-page.scss'],
 })
+
 export class LegalPage {
-  // privacyPolicyText = privacyPolicyText;
-  // legalNoticeText = legalNoticeText;
+  @Input() title = '';
+  @Input() content: LegalParagraph[] = [];
+
   legalPageType: 'privacyPolicy' | 'legalNotice' = 'privacyPolicy';
 
   currentLang: 'en' | 'de' = 'en';
   @Output() closeRequested = new EventEmitter<void>();
-  // @Input() title: string = '';
-  // @Input() content: string = '';
-  @Input() headline: string = '';
-  @Input() text: string = '';
 
   constructor(private langService: LangService) {
     this.langService.lang$.subscribe(lang => this.currentLang = lang);
+  }
+
+  close() {
+    this.closeRequested.emit();
   }
 
 }

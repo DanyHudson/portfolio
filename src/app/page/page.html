@@ -7,11 +7,11 @@
         <app-nav></app-nav>
     </nav>
     <main>
-        <app-page-content></app-page-content>
+        <app-page-content [legalPage]="legalPage" (privacyPolicyRequested)="openPrivacyPolicy()"
+            (closeRequested)="closeLegalPage()"></app-page-content>
     </main>
+
     <footer>
-        <app-footer></app-footer>
+        <app-footer (legalNoticeRequested)="openLegalNotice()"></app-footer>
     </footer>
 </div>
-
-
