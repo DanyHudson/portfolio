@@ -19,11 +19,9 @@
   @include defaultFont($c: rgba(38, 46, 52, 1), $fw: 500);
   transition: color 0.3s ease-in, opacity 0.5s ease-in;
 
-
   &:hover {
     text-decoration: none;
     color: white;
-
   }
 
   &.active::after {
@@ -39,8 +37,6 @@
     transition: opacity 0.5s ease-in;
     pointer-events: none;
     padding: 18px 16px;
-
-
   }
 
   &::after {
@@ -54,8 +50,6 @@
   }
 }
 
-
-
 // Burger menu animation (clean pattern)
 .burger {
   width: 40px;
@@ -67,9 +61,6 @@
   background: none;
   border: none;
   z-index: 1001;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
 
   span {
     background-color: #FFF;
@@ -134,28 +125,20 @@ span {
 
   &:hover span:nth-child(1),
   &:focus span:nth-child(1) {
-    // width: 80%;
     transform: scaleX(0.8);
   }
 
   &:hover span:nth-child(2),
   &:focus span:nth-child(2) {
-    // width: 50%;
     transform: scaleX(0.5);
-
   }
 
   &:hover span:nth-child(3),
   &:focus span:nth-child(3) {
-    // width: 80%;
     transform: scaleX(0.8);
   }
 
 }
-
-// :hover after an element (e.g. a:hover) means “when this element is hovered.”
-// &:hover span:nth-child(1) means “when the parent (.burger) is hovered,
-//style the first span inside it.”
 
 span.open:nth-child(1) {
   transform: translateY(13px) rotate(45deg);
@@ -174,32 +157,26 @@ span.open:nth-child(3) {
 
 .nav-links {
   position: absolute;
-  top: 42%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 600px;
+  width: 398px;
   height: 100vh;
   z-index: 1000;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  // margin: 60px 20px 20px 20px;
   background-image: url('/assets/img/nav-resp_bg.svg');
-  // opacity: 0.7;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 
-  // &.open {
-
-  // }
-
   a {
     color: rgb(38, 46, 52);
     text-decoration: none;
-    font-size: 1.6em;
-    line-height: 54px;
+    font-size: 1.4em;
+    line-height: 2em;
 
     &:hover {
       text-decoration: none;
@@ -225,9 +202,7 @@ span.open:nth-child(3) {
 
 .toggle-language {
   position: absolute;
-  // top: 16px;
-  // right: 16px;
-  top: 64%;
+  top: 72%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;

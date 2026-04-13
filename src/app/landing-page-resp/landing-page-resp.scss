@@ -4,7 +4,7 @@
      display: flex;
      justify-content: center;
      align-items: center;
-     height: 120px;
+    //  height: 120px;
      margin-top: 24px;
      width: min(64em, 100vw);
  }
@@ -38,9 +38,8 @@
      display: flex;
      justify-content: center;
      align-items: center;
-     height: 640px;
+    //  height: 640px;
  }
-
 
  .lp-logo {
      width: 94px;
@@ -63,7 +62,7 @@
      flex-direction: column;
 
      h1 {
-         font-size: 3.6em;
+         font-size: 3.2em;
          line-height: 48px;
          margin: 64px 0 24px 0;
          text-align: center;

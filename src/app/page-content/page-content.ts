@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { AboutMe } from '../about-me/about-me';
 import { MySkills } from '../my-skills/my-skills';
 import { MyProjects } from '../my-projects/my-projects';
@@ -6,7 +6,6 @@ import { Testimonials } from '../testimonials/testimonials';
 import { Contact } from '../contact/contact';
 import { legalPageContent } from '../../models/legal-page-data';
 import { LegalPage } from '../legal-page/legal-page';
-import { LangService } from '../services/lang.service';
 
 type LegalParagraph = {
   headline: {
@@ -27,7 +26,7 @@ type LegalPageData = {
 @Component({
   selector: 'app-page-content',
   standalone: true,
-  imports: [AboutMe, MySkills, MyProjects, Testimonials, Contact],
+  imports: [AboutMe, MySkills, MyProjects, Testimonials, Contact, LegalPage],
   templateUrl: './page-content.html',
   styleUrls: ['./page-content.scss'],
 })

@@ -25,8 +25,6 @@ app-landing-page-resp {
     @include display-resp($breakpoint: 1020px);
 }
 
-
-
 app-nav {
     align-items: center;
     justify-content: space-between;
@@ -41,7 +39,6 @@ nav {
     width: 100%;
     background: rgba(137, 188, 217, 1);
     height: 104px;
-    // padding: 8px 19px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,26 +57,17 @@ app-footer {
 }
 
 footer {
-    // width: 100%;
-    // width: min(42em, 90vw);
     width: 100%;
     background: rgba(137, 188, 217, 1);
-    // height: 160px;
     height: auto;
-    // padding: 8px 109px;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    // @media (max-width: 1020px) {
-    //     height: auto;
-    //     min-height: 100px
-    // }
 }
 
 nav,
 footer {
-    padding: 8px 16px; // smaller for mobile
+    // padding: 8px 16px;
 
     @media (min-width: 900px) {
         padding: 8px 109px;
