@@ -1,4 +1,4 @@
-<img class="lp-logo" src="assets/img/LOGO.svg" alt="logo">
+<!-- <img class="lp-logo" src="assets/img/LOGO.svg" alt="logo">
 
 <div class="nav-resp-container">
   <button class="burger" (click)="toggleNav()" [class.open]="navOpen" [attr.aria-expanded]="navOpen"
@@ -10,7 +10,7 @@
 
 
   @if (navOpen) {
-  <div class="nav-links fade-in">
+  <div class="nav-links fade-in" >
     @for (link of navLinks; track link.label) {
     <section class="nav-link" id="startPoint">
       <a [class.active]="selectedLink === link.label" (click)="onNavClick(link)" href="#{{ link.anchor }}">
@@ -34,6 +34,51 @@
     <button class="de-btn" [class.active]="currentLang === 'de'" (click)="setLanguage('de')">DE</button>
     <button class="en-btn" [class.active]="currentLang === 'en'" (click)="setLanguage('en')">EN</button>
   </div>
-</div>
+</div> -->
 
 <!-- need to have explained how the [] brackets work. is is a condition, is it an assignment? -->
+
+
+<img class="lp-logo" src="assets/img/LOGO.svg" alt="logo">
+
+<div class="nav-resp-container">
+  <button
+    class="burger"
+    (click)="toggleNav()"
+    [class.open]="menuOpen()"
+    [attr.aria-expanded]="menuOpen()"
+    aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  @if (menuOpen()) {
+    <div class="nav-links fade-in">
+      @for (link of navLinks; track link.label) {
+        <section class="nav-link" id="startPoint">
+          <a
+            [class.active]="selectedLink === link.label"
+            (click)="onNavClick(link)"
+            href="#{{ link.anchor }}">
+            {{ link.label }}
+          </a>
+        </section>
+      }
+
+      <div class="toggle-language">
+        <button class="de-btn" [class.active]="currentLang === 'de'" (click)="setLanguage('de')">DE</button>
+        <button class="en-btn" [class.active]="currentLang === 'en'" (click)="setLanguage('en')">EN</button>
+      </div>
+    </div>
+  }
+
+  @if (menuOpen()) {
+    <div class="backdrop" (click)="closeNav()"></div>
+  }
+
+  <div class="toggle-language">
+    <button class="de-btn" [class.active]="currentLang === 'de'" (click)="setLanguage('de')">DE</button>
+    <button class="en-btn" [class.active]="currentLang === 'en'" (click)="setLanguage('en')">EN</button>
+  </div>
+</div>

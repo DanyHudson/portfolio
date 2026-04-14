@@ -1,5 +1,34 @@
-<section class="lp-content-resp">
+<!-- <section class="lp-content-resp">
+<div class="nav-box"><app-nav-resp (menuOpenChange)="onMenuOpenChange($event)"></app-nav-resp></div>
 
+@if (!menuOpen) {
+<div class="persona-resp" id="persona-resp">
+
+        <div class="lp-img-box">
+            <img class="hero-img" src="assets/img/hero_img_resp.png" alt="landing page image">
+        </div>
+
+        <section class="lp-text-box">
+            <h1 class="lp-title-resp">Daniela Hudson</h1>
+            <p class="lp-subtitle">FRONTEND DEVELOPER</p>
+
+            <a #arrowDownBtn class="arrow-down-btn" (click)="onBounceScroll('startPoint', $event)">
+                <img src="assets/img/arrow_down.svg" alt="Arrow down" />
+            </a>
+        </section>
+
+    </div>
+
+}
+
+    
+</section> -->
+
+
+
+<!-- my very first own version -->
+<!-- <section class="lp-content-resp">
+    
     <div class="nav-box"><app-nav-resp></app-nav-resp></div>
 
     <div class="persona-resp" id="persona-resp">
@@ -19,4 +48,39 @@
 
     </div>
 
+</section> -->
+
+
+
+
+<!-- modern model() version -->
+<section class="lp-content-resp">
+  <div class="nav-box">
+    <app-nav-resp [(menuOpen)]="menuOpen"></app-nav-resp>
+  </div>
+
+  @if (!menuOpen()) {
+    <div class="persona-resp" id="persona-resp">
+      <div class="lp-img-box">
+        <img class="hero-img" src="assets/img/hero_img_resp.png" alt="landing page image">
+      </div>
+
+      <section class="lp-text-box">
+        <h1 class="lp-title-resp">Daniela Hudson</h1>
+        <p class="lp-subtitle">FRONTEND DEVELOPER</p>
+
+        <a #arrowDownBtn class="arrow-down-btn" (click)="onBounceScroll('startPoint', $event)">
+          <img src="assets/img/arrow_down.svg" alt="Arrow down" />
+        </a>
+      </section>
+    </div>
+  }
 </section>
+
+
+
+
+<!-- ::: add this to programming notes ::: 
+(something)="..." is event binding
+[something]="..." is property binding
+[(something)] is two-way binding -->
