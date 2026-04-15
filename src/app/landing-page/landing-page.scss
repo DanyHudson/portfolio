@@ -56,12 +56,13 @@
  }
 
  .hero-img {
-     width: 535px;
-     height: 632px;
+     width: 480px;
+     height: 600px;
      position: absolute;
      // top: 0;
      bottom: 0;
-     right: 0;
+     right: 50%;
+     transform: translate(50%, 0%);
      z-index: 1;
  }
 
