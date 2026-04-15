@@ -11,20 +11,28 @@ import { LandingPageResp } from "../landing-page-resp/landing-page-resp";
   imports: [LandingPage, Nav, PageContent, Footer, LandingPageResp],
   templateUrl: './page.html',
   styleUrls: ['./page.scss'],
-  
 })
 
 export class Page {
   legalPage: 'privacyPolicy' | 'legalNotice' | null = null;
 
+/**
+ * Opens the privacy policy page.
+ */
   openPrivacyPolicy() {
     this.legalPage = 'privacyPolicy';
   }
 
+  /**
+   * Opens the legal notice page.
+   */
   openLegalNotice() {
     this.legalPage = 'legalNotice';
   }
 
+  /**
+   * Closes the currently open legal page.
+   */
   closeLegalPage() {
     this.legalPage = null;
   }

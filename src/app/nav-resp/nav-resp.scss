@@ -172,35 +172,47 @@ span.open:nth-child(3) {
   // background-repeat: no-repeat;
   // background-position: center;
   // background-size: contain;
+  position: absolute;
+  inset: 0;
+  height: 72%;
+  min-height: 400px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   a {
     color: rgb(38, 46, 52);
     text-decoration: none;
     font-size: 1.4em;
-    line-height: 2em;
+    line-height: 1,8em;
 
     &:hover {
       text-decoration: none;
       color: white;
 
     }
+
+    @media (max-width: 400px) {
+      font-size: 1.2em;
+      line-height: 1.6em;
+    }
   }
-   position: absolute;
-  inset: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+
+
 }
 
 .nav-panel {
   width: min(398px, 88vw);
-  min-height: 520px;
-  padding: 96px 24px 56px;
+  // min-height: 520px;
+  padding: 80px 24px 56px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  // justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 10px;
   background-image: url('/assets/img/nav-resp_bg.svg');
   background-repeat: no-repeat;
   background-position: center;

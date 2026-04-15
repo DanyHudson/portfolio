@@ -9,14 +9,7 @@
   }
 </section>
 
-
-<!-- <div class="toggle-language">
-  <button class="de-btn active" (click)="setLanguage('de')">DE</button>
-  <button class="en-btn active" (click)="setLanguage('en')">EN</button>
-</div> -->
 <div class="toggle-language">
   <button class="de-btn" [class.active]="currentLang === 'de'" (click)="setLanguage('de')">DE</button>
   <button class="en-btn" [class.active]="currentLang === 'en'" (click)="setLanguage('en')">EN</button>
 </div>
-
-<!-- need to have explained how the [] brackets work. is is a condition, is it an assignment? -->

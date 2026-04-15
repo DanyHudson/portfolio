@@ -2,8 +2,6 @@
 
  @mixin bgImgFit() {
      background-repeat: no-repeat;
-     //  object-fit: cover;
-     //  background-position: center;
  }
 
  .soc-med {
@@ -16,29 +14,11 @@
      a {
          cursor: pointer;
          text-decoration: none;
-
-
      }
 
-     a.email-link:hover {
-        //  background-image: url(../../assets/img/email_button_hover.svg);
-         // background-repeat: no-repeat;
-         // object-fit: cover;
-         @include bgImgFit();
-
-     }
-
-     a.github-link:hover {
-        //  background-image: url(../../assets/img/github_button_hover.svg);
-         // background-repeat: no-repeat;  
-         // object-fit: cover;
-         @include bgImgFit();
-     }
-
+     a.email-link:hover,
+     a.github-link:hover,
      a.linkedin-link:hover {
-        //  background-image: url(../../assets/img/linkedin_button_hover.svg);
-         // background-repeat: no-repeat;
-         // object-fit: cover;
          @include bgImgFit();
      }
 

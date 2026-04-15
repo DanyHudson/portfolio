@@ -28,8 +28,7 @@
 
         &:hover {
             text-decoration: none;
-            color: white;
-            
+            color: white;  
         }
 
         &.active::after {
@@ -45,8 +44,6 @@
             transition: opacity 0.5s ease-in;
             pointer-events: none;
             padding: 18px 16px;
-
-
         }
 
         &::after {
@@ -74,11 +71,9 @@
     @include defaultFont($c: rgba(38, 46, 52, 1), $fw: 500);
     transition: color 0.3s ease-in, opacity 0.5s ease-in;
 
-
     &:hover {
         text-decoration: none;
         color: white;
-
     }
 
     &.active::after {
@@ -94,8 +89,6 @@
         transition: opacity 0.5s ease-in;
         pointer-events: none;
         padding: 18px 16px;
-
-
     }
 
     &::after {

@@ -40,10 +40,16 @@ export class PageContent {
   privacyPolicyData: LegalPageData = legalPageContent[0];
   legalNoticeData: LegalPageData = legalPageContent[1];
 
+/**
+ * Emits the privacyPolicyRequested event when the user requests to view the privacy policy.
+ */
   openPrivacyPolicy() {
     this.privacyPolicyRequested.emit();
   }
 
+/**
+ * Emits the closeRequested event when the user requests to close the currently open legal page.
+ */
   closeLegalPage() {
     this.closeRequested.emit();
   }

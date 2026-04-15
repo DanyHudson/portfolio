@@ -29,6 +29,11 @@ export class LegalPage {
   currentLang: 'en' | 'de' = 'en';
   @Output() closeRequested = new EventEmitter<void>();
 
+/**
+ * Constructor for LegalPage component.
+ * Subscribes to language observable and updates currentLang property.
+ * @param langService The LangService instance.
+ */
   constructor(private langService: LangService) {
     this.langService.lang$.subscribe(lang => this.currentLang = lang);
   }

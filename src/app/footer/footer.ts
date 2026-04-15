@@ -11,7 +11,6 @@ import { SocMed } from '../soc-med/soc-med';
 })
 export class Footer {
 
-  // legelNotice = LegalNotice
   @Output() legalNoticeRequested = new EventEmitter<void>();  
 
    requestLegalNotice() {

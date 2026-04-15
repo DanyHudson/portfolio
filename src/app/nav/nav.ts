@@ -28,6 +28,10 @@ export class Nav {
     this.langService.setLang(lang as 'en' | 'de');
   }
 
+  /**
+   * Set the selected link in the navigation bar
+   * @param link - The link object containing the label and anchor
+   */
   onNavClick(link: { label: string; anchor: string }) {
     this.selectedLink = link.label;
   }
