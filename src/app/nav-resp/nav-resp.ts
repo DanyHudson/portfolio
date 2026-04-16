@@ -8,6 +8,7 @@ import { LangService } from '../services/lang.service';
   templateUrl: './nav-resp.html',
   styleUrls: ['./nav-resp.scss'],
 })
+
 export class NavResp {
   menuOpen = model(false);
 
@@ -24,6 +25,10 @@ export class NavResp {
     this.langService.lang$.subscribe(lang => this.currentLang = lang);
   }
 
+/**
+ * Toggles the menu open status.
+ * If the menu is currently open, it will be closed, and vice versa.
+ */
   toggleNav(): void {
     this.menuOpen.set(!this.menuOpen());
   }
@@ -35,11 +40,6 @@ export class NavResp {
   setLanguage(lang: string) {
     this.langService.setLang(lang as 'en' | 'de');
   }
-
-  // onNavClick(link: { label: string; anchor: string }) {
-  //   this.selectedLink = link.label;
-  //   this.closeNav();
-  // }
 
   onNavClick(): void {
     this.closeNav();
