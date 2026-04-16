@@ -2,6 +2,7 @@
 
 app-about-me, app-my-skills, app-my-projects, app-testimonials, app-contact {
     @include defaultFont($c:rgb(137, 188, 217), $fw:400);
+    @include bottom-spacing();
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,9 +12,9 @@ app-my-projects, app-about-me {
     width: 100%;
 }
 
-app-testimonials, app-contact {
-    margin-top: 90px;
-}
+// app-testimonials, app-contact {
+//     margin-top: 90px;
+// }
 
 app-my-projects {
     @media (max-width: 1020px) {

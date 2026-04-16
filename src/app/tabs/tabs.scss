@@ -19,7 +19,6 @@ app-my-projects {
   width: 89%;
   display: flex;
   gap: 20px;
-
   flex-wrap: wrap;
 
   @media (max-width: 1020px) {
@@ -27,7 +26,6 @@ app-my-projects {
     gap: 8px;
   }
 }
-
 
 .tab-label,
 .tab-label-resp {
@@ -44,7 +42,6 @@ app-my-projects {
     padding: 8px 10px;
     font-size: 1em;
   }
-
 }
 
 .tab-label {
@@ -61,7 +58,6 @@ app-my-projects {
 
 .tab-label-resp {
   @include display-resp($breakpoint: 1020px);
-
 }
 
 .tab-content {
@@ -80,13 +76,13 @@ app-my-projects {
 .tab-content.active {
   background: rgba(137, 188, 217, 0.07);
   width: 100%;
-
 }
 
 // Responsive project component display
 .project-desktop {
   @include hide-for-resp($breakpoint: 1020px); // Hide on mobile/tablet, show on desktop
 }
+
 .project-mobile {
   @include display-resp($breakpoint: 1020px); // Show on mobile/tablet, hide on desktop
 }

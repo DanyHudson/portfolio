@@ -84,8 +84,12 @@ h2 {
     display: none;
 }
 
-.achor-point {
-    height: 90px;
+// .achor-point {
+//     height: 90px;
+// }
+
+.section-anchor {
+  scroll-margin-top: 90px;
 }
 
 ::ng-deep .custom-label-class {
@@ -108,4 +112,8 @@ h2 {
     @media (max-width: $breakpoint) {
         display: block;
     }
+}
+
+@mixin bottom-spacing() {
+   margin-bottom: 48px;
 }
