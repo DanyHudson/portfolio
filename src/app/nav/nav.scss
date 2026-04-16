@@ -1,5 +1,14 @@
 @use '../../styles.scss' as*;
 
+
+.home-link {
+    display: block;
+    width: 100px;
+    height: auto;
+    z-index: 10;
+    cursor: pointer;
+}
+
 .lp-logo {
     width: 94px;
     height: auto;
