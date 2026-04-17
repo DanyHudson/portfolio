@@ -361,6 +361,19 @@ export const testimonials = [
         linkLabel: ''
     },
     {
+        claim: `Anna Lena Westermann`,
+        reference: 'Firmen CI Projekt',
+        text: {
+            en: `I really enjoyed working with you on the development of the new company CI in the graphic team.
+                 From the mutual inspiration during the brainstorming, the decision-making processes to the implementation of the designs - you are a real team player.`,
+            de: `Die gemeinsame Entwicklung der neuen Firmen CI im Grafik-Team hat viel Spaß gemacht.
+                 Von der gegenseitigen Inspiration bei der Ideenfindung, den Entscheidungsprozessen bis zur Umsetzung der Entwürfe -
+                 du bist eine echte Teamplayerin.`
+        },
+        link: 'https://linkedin.com/in/anna-lena-westermann/',
+        linkLabel: 'View LinkedIn'
+    },
+    {
         claim: 'Tina Tester',
         reference: 'example project',
         text: {
@@ -369,17 +382,8 @@ export const testimonials = [
         },
         link: 'https://linkedin.com/in/janedoe',
         linkLabel: 'View LinkedIn'
-    },
-    {
-        claim: 'Eugenia Example',
-        reference: 'example project',
-        text: {
-            en: 'Working with you was a pleasure. You always brought creative solutions to the table.',
-            de: 'Die Zusammenarbeit mit Ihnen war eine Freude. Sie haben immer kreative Lösungen auf den Tisch gebracht.'
-        },
-        link: 'https://linkedin.com/in/janedoe',
-        linkLabel: 'View LinkedIn'
-    },
+    }
+
 ];
 
 export const contactInfo = [
