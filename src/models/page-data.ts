@@ -192,7 +192,7 @@ export const myProjectTabs = [
         techNames: ['JavaScript', 'CSS', 'Firebase'],
 
         projectImage: '../assets/img/join_scrsh.jpg',
-        linkLiveTest: '',
+        linkLiveTest: 'https://www.dany-hudson.com/Join',
         linkGitHub: ''
     },
 
@@ -263,8 +263,8 @@ export const myProjectTabs = [
         techNames: ['Angular', 'TypeScript', 'Firebase'],
 
         projectImage: '../assets/img/sharky_scrsh.jpg',
-        linkLiveTest: '',
-        linkGitHub: ''
+        linkLiveTest: 'https://www.dany-hudson.com/Sharky',
+        linkGitHub: 'https://github.com/DanyHudson/Sharkie-a-2d-game'
     },
 
     {
@@ -328,8 +328,8 @@ export const myProjectTabs = [
         techNames: ['JavaScript', 'CSS', 'HTML'],
 
         projectImage: '../assets/img/pokedex_scrsh.jpg',
-        linkLiveTest: '',
-        linkGitHub: ''
+        linkLiveTest: 'https://www.dany-hudson.com/Pokedex',
+        linkGitHub: 'https://github.com/DanyHudson/Pokedex'
     },
 
 ];

@@ -84,7 +84,7 @@
     margin-bottom: 40px;
     justify-content: center;
 
-    button {
+    a {
         @include defaultFont($fw: 400);
         border: 2px solid rgb(137, 188, 217);
         border-radius: 50vw;
@@ -94,6 +94,7 @@
         display: flex;
         align-items: center;
         gap: 8px;
+        text-decoration: none;
     }
 }
 
