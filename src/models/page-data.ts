@@ -364,18 +364,19 @@ export const testimonials = [
         claim: `Anna Lena Westermann`,
         reference: 'Firmen CI Projekt',
         text: {
-            en: `I really enjoyed working with you on the development of the new company CI in the graphic team.
-                 From the mutual inspiration during the brainstorming, the decision-making processes to the implementation of the designs - you are a real team player.`,
+            en: `I really enjoyed working on the development of the new company CI in the graphic team.
+            Dany was always there for a good creative exchange of ideas, decision processes and bringing designs to life.
+            I have learned a lot form her. 
+`,
             de: `Die gemeinsame Entwicklung der neuen Firmen CI im Grafik-Team hat viel Spaß gemacht.
-                 Von der gegenseitigen Inspiration bei der Ideenfindung, den Entscheidungsprozessen bis zur Umsetzung der Entwürfe -
-                 du bist eine echte Teamplayerin.`
+                 Ideenfindung, Entscheidungsprozesse und Umsetzung - Dany hat mir viel beigenbracht und war immer für eine Austausch ansprechbar.`
         },
         link: 'https://linkedin.com/in/anna-lena-westermann/',
         linkLabel: 'View LinkedIn'
     },
     {
-        claim: 'Tina Tester',
-        reference: 'example project',
+        claim: 'Thomas Bobzin',
+        reference: 'diverse Holzarbeiten',
         text: {
             en: 'Working with you was a pleasure. You always brought creative solutions to the table.',
             de: 'Die Zusammenarbeit mit Ihnen war eine Freude. Sie haben immer kreative Lösungen auf den Tisch gebracht.'
