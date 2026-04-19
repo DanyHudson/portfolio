@@ -396,8 +396,8 @@ export const contactInfo = [
                  Zögern Sie nicht, mich über das Kontaktformular zu erreichen oder sich mit mir auf LinkedIn zu vernetzen.`,
         },
 
-        email: 'hudson.developer@gmail.com',
-        tel: '0157 123 456 68'
+        email: `mail@dany-hudson.com`,
+        tel: `01570 3034009`
     },
 ];
 
