@@ -7,6 +7,7 @@
     width: 320px;
     height: 332px;
     overflow: hidden;
+    padding-top: 20px;
 
      .shape-bg {
         position: absolute;
@@ -83,16 +84,16 @@
     }
 }
 
-a .link  {
+a.link  {
     font-size: 0.9em;
-    color: white;
+    color: rgb(137, 188, 217);
     text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.3s ease-in-out;
+    margin-top: 4px;
 
     &:hover {
-        border-color: white;
+    color: rgb(137, 188, 217);
+    text-decoration: underline;
     }
 
-    &:visited { color: white; } 
+    &:visited { color: rgb(137, 188, 217); } 
 }
