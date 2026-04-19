@@ -354,8 +354,8 @@ export const testimonials = [
         claim: 'Victor Vaal',
         reference: 'Join',
         text: {
-            en: `You have a way to approach tasks with great attention to detail. If there is anything you don't understand you will keep going until you fully understand it. This makes you a very valuable and reliable team member.`,
-            de: `Du hast so eine Art, Aufgaben mit großer Sorgfalt anzugehen, wenn du estwas nicht verstehst bohrst du so lange bis du es verstanden hast. Das macht dich zu einem sehr wertvollen und zuverlässigen Teammitglied.`
+            en: `You have a way to approach tasks with great attention to detail. If there is a challenge, you keep working until you find a solution. This makes you a very valuable and reliable team member.`,
+            de: `Du hast so eine Art, Aufgaben mit großer Sorgfalt anzugehen, wenn du auf ein Problem triffst bohrst du so lange bis du eine Lösung hast. Das macht dich zu einem sehr wertvollen und zuverlässigen Teammitglied.`
         },
         link: '',
         linkLabel: ''
@@ -364,9 +364,9 @@ export const testimonials = [
         claim: `Anna Lena Westermann`,
         reference: 'Firmen CI Projekt',
         text: {
-            en: `I really enjoyed working on the development of the new company CI in the graphic team.
-            Dany was always there for a good creative exchange of ideas, decision processes and bringing designs to life.
-            I have learned a lot form her. 
+            en: `I really enjoyed working with Dany on the development of the new company CI.
+                 The creative exchange of ideas, the decision processes and finally bringing our designs to life was amazing.
+                 I could always rely on her founded input and I have learned a lot from her. 
 `,
             de: `Die gemeinsame Entwicklung der neuen Firmen CI im Grafik-Team hat viel Spaß gemacht.
                  Ideenfindung, Entscheidungsprozesse und Umsetzung - Dany hat mir viel beigenbracht und war immer für eine Austausch ansprechbar.`
@@ -375,14 +375,15 @@ export const testimonials = [
         linkLabel: 'View LinkedIn'
     },
     {
-        claim: 'Thomas Bobzin',
+        claim: 'Thomas Bopzin',
         reference: 'diverse Holzarbeiten',
         text: {
-            en: 'Working with you was a pleasure. You always brought creative solutions to the table.',
-            de: 'Die Zusammenarbeit mit Ihnen war eine Freude. Sie haben immer kreative Lösungen auf den Tisch gebracht.'
+            en: `Danys patient persistence, even when things get tough, is inspiring. Her active input in creating plans and finding solutions has greatly advanced our projects, and her ability to follow instructions has been excellent. I look forward to the next project together.`,
+            de: `Danys geduldige Ausdauer, auch wenn es anstrengend wird ziehen einen mit. 
+                 Ihr aktiver Input bei der Erstellung von Plänen und finden von Lösungen haben unsere Projekte gut vorran gebracht, aber auch Anleitungen hat sie sehr gut umgesetz. Ich freue mich schon auf das nächste Projekt`
         },
-        link: 'https://linkedin.com/in/janedoe',
-        linkLabel: 'View LinkedIn'
+        link: '',
+        linkLabel: ''
     }
 
 ];
