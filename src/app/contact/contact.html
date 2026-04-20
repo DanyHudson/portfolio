@@ -1,7 +1,10 @@
 <div class="contact-header">
-    <h2 >Contact Me</h2>
+    <h2>Contact Me</h2>
 
-    <a #arrowUpBtn class="arrow-up-btn" (click)="onBounceScroll('persona', $event)">
+    <!-- <a #arrowUpBtn class="arrow-up-btn" (click)="onBounceScroll('persona', $event)">
+        <img src="assets/img/arrow_up.svg" alt="Arrow up" />
+    </a> -->
+    <a #arrowUpBtn class="arrow-up-btn" (click)="onScrollToTop($event)">
         <img src="assets/img/arrow_up.svg" alt="Arrow up" />
     </a>
 </div>
@@ -21,7 +24,7 @@
 
 <section class="section-content-resp">
 
-    <p class="top-container"> 
+    <p class="top-container">
         <span class=""><img src="../../assets/icons/icon _phone.svg" alt="phone"> {{ contact.tel }} </span>
         <span class=""><img src="../../assets/icons/icon _email.svg" alt="email"> {{ contact.email }} </span>
     </p>

@@ -14,9 +14,9 @@ input:-webkit-autofill:active {
 
 input:focus,
 textarea:focus {
-    outline: none !important; 
-    box-shadow: 0 0 0 2px #89bcd9 !important; 
-    border-color: #89bcd9 !important; 
+    outline: none !important;
+    box-shadow: 0 0 0 2px #89bcd9 !important;
+    border-color: #89bcd9 !important;
 }
 
 .contact-form-container {
@@ -36,9 +36,9 @@ textarea:focus {
 
     label {
         margin-bottom: 6px;
-        margin-left: 24px; 
+        margin-left: 24px;
         font-size: 1em;
-        color: rgb(137, 188, 217); 
+        color: rgb(137, 188, 217);
     }
 }
 
@@ -196,6 +196,10 @@ label.container {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
+}
+
+.container input.error-input~.checkmark {
+    background-image: url('../../assets/img/checkbox_error.svg');
 }
 
 .checkmark:hover {
