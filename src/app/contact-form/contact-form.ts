@@ -21,7 +21,7 @@ export class ContactForm {
     privacyPolicyAccepted: false
   };
 
-  mailTest = false; // set to false for real mail sending
+  mailTest = false;
   submitAttempted = false;
   currentLang: 'en' | 'de' = 'en';
   successMessage = successMessages;
@@ -30,22 +30,21 @@ export class ContactForm {
   @Output() privacyPolicyRequested = new EventEmitter<void>();
 
   post = {
-    endPoint: 'https://dany-hudson.com/sendMail.php',
+    endPoint: '/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
         'Content-Type': 'text/plain',
-        responseType: 'text',
       },
+      responseType: 'text' as const,
     },
   };
 
   onSubmit(ngForm: NgForm) {
-
     this.submitAttempted = true;
 
-    if (ngForm.submitted && ngForm.form.valid && this.contactFormData.privacyPolicyAccepted && !this.mailTest) { // remove ' !this.mailTest' for real mail sending
-      this.http.post(this.post.endPoint, this.post.body(this.contactFormData))
+    if (ngForm.submitted && ngForm.form.valid && this.contactFormData.privacyPolicyAccepted) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactFormData), this.post.options)
         .subscribe({
           next: (response) => {
             this.showSuccessMessage();
