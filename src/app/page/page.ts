@@ -36,5 +36,16 @@ export class Page {
   closeLegalPage() {
     this.legalPage = null;
   }
+
+  handleSectionRequest(anchor: string): void {
+    this.closeLegalPage();
+
+    requestAnimationFrame(() => {
+      document.getElementById(anchor)?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  }
 }
  

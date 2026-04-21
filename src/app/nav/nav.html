@@ -6,7 +6,9 @@
 </div>
 <section class="nav-bar" id="startPoint">
   @for (link of navLinks; track link.label) {
-  <a [class.active]="selectedLink === link.label" (click)="onNavClick(link)" href="#{{ link.anchor }}">
+  <a [class.active]="selectedLink === link.label" 
+  (click)="onNavClick(link, $event)" 
+  href="#{{ link.anchor }}">
     {{ link.label }}
   </a>
   }

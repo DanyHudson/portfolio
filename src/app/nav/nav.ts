@@ -1,5 +1,10 @@
-import { AfterViewInit, Component, OnDestroy } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, EventEmitter, Output } from '@angular/core';
 import { LangService } from '../services/lang.service';
+
+type NavLink = {
+  label: string;
+  anchor: string;
+};
 
 @Component({
   selector: 'app-nav',
@@ -9,12 +14,14 @@ import { LangService } from '../services/lang.service';
   styleUrls: ['./nav.scss'],
 })
 export class Nav implements AfterViewInit, OnDestroy {
-  navLinks = [
+  navLinks: NavLink[] = [
     { label: 'About me', anchor: 'aboutme' },
     { label: 'Skills', anchor: 'skills' },
     { label: 'Projects', anchor: 'projects' },
     { label: 'Contact', anchor: 'contact' }
   ];
+
+  @Output() sectionRequested = new EventEmitter<string>();
 
   selectedLink = '';
   currentLang = 'en';
@@ -24,24 +31,24 @@ export class Nav implements AfterViewInit, OnDestroy {
   constructor(private langService: LangService) {
     this.langService.lang$.subscribe(lang => this.currentLang = lang);
   }
- 
-/**
- * Lifecycle hook that is called after the component's view has been
- * initialized. It creates an IntersectionObserver that observes
- * sections of the page and updates the selected link when a section
- * becomes visible.
- */
+
+  /**
+   * Lifecycle hook that is called after the component's view has been
+   * initialized. It creates an IntersectionObserver that observes
+   * sections of the page and updates the selected link when a section
+   * becomes visible.
+   */
   ngAfterViewInit(): void {
     this.observer = this.createSectionObserver();
     this.observeSections();
   }
 
-/**
- * Creates an IntersectionObserver that observes sections of the page and
- * updates the selected link when a section becomes visible.
- *
- * @returns {IntersectionObserver} The created IntersectionObserver.
- */
+  /**
+   * Creates an IntersectionObserver that observes sections of the page and
+   * updates the selected link when a section becomes visible.
+   *
+   * @returns {IntersectionObserver} The created IntersectionObserver.
+   */
   private createSectionObserver(): IntersectionObserver {
     return new IntersectionObserver(
       (entries) => this.updateSelectedLink(entries),
@@ -53,13 +60,13 @@ export class Nav implements AfterViewInit, OnDestroy {
     );
   }
 
-/**
- * Updates the selected link based on the visible sections.
- *
- * @param {IntersectionObserverEntry[]} entries The entries observed by the IntersectionObserver.
- *
- * This method filters the entries to find the most visible section, and then updates the selected link based on the ID of the visible section.
- */
+  /**
+   * Updates the selected link based on the visible sections.
+   *
+   * @param {IntersectionObserverEntry[]} entries The entries observed by the IntersectionObserver.
+   *
+   * This method filters the entries to find the most visible section, and then updates the selected link based on the ID of the visible section.
+   */
   private updateSelectedLink(entries: IntersectionObserverEntry[]): void {
     const visibleEntry = entries
       .filter((entry) => entry.isIntersecting)
@@ -75,12 +82,12 @@ export class Nav implements AfterViewInit, OnDestroy {
     }
   }
 
-/**
- * Observes sections of the page that correspond to the links in the navigation.
- *
- * This method iterates over the links in the navigation and observes the corresponding section elements using the IntersectionObserver.
- * If an element is not found, it is skipped.
- */
+  /**
+   * Observes sections of the page that correspond to the links in the navigation.
+   *
+   * This method iterates over the links in the navigation and observes the corresponding section elements using the IntersectionObserver.
+   * If an element is not found, it is skipped.
+   */
   private observeSections(): void {
     this.navLinks.forEach((link) => {
       const section = document.getElementById(link.anchor);
@@ -98,7 +105,9 @@ export class Nav implements AfterViewInit, OnDestroy {
     this.langService.setLang(lang as 'en' | 'de');
   }
 
-  onNavClick(link: { label: string; anchor: string }) {
+  onNavClick(link: NavLink, event: Event): void {
+    event.preventDefault();
     this.selectedLink = link.label;
+    this.sectionRequested.emit(link.anchor);
   }
 }

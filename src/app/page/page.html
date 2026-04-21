@@ -4,7 +4,7 @@
         <app-landing-page-resp></app-landing-page-resp>
     </header>
     <nav>
-        <app-nav></app-nav>
+        <app-nav (sectionRequested)="handleSectionRequest($event)"></app-nav>
     </nav>
     <main>
         <app-page-content [legalPage]="legalPage" (privacyPolicyRequested)="openPrivacyPolicy()"
