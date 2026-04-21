@@ -1,7 +1,8 @@
-import { Component, inject, EventEmitter, Input, Output } from '@angular/core';
+import { Component, inject, EventEmitter, Output } from '@angular/core';
+import { LangService } from '../services/lang.service';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { successMessages } from '../../models/page-data';
+import { contactFormText, successMessages } from '../../models/page-data';
 
 @Component({
   selector: 'app-contact-form',
@@ -26,8 +27,13 @@ export class ContactForm {
   currentLang: 'en' | 'de' = 'en';
   successMessage = successMessages;
   successMessageVisible = false;
+  contactFormText = contactFormText;
 
   @Output() privacyPolicyRequested = new EventEmitter<void>();
+
+  constructor(private langService: LangService) {
+    this.langService.lang$.subscribe(lang => this.currentLang = lang);
+  }
 
   post = {
     endPoint: '/sendMail.php',

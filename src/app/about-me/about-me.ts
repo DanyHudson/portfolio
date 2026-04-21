@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { aboutMe } from '../../models/page-data';
 import { aboutMeTypewriter } from '../../models/page-data';
 import { LangService } from '../services/lang.service';
@@ -9,7 +9,7 @@ import { Typewriter02 } from '../typewriter-02/typewriter-02';
   standalone: true,
   imports: [Typewriter02], //Typewriter,
   templateUrl: './about-me.html',
-  styleUrl: './about-me.scss',
+  styleUrls: ['./about-me.scss'],
 })
 export class AboutMe {
   aboutMe = aboutMe;

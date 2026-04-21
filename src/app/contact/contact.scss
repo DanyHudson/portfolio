@@ -50,6 +50,10 @@
     @include hide-for-resp(1020px);
 }
 
+p.left-container {
+    line-height: 1.6em;
+}
+
 .right-container {
     gap: 16px;
 

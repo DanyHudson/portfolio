@@ -391,16 +391,53 @@ export const testimonials = [
 export const contactInfo = [
     {
         text: {
-            en: `I am open to new opportunities and collaborations. 
-                 Feel free to reach out to me via the contact form or connect with me on LinkedIn.`,
-            de: `Ich bin offen für neue Möglichkeiten und Kooperationen.
-                 Zögern Sie nicht, mich über das Kontaktformular zu erreichen oder sich mit mir auf LinkedIn zu vernetzen.`,
+            en: `Feel free to reach out! You can contact me via contact form or LinkedIn.
+                 I am always open to new opportunities and collaborations.`,
+            de: `Nimm Kontakt auf! Über das Kontaktformular oder LinkedIn kannst du mich erreichen.
+                 Ich bin immer offen für neue Möglichkeiten und Zusammenarbeit.`,
         },
 
         email: `mail@dany-hudson.com`,
         tel: `01570 3034009`
     },
 ];
+
+export const contactFormText = {
+    en: {
+        nameLabel: 'your name',
+        nameRequired: 'your name is required',
+        emailLabel: 'your email',
+        emailRequired: 'your email is required',
+        emailInvalid: 'please enter a valid email address',
+        messageLabel: 'your message',
+        messageRequired: 'your message is required',
+        requiredFields: '* required fields',
+        privacy: {
+            beforeLink: `I've read the `,
+            linkText: `privacy policy`,
+            afterLink: ` and agree to the processing of my data as outlined.`,
+            error: 'Please accept the privacy policy.',
+        },
+        submit: 'Send',
+    },
+    de: {
+        nameLabel: 'dein Name',
+        nameRequired: 'Dein Name ist erforderlich',
+        emailLabel: 'deine E-Mail',
+        emailRequired: 'Deine E-Mail ist erforderlich',
+        emailInvalid: 'Bitte gib eine gueltige E-Mail-Adresse ein',
+        messageLabel: 'deine Nachricht',
+        messageRequired: 'Deine Nachricht ist erforderlich',
+        requiredFields: '* Pflichtfelder',
+        privacy: {
+            beforeLink: `Ich habe die `,
+            linkText: `Datenschutzerklaerung`,
+            afterLink: ` gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.`,
+            error: 'Bitte akzeptiere die Datenschutzerklaerung.',
+        },
+        submit: 'Senden',
+    },
+};
 
 export const successMessages = {
     en: 'Your message has been sent successfully!',

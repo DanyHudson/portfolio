@@ -1,6 +1,7 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { ContactForm } from '../contact-form/contact-form';
 import { contactInfo } from '../../models/page-data';
+import { LangService } from '../services/lang.service';
 
 @Component({
   selector: 'app-contact',
@@ -11,7 +12,12 @@ import { contactInfo } from '../../models/page-data';
 })
 export class Contact {
   contact = contactInfo[0];
+  currentLang: 'en' | 'de' = 'en';
   @Output() privacyPolicyRequested = new EventEmitter<void>();
+
+  constructor(private langService: LangService) {
+    this.langService.lang$.subscribe(lang => this.currentLang = lang);
+  }
 
   /**
    * Smoothly scrolls to the given target element and then back to the exact position after a short delay.
