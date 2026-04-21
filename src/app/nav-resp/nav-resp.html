@@ -15,8 +15,8 @@
     <div class="nav-panel">
       <div class="nav-items">
         @for (link of navLinks; track link.label) {
-        <section class="nav-link" id="startPoint">
-          <a (click)="onNavClick()" href="#{{ link.anchor }}">
+        <section class="nav-link" >
+          <a (click)="onNavClick(link, $event)" href="#{{ link.anchor }}">
             {{ link.label }}
           </a>
         </section>

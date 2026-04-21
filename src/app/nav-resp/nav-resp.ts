@@ -1,5 +1,10 @@
-import { Component, model } from '@angular/core';
+import { Component, model, EventEmitter, Output } from '@angular/core';
 import { LangService } from '../services/lang.service';
+
+type NavLink = {
+  label: string;
+  anchor: string;
+};
 
 @Component({
   selector: 'app-nav-resp',
@@ -12,12 +17,14 @@ import { LangService } from '../services/lang.service';
 export class NavResp {
   menuOpen = model(false);
 
-  navLinks = [
+  navLinks: NavLink[] = [
     { label: 'About me', anchor: 'aboutme' },
     { label: 'Skills', anchor: 'skills' },
     { label: 'Projects', anchor: 'projects' },
     { label: 'Contact', anchor: 'contact' }
   ];
+
+  @Output() sectionRequested = new EventEmitter<string>();
 
   currentLang: string = 'en';
 
@@ -25,10 +32,10 @@ export class NavResp {
     this.langService.lang$.subscribe(lang => this.currentLang = lang);
   }
 
-/**
- * Toggles the menu open status.
- * If the menu is currently open, it will be closed, and vice versa.
- */
+  /**
+   * Toggles the menu open status.
+   * If the menu is currently open, it will be closed, and vice versa.
+   */
   toggleNav(): void {
     this.menuOpen.set(!this.menuOpen());
   }
@@ -41,7 +48,9 @@ export class NavResp {
     this.langService.setLang(lang as 'en' | 'de');
   }
 
-  onNavClick(): void {
+  onNavClick(link: NavLink, event: Event): void {
+    event.preventDefault();
     this.closeNav();
+    this.sectionRequested.emit(link.anchor);
   }
 }

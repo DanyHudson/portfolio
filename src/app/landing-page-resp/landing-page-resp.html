@@ -1,22 +1,22 @@
 <section class="lp-content-resp">
   <div class="nav-box">
-    <app-nav-resp [(menuOpen)]="menuOpen"></app-nav-resp>
+    <app-nav-resp [(menuOpen)]="menuOpen" (sectionRequested)="onSectionRequested($event)">
+    </app-nav-resp>
   </div>
- 
-    <div class="persona-resp" [class.menu-open]="menuOpen()" id="persona-resp">
-      <div class="lp-img-box">
-        <img class="hero-img" src="assets/img/hero_01_img_resp.png" alt="landing page image">
-      </div>
-      </div>
 
-      <section class="lp-text-box">
-        <h1 class="lp-title-resp">Daniela Hudson</h1>
-        <p class="lp-subtitle">FRONTEND DEVELOPER</p>
+  <div class="persona-resp" [class.menu-open]="menuOpen()" id="persona-resp">
+    <div class="lp-img-box">
+      <img class="hero-img" src="assets/img/hero_01_img_resp.png" alt="landing page image">
+    </div>
+  </div>
 
-        <a #arrowDownBtn class="arrow-down-btn" (click)="onBounceScroll('startPoint', $event)">
-          <img src="assets/img/arrow_down.svg" alt="Arrow down" />
-        </a>
-      </section>
-  
+  <section class="lp-text-box">
+    <h1 class="lp-title-resp">Daniela Hudson</h1>
+    <p class="lp-subtitle">FRONTEND DEVELOPER</p>
+
+    <a #arrowDownBtn class="arrow-down-btn" (click)="onBounceScroll('startPoint', $event)">
+      <img src="assets/img/arrow_down.svg" alt="Arrow down" />
+    </a>
+  </section>
+
 </section>
-

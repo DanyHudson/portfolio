@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, EventEmitter, Output, signal } from '@angular/core';
 import { NavResp } from '../nav-resp/nav-resp';
 
 @Component({
@@ -9,6 +9,8 @@ import { NavResp } from '../nav-resp/nav-resp';
 })
 export class LandingPageResp {
   menuOpen = signal(false);
+
+  @Output() sectionRequested = new EventEmitter<string>();
 
   onBounceScroll(targetId: string, event: Event): void {
     event.preventDefault();
@@ -23,5 +25,9 @@ export class LandingPageResp {
     setTimeout(() => {
       window.scrollTo({ top: targetY, behavior: 'smooth' });
     }, 400);
+  }
+
+   onSectionRequested(anchor: string): void {
+    this.sectionRequested.emit(anchor);
   }
 }
