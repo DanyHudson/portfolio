@@ -193,7 +193,7 @@ export const myProjectTabs = [
 
         projectImage: '../assets/img/join_scrsh.jpg',
         linkLiveTest: 'https://www.dany-hudson.com/Join',
-        linkGitHub: ''
+        linkGitHub: 'https://github.com/DanyHudson/Join'
     },
 
     {
