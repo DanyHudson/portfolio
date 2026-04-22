@@ -179,7 +179,6 @@ export const myProjectTabs = [
                     Dies half uns nicht nur, schnell alle auftretenden Probleme zu lösen, sondern förderte auch ein Gefühl der Zusammenarbeit und gegenseitigen Unterstützung innerhalb des Teams.
                     `,
                 }
-
             }
         ],
 
@@ -251,7 +250,6 @@ export const myProjectTabs = [
                          Zudem habe ich gelernt, wie man Spielmechaniken wie Kollisionserkennung und Animation implementieren kann, ein Fun-Projekt.`
                 }
             }
-
         ],
 
         icons: [
@@ -266,7 +264,6 @@ export const myProjectTabs = [
         linkLiveTest: 'https://www.dany-hudson.com/Sharky',
         linkGitHub: 'https://github.com/DanyHudson/Sharkie-a-2d-game'
     },
-
     {
         label: 'Pokédex',
         subLabel: 'Pokemon Library App',
@@ -315,7 +312,6 @@ export const myProjectTabs = [
                     de: `Ich habe gelernt, wie man mit APIs arbeitet und Daten in JavaScript abruft. Ich habe auch ein besseres Verständnis dafür gewonnen, Code zu so strukturieren, dass er auch für Außenstehende verständlich ist. Außerdem habe ich gelernt, wie man Suchfunktionen implementiert.
                     `
                 }
-
             }
         ],
 
