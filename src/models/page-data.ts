@@ -17,7 +17,6 @@ export const aboutMeTypewriter = [
 
 ];
 
-
 export const aboutMe = {
 
     en: `I’m a frontend developer based in Hamburg with a background in media design.\nMy journey into web development began with a curiosity to understand how websites work and a determination to bring creative ideas to life.
