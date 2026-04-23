@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, AfterViewInit, ElementRef, ViewChild, signal } from '@angular/core';
 import { LangService } from '../services/lang.service';
 
 @Component({
@@ -8,13 +8,31 @@ import { LangService } from '../services/lang.service';
   templateUrl: './project.html',
   styleUrls: ['./project.scss'],
 })
-export class Project {
-  @Input() projectData: any; 
+export class Project implements AfterViewInit {
+  @Input() projectData: any;
+  @ViewChild('projectImage') projectImage?: ElementRef<HTMLImageElement>;
 
   currentLang: 'en' | 'de' = 'en';
+  isImageVisible = signal(false);
 
   constructor(private langService: LangService) {
     this.langService.lang$.subscribe(lang => this.currentLang = lang);
+  }
+
+  ngAfterViewInit(): void {
+    if (!this.projectImage) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        this.isImageVisible.set(entry.isIntersecting);
+      },
+      {
+        threshold: 0.25,
+        rootMargin: '0px 0px 120px 0px',
+      }
+    );
+
+    observer.observe(this.projectImage.nativeElement);
   }
 
 }

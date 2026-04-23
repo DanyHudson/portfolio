@@ -71,34 +71,34 @@
     object-fit: cover;
     margin: 30px 0 40px 0;
 
-    opacity: 0;
-    transform: scale(0.92);
-    // will-change: opacity, transform;
-    // transition:
-    //     opacity 500ms ease-out,
-    //     transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+    transform-origin: center bottom;
+    transform: translateY(0) scale(1);
+    animation: none;
 }
 
 .mp-img.is-visible {
-    // opacity: 1;
-    // transform: scale(1);
-    animation: project-image-reveal 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: project-image-bounce 650ms ease forwards;
 }
 
-@keyframes project-image-reveal {
+@keyframes project-image-bounce {
     0% {
-        opacity: 0;
-        transform: scale(0.92);
+        transform: translateY(0) scale(1);
     }
 
-    65% {
-        opacity: 1;
-        transform: scale(1.04);
+    30% {
+        transform: translateY(-6px) scale(1.025);
+    }
+
+    55% {
+        transform: translateY(0) scale(0.99);
+    }
+
+    75% {
+        transform: translateY(-2px) scale(1.006);
     }
 
     100% {
-        opacity: 1;
-        transform: scale(1);
+        transform: translateY(0) scale(1);
     }
 }
 
