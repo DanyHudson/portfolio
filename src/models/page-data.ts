@@ -263,73 +263,10 @@ export const myProjectTabs = [
         linkLiveTest: 'https://www.dany-hudson.com/Sharky',
         linkGitHub: 'https://github.com/DanyHudson/Sharkie-a-2d-game'
     },
-    // {
-    //     label: 'Pokédex',
-    //     subLabel: 'Pokemon Library App',
-    //     content: [
-    //         {
-    //             headline: {
-    //                 en: 'About the project',
-    //                 de: 'Über das Projekt'
-    //             },
-
-    //             text: {
-    //                 en: `This is a simple Pokédex app that allows users to search for and view information about different Pokémon.
-    //                      The app was built using JavaScript, fetching live data from the Pokémon API.
-    //                      The design was created by me.
-    //             `,
-    //                 de: `Eine einfache Pokédex-App, es kann nach Pokémon gesucht und Informationen über sie können angezeigt werden.
-    //                      Die App wurde mit JavaScript erstellt und ruft Live-Daten von der Pokémon-API ab.
-    //                      Das Design wurde von mir erstellt.`
-    //             }
-
-    //         },
-    //         {
-    //             headline: {
-    //                 en: `Organising my work process`,
-    //                 de: `Organisation meiner Arbeitsprozesse`
-    //             },
-
-    //             text: {
-    //                 en: `I started by first setting up the basic structure of the app, deciding for the design and layout and made sure that worked well.
-    //                      I then moved on to implementing the search functionality and fetching data from the API.
-    //                      I also made use of version control with Git to keep track of my changes and ensure that I could easily revert back to previous versions if needed.`,
-    //                 de: `Zuerst habe ich die grundlegende Struktur der App eingerichtet, mich für das Design und Layout entschieden und sichergestellt, dass dies gut funktioniert.
-    //                      Dann habe ich die Suchfunktionalität implementiert und Daten von der API abgerufen.
-    //                      Ich habe Git genutzt, um einen Überblick über meine Änderungen zu behalten und sicherzustellen, dass ich bei Bedarf problemlos auf frühere Versionen zurückgreifen kann.`
-    //             }
-
-    //         },
-    //         {
-    //             headline: {
-    //                 en: `What I have learned`,
-    //                 de: `Was ich gelernt habe`
-    //             },
-
-    //             text: {
-    //                 en: `I have learned how to work with APIs and fetch data in JavaScript. I also gained a better understanding of how to structure code in a way that is organized and maintainable. Additionally, I learned how to implement search functionality.`,
-    //                 de: `Ich habe gelernt, wie man mit APIs arbeitet und Daten in JavaScript abruft. Ich habe auch ein besseres Verständnis dafür gewonnen, Code zu so strukturieren, dass er auch für Außenstehende verständlich ist. Außerdem habe ich gelernt, wie man Suchfunktionen implementiert.
-    //                 `
-    //             }
-    //         }
-    //     ],
-
-    //     icons: [
-    //         { icon: '../assets/icons/js_icon.svg', alt: 'JavaScript logo' },
-    //         { icon: '../assets/icons/css_icon.svg', alt: 'CSS logo' },
-    //         { icon: '../assets/icons/html_icon.svg', alt: 'HTML logo' }
-    //     ],
-
-    //     techNames: ['JavaScript', 'CSS', 'HTML'],
-
-    //     projectImage: '../assets/img/pokedex_scrsh.jpg',
-    //     linkLiveTest: 'https://www.dany-hudson.com/Pokedex',
-    //     linkGitHub: 'https://github.com/DanyHudson/Pokedex'
-    // },
-
+   
     {
         label: 'My GitHub',
-        subLabel: '^My GitHub',
+        subLabel: 'My GitHub',
         content: [
             {
                 headline: {
@@ -346,21 +283,27 @@ export const myProjectTabs = [
                 `
                 }
 
-            }
+            },
+            
+
       
         ],
 
         icons: [
-            { icon: '../assets/icons/js_icon.svg', alt: 'JavaScript logo' },
+            { icon: '../assets/icons/html_icon.svg', alt: 'HTML logo' },
             { icon: '../assets/icons/css_icon.svg', alt: 'CSS logo' },
-            { icon: '../assets/icons/html_icon.svg', alt: 'HTML logo' }
+            { icon: '../assets/icons/js_icon.svg', alt: 'JavaScript logo' },
+            { icon: '../assets/icons/ts_icon.svg', alt: 'TypeScript logo' },
+            { icon: '../assets/icons/ang_icon.svg', alt: 'Angular logo' },
+            { icon: '../assets/icons/fb_icon.svg', alt: 'Firebase logo' },
+
         ],
 
         techNames: ['JavaScript', 'CSS', 'HTML'],
 
-        projectImage: '../assets/img/pokedex_scrsh.jpg',
+        projectImage: '../assets/img/github.jpg',
         linkLiveTest: '',
-        linkGitHub: 'https://github.com/DanyHudson/Pokedex'
+        linkGitHub: 'https://github.com/DanyHudson'
     },
 
 ];
