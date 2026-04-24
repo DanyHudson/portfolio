@@ -10,7 +10,8 @@
     }
   </div>
   @if (projectData.projectImage) {
-  <img [src]="projectData.projectImage" alt="{{ projectData.label }}" class="mp-img">
+  <img [src]="projectData.projectImage" alt="{{ projectData.label }}" class="mp-img"
+    [class.is-visible]="isImageVisible()">
   }
 </div>
 
@@ -25,10 +26,14 @@
 </div>
 
 <div class="mp-btn">
+  @if (projectData.linkLiveTest) {
   <a class="live-test" [href]="projectData.linkLiveTest" target="_blank" rel="noopener noreferrer">
     Live Test
   </a>
+  }
+  @if (projectData.linkGitHub) {
   <a class="github" [href]="projectData.linkGitHub" target="_blank" rel="noopener noreferrer">
     GitHub
   </a>
+  }
 </div>
