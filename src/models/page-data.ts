@@ -333,49 +333,21 @@ export const myProjectTabs = [
         content: [
             {
                 headline: {
-                    en: 'About the project',
-                    de: 'Über das Projekt'
+                    en: 'Ongoing projects',
+                    de: 'Laufende Projektes'
                 },
 
                 text: {
-                    en: `This is a simple Pokédex app that allows users to search for and view information about different Pokémon.
-                         The app was built using JavaScript, fetching live data from the Pokémon API.
-                         The design was created by me.
+                    en: `Come check out my GitHub for more projects and code samples! 
+                         I am continuously working on new projects to further develop my skills and explore new technologies.
                 `,
-                    de: `Eine einfache Pokédex-App, es kann nach Pokémon gesucht und Informationen über sie können angezeigt werden.
-                         Die App wurde mit JavaScript erstellt und ruft Live-Daten von der Pokémon-API ab.
-                         Das Design wurde von mir erstellt.`
+                    de: `Schau dir mein GitHub für weitere Projekte und Codebeispiele an! 
+                         Ich arbeite ständig an neuen Projekten, um meine Fähigkeiten weiterzuentwickeln und neue Technologien zu erkunden.
+                `
                 }
 
-            },
-            {
-                headline: {
-                    en: `Organising my work process`,
-                    de: `Organisation meiner Arbeitsprozesse`
-                },
-
-                text: {
-                    en: `I started by first setting up the basic structure of the app, deciding for the design and layout and made sure that worked well.
-                         I then moved on to implementing the search functionality and fetching data from the API.
-                         I also made use of version control with Git to keep track of my changes and ensure that I could easily revert back to previous versions if needed.`,
-                    de: `Zuerst habe ich die grundlegende Struktur der App eingerichtet, mich für das Design und Layout entschieden und sichergestellt, dass dies gut funktioniert.
-                         Dann habe ich die Suchfunktionalität implementiert und Daten von der API abgerufen.
-                         Ich habe Git genutzt, um einen Überblick über meine Änderungen zu behalten und sicherzustellen, dass ich bei Bedarf problemlos auf frühere Versionen zurückgreifen kann.`
-                }
-
-            },
-            {
-                headline: {
-                    en: `What I have learned`,
-                    de: `Was ich gelernt habe`
-                },
-
-                text: {
-                    en: `I have learned how to work with APIs and fetch data in JavaScript. I also gained a better understanding of how to structure code in a way that is organized and maintainable. Additionally, I learned how to implement search functionality.`,
-                    de: `Ich habe gelernt, wie man mit APIs arbeitet und Daten in JavaScript abruft. Ich habe auch ein besseres Verständnis dafür gewonnen, Code zu so strukturieren, dass er auch für Außenstehende verständlich ist. Außerdem habe ich gelernt, wie man Suchfunktionen implementiert.
-                    `
-                }
             }
+      
         ],
 
         icons: [
@@ -387,7 +359,7 @@ export const myProjectTabs = [
         techNames: ['JavaScript', 'CSS', 'HTML'],
 
         projectImage: '../assets/img/pokedex_scrsh.jpg',
-        linkLiveTest: 'https://www.dany-hudson.com/Pokedex',
+        linkLiveTest: '',
         linkGitHub: 'https://github.com/DanyHudson/Pokedex'
     },
 
