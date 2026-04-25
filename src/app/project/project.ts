@@ -20,6 +20,9 @@ export class Project implements AfterViewInit, OnChanges {
   }
 
 
+  /**
+   * Starts observing the project image so it becomes visible when the element enters the viewport.
+   */
   ngAfterViewInit(): void {
     if (!this.projectImage) return;
 
@@ -37,6 +40,9 @@ export class Project implements AfterViewInit, OnChanges {
   }
 
 
+  /**
+   * Re-triggers the image display when the project input changes while the image is already visible.
+   */
   ngOnChanges(changes: SimpleChanges): void {
     if (!changes['projectData'] || changes['projectData'].firstChange) return;
     if (!this.isImageVisible()) return;

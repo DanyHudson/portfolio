@@ -8,6 +8,7 @@ import { LangService } from '../services/lang.service';
   templateUrl: './project-resp.html',
   styleUrls: ['./project-resp.scss'],
 })
+
 export class ProjectResp implements OnChanges {
   @Input() projectData: any;
 
@@ -18,6 +19,9 @@ export class ProjectResp implements OnChanges {
     this.langService.lang$.subscribe(lang => this.currentLang = lang);
   }
 
+  /**
+   * Briefly toggles image visibility when the project input changes so the responsive preview can re-render cleanly.
+   */
   ngOnChanges(changes: SimpleChanges): void {
     if (!changes['projectData'] || changes['projectData'].firstChange) return;
 

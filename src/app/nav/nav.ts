@@ -13,7 +13,13 @@ type NavLink = {
   templateUrl: './nav.html',
   styleUrls: ['./nav.scss'],
 })
+/**
+ * Renders the main navigation and emits section requests for in-page scrolling.
+ */
 export class Nav {
+  /**
+   * Defines the visible navigation labels and their target anchors.
+   */
   navLinks: NavLink[] = [
     { label: 'About me', anchor: 'aboutme' },
     { label: 'Skills', anchor: 'skills' },
@@ -27,20 +33,41 @@ export class Nav {
   currentLang = 'en';
 
   private suppressScrollClear = false;
+
+  /**
+   * Subscribes to language changes so the navigation labels can react to the current locale.
+   *
+   * @param langService Shared language state service.
+   */
   constructor(private langService: LangService) {
     this.langService.lang$.subscribe(lang => this.currentLang = lang);
   }
 
   @HostListener('window:scroll')
+
+  /**
+   * Clears the active link marker after manual scrolling unless a click-triggered scroll is in progress.
+   */
   onWindowScroll(): void {
     if (this.suppressScrollClear) return;
     this.selectedLink = '';
   }
 
+  /**
+   * Updates the active application language.
+   *
+   * @param lang Language code to activate.
+   */
   setLanguage(lang: string) {
     this.langService.setLang(lang as 'en' | 'de');
   }
 
+  /**
+   * Marks the clicked link as active and requests scrolling to the matching section.
+   *
+   * @param link Navigation item that was selected.
+   * @param event Click event used to suppress the default anchor navigation.
+   */
   onNavClick(link: NavLink, event: Event): void {
     event.preventDefault();
     this.selectedLink = link.label;

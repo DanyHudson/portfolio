@@ -37,6 +37,9 @@ export class Page {
     this.legalPage = null;
   }
 
+  /**
+   * Closes any open legal page and then scrolls smoothly to the requested section.
+   */
   handleSectionRequest(anchor: string): void {
     this.closeLegalPage();
 
