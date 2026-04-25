@@ -12,22 +12,25 @@ export class LandingPageResp {
 
   @Output() sectionRequested = new EventEmitter<string>();
 
-  /**
-   * Scrolls past the requested section and then back to it to create a bounce effect.
-   */
-  onBounceScroll(targetId: string, event: Event): void {
+
+  // onBounceScroll(targetId: string, event: Event): void {
+  //   event.preventDefault();
+  //   const target = document.getElementById(targetId);
+  //   if (!target) return;
+
+  //   const targetY = target.getBoundingClientRect().top + window.scrollY;
+  //   const overshootY = targetY + 80;
+
+  //   window.scrollTo({ top: overshootY, behavior: 'smooth' });
+
+  //   setTimeout(() => {
+  //     window.scrollTo({ top: targetY, behavior: 'smooth' });
+  //   }, 400);
+  // }
+
+  onArrowClick(event: Event): void {
     event.preventDefault();
-    const target = document.getElementById(targetId);
-    if (!target) return;
-
-    const targetY = target.getBoundingClientRect().top + window.scrollY;
-    const overshootY = targetY + 80;
-
-    window.scrollTo({ top: overshootY, behavior: 'smooth' });
-
-    setTimeout(() => {
-      window.scrollTo({ top: targetY, behavior: 'smooth' });
-    }, 400);
+    this.sectionRequested.emit('aboutme');
   }
 
   /**

@@ -16,9 +16,9 @@ import { LandingPageResp } from "../landing-page-resp/landing-page-resp";
 export class Page {
   legalPage: 'privacyPolicy' | 'legalNotice' | null = null;
 
-/**
- * Opens the privacy policy page.
- */
+  /**
+   * Opens the privacy policy page.
+   */
   openPrivacyPolicy() {
     this.legalPage = 'privacyPolicy';
   }
@@ -37,18 +37,25 @@ export class Page {
     this.legalPage = null;
   }
 
-  /**
-   * Closes any open legal page and then scrolls smoothly to the requested section.
-   */
   handleSectionRequest(anchor: string): void {
     this.closeLegalPage();
 
     requestAnimationFrame(() => {
-      document.getElementById(anchor)?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+      const target = document.getElementById(anchor);
+      const nav = document.querySelector('nav');
+
+      if (!target) return;
+
+      const navHeight = nav instanceof HTMLElement ? nav.offsetHeight : 0;
+      const targetTop = target.getBoundingClientRect().top + window.scrollY;
+      const scrollTop = Math.max(targetTop - navHeight, 0);
+
+      window.scrollTo({
+        top: scrollTop,
+        behavior: 'smooth'
       });
     });
   }
+
+
 }
- 

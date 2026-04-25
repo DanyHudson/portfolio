@@ -1,6 +1,6 @@
 <div class="page-container">
     <header>
-        <app-landing-page></app-landing-page>
+        <app-landing-page (sectionRequested)="handleSectionRequest($event)"></app-landing-page>
         <app-landing-page-resp (sectionRequested)="handleSectionRequest($event)">
         </app-landing-page-resp>
     </header>
