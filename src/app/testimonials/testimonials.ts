@@ -11,6 +11,7 @@ import { LangService } from '../services/lang.service';
   templateUrl: './testimonials.html',
   styleUrls: ['./testimonials.scss'],
 })
+
 export class Testimonials {
 testimonials = testimonials;
 mainClaim = mainClaim;

@@ -30,18 +30,7 @@ app-nav {
     justify-content: space-between;
     display: flex;
     width: 100%;
-}
-
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 2000;
-    width: 100%;
-    background: rgba(137, 188, 217, 1);
-    height: 104px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    box-sizing: border-box;
 }
 
 app-landing-page,
@@ -56,21 +45,45 @@ app-footer {
     justify-content: center;
 }
 
+nav,
 footer {
     width: 100%;
-    background: rgba(137, 188, 217, 1);
-    height: auto;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    background: transparent;
+    isolation: isolate;
+    position: relative;
 
-nav,
-footer {
     @media (min-width: 900px) {
         padding: 8px 109px;
-        width: 100%;
     }
+}
+
+nav::before,
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background: rgba(137, 188, 217, 1);
+    z-index: -1;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    height: 104px;
+    padding: 8px 0;
+}
+
+footer {
+    height: auto;
 }
 
 app-page-content {
