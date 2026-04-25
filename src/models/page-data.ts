@@ -135,14 +135,13 @@ export const myProjectTabs = [
                 },
 
                 text: {
-                    en: `Join is a Kanban App for task management and planning.
-                    This was a group project where our Team worked together to create a functional and user-friendly application.
-                    The design was provided by the course customer, which we had to implement while ensuring a smooth user experience.
+                    en: `Task manager inspired by the Kanban system. Create and organize tasks using drag-and-drop functions,
+                         assign users and categories.
+                         This was a group project.
                 `,
-                    de: `Join ist eine Kanban-App für Projekt-Planung und um Aufgaben zu verwalten.
-                    Dies Projekt war eine Gruppenarbeit, in der wir die Zusammenarbeit trainieren konnten. 
-                    Ziel war es aus einem vorgegebenen Design eine funktionale und benutzerfreundliche Anwendung zu erstellen.
-                    Design und Funktionalität wurden sinnvoll implementiert, um eine reibungslose Benutzererfahrung sicherzustellen.`
+                    de: `Task Manager inspiriert vom Kanban-System. Erstellen und Organisieren von Aufgaben mit Drag-and-Drop-Funktionen, Zuweisen von Benutzern und Kategorien.
+                         Dies war ein Gruppenprojekt.
+                `
                 }
 
             },
@@ -153,12 +152,13 @@ export const myProjectTabs = [
                 },
 
                 text: {
-                    en: `We organised our work process by dividing the project into smaller tasks and assigning them to each team member based on their strengths and interests. 
-                    We used the Trello Kanban board to track our progress and ensure that we were meeting our self-set deadlines. 
-                    Regular communication and collaboration were key to our success, as we had to coordinate our efforts and resolve any issues that arose during the development process.`,
-                    de: `Unser Team hat das Projekt in kleinere Aufgaben unterteilt und diese jedem Teammitglied basierend auf seinen Stärken und Interessen zugewiesen. 
-                    Mit dem Trello-Kanban-Board haben wir unseren Fortschritt verfolgt und sichergestellt, dass wir unsere selbsgesetzten Fristen einhalten. 
-                    Durch regelmäßige Kommunikation und gemeinsame Coding-Sessions konnten wir alle während des Entwicklungsprozesses auftretenden Probleme lösen.`,
+                    en: `Dividing the project into smaller tasks and assigning them to each team member based on strengths and interests. 
+                         Use of the Trello Kanban board to track our progress. 
+                         Regular communication and collaboration `,
+                    de: `Unterteilung des Projekts in kleinere Aufgaben und Zuweisung an jedes Teammitglied basierend auf Stärken und Interessen.
+                         Verwendung des Trello-Kanban-Boards, um unsere Prozesse zu organisieren.
+                         Regelmäßige Kommunikation und Co-Programming Sessions.
+                         `,
                 }
 
             },
@@ -169,13 +169,11 @@ export const myProjectTabs = [
                 },
 
                 text: {
-                    en: `Our group work experience was highly collaborative and educational. 
-                    We learned the importance of communication, teamwork, and problem-solving in a real-world project setting.
-                    I enjoyed the colab-sessions emensely, as they allowed us to work together in real-time, share our screens, and provide immediate feedback to each other.
-                    This not only helped us to quickly resolve any issues but also fostered a sense of mutual support within the team.`,
-                    de: `In unserer Gruppenarbeit haben wir die Bedeutung von Kommunikation, Teamarbeit und gemeinsamen Problemlösungen in einem realen Projektumfeld gelernt.
-                    Die gemeinsamen Coding-Sessions haben uns ermöglicht, in Echtzeit zusammenzuarbeiten, unsere Bildschirme zu teilen und sofortiges Feedback zu geben.
-                    Dies half uns nicht nur, schnell alle auftretenden Probleme zu lösen, sondern förderte auch ein Gefühl der Zusammenarbeit und gegenseitigen Unterstützung innerhalb des Teams.
+                    en: `Collaboration, teamwork, and problem-solving in a real-world project setting.
+                         Communication in real-time colab-sessions with immediate feedback.
+                    `,
+                    de: `Zusammenarbeit, Teamarbeit und Problemlösung in einem realen Projektumfeld.
+                         Kommunikation und direktes Feedback in Real-Time Colab-Sessions.
                     `,
                 }
             }
@@ -204,17 +202,15 @@ export const myProjectTabs = [
                     de: `Über das Projekt`
                 },
                 text: {
-                    en: `Sharky is a simple D2 browser game app.
-                         This was the first project where we usesd classes and OOP in general.
-                         It inculded collision detection, animation as well as a simple game loop and the use of the HTML5 canvas element.
-                         The design was mainly provided by the Developer Academy.
+                    en: `Simple D2 browser game app.
+                         OOP based with collision detection, animation and HTML5 canvas element.
+                         Design by Developer Academy.
                          `,
-                    de: `Sharky ist ein einfaches D2 Browsergame.
-                         Es war das erste Projekt, bei dem wir Klassen und OOP im Allgemeinen verwendet haben.
-                         Außerdem beinhaltete es Kollisions-Logik, Animationen sowie einen einfachen Game-Loop und die Verwendung des HTML5-Canvas-Elements.
-                         Das Design wurde hauptsächlich von der Developer Academy bereitgestellt.
-                          `,
-                }
+                    de: `Einfaches D2 Browsergame.
+                         OOP basiert mit Kollisions-Logik, Animationen und HTML5-Canvas-Element.
+                         Design von der Developer Academy.
+                        `,
+                } 
             },
             {
                 headline: {
@@ -222,15 +218,14 @@ export const myProjectTabs = [
                     de: `Organisation meiner Arbeitsprozesse`
                 },
                 text: {
-                    en: `To organize myself during the development process, I tried to break down the project into smaller and logical steps.
-                         For the main part I followed the tutorial provided by the Developer Academy, however the tutorial was created for a slightly different game.
-                         So I had to adapt the code and logic to fit the requirements of my game, which was a great learning experience for me.
-                         I also made use of version control with Git to keep track of my changes and ensure that I could easily revert back to previous versions if needed.`,
-
-                    de: `Um mich während des Entwicklungsprozesses zu organisieren, habe ich versucht, das Projekt in kleinere und logische Schritte zu unterteilen.
-                         Den Hauptteil habe ich nach dem Tutorial der Developer Academy abgearbeitet. Das Tutorial wurde für ein etwas anderes Spiel erstellt.
-                         Daher habe ich den Code und die Logik an die Anforderungen meines Spiels angepasst, was eine großartige Lernerfahrung für mich war.
-                         Ich habe Git genutzt, um meine Änderungen zu verfolgen und sicherzustellen, dass ich bei Bedarf problemlos zu früheren Versionen zurückkehren kann.`,
+                    en: ` Focus on folder structure, hyrarchy of classes and instances.
+                          Research for sound effects, applied game mechanics and animation techniques.
+                          Git for version control and tracking changes.
+                    `,
+                    de: `Fokus auf Ordnerstruktur, Hierarchie von Klassen und Instanzen.
+                         Recherche für Soundeffekte, angewandte Spielmechaniken und Animationstechniken.
+                         Git für Versionskontrolle und Nachverfolgung von Änderungen.
+                    `,
                 }
             },
             {
@@ -240,13 +235,14 @@ export const myProjectTabs = [
                 },
 
                 text: {
-                    en: `I  have learned to think in terms of objects and classes, which was a new concept for me at the time.
-                         I also gained a deeper understanding of how to structure code in a way that is organized and maintainable.
-                         Additionally, I learned how to implement game mechanics such as collision detection and animation, which was a fun and rewarding experience.`,
+                    en: `Thinking in terms of objects and classes.
+                         Structuring and refactoring code.
+                         Collision detection and animation`,
 
-                    de: `Ich habe gelernt, in Begriffen von Objekten und Klassen zu denken, was für mich zu diesem Zeitpunkt ein neues Konzept war.
-                         Außerdem habe ich ein tieferes Verständnis dafür gewonnen, wie man Code sinnvoll und wiederverwendbar strukturieren kann.
-                         Zudem habe ich gelernt, wie man Spielmechaniken wie Kollisionserkennung und Animation implementieren kann, ein Fun-Projekt.`
+                    de: `Denkweise in der Logik von Objekten und Klassen.
+                         Strukturierung und Refactoring von Code.
+                         Kollisionserkennung und Animation.
+                         `
                 }
             }
         ],
