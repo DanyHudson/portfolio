@@ -53,7 +53,6 @@
       </div>
     </div>
 
-    <!-- <div style="margin-left: 24px;">* required fields</div> -->
     <div style="margin-left: 24px;">
       {{ contactFormText[currentLang].requiredFields }}
     </div>
@@ -62,8 +61,6 @@
       <label for="privacyPolicyAccepted" class="container">
 
         <p>
-          <!-- I've read the <a href="#" (click)="requestPrivacyPolicy(); $event.preventDefault()">privacy policy</a> and
-          agree to the processing of my data as outlined. -->
           {{ contactFormText[currentLang].privacy.beforeLink }}
           <a href="#" (click)="requestPrivacyPolicy(); $event.preventDefault()">
             {{ contactFormText[currentLang].privacy.linkText }}
@@ -78,10 +75,6 @@
 
       </label>
 
-      <!-- @if (!contactFormData.privacyPolicyAccepted && submitAttempted) {
-      <span class="error-message">Please accept the privacy policy.</span>
-      } -->
-
       @if (!contactFormData.privacyPolicyAccepted && submitAttempted) {
       <span class="error-message">
         {{ contactFormText[currentLang].privacy.error }}
@@ -91,7 +84,6 @@
     </div>
 
     <div class="button-container">
-      <!-- <button class="submit-btn" type="submit" [class.btn-disabled]="!contactForm.form.valid">Send</button> -->
       <button class="submit-btn" type="submit" [class.btn-disabled]="!contactForm.form.valid">
         {{ contactFormText[currentLang].submit }}
       </button>

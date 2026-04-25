@@ -48,6 +48,9 @@ export class Contact {
     this.privacyPolicyRequested.emit();
   }
 
+  /**
+   * Scrolls back to the contact section header, choosing the mobile or desktop target element by viewport width.
+   */
   onScrollToTop(event: Event): void {
     const targetId = window.innerWidth <= 1020 ? 'persona-resp' : 'persona';
     this.onBounceScroll(targetId, event);

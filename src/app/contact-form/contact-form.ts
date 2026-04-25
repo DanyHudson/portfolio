@@ -11,10 +11,16 @@ import { contactFormText, successMessages } from '../../models/page-data';
   templateUrl: './contact-form.html',
   styleUrls: ['./contact-form.scss'],
 })
+/**
+ * Collects contact requests, validates consent, and submits the form payload to the mail endpoint.
+ */
 export class ContactForm {
 
   http = inject(HttpClient);
 
+  /**
+   * Holds the mutable form values bound to the template.
+   */
   contactFormData = {
     userName: '',
     userEmail: '',
@@ -31,6 +37,11 @@ export class ContactForm {
 
   @Output() privacyPolicyRequested = new EventEmitter<void>();
 
+  /**
+   * Keeps the component language in sync with the global language service.
+   *
+   * @param langService Shared language state service.
+   */
   constructor(private langService: LangService) {
     this.langService.lang$.subscribe(lang => this.currentLang = lang);
   }
@@ -46,6 +57,11 @@ export class ContactForm {
     },
   };
 
+  /**
+   * Validates and submits the contact form to the backend mail endpoint.
+   *
+   * @param ngForm Template-driven Angular form instance.
+   */
   onSubmit(ngForm: NgForm) {
     this.submitAttempted = true;
 
@@ -66,6 +82,9 @@ export class ContactForm {
     }
   }
 
+  /**
+   * Shows the localized success message for a short period after a successful submission.
+   */
   showSuccessMessage() {
     this.successMessageVisible = true;
     setTimeout(() => {
@@ -73,6 +92,9 @@ export class ContactForm {
     }, 1600);
   }
 
+  /**
+   * Emits a request so the parent component can open the privacy policy view.
+   */
   requestPrivacyPolicy() {
     this.privacyPolicyRequested.emit();
   }

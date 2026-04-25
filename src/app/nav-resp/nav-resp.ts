@@ -40,14 +40,23 @@ export class NavResp {
     this.menuOpen.set(!this.menuOpen());
   }
 
+  /**
+   * Closes the responsive navigation menu.
+   */
   closeNav(): void {
     this.menuOpen.set(false);
   }
 
+  /**
+   * Updates the active application language.
+   */
   setLanguage(lang: string) {
     this.langService.setLang(lang as 'en' | 'de');
   }
 
+  /**
+   * Closes the menu and emits a section navigation request for the selected link.
+   */
   onNavClick(link: NavLink, event: Event): void {
     event.preventDefault();
     this.closeNav();

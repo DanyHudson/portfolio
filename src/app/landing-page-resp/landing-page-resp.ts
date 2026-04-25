@@ -12,6 +12,9 @@ export class LandingPageResp {
 
   @Output() sectionRequested = new EventEmitter<string>();
 
+  /**
+   * Scrolls past the requested section and then back to it to create a bounce effect.
+   */
   onBounceScroll(targetId: string, event: Event): void {
     event.preventDefault();
     const target = document.getElementById(targetId);
@@ -27,7 +30,10 @@ export class LandingPageResp {
     }, 400);
   }
 
-   onSectionRequested(anchor: string): void {
+  /**
+   * Forwards a section navigation request from the responsive navigation component.
+   */
+  onSectionRequested(anchor: string): void {
     this.sectionRequested.emit(anchor);
   }
 }
