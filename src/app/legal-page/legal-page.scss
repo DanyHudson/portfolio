@@ -59,7 +59,11 @@
      color: white;
  }
 
-  @media (max-width: 600px) {
+ .priv-pol-text p {
+     white-space: pre-line;
+ }
+
+ @media (max-width: 600px) {
      .legal-page-overlay {
          margin-top: 32px;
      }

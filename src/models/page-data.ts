@@ -50,17 +50,16 @@ export const aboutMeTypewriter = [
 
 export const aboutMe = {
 
-    en: `I’m a frontend developer based in Hamburg with a background in media design.\nMy journey into web development began with a curiosity to understand how websites work and a determination to bring creative ideas to life.
-         While I wouldn’t call myself a natural-born coder, I am persistent and resilient and I thrive on the challenge of finding solutions, finding satisfaction in translating a designer’s vision into functional web experiences.
-         I enjoy working in teams, exchanging ideas and knowledge as well as learning from others and in this way to contribute to the success of projects. 
-         I’m always eager to improve my skills and stay up-to-date with the latest technologies.
-          \nInterested? Let’s connect!`,
+    en: `I\’m a frontend developer based in Hamburg with a background in media design.
+         I thrive on the challenge of translating a designer\’s vision into functional web experiences.
+         I enjoy working in teams as well as independently, sharing ideas and knowledge. 
+         I\’m always eager to improve my skills and stay up-to-date with the latest technologies.
+          \nLet\’s connect!`,
 
-    de: `Ich bin eine Frontend-Entwicklerin aus Hamburg.\nAls ursprüngliche Mediengestalterin begann mein Weg in die Webentwicklung nicht nur mit der Lust, kreative Ideen zum Leben zu erwecken sondern auch mit der Neugier, zu verstehen, wie Websites funktionieren.
-         Obwohl ich mich nicht als geborene Programmiererin bezeichnen würde, bin ich hartnäckig und ausdauernd wenn es darum geht Lösungen zu finden und es macht mir Spaß Designs so präzise wie möglich in funktionale Web-Erlebnisse umzusetzen.
-         Ich arbeite gerne im Team, um Ideen und  Wissen mit anderen zu teilen und von anderen zu lernen. 
-         Dabei versuche ich meine Kenntnisse und Fähigkeiten ständig aktuell zu halten, das versteht sich von selbst.\n 
-        Interessiert? Let‘s connect!
+    de: `Ich bin eine Frontend-Entwicklerin und Mediengestalterin aus Hamburg.
+         Es macht mir Spaß Designs so präzise wie möglich in funktionale Web-Erlebnisse umzusetzen.
+         Ich arbeite gerne im Team aber auch selbststandig, probiere gerne neue Tools und Frameworks.
+        \nLet\‘s connect!
         `
 
 };
@@ -166,8 +165,8 @@ export const myProjectTabs = [
                 },
 
                 text: {
-                    en: `Task manager inspired by the Kanban system. Create and organize tasks using drag-and-drop functions,
-                         assign users and categories.
+                    en: `Task manager inspired by the Kanban system.
+                         \nMy part: Login and signup form, form validation.
                          This was a group project.
                 `,
                     de: `Task Manager inspiriert vom Kanban-System. Erstellen und Organisieren von Aufgaben mit Drag-and-Drop-Funktionen, Zuweisen von Benutzern und Kategorien.

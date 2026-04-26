@@ -21,3 +21,31 @@ app-my-projects {
 app-contact, app-privacy-policy {
     position: relative;
 }
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+app-about-me,
+app-my-skills,
+app-my-projects,
+app-testimonials,
+app-contact {
+    @include defaultFont($c: rgb(137, 188, 217), $fw: 400);
+    @include bottom-spacing();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    animation: fade-up linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 45%;
+}

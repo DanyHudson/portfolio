@@ -10,7 +10,7 @@ import { LangService } from '../services/lang.service';
 })
 export class Project implements AfterViewInit, OnChanges {
   @Input() projectData: any;
-  @ViewChild('projectImage') projectImage?: ElementRef<HTMLImageElement>;
+  @ViewChild('projectImageFrame') projectImageFrame?: ElementRef<HTMLDivElement>;
 
   currentLang: 'en' | 'de' = 'en';
   isImageVisible = signal(false);
@@ -19,26 +19,24 @@ export class Project implements AfterViewInit, OnChanges {
     this.langService.lang$.subscribe(lang => this.currentLang = lang);
   }
 
-
   /**
    * Starts observing the project image so it becomes visible when the element enters the viewport.
    */
   ngAfterViewInit(): void {
-    if (!this.projectImage) return;
+  if (!this.projectImageFrame) return;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        this.isImageVisible.set(entry.isIntersecting);
-      },
-      {
-        threshold: 0.25,
-        rootMargin: '0px 0px 120px 0px',
-      }
-    );
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      this.isImageVisible.set(entry.isIntersecting);
+    },
+    {
+      threshold: 0.75,
+      rootMargin: '0px 0px -20% 0px',
+    }
+  );
 
-    observer.observe(this.projectImage.nativeElement);
-  }
-
+  observer.observe(this.projectImageFrame.nativeElement);
+}
 
   /**
    * Re-triggers the image display when the project input changes while the image is already visible.

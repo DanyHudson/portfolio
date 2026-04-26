@@ -9,9 +9,11 @@
     </div>
     }
   </div>
-  @if (projectData.projectImage) {
-  <img [src]="projectData.projectImage" alt="{{ projectData.label }}" class="mp-img"
-    [class.is-visible]="isImageVisible()">
+   @if (projectData.projectImage) {
+  <div class="mp-img-frame" #projectImageFrame>
+    <img [src]="projectData.projectImage" alt="{{ projectData.label }}" class="mp-img"
+      [class.is-visible]="isImageVisible()">
+  </div>
   }
 </div>
 

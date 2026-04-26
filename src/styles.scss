@@ -49,16 +49,22 @@ html {
     scroll-behavior: smooth;
     width: 100%;
     height: 100%;
+    scrollbar-gutter: stable;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    width: 100%;
     color: white;
     overflow-x: hidden;
     background-color: rgb(38, 46, 52);
-    @include defaultFont($c: white, $fw: 400);
+}
+
+app-root {
+    display: block;
+    width: 100%;
 }
 
 app-page {

@@ -1,6 +1,5 @@
 @use '../../styles.scss' as*;
 
-
 .home-link {
     display: block;
     width: 100px;
@@ -17,10 +16,11 @@
 
 .nav-bar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 2rem;
     padding: 1rem;
-    width: 64%;
+    flex: 1;
+    width: auto;
 
     a {
         position: relative;

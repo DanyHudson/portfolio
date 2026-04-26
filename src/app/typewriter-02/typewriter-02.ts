@@ -172,7 +172,7 @@ export class Typewriter02 implements OnInit {
       }),
       take(full.length + 1),
       tap({
-        complete: () => { this.iconVisible = false; } // Fade out after all deleted
+        complete: () => { this.iconVisible = false; }
       })
     );
   }

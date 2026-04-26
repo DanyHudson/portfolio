@@ -6,7 +6,7 @@ import { Typewriter02 } from '../typewriter-02/typewriter-02';
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [Typewriter02], //Typewriter,
+  imports: [Typewriter02],
   templateUrl: './about-me.html',
   styleUrls: ['./about-me.scss'],
 })

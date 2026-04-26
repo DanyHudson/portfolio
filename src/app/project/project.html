@@ -19,13 +19,12 @@
     </div>
     }
   </div>
+  
   @if (projectData.projectImage) {
-  <img 
-  #projectImage 
-  [src]="projectData.projectImage" 
-  alt="{{ projectData.label }}" 
-  class="mp-img"
-  [class.is-visible]="isImageVisible()">
+  <div class="mp-img-frame" #projectImageFrame>
+    <img [src]="projectData.projectImage" alt="{{ projectData.label }}" class="mp-img"
+      [class.is-visible]="isImageVisible()">
+  </div>
   }
 
   <div class="mp-btn">
@@ -34,7 +33,7 @@
       Live Test
     </a>
     }
-    @if (projectData.linkGitHub) {  
+    @if (projectData.linkGitHub) {
     <a class="github" [href]="projectData.linkGitHub" target="_blank" rel="noopener noreferrer">
       GitHub
     </a>
