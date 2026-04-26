@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { aboutMe } from '../../models/page-data';
-import { aboutMeTypewriter } from '../../models/page-data';
+import { sectionNames, aboutMe, aboutMeTypewriter } from '../../models/page-data';
 import { LangService } from '../services/lang.service';
 import { Typewriter02 } from '../typewriter-02/typewriter-02';
 
@@ -13,6 +12,7 @@ import { Typewriter02 } from '../typewriter-02/typewriter-02';
 })
 export class AboutMe {
   aboutMe = aboutMe;
+  sectionNames = sectionNames;
   currentLang: 'en' | 'de' = 'en';
   typewriterWords = aboutMeTypewriter;
 

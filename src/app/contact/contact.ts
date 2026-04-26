@@ -1,6 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { ContactForm } from '../contact-form/contact-form';
-import { contactInfo } from '../../models/page-data';
+import { contactInfo, sectionNames } from '../../models/page-data';
 import { LangService } from '../services/lang.service';
 
 @Component({
@@ -12,6 +12,7 @@ import { LangService } from '../services/lang.service';
 })
 export class Contact {
   contact = contactInfo[0];
+  sectionNames = sectionNames;
   currentLang: 'en' | 'de' = 'en';
   @Output() privacyPolicyRequested = new EventEmitter<void>();
 

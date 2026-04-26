@@ -1,5 +1,6 @@
 import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 import { LangService } from '../services/lang.service';
+import { navLinks } from '../../models/page-data';
 
 type NavLink = {
   label: string;
@@ -17,20 +18,12 @@ type NavLink = {
  * Renders the main navigation and emits section requests for in-page scrolling.
  */
 export class Nav {
-  /**
-   * Defines the visible navigation labels and their target anchors.
-   */
-  navLinks: NavLink[] = [
-    { label: 'About me', anchor: 'aboutme' },
-    { label: 'Skills', anchor: 'skills' },
-    { label: 'Projects', anchor: 'projects' },
-    { label: 'Contact', anchor: 'contact' }
-  ];
 
   @Output() sectionRequested = new EventEmitter<string>();
-
+  
+  navLinks = navLinks;
   selectedLink = '';
-  currentLang = 'en';
+  currentLang: 'en' | 'de' = 'en';
 
   private suppressScrollClear = false;
 

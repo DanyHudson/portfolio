@@ -29,11 +29,13 @@ app-nav {
     align-items: center;
     justify-content: space-between;
     display: flex;
-    width: 100%;
+    width: 80%;
     box-sizing: border-box;
 }
 
 app-landing-page,
+app-nav,
+nav::before,
 nav {
     @include hide-for-resp($breakpoint: 1020px);
 }

@@ -1,12 +1,12 @@
 <div class="contact-header">
-    <h2>Contact Me</h2>
+    <h2 class="section-anchor" id="contact">{{ sectionNames[currentLang][3] }}</h2>
 
     <a #arrowUpBtn class="arrow-up-btn" (click)="onScrollToTop($event)">
         <img src="assets/img/arrow_up.svg" alt="Arrow up" />
     </a>
 </div>
 
-<section class="section-content section-anchor" id="contact">
+<section class="section-content" >
 
     <p class="left-container">
         {{ contact.text[currentLang] }}

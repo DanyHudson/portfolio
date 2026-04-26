@@ -5,10 +5,10 @@
 </div>
 
 <section class="nav-bar" id="startPoint">
-  @for (link of navLinks; track link.label) {
+  @for (link of navLinks[currentLang]; track link.label) {
   <a [class.active]="selectedLink === link.label" 
   (click)="onNavClick(link, $event)" 
-  href="#{{ link.anchor }}">
+  href="{{ link.anchor }}">
     {{ link.label }}
   </a>
   }

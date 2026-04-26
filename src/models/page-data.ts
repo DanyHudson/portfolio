@@ -1,3 +1,34 @@
+export const navLinks = {
+    en: [
+        { label: 'About me', anchor: 'about-me' },
+        { label: 'Skills', anchor: 'skills' },
+        { label: 'Projects', anchor: 'projects' },
+        { label: 'Contact', anchor: 'contact' },
+    ],
+    de: [
+        { label: 'Über mich', anchor: 'about-me' },
+        { label: 'Fähigkeiten', anchor: 'skills' },
+        { label: 'Projekte', anchor : 'projects' },
+        { label: 'Kontakt', anchor: 'contact' },
+    ]
+}
+
+export const sectionNames = {
+    en: [
+        'About me',
+        'Skills',
+        'Projects',
+        'Contact me',
+    ],
+    de: [
+        'Über mich',
+        'Fähigkeiten',
+        'Projekte',
+        'Kontakt',              
+    ]
+
+}
+
 export const aboutMeTypewriter = [
     {
         icon: 'assets/icons/location_icon.svg',
