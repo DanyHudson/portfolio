@@ -16,35 +16,22 @@ main {
     width: 100%;
 }
 
+app-page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 app-landing-page {
     display: flex;
     width: 100%;
+
+    @include hide-for-resp($breakpoint: 1020px);
 }
 
 app-landing-page-resp {
     @include display-resp($breakpoint: 1020px);
-}
-
-app-nav {
-    align-items: center;
-    justify-content: space-between;
-    display: flex;
-    width: 80%;
-    box-sizing: border-box;
-}
-
-app-landing-page,
-app-nav,
-nav::before,
-nav {
-    @include hide-for-resp($breakpoint: 1020px);
-}
-
-app-footer {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
 }
 
 nav,
@@ -82,15 +69,27 @@ nav {
     z-index: 2000;
     height: 104px;
     padding: 8px 0;
+
+    @include hide-for-resp($breakpoint: 1020px);
+}
+
+app-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    box-sizing: border-box;
+
+    @include hide-for-resp($breakpoint: 1020px);
 }
 
 footer {
     height: auto;
 }
 
-app-page-content {
+app-footer {
     display: flex;
-    flex-direction: column;
+    width: 100%;
     align-items: center;
     justify-content: center;
 }

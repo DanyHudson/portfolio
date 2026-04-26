@@ -37,6 +37,10 @@
   font-size: 1.5em;
   color: white; 
   @include defaultFont($c: #FFFFFF, $fw: 400);
+
+    @media (max-width: 1020px) {
+        flex-direction: column;
+    }
 }
 
 .typewriter-icon {
@@ -45,6 +49,10 @@
   margin-right: 12px;
   opacity: 0;
   transition: opacity 0.2s cubic-bezier(0.2, 0, 0.2, 0.2), transform 0.2s ease-in-out;
+
+   @media (max-width: 1020px) {
+        margin-right: 0px;
+    }
 }
 
 .typewriter-icon.fade-in {

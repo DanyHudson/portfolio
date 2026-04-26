@@ -1,4 +1,4 @@
-<div class="page-container">
+<!-- <div class="page-container">
     <header>
         <app-landing-page (sectionRequested)="handleSectionRequest($event)"></app-landing-page>
         <app-landing-page-resp (sectionRequested)="handleSectionRequest($event)">
@@ -15,4 +15,29 @@
     <footer>
         <app-footer (legalNoticeRequested)="openLegalNotice()"></app-footer>
     </footer>
+</div> -->
+<div class="page-container">
+  @if (!legalPage) {
+    <header>
+      <app-landing-page (sectionRequested)="handleSectionRequest($event)"></app-landing-page>
+      <app-landing-page-resp (sectionRequested)="handleSectionRequest($event)">
+      </app-landing-page-resp>
+    </header>
+  }
+
+  <nav>
+    <app-nav (sectionRequested)="handleSectionRequest($event)"></app-nav>
+  </nav>
+
+  <main>
+    <app-page-content
+      [legalPage]="legalPage"
+      (privacyPolicyRequested)="openPrivacyPolicy()"
+      (closeRequested)="closeLegalPage()">
+    </app-page-content>
+  </main>
+
+  <footer>
+    <app-footer (legalNoticeRequested)="openLegalNotice()"></app-footer>
+  </footer>
 </div>

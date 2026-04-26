@@ -1,18 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HighlightShapeResp } from './highlight-shape-resp';
 
-import { HighlightShape } from './highlight-shape-resp';
-
-describe('HighlightShape', () => {
-  let component: HighlightShape;
-  let fixture: ComponentFixture<HighlightShape>;
+describe('HighlightShapeResp', () => {
+  let component: HighlightShapeResp;
+  let fixture: ComponentFixture<HighlightShapeResp>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HighlightShape]
-    })
-    .compileComponents();
+      imports: [HighlightShapeResp]
+    }).compileComponents();
 
-    fixture = TestBed.createComponent(HighlightShape);
+    fixture = TestBed.createComponent(HighlightShapeResp);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
