@@ -14,8 +14,8 @@
 
         <i class="done-icon" [class.d-none]="!userName.valid || !userName.touched"></i>
         <input maxlength="40" [(ngModel)]="contactFormData.userName" id="userName" name="userName" type="text" required
-          pattern=".*\\S.*"
-          #userName="ngModel" [class.error-input]="userName.invalid && (userName.touched || submitAttempted)" />
+          pattern=".*\S.*" #userName="ngModel"
+          [class.error-input]="userName.invalid && (userName.touched || submitAttempted)" />
       </div>
 
       <div class="form-group">
@@ -49,8 +49,8 @@
           *
         </label>
         <textarea maxlength="500" #message="ngModel" [(ngModel)]="contactFormData.message" id="message" name="message"
-          pattern=".*\\S.*"
-          required [class.error-input]="message.invalid && (message.touched || submitAttempted)"></textarea>
+          pattern=".*\S.*" required
+          [class.error-input]="message.invalid && (message.touched || submitAttempted)"></textarea>
         <i class="done-icon" [class.d-none]="!message.valid || !message.touched"></i>
       </div>
     </div>
@@ -69,10 +69,12 @@
           </a>
           {{ contactFormText[currentLang].privacy.afterLink }}
         </p>
+        <!-- <input type="checkbox" id="privacyPolicyAccepted" [(ngModel)]="contactFormData.privacyPolicyAccepted"
+          name="privacyPolicyAccepted" required
+          [class.error-input]=" !contactFormData.privacyPolicyAccepted && submitAttempted" /> -->
         <input type="checkbox" id="privacyPolicyAccepted" [(ngModel)]="contactFormData.privacyPolicyAccepted"
-          name="privacyPolicyAccepted"
-          [class.error-input]=" !contactFormData.privacyPolicyAccepted && submitAttempted" />
-
+          name="privacyPolicyAccepted" required #privacyPolicy="ngModel"
+          [class.error-input]="privacyPolicy.invalid && (privacyPolicy.touched || (userName.valid && userEmail.valid && message.valid))" />
         <span class="checkmark"></span>
 
       </label>
@@ -86,7 +88,11 @@
     </div>
 
     <div class="button-container">
-      <button class="submit-btn" type="submit" [class.btn-disabled]="!contactForm.form.valid">
+      <!-- <button class="submit-btn" type="submit" [class.btn-disabled]="!contactForm.form.valid">
+        {{ contactFormText[currentLang].submit }}
+      </button> -->
+      <button class="submit-btn" type="submit" [disabled]="contactForm.form.invalid"
+        [class.btn-disabled]="contactForm.form.invalid">
         {{ contactFormText[currentLang].submit }}
       </button>
     </div>
