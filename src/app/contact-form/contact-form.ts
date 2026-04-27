@@ -33,6 +33,7 @@ export class ContactForm {
   currentLang: 'en' | 'de' = 'en';
   successMessage = successMessages;
   successMessageVisible = false;
+  submitErrorVisible = false;
   contactFormText = contactFormText;
 
   @Output() privacyPolicyRequested = new EventEmitter<void>();
@@ -64,20 +65,28 @@ export class ContactForm {
    */
   onSubmit(ngForm: NgForm) {
     this.submitAttempted = true;
+    this.submitErrorVisible = false;
 
-    if (ngForm.submitted && ngForm.form.valid && this.contactFormData.privacyPolicyAccepted) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactFormData), this.post.options)
+    const payload = {
+      userName: this.contactFormData.userName.trim(),
+      userEmail: this.contactFormData.userEmail.trim(),
+      message: this.contactFormData.message.trim(),
+      privacyPolicyAccepted: this.contactFormData.privacyPolicyAccepted,
+    };
+
+    if (ngForm.submitted && ngForm.form.valid && payload.privacyPolicyAccepted) {
+      this.http.post(this.post.endPoint, this.post.body(payload), this.post.options)
         .subscribe({
-          next: (response) => {
+
+          next: () => {
             this.showSuccessMessage();
-            console.log('Response from server: ', response);
+            this.submitErrorVisible = false;
             ngForm.resetForm();
             this.submitAttempted = false;
           },
-          error: (error: any) => {
-            console.error(error);
+          error: () => {
+            this.showSubmitErrorMessage();
           },
-          complete: () => console.info('send post complete'),
         });
     }
   }
@@ -90,6 +99,13 @@ export class ContactForm {
     setTimeout(() => {
       this.successMessageVisible = false;
     }, 1600);
+  }
+
+  /**
+   * Shows the localized error message after a failed submission attempt.
+   */
+  showSubmitErrorMessage() {
+    this.submitErrorVisible = true;
   }
 
   /**
