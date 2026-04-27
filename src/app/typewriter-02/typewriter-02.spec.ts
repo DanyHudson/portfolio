@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { aboutMeTypewriter } from '../../models/page-data';
 
 import { Typewriter02 } from './typewriter-02';
 
@@ -13,6 +14,8 @@ describe('Typewriter02', () => {
     .compileComponents();
 
     fixture = TestBed.createComponent(Typewriter02);
+    fixture.componentRef.setInput('words', aboutMeTypewriter);
+    fixture.detectChanges();
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

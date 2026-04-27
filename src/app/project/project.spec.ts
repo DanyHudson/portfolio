@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { myProjectTabs } from '../../models/page-data';
 
 import { Project } from './project';
 
@@ -13,6 +14,8 @@ describe('Projects', () => {
     .compileComponents();
 
     fixture = TestBed.createComponent(Project);
+    fixture.componentRef.setInput('projectData', myProjectTabs[0]);
+    fixture.detectChanges();
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
