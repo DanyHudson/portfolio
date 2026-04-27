@@ -6,15 +6,26 @@
     </a>
 </div>
 
-<section class="section-content" >
+<section class="section-content">
 
     <p class="left-container">
         {{ contact.text[currentLang] }}
     </p>
 
     <p class="right-container">
-        <span class=""><img src="../../assets/icons/icon _email.svg" alt="email"> {{ contact.email }} </span>
-        <span class=""><img src="../../assets/icons/icon _phone.svg" alt="phone"> {{ contact.tel }} </span>
+        <span>
+            <a [href]="'mailto:' + contact.email">
+                <img src="../../assets/icons/icon _email.svg" alt="email" />
+                {{ contact.email }}
+            </a>
+        </span>
+
+        <span>
+            <a [href]="'tel:' + contact.tel">
+                <img src="../../assets/icons/icon _phone.svg" alt="phone" />
+                {{ contact.tel }}
+            </a>
+        </span>
     </p>
 
 </section>
@@ -22,8 +33,19 @@
 <section class="section-content-resp">
 
     <p class="top-container">
-        <span class=""><img src="../../assets/icons/icon _phone.svg" alt="phone"> {{ contact.tel }} </span>
-        <span class=""><img src="../../assets/icons/icon _email.svg" alt="email"> {{ contact.email }} </span>
+        <span>
+            <a [href]="'mailto:' + contact.email">
+                <img src="../../assets/icons/icon _email.svg" alt="email" />
+                {{ contact.email }}
+            </a>
+        </span>
+
+        <span>
+            <a [href]="'tel:' + contact.tel">
+                <img src="../../assets/icons/icon _phone.svg" alt="phone" />
+                {{ contact.tel }}
+            </a>
+        </span>
     </p>
 
     <p class="bottom-container">

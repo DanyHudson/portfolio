@@ -57,10 +57,20 @@ p.left-container {
 .right-container {
     gap: 16px;
 
-    span {
+    // span {
+    //     align-items: center;
+    //     display: flex;
+    //     gap: 8px;
+    //     cursor: pointer;
+    // }
+
+    a {
         align-items: center;
         display: flex;
         gap: 8px;
+        width: fit-content;
+        color: white;
+        text-decoration: none;
         cursor: pointer;
     }
 
@@ -87,10 +97,24 @@ p.left-container {
         margin-bottom: 16px;
     }
 
-    span {
+    // span {
+    //     align-items: center;
+    //     display: flex;
+    //     gap: 8px;
+    //     cursor: pointer;
+
+    //     @media (max-width: 1020px) {
+    //         margin-bottom: 12px;
+    //     }
+    // }
+
+    a {
         align-items: center;
         display: flex;
         gap: 8px;
+        width: fit-content;
+        color: white;
+        text-decoration: none;
         cursor: pointer;
 
         @media (max-width: 1020px) {
