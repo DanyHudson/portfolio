@@ -23,7 +23,7 @@ export class Project implements AfterViewInit, OnChanges {
    * Starts observing the project image so it becomes visible when the element enters the viewport.
    */
   ngAfterViewInit(): void {
-  if (!this.projectImageFrame) return;
+  if (!this.projectImageFrame || typeof IntersectionObserver === 'undefined') return;
 
   const observer = new IntersectionObserver(
     ([entry]) => {

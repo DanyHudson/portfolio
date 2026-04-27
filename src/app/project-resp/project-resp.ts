@@ -24,7 +24,7 @@ export class ProjectResp implements AfterViewInit, OnChanges {
  * starts when the full frame reaches the viewport trigger point.
  */
   ngAfterViewInit(): void {
-    if (!this.projectImageFrame) return;
+    if (!this.projectImageFrame || typeof IntersectionObserver === 'undefined') return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
