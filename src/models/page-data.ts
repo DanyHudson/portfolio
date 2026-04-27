@@ -419,6 +419,7 @@ export const contactFormText = {
             error: 'Please accept the privacy policy.',
         },
         submit: 'Send',
+        submitError: 'Your message could not be sent. Please try again later.',
     },
     de: {
         nameLabel: 'dein Name',
@@ -436,6 +437,7 @@ export const contactFormText = {
             error: 'Bitte akzeptiere die Datenschutzerklaerung.',
         },
         submit: 'Senden',
+        submitError: 'Deine Nachricht konnte nicht gesendet werden. Bitte versuche es spaeter erneut.',
     },
 };
 
