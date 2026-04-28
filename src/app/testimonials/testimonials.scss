@@ -70,10 +70,22 @@
     }
  }
 
+ .scroll-indicator {
+    border: 1px solid rgb(137, 217, 144);
+    //  display: none;
+    width: 50%;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+
+    @media (max-width: 1020px) {
+       display: flex;
+    }
+ }
+
  app-highlight-shape {
     min-width: 300px;
     flex: 0 0 auto;
     scroll-snap-align: start;
  }
-
- 
