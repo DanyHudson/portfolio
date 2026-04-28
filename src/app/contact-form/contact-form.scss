@@ -242,6 +242,12 @@ span.error-message {
     justify-content: flex-end;
     width: 100%;
     max-width: 860px;
+    margin-top: 8px;
+
+    @media (max-width: 1020px) {
+        justify-content: center;
+        margin-top: 20px;
+    }
 }
 
 .submit-btn {

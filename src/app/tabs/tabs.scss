@@ -93,11 +93,11 @@ app-my-projects {
 }
 
 .project-desktop {
-  @include hide-for-resp($breakpoint: 1020px); 
+  @include hide-for-resp($breakpoint: 1020px);
 }
 
 .project-mobile {
-  @include display-resp($breakpoint: 1020px); 
+  @include display-resp($breakpoint: 1020px);
 }
 
 .tab-content section {

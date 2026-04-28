@@ -8,6 +8,11 @@
     height: auto;
     font-size: 1.2em;
 
+    p {
+        text-align: center;
+        color: white;
+    }
+
     @media (min-width: 1021px) {
         display: none;
     }

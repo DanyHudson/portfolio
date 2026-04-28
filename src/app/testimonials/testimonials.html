@@ -1,20 +1,20 @@
-
 <h3 class="hide-for-resp">{{mainClaim[currentLang]}}</h3>
 
 <div class="display-resp">
-<h3>{{mainClaimResp[currentLang]}}</h3>
-<h4>{{mainSubClaimResp[currentLang]}}</h4>
+  <h3>{{mainClaimResp[currentLang]}}</h3>
+  <h4>{{mainSubClaimResp[currentLang]}}</h4>
 </div>
 
 <section class="section-content">
-@for (testimonial of testimonials; track testimonial) {
-  <app-highlight-shape
-    [claim]="testimonial.claim"
-    [reference]="testimonial.reference"
-    [text]="testimonial.text[currentLang]"
-    [link]="testimonial.link"
-    [linkLabel]="testimonial.linkLabel">
+  @for (testimonial of testimonials; track testimonial) {
+  <app-highlight-shape [claim]="testimonial.claim" [reference]="testimonial.reference"
+    [text]="testimonial.text[currentLang]" [link]="testimonial.link" [linkLabel]="testimonial.linkLabel">
   </app-highlight-shape>
-}
+  }
 </section>
-<div class="scroll-indicator"> <img src="assets/img/scroll_left-right.svg" alt="scroll indicator"> </div>
+
+<div class="scroll-indicator-wrap" aria-hidden="true">
+  <div class="scroll-indicator">
+    <img class="indicator-sweep" src="assets/img/scroll_left-right.svg" alt="">
+  </div>
+</div>
