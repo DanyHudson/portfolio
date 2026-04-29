@@ -30,7 +30,6 @@ export const aboutMe = {
          Ich arbeite gerne im Team aber auch selbststandig, probiere gerne neue Tools und Frameworks.
         \nLet\‘s connect!
         `
-
 };
 
 export const skills = [
@@ -190,7 +189,6 @@ export const myProjectTabs = [
         linkLiveTest: 'https://www.dany-hudson.com/Join',
         linkGitHub: 'https://github.com/DanyHudson/Join'
     },
-
     {
         label: 'Sharky',
         subLabel: 'Game App',
@@ -258,7 +256,6 @@ export const myProjectTabs = [
         linkLiveTest: 'https://www.dany-hudson.com/Sharky',
         linkGitHub: 'https://github.com/DanyHudson/Sharkie-a-2d-game'
     },
-   
     {
         label: 'Upcoming Projects',
         subLabel: 'More to come',
@@ -277,11 +274,7 @@ export const myProjectTabs = [
                          Ich arbeite ständig an neuen Projekten, um meine Fähigkeiten weiterzuentwickeln und neue Technologien zu erkunden.
                 `
                 }
-
-            },
-            
-
-      
+            },      
         ],
 
         icons: [
@@ -291,7 +284,6 @@ export const myProjectTabs = [
             { icon: '../assets/icons/ts_icon.svg', alt: 'TypeScript logo' },
             { icon: '../assets/icons/ang_icon.svg', alt: 'Angular logo' },
             { icon: '../assets/icons/fb_icon.svg', alt: 'Firebase logo' },
-
         ],
 
         techNames: ['JavaScript', 'CSS', 'HTML'],

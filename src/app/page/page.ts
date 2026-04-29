@@ -17,17 +17,25 @@ export class Page {
   legalPage: 'privacyPolicy' | 'legalNotice' | null = null;
 
   /**
-   * Opens the privacy policy page.
+   * Opens the privacy policy page and scrolls the window to the top
+   * after the legal page has been rendered.
    */
   openPrivacyPolicy() {
     this.legalPage = 'privacyPolicy';
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    });
   }
 
   /**
-   * Opens the legal notice page.
+   * Opens the legal notice page and scrolls the window to the top
+   * after the legal page has been rendered.
    */
   openLegalNotice() {
     this.legalPage = 'legalNotice';
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    });
   }
 
   /**
