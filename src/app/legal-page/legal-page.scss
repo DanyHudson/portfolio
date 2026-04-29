@@ -61,6 +61,9 @@
 
  .priv-pol-text p {
      white-space: pre-line;
+     @include defaultFont($c: white, $fw: 300);
+     font-size: 1.1em;
+     font-weight: lighter;
  }
 
  @media (max-width: 600px) {
