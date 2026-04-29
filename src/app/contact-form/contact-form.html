@@ -49,7 +49,7 @@
           *
         </label>
         <textarea maxlength="500" #message="ngModel" [(ngModel)]="contactFormData.message" id="message" name="message"
-          pattern=".*\S.*" required
+          pattern="[\s\S]*\S[\s\S]*" required
           [class.error-input]="message.invalid && (message.touched || submitAttempted)"></textarea>
         <i class="done-icon" [class.d-none]="!message.valid || !message.touched"></i>
       </div>
