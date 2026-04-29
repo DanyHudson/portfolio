@@ -291,8 +291,8 @@ export const myProjectTabs = [
     },
    
     {
-        label: 'My GitHub',
-        subLabel: 'My GitHub',
+        label: 'Upcoming Projects',
+        subLabel: 'More to come',
         content: [
             {
                 headline: {
@@ -301,10 +301,10 @@ export const myProjectTabs = [
                 },
 
                 text: {
-                    en: `Come check out my GitHub for more projects and code samples! 
+                    en: `Come check here for more projects and code samples! 
                          I am continuously working on new projects to further develop my skills and explore new technologies.
                 `,
-                    de: `Schau dir mein GitHub für weitere Projekte und Codebeispiele an! 
+                    de: `Schau gerne rein für weitere Projekte und Codebeispiele! 
                          Ich arbeite ständig an neuen Projekten, um meine Fähigkeiten weiterzuentwickeln und neue Technologien zu erkunden.
                 `
                 }
@@ -327,9 +327,9 @@ export const myProjectTabs = [
 
         techNames: ['JavaScript', 'CSS', 'HTML'],
 
-        projectImage: '../assets/img/github.jpg',
+        projectImage: '../assets/img/ongoing.jpg',
         linkLiveTest: '',
-        linkGitHub: 'https://github.com/DanyHudson'
+        linkGitHub: ''
     },
 
 ];
