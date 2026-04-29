@@ -145,6 +145,7 @@ textarea {
     margin-top: 8px;
     margin-bottom: 8px;
     height: 56px;
+    font-size: 1rem;
 
     a {
         color: rgb(137, 188, 217);
@@ -171,8 +172,8 @@ label.container {
 
     p {
         margin-top: 5px;
-        font-size: 1.3em;
-        line-height: 1.3em;
+        font-size: 1rem;
+        line-height: 1.4;
     }
 }
 
@@ -229,6 +230,11 @@ label.container {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+.required-fields-note {
+    margin-left: 24px;
+    font-size: 1rem;
 }
 
 span.error-message {

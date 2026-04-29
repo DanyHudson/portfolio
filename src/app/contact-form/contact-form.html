@@ -55,7 +55,7 @@
       </div>
     </div>
 
-    <div style="margin-left: 24px;">
+    <div class="required-fields-note">
       {{ contactFormText[currentLang].requiredFields }}
     </div>
 
@@ -69,7 +69,7 @@
           </a>
           {{ contactFormText[currentLang].privacy.afterLink }}
         </p>
-       
+
         <input type="checkbox" id="privacyPolicyAccepted" [(ngModel)]="contactFormData.privacyPolicyAccepted"
           name="privacyPolicyAccepted" required #privacyPolicy="ngModel"
           [class.error-input]="privacyPolicy.invalid && (privacyPolicy.touched || (userName.valid && userEmail.valid && message.valid))" />
@@ -86,7 +86,7 @@
     </div>
 
     <div class="button-container">
-     
+
       <button class="submit-btn" type="submit" [disabled]="contactForm.form.invalid"
         [class.btn-disabled]="contactForm.form.invalid">
         {{ contactFormText[currentLang].submit }}
