@@ -99,7 +99,7 @@ app-highlight-shape {
    height: 100%;
    object-fit: contain;
    transform: translateX(-50%);
-   animation: indicator-sweep 3.2s ease-in-out infinite alternate;
+   animation: indicator-sweep 2s ease-in-out infinite alternate;
 }
 
 @keyframes indicator-sweep {
