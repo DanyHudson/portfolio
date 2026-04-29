@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Tabs } from '../tabs/tabs';
-import { sectionNames } from '../../models/page-data';
+import { sectionNames } from '../../models/section-names-data';
 import { LangService } from '../services/lang.service';
 
 @Component({

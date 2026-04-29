@@ -14,7 +14,7 @@
   <div class="nav-links fade-in">
     <div class="nav-panel">
       <div class="nav-items">
-        @for (link of navLinks; track link.label) {
+        @for (link of navLinks[currentLang]; track link.label) {
         <section class="nav-link" >
           <a (click)="onNavClick(link, $event)" href="#{{ link.anchor }}">
             {{ link.label }}

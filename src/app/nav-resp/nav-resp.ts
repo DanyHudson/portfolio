@@ -1,5 +1,6 @@
 import { Component, model, EventEmitter, Output } from '@angular/core';
 import { LangService } from '../services/lang.service';
+import { navLinks } from '../../models/nav-data';
 
 type NavLink = {
   label: string;
@@ -17,16 +18,9 @@ type NavLink = {
 export class NavResp {
   menuOpen = model(false);
 
-  navLinks: NavLink[] = [
-    { label: 'About me', anchor: 'aboutme' },
-    { label: 'Skills', anchor: 'skills' },
-    { label: 'Projects', anchor: 'projects' },
-    { label: 'Contact', anchor: 'contact' }
-  ];
-
   @Output() sectionRequested = new EventEmitter<string>();
-
-  currentLang: string = 'en';
+  navLinks = navLinks;
+  currentLang: 'en' | 'de' = 'en';
 
   constructor(private langService: LangService) {
     this.langService.lang$.subscribe(lang => this.currentLang = lang);

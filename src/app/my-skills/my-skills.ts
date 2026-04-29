@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { HighlightShape } from '../highlight-shape/highlight-shape';
 import { HighlightShapeResp } from '../highlight-shape-resp/highlight-shape-resp';
-import { skills, sectionNames } from '../../models/page-data';
+import { skills } from '../../models/page-data';
+import { sectionNames } from '../../models/section-names-data';
 import { LangService } from '../services/lang.service';
 
 @Component({

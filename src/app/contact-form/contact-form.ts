@@ -2,7 +2,7 @@ import { Component, inject, EventEmitter, Output } from '@angular/core';
 import { LangService } from '../services/lang.service';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { contactFormText, successMessages } from '../../models/page-data';
+import { contactFormText, successMessages } from '../../models/contact-form-data';
 
 @Component({
   selector: 'app-contact-form',

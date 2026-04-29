@@ -1,6 +1,6 @@
 import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 import { LangService } from '../services/lang.service';
-import { navLinks } from '../../models/page-data';
+import { navLinks } from '../../models/nav-data';
 
 type NavLink = {
   label: string;

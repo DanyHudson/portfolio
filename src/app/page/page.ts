@@ -37,6 +37,11 @@ export class Page {
     this.legalPage = null;
   }
 
+  /**
+   * Closes any open legal page and smoothly scrolls to the requested section.
+   *
+   * @param anchor The ID of the target section element to scroll to.
+   */
   handleSectionRequest(anchor: string): void {
     this.closeLegalPage();
 

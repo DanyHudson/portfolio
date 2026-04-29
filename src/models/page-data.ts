@@ -1,34 +1,3 @@
-export const navLinks = {
-    en: [
-        { label: 'About me', anchor: 'aboutme' },
-        { label: 'Skills', anchor: 'skills' },
-        { label: 'Projects', anchor: 'projects' },
-        { label: 'Contact', anchor: 'contact' },
-    ],
-    de: [
-        { label: 'Über mich', anchor: 'aboutme' },
-        { label: 'Fähigkeiten', anchor: 'skills' },
-        { label: 'Projekte', anchor : 'projects' },
-        { label: 'Kontakt', anchor: 'contact' },
-    ]
-}
-
-export const sectionNames = {
-    en: [
-        'About me',
-        'Skills',
-        'Projects',
-        'Contact me',
-    ],
-    de: [
-        'Über mich',
-        'Fähigkeiten',
-        'Projekte',
-        'Kontakt',              
-    ]
-
-}
-
 export const aboutMeTypewriter = [
     {
         icon: 'assets/icons/location_icon.svg',
@@ -354,8 +323,8 @@ export const testimonials = [
         claim: 'Victor Vaal',
         reference: 'Join',
         text: {
-            en: `You have a way to approach tasks with great attention to detail. If there is a challenge, you keep working until you find a solution. This makes you a very valuable and reliable team member.`,
-            de: `Du hast so eine Art, Aufgaben mit großer Sorgfalt anzugehen, wenn du auf ein Problem triffst bohrst du so lange bis du eine Lösung hast. Das macht dich zu einem sehr wertvollen und zuverlässigen Teammitglied.`
+            en: `You have a way to approach tasks with great attention to detail. If there is a challenge, you keep working until you find a solution.`,
+            de: `Du hast so eine Art, Aufgaben mit großer Sorgfalt anzugehen, wenn du auf ein Problem triffst bohrst du so lange bis du eine Lösung hast.`
         },
         link: '',
         linkLabel: ''
@@ -365,11 +334,10 @@ export const testimonials = [
         reference: 'Firmen CI Projekt',
         text: {
             en: `I really enjoyed working with Dany on the development of the new company CI.
-                 The creative exchange of ideas, the decision processes and finally bringing our designs to life was amazing.
                  I could always rely on her founded input and I have learned a lot from her. 
 `,
             de: `Die gemeinsame Entwicklung der neuen Firmen CI im Grafik-Team hat viel Spaß gemacht.
-                 Ideenfindung, Entscheidungsprozesse und Umsetzung - Dany hat mir viel beigenbracht und war immer für eine Austausch ansprechbar.`
+                 Dany war immer für eine Austausch ansprechbar.`
         },
         link: 'https://linkedin.com/in/anna-lena-westermann/',
         linkLabel: 'View LinkedIn'
@@ -378,9 +346,9 @@ export const testimonials = [
         claim: 'Thomas Bopzin',
         reference: 'diverse Holzarbeiten',
         text: {
-            en: `Danys patient persistence, even when things get tough, is inspiring. Her active input in creating plans and finding solutions has greatly advanced our projects, and her ability to follow instructions has been excellent. I look forward to the next project together.`,
+            en: `Danys patient persistence, even when things get tough, is inspiring. Her active input in creating plans and finding solutions has greatly advanced our projects, I look forward to the next project together.`,
             de: `Danys geduldige Ausdauer, auch wenn es anstrengend wird ziehen einen mit. 
-                 Ihr aktiver Input bei der Erstellung von Plänen und finden von Lösungen haben unsere Projekte gut vorran gebracht, aber auch Anleitungen hat sie sehr gut umgesetz. Ich freue mich schon auf das nächste Projekt`
+                 Ihr aktiver Input bei der Erstellung von Plänen und finden von Lösungen haben unsere Projekte gut vorran gebracht. Ich freue mich schon auf das nächste Projekt`
         },
         link: '',
         linkLabel: ''
@@ -401,47 +369,3 @@ export const contactInfo = [
         tel: `01570 3034009`
     },
 ];
-
-export const contactFormText = {
-    en: {
-        nameLabel: 'your name',
-        nameRequired: 'your name is required',
-        emailLabel: 'your email',
-        emailRequired: 'your email is required',
-        emailInvalid: 'please enter a valid email address',
-        messageLabel: 'your message',
-        messageRequired: 'your message is required',
-        requiredFields: '* required fields',
-        privacy: {
-            beforeLink: `I've read the `,
-            linkText: `privacy policy`,
-            afterLink: ` and agree to the processing of my data as outlined.`,
-            error: 'Please accept the privacy policy.',
-        },
-        submit: 'Send',
-        submitError: 'Your message could not be sent. Please try again later.',
-    },
-    de: {
-        nameLabel: 'dein Name',
-        nameRequired: 'Dein Name ist erforderlich',
-        emailLabel: 'deine E-Mail',
-        emailRequired: 'Deine E-Mail ist erforderlich',
-        emailInvalid: 'Bitte gib eine gueltige E-Mail-Adresse ein',
-        messageLabel: 'deine Nachricht',
-        messageRequired: 'Deine Nachricht ist erforderlich',
-        requiredFields: '* Pflichtfelder',
-        privacy: {
-            beforeLink: `Ich habe die `,
-            linkText: `Datenschutzerklaerung`,
-            afterLink: ` gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.`,
-            error: 'Bitte akzeptiere die Datenschutzerklaerung.',
-        },
-        submit: 'Senden',
-        submitError: 'Deine Nachricht konnte nicht gesendet werden. Bitte versuche es spaeter erneut.',
-    },
-};
-
-export const successMessages = {
-    en: 'Your message has been sent successfully!',
-    de: 'Deine Nachricht wurde erfolgreich gesendet!'
-}
