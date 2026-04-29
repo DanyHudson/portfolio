@@ -161,6 +161,7 @@ span.open:nth-child(3) {
   display: flex;
   justify-content: center;
   align-items: center;
+  @include defaultFont($c: rgba(38, 46, 52, 1), $fw: 500);
 
   a {
     color: rgb(38, 46, 52);
