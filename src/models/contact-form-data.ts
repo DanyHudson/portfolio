@@ -22,18 +22,18 @@ export const contactFormText = {
         nameRequired: 'Dein Name ist erforderlich',
         emailLabel: 'deine E-Mail',
         emailRequired: 'Deine E-Mail ist erforderlich',
-        emailInvalid: 'Bitte gib eine gueltige E-Mail-Adresse ein',
+        emailInvalid: 'Bitte gib eine gültige E-Mail-Adresse ein',
         messageLabel: 'deine Nachricht',
         messageRequired: 'Deine Nachricht ist erforderlich',
         requiredFields: '* Pflichtfelder',
         privacy: {
             beforeLink: `Ich habe die `,
-            linkText: `Datenschutzerklaerung`,
+            linkText: `Datenschutzerklärung`,
             afterLink: ` gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.`,
-            error: 'Bitte akzeptiere die Datenschutzerklaerung.',
+            error: 'Bitte akzeptiere die Datenschutzerklärung.',
         },
         submit: 'Senden',
-        submitError: 'Deine Nachricht konnte nicht gesendet werden. Bitte versuche es spaeter erneut.',
+        submitError: 'Deine Nachricht konnte nicht gesendet werden. Bitte versuche es später erneut.',
     },
 };
 

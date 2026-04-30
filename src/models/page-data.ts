@@ -286,7 +286,7 @@ export const myProjectTabs = [
             { icon: '../assets/icons/fb_icon.svg', alt: 'Firebase logo' },
         ],
 
-        techNames: ['JavaScript', 'CSS', 'HTML'],
+        techNames: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Angular', 'Firebase'],
 
         projectImage: '../assets/img/ongoing.jpg',
         linkLiveTest: '',
