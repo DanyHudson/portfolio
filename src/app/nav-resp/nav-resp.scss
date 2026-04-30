@@ -111,28 +111,26 @@
   }
 }
 
-span {
-  display: block;
-  height: 4px;
-  width: 100%;
-  background: #89bcd9;
-  margin: 5px 0;
-  border-radius: 2px;
-  transition: transform 0.3s cubic-bezier(.68, -0.55, .27, 1.55);
-  transform-origin: center;
+.nav-links {
+  position: absolute;
+  inset: 0;
+  height: 72%;
+  min-height: 400px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include defaultFont($c: rgba(38, 46, 52, 1), $fw: 500);
 
-  &:hover span:nth-child(1),
-  &:focus span:nth-child(1) {
-    transform: scaleX(0.8);
-  }
-
-  &:hover span:nth-child(2),
-  &:focus span:nth-child(2) {
+  a {
+    color: rgb(38, 46, 52);
+    text-decoration: none;
+    font-size: 1.4em;
+    line-height: 1.8em;
 
     &:hover {
       text-decoration: none;
       color: white;
-
     }
 
     @media (max-width: 400px) {
