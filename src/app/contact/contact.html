@@ -14,15 +14,15 @@
 
     <p class="right-container">
         <span>
-            <a [href]="'mailto:' + contact.email">
-                <img src="../../assets/icons/icon _email.svg" alt="email" />
+            <a class="contact-link email-link" [href]="'mailto:' + contact.email">
+                <span class="contact-icon email-icon" aria-hidden="true"></span>
                 {{ contact.email }}
             </a>
         </span>
 
         <span>
-            <a [href]="'tel:' + contact.tel">
-                <img src="../../assets/icons/icon _phone.svg" alt="phone" />
+            <a class="contact-link phone-link" [href]="'tel:' + contact.tel">
+                <span class="contact-icon phone-icon" aria-hidden="true"></span>
                 {{ contact.tel }}
             </a>
         </span>
@@ -34,15 +34,15 @@
 
     <p class="top-container">
         <span>
-            <a [href]="'mailto:' + contact.email">
-                <img src="../../assets/icons/icon _email.svg" alt="email" />
+            <a class="contact-link email-link" [href]="'mailto:' + contact.email">
+                <span class="contact-icon email-icon" aria-hidden="true"></span>
                 {{ contact.email }}
             </a>
         </span>
 
         <span>
-            <a [href]="'tel:' + contact.tel">
-                <img src="../../assets/icons/icon _phone.svg" alt="phone" />
+            <a class="contact-link phone-link" [href]="'tel:' + contact.tel">
+                <span class="contact-icon phone-icon" aria-hidden="true"></span>
                 {{ contact.tel }}
             </a>
         </span>
