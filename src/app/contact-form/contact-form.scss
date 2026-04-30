@@ -21,19 +21,24 @@ textarea:focus {
 
 .contact-form-container {
     margin-top: 48px;
+    margin-bottom: 160px;
     display: flex;
     flex-direction: column;
     gap: 8px;
     width: 100%;
     max-width: 860px;
-    margin-bottom: 160px;
+}
+
+.row-1,
+.row-2,
+.privacy-policy-resp,
+.button-container {
+    width: 100%;
+    max-width: 860px;
 }
 
 .row-1,
 .row-2 {
-    width: 100%;
-    max-width: 860px;
-
     label {
         margin-bottom: 6px;
         margin-left: 24px;
@@ -62,7 +67,6 @@ textarea:focus {
 
 .row-2 {
     flex: 1 1 0;
-    width: 100%;
 
     @media (max-width: 1020px) {
         margin-top: 96px;
@@ -71,7 +75,6 @@ textarea:focus {
     textarea {
         max-width: 860px;
         height: 240px;
-        resize: vertical;
         background: none;
         border: 1px solid rgb(137, 188, 217);
         border-radius: 24px;
@@ -105,12 +108,12 @@ form {
 }
 
 .form-group {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
     margin-bottom: 16px;
-    position: relative;
 }
 
 input,
@@ -128,22 +131,12 @@ textarea {
     }
 }
 
-.submit-btn.btn-disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-}
-
-.privacy-policy,
 .privacy-policy-resp {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    font-size: 0.8em;
     color: white;
-    width: 100%;
-    max-width: 860px;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin: 8px 0;
     height: 56px;
     font-size: 1rem;
 
@@ -189,8 +182,8 @@ label.container {
     position: absolute;
     top: 0;
     left: 0;
-    height: 25px;
     width: 25px;
+    height: 25px;
     cursor: pointer;
     background-image: url('../../assets/img/checkbox.svg');
     background-repeat: no-repeat;
@@ -211,7 +204,7 @@ label.container {
 }
 
 .checkmark:after {
-    content: "";
+    content: '';
     position: absolute;
     display: none;
 }
@@ -247,8 +240,6 @@ span.error-message {
 .button-container {
     display: flex;
     justify-content: flex-end;
-    width: 100%;
-    max-width: 860px;
     margin-top: 8px;
 
     @media (max-width: 1020px) {
@@ -275,8 +266,8 @@ span.error-message {
     }
 
     &:disabled {
-        border-color: rgb(137, 188, 217, 0.5);
-        color: rgb(137, 188, 217, 0.5);
+        border-color: rgba(137, 188, 217, 0.5);
+        color: rgba(137, 188, 217, 0.5);
         cursor: not-allowed;
         opacity: 0.7;
     }
@@ -291,13 +282,13 @@ span.error-message {
 }
 
 .done-icon {
-    width: 16px;
-    height: 16px;
-    background-image: url('../../assets/icons/icon_done.svg');
     position: absolute;
     top: 37px;
     right: 16px;
+    width: 16px;
+    height: 16px;
     z-index: 10;
+    background-image: url('../../assets/icons/icon_done.svg');
 }
 
 .success-message-container {
@@ -311,7 +302,7 @@ span.error-message {
     width: 370px;
     max-width: 860px;
     height: 94px;
-    background-color: rgb(137, 188, 217, 0.3);
+    background-color: rgba(137, 188, 217, 0.3);
     border-radius: 24px;
 }
 
@@ -324,11 +315,11 @@ span.error-message {
 
     .done-icon {
         display: inline-block;
+        position: static;
         width: 20px;
         height: 20px;
+        z-index: 1;
         background-image: url('../../assets/icons/icon_done.svg');
         background-repeat: no-repeat;
-        position: static;
-        z-index: 1;
     }
 }

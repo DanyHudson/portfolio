@@ -128,46 +128,6 @@ span {
 
   &:hover span:nth-child(2),
   &:focus span:nth-child(2) {
-    transform: scaleX(0.5);
-  }
-
-  &:hover span:nth-child(3),
-  &:focus span:nth-child(3) {
-    transform: scaleX(0.8);
-  }
-}
-
-span.open:nth-child(1) {
-  transform: translateY(13px) rotate(45deg);
-}
-
-span.open:nth-child(2) {
-  width: 0;
-  opacity: 0;
-  transition: opacity 0.2s ease-in;
-  transform: scaleX(0);
-}
-
-span.open:nth-child(3) {
-  transform: translateY(-13px) rotate(-45deg);
-}
-
-.nav-links {
-  position: absolute;
-  inset: 0;
-  height: 72%;
-  min-height: 400px;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @include defaultFont($c: rgba(38, 46, 52, 1), $fw: 500);
-
-  a {
-    color: rgb(38, 46, 52);
-    text-decoration: none;
-    font-size: 1.4em;
-    line-height: 1, 8em;
 
     &:hover {
       text-decoration: none;
