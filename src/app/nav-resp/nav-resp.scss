@@ -50,76 +50,10 @@
     pointer-events: none;
   }
 }
-// :::::::: burger original
-
-// .burger {
-//   width: 40px;
-//   height: 40px;
-//   position: relative;
-//   cursor: pointer;
-//   display: inline-block;
-//   background: none;
-//   border: none;
-//   z-index: 1001;
-
-//   span {
-//     background-color: #FFF;
-//     position: absolute;
-//     border-radius: 2px;
-//     transition: .3s cubic-bezier(.8, .5, .2, 1.4);
-//     width: 100%;
-//     height: 4px;
-//     left: 0;
-//   }
-
-//   span:nth-child(1) {
-//     top: 0px;
-//   }
-
-//   span:nth-child(2) {
-//     top: 13px;
-//   }
-
-//   span:nth-child(3) {
-//     bottom: 0px;
-//   }
-
-//   &:not(.open):hover span:nth-child(1) {
-//     transform: scaleX(.8);
-//   }
-
-//   &:not(.open):hover span:nth-child(2) {
-//     transform: scaleX(.5);
-//   }
-
-//   &:not(.open):hover span:nth-child(3) {
-//     transform: scaleX(.8);
-//   }
-
-//   &.open span:nth-child(1) {
-//     transform: rotate(45deg);
-//     top: 13px;
-//   }
-
-//   &.open span:nth-child(2) {
-//     transform: scale(0);
-//     transition-duration: 50ms;
-//   }
-
-//   &.open span:nth-child(3) {
-//     top: 13px;
-//     transform: rotate(-45deg);
-//   }
-// }
-
-// ::::::::
 
 // XXXXXXXXXX burger first edit
 
-
-
 // XXXXXXXXXX
-
 
 // ------- burger second edit
 .burger {
