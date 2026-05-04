@@ -96,6 +96,8 @@
      transition-duration: 0.3s;
      transition-timing-function: ease-in-out;
      border-radius: 50vw;
+     line-height: 0;
+     display: block;
 
      &:hover {
          background-color: rgba(137, 188, 217, 0.3);
