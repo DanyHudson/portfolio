@@ -125,7 +125,8 @@
   max-width: 320px;
   height: 332px;
   overflow: hidden;
-  padding-top: 20px;
+  // padding-top: 20px;
+  padding-bottom: 20px;
 
   @media (max-width: 1020px) {
     max-width: min(320px, calc(100vw - 72px));
@@ -184,7 +185,7 @@
 }
 
 .highlight-shape-container .claim {
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: bold;
   color: rgb(137, 188, 217);
   margin-bottom: 8px;
@@ -204,7 +205,7 @@
 }
 
 .project-reference {
-  font-size: 1.2em;
+  font-size: 1.1em;
   text-align: center;
   color: rgb(137, 188, 217);
 }
@@ -261,6 +262,88 @@ a.link {
   justify-content: flex-start;
 }
 
-.highlight-shape-container.align-left p {
-  width: 100%;
+@media (max-width: 1020px) {
+  .highlight-shape-container.align-left p {
+    width: 92%;
+    font-size: 0.8rem;
+    line-height: 0.95rem;
+  }
+
+  .highlight-shape-container.no-bg-animation.align-left {
+    padding-left: 32px;
+    padding-right: 18px;
+    padding-top: 16px;
+    box-sizing: border-box;
+  }
+
+  .highlight-shape-container.no-bg-animation.align-left .claim,
+  .highlight-shape-container.no-bg-animation.align-left .reference,
+  .highlight-shape-container.no-bg-animation.align-left .text,
+  .highlight-shape-container.no-bg-animation.align-left .link {
+    margin-left: 6px;
+  }
+
+  .highlight-shape-container.no-bg-animation.align-left .reference,
+  .highlight-shape-container.no-bg-animation.align-left .text {
+    width: 88%;
+  }
+
+  .highlight-shape-container.no-bg-animation .shape-bg {
+    display: none;
+  }
+
+  .highlight-shape-container.no-bg-animation::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../../assets/img/shape_testimonial_resp.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.08;
+    z-index: 0;
+    pointer-events: none;
+  }
 }
+
+
+
+// @media (max-width: 1020px) {
+//   .highlight-shape-container.no-bg-animation .shape-bg {
+//     width: 112%;
+//     height: auto;
+//     min-height: 112%;
+//     top: 50%;
+//     left: 50%;
+//   }
+
+//   .highlight-shape-container.no-bg-animation .shape-bg.base {
+//     transform: translate(-50%, -50%) rotate(-24deg);
+//   }
+
+//   .highlight-shape-container.no-bg-animation .shape-bg.animated {
+//     transform: translate(-50%, -50%) rotate(-24deg);
+//     opacity: 0;
+//   }
+// }
+
+
+
+// @media (max-width: 1020px) {
+//   .highlight-shape-container.no-bg-animation .shape-bg {
+//     display: none;
+//   }
+
+//   .highlight-shape-container.no-bg-animation::before {
+//     content: '';
+//     position: absolute;
+//     inset: 0;
+//     background-image: url('../../assets/img/shape_testimonial_resp.svg');
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     background-size: contain;
+//     opacity: 0.08;
+//     z-index: 0;
+//     pointer-events: none;
+//   }
+// }

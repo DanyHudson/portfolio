@@ -322,11 +322,11 @@ export const testimonials = [
         linkLabel: ''
     },
     {
-        claim: `Anna Lena Westermann`,
+        claim: `Anna L. Westermann`,
         reference: 'Firmen CI Projekt',
         text: {
             en: `I really enjoyed working with Dany on the development of the new company CI.
-                 I could always rely on her founded input and I have learned a lot from her. 
+                 I have learned a lot from her. 
 `,
             de: `Die gemeinsame Entwicklung der neuen Firmen CI im Grafik-Team hat viel Spaß gemacht.
                  Dany war immer für eine Austausch ansprechbar.`
@@ -338,9 +338,9 @@ export const testimonials = [
         claim: 'Thomas Bopzin',
         reference: 'diverse Holzarbeiten',
         text: {
-            en: `Danys patient persistence, even when things get tough, is inspiring. Her active input in creating plans and finding solutions has greatly advanced our projects, I look forward to the next project together.`,
+            en: `Danys persistence, is inspiring. Her active input has greatly advanced our projects, I look forward to the next project together.`,
             de: `Danys geduldige Ausdauer, auch wenn es anstrengend wird ziehen einen mit. 
-                 Ihr aktiver Input bei der Erstellung von Plänen und finden von Lösungen haben unsere Projekte gut vorran gebracht. Ich freue mich schon auf das nächste Projekt`
+                 Ihr aktiver Input hat unsere Projekte gut vorran gebracht. Ich freue mich schon auf das nächste Projekt`
         },
         link: '',
         linkLabel: ''
