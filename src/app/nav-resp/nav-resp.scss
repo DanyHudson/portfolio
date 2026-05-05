@@ -10,6 +10,7 @@
 .de-btn,
 .en-btn {
   position: relative;
+  z-index: 1;
   text-decoration: none;
   border: none;
   background: transparent;
@@ -25,11 +26,15 @@
     color: white;
   }
 
+  &.active {
+    color: white;
+  }
+
   &.active::after {
     content: '';
     position: absolute;
     inset: 0;
-    z-index: -1;
+    z-index: 0;
     background-image: url('../../assets/img/nav_bg.svg');
     background-repeat: no-repeat;
     background-position: center;
@@ -49,13 +54,13 @@
     transition: opacity 0.5s ease-in;
     pointer-events: none;
   }
+
+  span {
+    position: relative;
+    z-index: 1;
+  }
 }
 
-// XXXXXXXXXX burger first edit
-
-// XXXXXXXXXX
-
-// ------- burger second edit
 .burger {
   $burger-width: 36px;
   $burger-height: 40px;
@@ -125,7 +130,6 @@
     transform: rotate(-45deg);
   }
 }
-//------------
 
 .nav-links {
   position: absolute;
