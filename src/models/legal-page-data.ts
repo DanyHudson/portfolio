@@ -133,9 +133,9 @@ export const legalPageContent = [
                 },
 
                 text: {
-                    en: `This privacy policy was last updated on [date].
+                    en: `This privacy policy was last updated in May 2026.
                  `,
-                    de: `Diese Datenschutzerklärung wurde zuletzt am [Datum] aktualisiert.
+                    de: `Diese Datenschutzerklärung wurde zuletzt im Mai 2026 aktualisiert.
                  `
                 }
             },
@@ -256,9 +256,9 @@ export const legalPageContent = [
                 },
 
                 text: {
-                    en: `This privacy policy was last updated on [date].
+                    en: `This privacy policy was last updated in May 2026.
                  `,
-                    de: `Diese Datenschutzerklärung wurde zuletzt am [Datum] aktualisiert.
+                    de: `Diese Datenschutzerklärung wurde zuletzt im Mai 2026 aktualisiert.
                  `
                 }
 
